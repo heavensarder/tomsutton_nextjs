@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="flex-1 w-full bg-slate-50 relative overflow-x-hidden">
       {/* Hero Section - Matching New Design Pattern */}
-      <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-gradient-to-r from-[#0d1033] via-[#2d3266] to-[#8f96b8] pt-20 lg:pt-10 pb-24 lg:pb-20">
+      <section className="relative w-full min-h-[calc(100vh-140px)] flex items-center overflow-hidden bg-gradient-to-r from-[#0d1033] via-[#2d3266] to-[#8f96b8] pt-20 lg:pt-10 pb-24 lg:pb-20">
 
         {/* Background SVG Curve Effect across entire screen width */}
         <div className="absolute inset-0 pointer-events-none z-0 hidden lg:block">
@@ -48,12 +48,20 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 w-full mb-10 sm:pl-6 relative items-center lg:items-start justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-6 w-full mb-8 sm:pl-6 relative items-center lg:items-start justify-center lg:justify-start">
               {/* Small connecting line in the paragraph area matching design */}
               <div className="hidden sm:block absolute left-0 top-2 bottom-2 w-[2px] bg-white/20"></div>
               <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-md font-medium text-center lg:text-left">
                 The boiler installation and maintenance specialists! Keeping families warm with our expert boiler installations and repairs in New Milton, Christchurch, Highcliffe, Lymington, Brockenhurst and all over the New Forest.
               </p>
+            </div>
+
+            {/* Primary 'Get A Quote' CTA */}
+            <div className="mb-10 w-full flex justify-center lg:justify-start sm:pl-6 relative z-30">
+                <Link href="/online-boiler-quote" className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] px-8 py-3.5 sm:py-4 font-bold text-white shadow-[0_10px_20px_-10px_rgba(255,94,20,0.6)] transition-all hover:scale-105 hover:shadow-[0_15px_30px_-10px_rgba(255,94,20,0.8)] flex items-center gap-3">
+                  <span className="relative z-10 tracking-wide uppercase text-[15px]">GET A QUOTE</span>
+                  <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </Link>
             </div>
 
             {/* Action Buttons Block - Strictly Horizontal Row */}
@@ -103,7 +111,7 @@ export default function Home() {
             </div>
 
             {/* Floating Tag Bottom Left */}
-            <div className="absolute bottom-[25%] sm:bottom-[35%] left-0 sm:left-[5%] lg:left-[5%] z-40">
+            <div className="absolute bottom-[25%] sm:bottom-[35%] lg:bottom-auto lg:top-[485px] left-0 sm:left-[5%] lg:left-[20px] z-40">
               <div className="bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full font-bold text-xs sm:text-sm shadow-xl shadow-orange-500/20 border border-orange-400/50">
                 Gas Safe
               </div>

@@ -13,7 +13,7 @@ const NavBar = () => {
 
     const isHome = pathname === '/';
     const isReviews = pathname === '/our-reviews';
-    const isInstall = ['/new-boiler', '/our-boiler-brands', '/alpha', '/worcester', '/online-boiler', '/combi-', '/lpg-boilers', '/oil-boilers', '/unvented'].some(p => pathname.includes(p)) || pathname === '/new-gas-boilers-2';
+    const isInstall = ['/new-boiler', '/our-boiler-brands', '/alpha', '/worcester', '/online-boiler', '/combi-', '/lpg-boilers', '/oil-boilers', '/unvented'].some(p => pathname.includes(p));
     const isBreakdowns = pathname === '/boiler-breakdowns';
     const isServicing = pathname.includes('servic') || pathname.includes('maintenance');
     const isRenewables = pathname === '/renewable-technology';
@@ -159,7 +159,7 @@ const NavBar = () => {
                                     </div>
 
                                     <Link href="/online-boiler-quote" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors border-t border-gray-100">Online Boiler Quote</Link>
-                                    <Link href="/new-gas-boilers-2" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">New Gas Boilers</Link>
+
                                     <Link href="/lpg-boilers" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">LPG Boilers</Link>
                                     <Link href="/oil-boilers" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Oil Boilers</Link>
                                     <Link href="/combi-boiler-installation" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Combi Boiler Install</Link>
@@ -198,7 +198,7 @@ const NavBar = () => {
                                     <span className={`absolute bottom-[20px] left-1/2 -translate-x-1/2 h-0.5 bg-orange-500 transition-all duration-300 ease-out ${isMore ? 'w-full' : 'w-0 group-hover/nav:w-full'}`}></span>
                                 </div>
                                 <div className="absolute right-0 top-full opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 translate-y-2 transition-all duration-300 w-72 bg-white border-t-4 border-orange-500 shadow-2xl z-50 py-2 rounded-b-lg">
-                                    <Link href="/book-services-online" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Book Services Online</Link>
+                                    <a href="https://book.servicem8.com/request_service_online_booking?strVendorUUID=b00bca15-4f6a-44c6-8974-1b55a86bb7cb" target="_blank" rel="noopener noreferrer" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Book Services Online</a>
                                     <Link href="/unvented-hot-water" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Unvented Cylinders</Link>
                                     <Link href="/gas" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Gas</Link>
                                     <Link href="/heating" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Heating</Link>
@@ -329,7 +329,7 @@ const NavBar = () => {
                                 <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileDropdown === 'more' ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
                                     <div className="bg-slate-50 px-6 py-2 pb-4 shadow-inner">
                                         <div className="border-l-2 border-orange-200 ml-2 pl-4 space-y-1">
-                                            <Link href="/book-services-online" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Book Services Online</Link>
+                                            <a href="https://book.servicem8.com/request_service_online_booking?strVendorUUID=b00bca15-4f6a-44c6-8974-1b55a86bb7cb" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Book Services Online</a>
                                             <Link href="/gas" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Gas</Link>
                                             <Link href="/heating" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Heating</Link>
                                             <Link href="/nest-thermostat-installation" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Nest Thermostat</Link>

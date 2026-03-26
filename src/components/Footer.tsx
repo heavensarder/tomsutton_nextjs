@@ -67,7 +67,7 @@ const Footer = () => {
                         <ul className="flex flex-col w-full text-[15px]">
                             {[
                                 { name: 'New Boilers', path: '/new-boilers' },
-                                { name: 'Boiler Installation', path: '/boiler-installation' },
+                                { name: 'Boiler Installation', path: '/new-boiler-installation-2' },
                                 { name: 'Boiler Breakdowns', path: '/boiler-breakdowns' },
                                 { name: 'Boiler Servicing & Certificates', path: '/boiler-servicing' },
                                 { name: 'Gas', path: '/gas' },

@@ -307,35 +307,35 @@ export default function NewBoilerInstallationPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-center">
 
-            {/* Package 1: Snug Home */}
+            {/* Package 1: Standard */}
             <div className="bg-white rounded-3xl p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col hover:-translate-y-2 transition-transform duration-500">
               <div className="mb-8 relative z-10">
                 <h3 className="text-[1.75rem] font-black mb-2 tracking-tight">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00d0bb] to-teal-600">Snug Home</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00d0bb] to-teal-600">Standard</span>
                 </h3>
-                <div className="text-slate-500 font-bold text-[0.85rem] tracking-wider uppercase mb-6">Alpha Evoke</div>
+                <div className="text-slate-500 font-bold text-[0.85rem] tracking-wider uppercase mb-6">Worcester Bosch 1000 Range</div>
 
                 {/* Transparent Product Showcase Container */}
                 <div className="relative w-full h-64 sm:h-72 lg:h-64 mb-4 flex items-center justify-center rounded-2xl bg-[radial-gradient(circle_at_center,theme(colors.teal.50),transparent_70%)]">
-                  <Image src="https://i.postimg.cc/G29jqr3c/Snug_Home.png" alt="Snug Home Package - Alpha Evoke" fill className="object-contain p-4 drop-shadow-[0_20px_25px_rgba(0,208,187,0.15)] transition-transform duration-700 group-hover:scale-110" />
+                  <Image src="https://i.postimg.cc/jjGCP7w6/Worcester-Bosch-1000-Range.png" alt="Standard Package - Worcester Bosch 1000 Range" fill className="object-contain p-4 drop-shadow-[0_20px_25px_rgba(0,208,187,0.15)] transition-transform duration-700 group-hover:scale-110" />
                 </div>
               </div>
 
               <div className="flex flex-col flex-1">
                 <div className="flex items-baseline gap-2 mb-8">
                   <span className="text-gray-500 font-bold text-lg">from</span>
-                  <span className="text-4xl sm:text-5xl font-black text-[#0d1033] tracking-tight">£1,900</span>
+                  <span className="text-4xl sm:text-5xl font-black text-[#0d1033] tracking-tight">£2,028</span>
                 </div>
 
-                <Link href="/online-boiler-quote" className="w-full py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold text-center mb-10 transition-colors shadow-lg shadow-slate-900/20">Get a quote now</Link>
+                <Link href="/online-boiler-quote" className="w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold text-center mb-10 transition-colors shadow-lg shadow-green-600/20">Get a quote now</Link>
 
                 <ul className="space-y-4 flex-1">
                   {[
-                    "7-year warranty with upgrades available",
-                    "Premium Choice of 2 outputs: 28kw, 33kw",
-                    "Superb hot water delivery",
-                    "High-quality components",
-                    "Suitable for small to medium-sized homes",
+                    "5-year warranty for peace of mind",
+                    "Efficient 24kW output",
+                    "Compact design (Ideal for fitting into kitchen cupboards)",
+                    "Quiet Operation (Quiet Mark certified)",
+                    "High-quality engineering from a market-leading brand",
                     "Magnaclean Magnetic filter included",
                     "Magnetic scale reducer included",
                     "Programmable room thermostat included"
@@ -349,42 +349,43 @@ export default function NewBoilerInstallationPage() {
               </div>
             </div>
 
-            {/* Package 2: Snug Home Pro (PREMIUM CENTER) */}
+            {/* Package 2: Premium (PREMIUM CENTER) */}
             <div className="bg-[#0b1021] rounded-[2.5rem] p-10 shadow-[0_30px_60px_-15px_rgba(255,106,0,0.3)] border border-[#1e274a] flex flex-col hover:-translate-y-2 transition-transform duration-500 scale-100 lg:scale-[1.05] z-10 relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-gradient-to-r from-orange-500 to-[#ff6a00] text-white text-xs font-black px-4 py-1.5 rounded-bl-[1.5rem] uppercase tracking-widest shadow-lg">Most Popular</div>
               <div className="absolute -left-32 -top-32 w-64 h-64 bg-orange-500/20 rounded-full blur-[80px] pointer-events-none"></div>
 
               <div className="mb-8 relative z-10">
                 <h3 className="text-4xl font-black mb-2 tracking-tight">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-[#ff6a00] drop-shadow-sm">Snug Home Pro</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-[#ff6a00] drop-shadow-sm">Premium</span>
                 </h3>
-                <div className="text-white/60 font-bold text-[0.85rem] tracking-wider uppercase mb-6">Worcester Bosch CDi Compact</div>
+                <div className="text-white/60 font-bold text-[0.85rem] tracking-wider uppercase mb-6">Worcester Bosch 4000 Range</div>
 
                 {/* Transparent Product Showcase Container (No Glow) */}
                 <div className="relative w-full h-64 sm:h-72 lg:h-64 mb-4 flex items-center justify-center">
-                  <Image src="https://i.postimg.cc/MKw9JCdm/Snug-Home-Pro.png" alt="Snug Home Pro Package - Worcester Bosch CDi" fill className="object-contain p-4 drop-shadow-[0_25px_35px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:scale-110" />
+                  <Image src="https://i.postimg.cc/NfJsRHSn/Worcester-Bosch-4000-Range.webp" alt="Premium Package - Worcester Bosch 4000 Range" fill className="object-contain p-4 drop-shadow-[0_25px_35px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:scale-110" unoptimized />
                 </div>
               </div>
 
               <div className="flex flex-col flex-1 relative z-10">
                 <div className="flex items-baseline gap-2 mb-8">
                   <span className="text-white/60 font-bold text-lg">from</span>
-                  <span className="text-5xl sm:text-6xl font-black text-white tracking-tight">£2,500</span>
+                  <span className="text-5xl sm:text-6xl font-black text-white tracking-tight">£2,750</span>
                 </div>
 
-                <Link href="/online-boiler-quote" className="w-full py-4 bg-gradient-to-r from-orange-500 to-[#ff6a00] hover:from-orange-600 hover:to-[#e65c00] text-white rounded-xl font-bold text-lg text-center mb-10 transition-all shadow-[0_15px_30px_-10px_rgba(255,106,0,0.5)]">Get a quote now</Link>
+                <Link href="/online-boiler-quote" className="w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold text-lg text-center mb-10 transition-all shadow-[0_15px_30px_-10px_rgba(22,163,74,0.5)]">Get a quote now</Link>
 
                 <ul className="space-y-4 flex-1">
                   {[
-                    "10-year guarantee",
-                    "Worcester's smallest combi boiler, designed to fit in a kitchen cupboard",
-                    "Choice of 3 outputs: 28, 32 and 36kW",
-                    "Capable of delivering hot water to more than one bathroom",
-                    "High-quality components",
-                    "Suitable for small to medium-sized homes",
-                    "Worcester Bosch Magnetic filter included",
-                    "Magnetic scale reducer included",
-                    "Worcester Bosch room programmable room thermostat included"
+                    "10-year warranty (Long-term peace of mind)",
+                    "Optimal 25kW output (Perfect for small to medium homes)",
+                    "Reduced gas consumption: Wide power range lowers energy bills",
+                    "Innovative 'Quick Tap': Water-saving function reduces water waste",
+                    "Modern interface: New design featuring an easy-to-use color display",
+                    "Low-pressure performance: Operates extremely well in low water pressure areas for powerful showers",
+                    "Whisper-quiet operation: One of the quietest combi boilers available",
+                    "Smart connectivity: Features wireless connectivity with the Bosch EasyControl",
+                    "Magnaclean Magnetic filter included",
+                    "Magnetic scale reducer included"
                   ].map((feature, idx) => (
                     <li key={idx} className="flex gap-3 text-white/90 text-[0.95rem] font-medium items-start">
                       <svg className="w-5 h-5 mt-0.5 shrink-0 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
@@ -395,40 +396,40 @@ export default function NewBoilerInstallationPage() {
               </div>
             </div>
 
-            {/* Package 3: Snug Home Premium */}
+            {/* Package 3: Premium Plus */}
             <div className="bg-white rounded-3xl p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col hover:-translate-y-2 transition-transform duration-500">
               <div className="mb-8 relative z-10">
                 <h3 className="text-[1.75rem] font-black mb-2 tracking-tight">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0d1033] to-slate-600">Snug Home Premium</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0d1033] to-slate-600">Premium Plus</span>
                 </h3>
-                <div className="text-slate-500 font-bold text-[0.85rem] tracking-wider uppercase mb-6">Worcester Bosch 8000 Life</div>
+                <div className="text-slate-500 font-bold text-[0.85rem] tracking-wider uppercase mb-6">Worcester Bosch 8000+ Range</div>
 
                 {/* Transparent Product Showcase Container */}
                 <div className="relative w-full h-64 sm:h-72 lg:h-64 mb-4 flex items-center justify-center rounded-2xl bg-[radial-gradient(circle_at_center,theme(colors.slate.100),transparent_70%)]">
-                  <Image src="https://i.postimg.cc/j5ChZKqx/Snug_Home_Premium.png" alt="Snug Home Premium Package - Worcester Bosch 8000" fill className="object-contain p-2 drop-shadow-[0_20px_25px_rgba(13,16,51,0.15)] transition-transform duration-700 group-hover:scale-110" />
+                  <Image src="https://i.postimg.cc/fbbgm3nz/Worcester-Bosch-8000-Style.webp" alt="Premium Plus Package - Worcester Bosch 8000+ Range" fill className="object-contain p-2 drop-shadow-[0_20px_25px_rgba(13,16,51,0.15)] transition-transform duration-700 group-hover:scale-110" unoptimized />
                 </div>
               </div>
 
               <div className="flex flex-col flex-1">
                 <div className="flex items-baseline gap-2 mb-8">
                   <span className="text-gray-500 font-bold text-lg">from</span>
-                  <span className="text-4xl sm:text-5xl font-black text-[#0d1033] tracking-tight">£2,950</span>
+                  <span className="text-4xl sm:text-5xl font-black text-[#0d1033] tracking-tight">£3,205</span>
                 </div>
 
-                <Link href="/online-boiler-quote" className="w-full py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold text-center mb-10 transition-colors shadow-lg shadow-slate-900/20">Get a quote now</Link>
+                <Link href="/online-boiler-quote" className="w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold text-center mb-10 transition-colors shadow-lg shadow-green-600/20">Get a quote now</Link>
 
                 <ul className="space-y-4 flex-1">
                   {[
-                    "12-year guarantee",
-                    "Direct replacement for the superb Greenstar CDi range",
-                    "Choice of 5 outputs: 30, 35, 40, 45, and 50kW",
-                    "Most powerful combi boiler on the market",
-                    "Unbeatable hot water delivery",
-                    "High-quality components",
-                    "Suitable for medium to larger sized homes",
-                    "Worcester Bosch Magnetic filter included",
-                    "Magnetic scale reducer included",
-                    "Worcester Bosch room programmable room thermostat included"
+                    "Unrivalled 12-year warranty: Complete peace of mind for over a decade",
+                    "High Performance 32kW output: Perfect for larger homes with multiple bathrooms",
+                    "High Flow Rates: Delivers powerful hot water even with high demand",
+                    "Advanced \"A\" Rated Efficiency: Wide modulation range drastically reduces gas consumption",
+                    "Sleek Glass Front Design: Available in Black or White to suit modern interiors",
+                    "Intuitive Full-Color Touchscreen: Simplifies control and diagnostics",
+                    "Ultra-Quiet Performance: One of the quietest high-output boilers on the market",
+                    "Intelligent Filling System: Automatically maintains optimum system pressure",
+                    "Full Wireless Connectivity: Integrated with the Bosch EasyControl app",
+                    "Magnaclean Magnetic filter & Scale reducer included"
                   ].map((feature, idx) => (
                     <li key={idx} className="flex gap-3 text-gray-600 text-[0.95rem] font-medium items-start">
                       <svg className="w-5 h-5 mt-0.5 shrink-0 text-[#00d0bb]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>

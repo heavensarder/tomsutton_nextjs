@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#191919] text-gray-400 pt-16 pb-6 border-t border-gray-800 font-sans">
+        <footer className="bg-[#191919] text-gray-400 pt-16 pb-6 border-t border-gray-800 font-sans" suppressHydrationWarning>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* 3 Column Grid Based on Client Mockup */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
@@ -15,7 +15,7 @@ const Footer = () => {
                     <div className="flex flex-col space-y-6">
                         <h3 className="text-white font-bold text-lg">Contact Us</h3>
                         
-                        <a href="https://www.sl-energy.co.uk/" target="_blank" rel="noopener noreferrer" className="block w-[240px] hover:opacity-80 transition-opacity">
+                        <a href="https://www.sl-energy.co.uk/" target="_blank" rel="noopener noreferrer" className="block w-[240px] hover:opacity-80 transition-opacity" suppressHydrationWarning>
                             <Image
                                 src="https://i.postimg.cc/MKPVK7HV/SLEnergy-logo.webp"
                                 alt="SL Energy Heating, Plumbing & Renewables"

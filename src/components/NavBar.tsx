@@ -4,8 +4,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useSiteSettings } from '@/components/SiteSettingsProvider';
 
 const NavBar = () => {
+    const s = useSiteSettings();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
     const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
@@ -41,29 +43,29 @@ const NavBar = () => {
                     <div className="flex flex-wrap items-center gap-4 md:gap-6 lg:gap-8">
                         <div className="flex items-center text-gray-600 hover:text-orange-500 transition-colors cursor-pointer font-medium tracking-wide">
                             <svg className="w-4 h-4 mr-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                            19 Longleat Gardens, New Milton, BH25 5UZ
+                            {s?.header_address || '19 Longleat Gardens, New Milton, BH25 5UZ'}
                         </div>
-                        <a href="tel:01590631671" className="flex items-center text-gray-600 hover:text-orange-500 transition-colors cursor-pointer font-semibold tracking-wide">
+                        <a href={s?.header_phone_link || 'tel:01590631671'} className="flex items-center text-gray-600 hover:text-orange-500 transition-colors cursor-pointer font-semibold tracking-wide">
                             <svg className="w-4 h-4 mr-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                            01590 631671
+                            {s?.header_phone || '01590 631671'}
                         </a>
                         <div className="flex items-center text-gray-600 hover:text-orange-500 transition-colors cursor-pointer font-medium tracking-wide">
                             <svg className="w-4 h-4 mr-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                            info@tomsuttonheating.co.uk
+                            {s?.header_email || 'info@tomsuttonheating.co.uk'}
                         </div>
                     </div>
                     <div className="hidden lg:flex items-center space-x-3">
                         <span className="mr-3 border-r border-gray-300 pr-5 tracking-wider font-semibold text-gray-400">Visit Our Social Pages:</span>
-                        <Link href="#" className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-twitter-blue hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
+                        <Link href={s?.social_twitter || '#'} className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-twitter-blue hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
                             <svg className="w-3.5 h-3.5 fill-current group-hover:text-blue-400" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
                         </Link>
-                        <Link href="#" className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-facebook-blue hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
+                        <Link href={s?.social_facebook || '#'} className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-facebook-blue hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
                             <svg className="w-3.5 h-3.5 fill-current group-hover:text-blue-600" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" /></svg>
                         </Link>
-                        <Link href="#" className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-youtube-red hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
+                        <Link href={s?.social_youtube || '#'} className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-youtube-red hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
                             <svg className="w-3.5 h-3.5 fill-current group-hover:text-red-500" viewBox="0 0 24 24"><path d="M21.582 6.186c-.23-.86-.908-1.538-1.768-1.768C18.254 4 12 4 12 4s-6.254 0-7.814.418c-.86.23-1.538.908-1.768 1.768C2 7.746 2 12 2 12s0 4.254.418 5.814c.23.86.908 1.538 1.768 1.768C5.746 20 12 20 12 20s6.254 0 7.814-.418c.86-.23 1.538-.908 1.768-1.768C22 16.254 22 12 22 12s0-4.254-.418-5.814zM9.999 15.5v-7l6.5 3.5-6.5 3.5z" /></svg>
                         </Link>
-                        <Link href="#" className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-linkedin-blue hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
+                        <Link href={s?.social_linkedin || '#'} className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-linkedin-blue hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
                             <svg className="w-3.5 h-3.5 fill-current group-hover:text-blue-500" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" /></svg>
                         </Link>
                     </div>
@@ -79,7 +81,7 @@ const NavBar = () => {
                         <div className="flex-shrink-0 flex items-center xl:mr-10 lg:mr-4 z-20">
                             <Link href="/" className="hover:opacity-90 transition-opacity">
                                 <Image
-                                    src="https://i.postimg.cc/V65kTYN4/tom-sutton-logo.webp"
+                                    src={s?.header_logo_url || 'https://i.postimg.cc/V65kTYN4/tom-sutton-logo.webp'}
                                     alt="Tom Sutton Heating"
                                     width={320}
                                     height={80}
@@ -215,8 +217,8 @@ const NavBar = () => {
 
                             {/* Before Scroll: GET A QUOTE Button */}
                             {!isScrolled && (
-                                <Link href="/online-boiler-quote" className="bg-[#ff5e14] hover:bg-orange-600 text-white px-8 py-3.5 rounded-full font-semibold text-sm tracking-widest shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
-                                    GET A QUOTE
+                                <Link href={s?.header_cta_link || '/online-boiler-quote'} className="bg-[#ff5e14] hover:bg-orange-600 text-white px-8 py-3.5 rounded-full font-semibold text-sm tracking-widest shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
+                                    {s?.header_cta_text || 'GET A QUOTE'}
                                 </Link>
                             )}
 
@@ -229,7 +231,7 @@ const NavBar = () => {
                                     </div>
                                     <div className="whitespace-nowrap">
                                         <p className="text-[12px] xl:text-[13px] text-gray-500 font-semibold tracking-wide">Call Us Anytime</p>
-                                        <p className="text-[17px] xl:text-[19px] font-extrabold text-[#1e3a8a] group-hover:text-orange-500 transition-colors tracking-tight">01590 631671</p>
+                                        <p className="text-[17px] xl:text-[19px] font-extrabold text-[#1e3a8a] group-hover:text-orange-500 transition-colors tracking-tight">{s?.header_phone || '01590 631671'}</p>
                                     </div>
                                 </div>
                             )}

@@ -81,8 +81,8 @@ export async function POST(request: Request) {
       const sizeKb = Math.round(file.size / 1024);
 
       const [result] = await pool.execute(
-        'INSERT INTO media_library (filename, url, original_name, mime_type, file_size, uploaded_at) VALUES (?, ?, ?, ?, ?, NOW())',
-        [filename, url, file.name, file.type, sizeKb]
+        'INSERT INTO media_library (filename, url, original_name, mime_type, file_size, alt_text, uploaded_at) VALUES (?, ?, ?, ?, ?, ?, NOW())',
+        [filename, url, file.name, file.type, sizeKb, '']
       );
 
       const insertId = (result as { insertId: number }).insertId;
@@ -145,6 +145,51 @@ export async function DELETE(request: Request) {
       success: true,
       message: `${mediaRows.length} file(s) deleted.`,
     });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
+}
+
+// PUT: Update media metadata (name, alt text)
+export async function PUT(request: Request) {
+  try {
+    const cookieStore = await cookies();
+    const token = cookieStore.get(SESSION_COOKIE_NAME)?.value;
+    if (!token || !verifySessionToken(token)) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const body = await request.json();
+    const { id, original_name, alt_text } = body as { id: number; original_name?: string; alt_text?: string };
+
+    if (!id) {
+      return NextResponse.json({ error: 'No ID provided' }, { status: 400 });
+    }
+
+    const updates: string[] = [];
+    const values: (string | number)[] = [];
+
+    if (original_name !== undefined) {
+      updates.push('original_name = ?');
+      values.push(original_name);
+    }
+    if (alt_text !== undefined) {
+      updates.push('alt_text = ?');
+      values.push(alt_text);
+    }
+
+    if (updates.length === 0) {
+      return NextResponse.json({ error: 'Nothing to update' }, { status: 400 });
+    }
+
+    values.push(id);
+    await pool.execute(
+      `UPDATE media_library SET ${updates.join(', ')} WHERE id = ?`,
+      values
+    );
+
+    return NextResponse.json({ success: true, message: 'Media updated.' });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json({ error: message }, { status: 500 });

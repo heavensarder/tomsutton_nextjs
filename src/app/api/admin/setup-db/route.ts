@@ -152,7 +152,7 @@ export async function POST() {
       );
     }
 
-    // Create media_library table
+    // Create media_library table (if not exists)
     await conn.execute(`
       CREATE TABLE IF NOT EXISTS media_library (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -161,7 +161,9 @@ export async function POST() {
         original_name VARCHAR(255) NOT NULL,
         mime_type VARCHAR(100) DEFAULT 'image/jpeg',
         file_size INT DEFAULT 0,
-        uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        alt_text VARCHAR(500) DEFAULT '',
+        uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE KEY unique_url (url)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
     `);
 

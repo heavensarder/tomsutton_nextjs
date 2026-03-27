@@ -10,6 +10,8 @@ export interface SiteSettings {
   header_address: string;
   header_cta_text: string;
   header_cta_link: string;
+  // Favicon
+  site_favicon: string;
   // Social
   social_twitter: string;
   social_facebook: string;
@@ -41,6 +43,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   header_address: '19 Longleat Gardens, New Milton, BH25 5UZ',
   header_cta_text: 'GET A QUOTE',
   header_cta_link: '/online-boiler-quote',
+  site_favicon: 'https://i.postimg.cc/X7skSxGn/favicon.png',
   social_twitter: '#',
   social_facebook: '#',
   social_instagram: '#',
@@ -68,6 +71,7 @@ export const SETTINGS_LABELS: Record<string, { label: string; helpText?: string;
   header_address: { label: 'Office Address', group: 'Header' },
   header_cta_text: { label: 'CTA Button Text', helpText: 'The main call-to-action button (e.g. GET A QUOTE)', group: 'Header' },
   header_cta_link: { label: 'CTA Button Link', helpText: 'Page URL for the button', group: 'Header' },
+  site_favicon: { label: 'Favicon', helpText: 'Recommended: 32×32px or 180×180px PNG. Browser tab icon.', group: 'Header' },
   social_twitter: { label: 'Twitter / X URL', group: 'Social Media' },
   social_facebook: { label: 'Facebook URL', group: 'Social Media' },
   social_instagram: { label: 'Instagram URL', group: 'Social Media' },

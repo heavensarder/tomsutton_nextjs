@@ -30,6 +30,10 @@ export default async function RootLayout({
       className={`${inter.variable} font-sans h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="icon" href={settings.site_favicon || 'https://i.postimg.cc/X7skSxGn/favicon.png'} />
+        <link rel="apple-touch-icon" href={settings.site_favicon || 'https://i.postimg.cc/X7skSxGn/favicon.png'} />
+      </head>
       <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
         <SiteSettingsProvider settings={settings}>
           <LayoutWrapper>{children}</LayoutWrapper>

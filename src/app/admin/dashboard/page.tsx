@@ -120,10 +120,17 @@ export default function AdminDashboardPage() {
           <p className="text-lg font-bold mb-3">Quick Actions</p>
           <Link
             href="/admin/seo-manager"
-            className="block w-full bg-[#ff5e14] hover:bg-[#e05010] text-white text-center font-bold text-sm py-3 rounded-xl shadow-lg shadow-orange-500/20 transition-colors"
+            className="block w-full bg-[#ff5e14] hover:bg-[#e05010] text-white text-center font-bold text-sm py-3 rounded-xl shadow-lg shadow-orange-500/20 transition-colors mb-2"
           >
             Open SEO Manager →
           </Link>
+          <button
+            onClick={handleSetupDb}
+            disabled={loading}
+            className="block w-full bg-white/10 hover:bg-white/20 text-white text-center font-semibold text-sm py-2.5 rounded-xl transition-colors disabled:opacity-50"
+          >
+            {loading ? 'Syncing...' : '🔄 Sync Database Tables'}
+          </button>
         </div>
       </div>
 

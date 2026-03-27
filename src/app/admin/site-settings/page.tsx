@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import { DEFAULT_SETTINGS, SETTINGS_LABELS } from '@/lib/site-settings';
 
@@ -182,15 +182,20 @@ export default function SiteSettingsPage() {
 
               {isExpanded && (
                 <div className="border-t border-slate-100 px-5 pb-6 pt-4 space-y-5">
-                  {groupSettings.map(([key, meta]) => (
+                  {groupSettings.map(([key, meta]) => {
+                    const isImage = key.includes('logo') || key.includes('image') || key.includes('accreditations') || key.includes('favicon');
+                    const fieldValue = settings[key] ?? DEFAULT_SETTINGS[key as keyof typeof DEFAULT_SETTINGS] ?? '';
+                    return (
                     <div key={key} className="space-y-1.5">
                       <div className="flex items-center justify-between">
                         <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">{meta.label}</label>
                         <span className="text-[0.6rem] font-mono text-slate-300">{key}</span>
                       </div>
-                      {key.includes('address') || key.includes('copyright') ? (
+                      {isImage ? (
+                        <ImageUploadField value={fieldValue} onChange={(val: string) => handleChange(key, val)} />
+                      ) : key.includes('address') || key.includes('copyright') ? (
                         <textarea
-                          value={settings[key] ?? DEFAULT_SETTINGS[key as keyof typeof DEFAULT_SETTINGS] ?? ''}
+                          value={fieldValue}
                           onChange={(e) => handleChange(key, e.target.value)}
                           rows={2}
                           className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 focus:bg-white transition-all resize-y"
@@ -198,14 +203,15 @@ export default function SiteSettingsPage() {
                       ) : (
                         <input
                           type="text"
-                          value={settings[key] ?? DEFAULT_SETTINGS[key as keyof typeof DEFAULT_SETTINGS] ?? ''}
+                          value={fieldValue}
                           onChange={(e) => handleChange(key, e.target.value)}
                           className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 focus:bg-white transition-all"
                         />
                       )}
                       {meta.helpText && <p className="text-xs text-slate-400">{meta.helpText}</p>}
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -234,6 +240,60 @@ export default function SiteSettingsPage() {
           to { opacity: 1; transform: translateX(0); }
         }
       `}</style>
+    </div>
+  );
+}
+
+function ImageUploadField({ value, onChange }: { value: string; onChange: (val: string) => void }) {
+  const [uploading, setUploading] = useState(false);
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  const handleUpload = async (file: File) => {
+    setUploading(true);
+    try {
+      const fd = new FormData();
+      fd.append('file', file);
+      const res = await fetch('/api/admin/upload', { method: 'POST', body: fd });
+      const data = await res.json();
+      if (data.success) {
+        onChange(data.url);
+      } else {
+        alert(data.error || 'Upload failed');
+      }
+    } catch { alert('Upload error'); }
+    setUploading(false);
+  };
+
+  return (
+    <div className="space-y-2">
+      <div className="flex gap-2">
+        <input
+          type="text"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder="Paste URL or click Upload"
+          className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 focus:bg-white transition-all"
+        />
+        <button
+          type="button"
+          onClick={() => fileRef.current?.click()}
+          disabled={uploading}
+          className="px-4 py-3 bg-[#0f172a] hover:bg-[#1e293b] text-white text-xs font-bold rounded-xl transition-colors disabled:opacity-60 flex items-center gap-1.5 whitespace-nowrap"
+        >
+          {uploading ? (
+            <><svg className="w-3.5 h-3.5 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>Uploading</>
+          ) : (
+            <><svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>Upload</>
+          )}
+        </button>
+        <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={(e) => { const f = e.target.files?.[0]; if (f) handleUpload(f); e.target.value = ''; }} />
+      </div>
+      {value && (
+        <div className="bg-slate-50 rounded-xl p-3 border border-dashed border-slate-200 flex items-center gap-3">
+          <img src={value} alt="Preview" className="w-16 h-10 object-contain rounded-lg border border-slate-200" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+          <span className="text-xs text-slate-500 truncate flex-1">{value}</span>
+        </div>
+      )}
     </div>
   );
 }

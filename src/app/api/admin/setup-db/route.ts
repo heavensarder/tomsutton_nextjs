@@ -152,6 +152,33 @@ export async function POST() {
       );
     }
 
+    // Create media_library table
+    await conn.execute(`
+      CREATE TABLE IF NOT EXISTS media_library (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        filename VARCHAR(255) NOT NULL,
+        url VARCHAR(512) NOT NULL,
+        original_name VARCHAR(255) NOT NULL,
+        mime_type VARCHAR(100) DEFAULT 'image/jpeg',
+        file_size INT DEFAULT 0,
+        uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+    `);
+
+    // Seed existing site images into media library
+    const existingImages = [
+      { filename: 'tom-sutton-logo.webp', url: 'https://i.postimg.cc/V65kTYN4/tom-sutton-logo.webp', original_name: 'Tom Sutton Logo (Header)', mime_type: 'image/webp' },
+      { filename: 'SLEnergy-logo.webp', url: 'https://i.postimg.cc/MKPVK7HV/SLEnergy-logo.webp', original_name: 'SL Energy Logo (Footer)', mime_type: 'image/webp' },
+      { filename: 'Footer-Logos-Updated-1.webp', url: 'https://i.postimg.cc/nr1K1NHx/Footer-Logos-Updated-1.webp', original_name: 'Accreditations (Gas Safe, OFTEC, Checkatrade)', mime_type: 'image/webp' },
+      { filename: 'favicon.png', url: 'https://i.postimg.cc/X7skSxGn/favicon.png', original_name: 'Site Favicon', mime_type: 'image/png' },
+    ];
+    for (const img of existingImages) {
+      await conn.execute(
+        'INSERT IGNORE INTO media_library (filename, url, original_name, mime_type, file_size) VALUES (?, ?, ?, ?, 0)',
+        [img.filename, img.url, img.original_name, img.mime_type]
+      );
+    }
+
     conn.release();
 
     return NextResponse.json({

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import InteractiveSlider from '@/components/InteractiveSlider';
 import FaqAccordion from '@/components/FaqAccordion';
+import SlidingGallery from '@/components/SlidingGallery';
 
 export default function Home() {
   return (
@@ -222,6 +223,21 @@ export default function Home() {
                   <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 19L19 5M19 5v10M19 5H9" /></svg>
                 </div>
               </Link>
+            </div>
+
+            {/* Far Right: Service Highlights & Accreditations */}
+            <div className="hidden xl:flex shrink-0 w-[240px] order-3 flex-col justify-center gap-4">
+              {[
+                { icon: '🛡️', text: 'Gas Safe Registered' },
+                { icon: '🔧', text: 'OFTEC Registered' },
+                { icon: '⚡', text: 'Next Day Installations' },
+                { icon: '📞', text: 'Out of Hours Service' },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 bg-gradient-to-br from-[#f8f9fc] to-white rounded-xl px-4 py-3.5 shadow-sm border border-gray-100 hover:border-[#ff5e14]/30 hover:shadow-md transition-all duration-300 group/item">
+                  <span className="text-xl">{item.icon}</span>
+                  <span className="text-[13px] font-bold text-[#0d1033] group-hover/item:text-[#ff5e14] transition-colors">{item.text}</span>
+                </div>
+              ))}
             </div>
 
           </div>
@@ -759,7 +775,52 @@ export default function Home() {
 
       </section>
 
+      {/* Services Marquee Ticker */}
+      <section className="py-8 sm:py-10 bg-white relative overflow-hidden border-y border-gray-100">
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#ff5e14] via-[#ff8c42] to-[#ff5e14]"></div>
 
+
+        <style dangerouslySetInnerHTML={{ __html: `
+          @keyframes marqueeLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @keyframes marqueeRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+          .marquee-left { animation: marqueeLeft 80s linear infinite; }
+          .marquee-right { animation: marqueeRight 80s linear infinite; }
+          .marquee-left:hover, .marquee-right:hover { animation-play-state: paused; }
+          .text-stroke-dark {
+            -webkit-text-stroke: 2px #0d1033;
+            color: transparent;
+          }
+        `}} />
+
+        {/* Row 1 - Scrolls Left */}
+        <div className="flex items-center marquee-left" style={{ width: 'max-content' }}>
+          {[0, 1].map(set => (
+            <div key={set} className="flex items-center shrink-0">
+              {[
+                'Boiler Installation',
+                'Boiler Servicing',
+                'Boiler Repairs',
+                'Air Source Heat Pumps',
+                'Ground Source Heat Pumps',
+                'Gas, LPG, and Oil Heating',
+                'Landlord Gas Safety Certificates',
+              ].map((service, i) => (
+                <div key={`${set}-${i}`} className="flex items-center shrink-0">
+                  <span className={`font-black text-3xl sm:text-4xl lg:text-[2.75rem] italic tracking-tight whitespace-nowrap px-6 sm:px-10 ${i % 2 === 0 ? 'text-[#0d1033]' : 'text-stroke-dark'}`}>{service}</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#ff5e14] shrink-0"></span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
+      </section>
 
       {/* Ultra-Premium Smart Home Section */}
       <section className="relative py-24 sm:py-32 bg-[#050B14] overflow-hidden">
@@ -876,47 +937,18 @@ export default function Home() {
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-stretch gap-10 lg:gap-16">
 
-            {/* Left: Multi-row Image Gallery */}
-            <div className="w-full lg:w-[50%] relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-gray-50 to-gray-100 min-h-[400px] lg:min-h-[560px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.08)] border border-gray-100">
-              {/* Edge fades */}
-              <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-gray-50 to-transparent z-20 pointer-events-none"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-gray-100 to-transparent z-20 pointer-events-none"></div>
-
-              <div className="flex flex-col justify-center h-full gap-4 py-8">
-                {(() => {
-                  const galleryImages = [
-                    'https://i.postimg.cc/Hs8qW2s5/gas_service.webp',
-                    'https://i.postimg.cc/MKfCZDKB/boiler_service.webp',
-                    'https://i.postimg.cc/02KT5f2M/heating_service.webp',
-                    'https://i.postimg.cc/wTQkkY7r/renwable-energy.jpg',
-                    'https://i.postimg.cc/XNcGYZVS/boiler-installation.webp',
-                    'https://i.postimg.cc/nc9yVkcX/plumbing_service.webp',
-                    'https://i.postimg.cc/wTRCxVTt/Thermostat_service.webp',
-                    'https://i.postimg.cc/bNS7YTN2/lpg_oil_service.webp',
-                    'https://i.postimg.cc/TYFRhPbV/My-Post.webp',
-                    'https://i.postimg.cc/k48j3jym/Tom-Sutton-Heating-NEST.webp',
-                  ];
-                  return [0, 1, 2, 3].map(row => {
-                    const offset = (row * 3) % galleryImages.length;
-                    const rowImages = [...galleryImages.slice(offset), ...galleryImages.slice(0, offset)];
-                    const direction = row % 2 === 0 ? 'gallery-row-left' : 'gallery-row-right';
-                    return (
-                      <div key={row} className={`flex gap-4 ${direction}`} style={{ width: 'max-content' }}>
-                        {[0, 1].map(set => (
-                          <div key={set} className="flex gap-4">
-                            {rowImages.map((src, i) => (
-                              <div key={`${set}-${i}`} className="w-[200px] h-[130px] rounded-xl overflow-hidden shrink-0 shadow-md hover:shadow-xl hover:scale-105 transition-all duration-500 relative group/img">
-                                <Image src={src} alt={`Gallery ${row * 10 + i + 1}`} fill className="object-cover group-hover/img:brightness-110 transition-all duration-500" />
-                              </div>
-                            ))}
-                          </div>
-                        ))}
-                      </div>
-                    );
-                  });
-                })()}
-              </div>
-            </div>
+            <SlidingGallery images={[
+              'https://i.postimg.cc/Hs8qW2s5/gas_service.webp',
+              'https://i.postimg.cc/MKfCZDKB/boiler_service.webp',
+              'https://i.postimg.cc/02KT5f2M/heating_service.webp',
+              'https://i.postimg.cc/wTQkkY7r/renwable-energy.jpg',
+              'https://i.postimg.cc/XNcGYZVS/boiler-installation.webp',
+              'https://i.postimg.cc/nc9yVkcX/plumbing_service.webp',
+              'https://i.postimg.cc/wTRCxVTt/Thermostat_service.webp',
+              'https://i.postimg.cc/bNS7YTN2/lpg_oil_service.webp',
+              'https://i.postimg.cc/TYFRhPbV/My-Post.webp',
+              'https://i.postimg.cc/k48j3jym/Tom-Sutton-Heating-NEST.webp',
+            ]} />
 
             {/* Right: Logo + Content */}
             <div className="w-full lg:w-[50%] flex flex-col justify-center text-center lg:text-left relative z-10">

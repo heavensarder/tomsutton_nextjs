@@ -4,6 +4,7 @@ import Image from 'next/image';
 import InteractiveSlider from '@/components/InteractiveSlider';
 import FaqAccordion from '@/components/FaqAccordion';
 import SlidingGallery from '@/components/SlidingGallery';
+import ScrollAnimate from '@/components/ScrollAnimate';
 
 export default function Home() {
   return (
@@ -26,6 +27,11 @@ export default function Home() {
             </defs>
           </svg>
         </div>
+
+        {/* Animated Floating Particles */}
+        <div className="absolute top-[15%] right-[10%] w-20 h-20 border-2 border-white/10 rounded-full animate-slow-spin pointer-events-none z-0"></div>
+        <div className="absolute bottom-[20%] left-[5%] w-3 h-3 bg-[#00d0bb]/40 rounded-full animate-gentle-float pointer-events-none z-0"></div>
+        <div className="absolute top-[60%] right-[25%] w-2 h-2 bg-[#ff5e14]/30 rounded-full animate-gentle-float pointer-events-none z-0" style={{ animationDelay: '1.5s' }}></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col lg:flex-row items-center justify-between mt-8 lg:mt-16">
 
@@ -106,7 +112,7 @@ export default function Home() {
             </div>
 
             {/* Floating Tag Top Left */}
-            <div className="absolute top-[5%] sm:top-[10%] left-[-2%] sm:left-[-5%] lg:left-[-10%] z-40 animate-bounce-slow">
+            <div className="absolute top-[5%] sm:top-[10%] left-[-2%] sm:left-[-5%] lg:left-[-10%] z-40 animate-gentle-float">
               <div className="bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full font-bold text-xs sm:text-sm shadow-xl shadow-orange-500/20 border border-orange-400/50">
                 A-Rated Boilers
               </div>
@@ -143,9 +149,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* ROW 1: Badge left + Headline right — same line on desktop */}
+          <ScrollAnimate animation="fadeUp">
           <div className="flex flex-col items-center text-center lg:text-left lg:items-start lg:flex-row gap-4 lg:gap-12 mb-8 lg:mb-10">
             <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-orange-50 px-5 py-2.5 rounded-full shrink-0 w-max lg:mt-2">
-              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14] pulse-glow"></span>
               Who We Are
             </span>
             <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] xl:text-[3.2rem] font-black text-[#0d1033] tracking-tight leading-[1.15]">
@@ -157,16 +164,17 @@ export default function Home() {
               {' '}Solutions and Unmatched Comfort for Homes Across the New Forest
             </h2>
           </div>
+          </ScrollAnimate>
 
           {/* ROW 2: Stats Card left + Content right */}
           <div className="flex flex-col items-center lg:items-start lg:flex-row gap-8 lg:gap-14">
 
             {/* Stats Card — matching reference: number + vertical strip + rating + avatars */}
-            <div className="shrink-0 order-2 lg:order-1 self-center lg:self-start">
+            <ScrollAnimate animation="fadeLeft" delay={100} className="shrink-0 order-2 lg:order-1 self-center lg:self-start">
               <div className="bg-gradient-to-br from-[#eef1fa] to-[#f5f7ff] rounded-[1.5rem] overflow-hidden inline-flex">
                 {/* Left part: number + rating + avatars */}
                 <div className="py-6 pl-6 pr-3 sm:py-7 sm:pl-7 sm:pr-4 flex flex-col">
-                  <span className="text-[7rem] sm:text-[8rem] font-black text-[#0d1033] leading-[0.8] tracking-tighter mb-4">30</span>
+                  <span className="text-[7rem] sm:text-[8rem] font-black text-[#0d1033] leading-[0.8] tracking-tighter mb-4 animate-counter-pop">30</span>
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-[1.75rem] font-black text-[#0d1033] tracking-tight">9.94</span>
                     <div className="flex gap-0.5">
@@ -192,10 +200,10 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-            </div>
+            </ScrollAnimate>
 
             {/* Right Content: text + image + button */}
-            <div className="flex-1 order-1 lg:order-2 flex flex-col items-center lg:items-start text-center lg:text-left">
+            <ScrollAnimate animation="fadeRight" delay={200} className="flex-1 order-1 lg:order-2 flex flex-col items-center lg:items-start text-center lg:text-left">
               <p className="text-gray-500 text-[15px] sm:text-base leading-[1.7] mb-6 max-w-xl">
                 We&apos;re not just installing boilers—we&apos;re the local team New Forest families trust when it matters most. Led by Managing Director Ronan Sutton, our engineers combine three decades of heritage with the forward-thinking technology of SL Energy Ltd, delivering next-day installations and out-of-hours emergency calls across New Milton, Lymington, and Christchurch.
               </p>
@@ -223,7 +231,7 @@ export default function Home() {
                   <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 19L19 5M19 5v10M19 5H9" /></svg>
                 </div>
               </Link>
-            </div>
+            </ScrollAnimate>
 
             {/* Far Right: Service Highlights & Accreditations */}
             <div className="hidden xl:flex shrink-0 w-[240px] order-3 flex-col justify-center gap-4">
@@ -254,9 +262,10 @@ export default function Home() {
           }
         `}} />
 
+        <ScrollAnimate animation="scaleUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16 text-center">
           <span className="inline-flex items-center gap-2 text-[#ff4c24] text-sm font-bold uppercase tracking-wider mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#ff4c24]"></span>
+            <span className="w-2 h-2 rounded-full bg-[#ff4c24] pulse-glow"></span>
             Our Services
           </span>
           <h2 className="text-3xl md:text-5xl font-black text-[#0d1b42] mb-6 leading-tight max-w-3xl mx-auto">
@@ -266,6 +275,7 @@ export default function Home() {
             Tom Sutton Heating specialises in services ranging from boiler breakdowns to plumbing repairs and bathroom installations.
           </p>
         </div>
+        </ScrollAnimate>
 
         {/* The Track (Grid / Interactive Slider) */}
         <div className="relative w-full max-w-md mx-auto sm:max-w-2xl lg:max-w-none px-4 sm:px-6 lg:px-0 lg:flex lg:overflow-hidden">
@@ -320,7 +330,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
 
             {/* Left: Image with overlapping cards */}
-            <div className="w-full lg:w-[48%] relative">
+            <ScrollAnimate animation="fadeLeft" className="w-full lg:w-[48%] relative">
               {/* Main Image */}
               <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)]">
                 <Image
@@ -348,13 +358,13 @@ export default function Home() {
                   <p className="text-[#ff5e14] text-xs font-semibold">Managing Director</p>
                 </div>
               </div>
-            </div>
+            </ScrollAnimate>
 
             {/* Right: Content */}
-            <div className="flex-1 pt-8 lg:pt-0">
+            <ScrollAnimate animation="fadeRight" delay={200} className="flex-1 pt-8 lg:pt-0">
               {/* Badge */}
               <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-orange-50 px-5 py-2.5 rounded-full mb-5">
-                <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#ff5e14] pulse-glow"></span>
                 Why Choose Us
               </span>
 
@@ -409,7 +419,7 @@ export default function Home() {
                   <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 19L19 5M19 5v10M19 5H9" /></svg>
                 </div>
               </Link>
-            </div>
+            </ScrollAnimate>
 
           </div>
         </div>
@@ -419,6 +429,7 @@ export default function Home() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#00d0bb]/30 to-transparent"></div>
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
 
+          <ScrollAnimate animation="fadeUp">
           <div className="text-center mb-16 lg:mb-24">
             <span className="text-[#00d0bb] font-extrabold tracking-widest uppercase text-xs sm:text-sm mb-4 block">Transparent Pricing</span>
             <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-black text-[#0d1033] tracking-tighter leading-tight mb-6">
@@ -426,6 +437,7 @@ export default function Home() {
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto text-lg font-medium">We offer straightforward, premium heating solutions tailored to any home. No hidden fees, just absolute highest-tier quality.</p>
           </div>
+          </ScrollAnimate>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-start">
 
@@ -750,7 +762,7 @@ export default function Home() {
         </div>
 
         {/* Content Side (Right) */}
-        <div className="w-full lg:w-1/2 flex items-center bg-slate-50 relative z-20 py-16 sm:py-20 lg:py-24">
+        <ScrollAnimate animation="fadeRight" className="w-full lg:w-1/2 flex items-center bg-slate-50 relative z-20 py-16 sm:py-20 lg:py-24">
           <div className="w-full px-6 sm:px-12 lg:px-16 xl:px-20 2xl:px-24 max-w-[800px] mx-auto lg:mx-0 lg:ml-0 lg:mr-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-600 w-max mb-6 lg:mb-8 shadow-sm">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" /></svg>
@@ -771,7 +783,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out"></div>
             </Link>
           </div>
-        </div>
+        </ScrollAnimate>
 
       </section>
 
@@ -833,7 +845,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-20">
 
             {/* Left Content Area - High End Typography */}
-            <div className="w-full lg:w-[45%] flex flex-col items-start text-left order-2 lg:order-1 relative z-20">
+            <ScrollAnimate animation="fadeLeft" className="w-full lg:w-[45%] flex flex-col items-start text-left order-2 lg:order-1 relative z-20">
               <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -863,7 +875,7 @@ export default function Home() {
                   <svg className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </span>
               </Link>
-            </div>
+            </ScrollAnimate>
 
             {/* Right Media Area - Abstract 3D Glassmorphic Display */}
             <div className="w-full lg:w-[55%] relative flex justify-center lg:justify-end order-1 lg:order-2 group">
@@ -951,7 +963,7 @@ export default function Home() {
             ]} />
 
             {/* Right: Logo + Content */}
-            <div className="w-full lg:w-[50%] flex flex-col justify-center text-center lg:text-left relative z-10">
+            <ScrollAnimate animation="fadeRight" delay={150} className="w-full lg:w-[50%] flex flex-col justify-center text-center lg:text-left relative z-10">
               {/* Logo at top */}
               <div className="relative w-full max-w-[360px] aspect-[16/9] mb-8 mx-auto lg:mx-0 drop-shadow-[0_15px_25px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform duration-500">
                 <Image
@@ -987,35 +999,102 @@ export default function Home() {
                 Find Out More
                 <svg className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
               </a>
-            </div>
+            </ScrollAnimate>
 
           </div>
         </div>
       </section>
 
-      {/* Google Maps Location Section */}
+      {/* Location & Contact Section */}
       <section className="py-16 sm:py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <ScrollAnimate animation="fadeUp">
+          <div className="text-center mb-12">
             <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider mb-4">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              Find Us
+              Get In Touch
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0d1033] tracking-tight mb-4">Our Location</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight mb-4">Visit Us or <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5e14] to-[#ff8c42]">Get in Touch</span></h2>
             <p className="text-gray-500 max-w-xl mx-auto text-base font-medium">Serving the New Forest and beyond — from Lymington to Bournemouth, we&apos;re always nearby when you need us.</p>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-[0_15px_40px_-10px_rgba(0,0,0,0.12)] border border-gray-100">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.9500162605204!2d-1.6704168000000001!3d50.757245100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487383d967293ef5%3A0x722abc9b62d8ffc2!2sTom%20Sutton%20Heating!5e1!3m2!1sen!2sbd!4v1774807873622!5m2!1sen!2sbd"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full"
-              title="Tom Sutton Heating Location"
-            />
+          </ScrollAnimate>
+
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
+            {/* Left: Map */}
+            <ScrollAnimate animation="fadeLeft" className="flex-1 min-w-0">
+              <div className="rounded-2xl overflow-hidden shadow-[0_15px_40px_-10px_rgba(0,0,0,0.12)] border border-gray-100 h-full min-h-[350px] lg:min-h-[480px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.9500162605204!2d-1.6704168000000001!3d50.757245100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487383d967293ef5%3A0x722abc9b62d8ffc2!2sTom%20Sutton%20Heating!5e0!3m2!1sen!2sbd!4v1774807873622!5m2!1sen!2sbd"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: '350px' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                  title="Tom Sutton Heating Location"
+                />
+              </div>
+            </ScrollAnimate>
+
+            {/* Right: Contact Info */}
+            <ScrollAnimate animation="fadeRight" delay={200} className="w-full lg:w-[420px] shrink-0">
+              <div className="flex flex-col gap-4 h-full">
+
+                {/* Phone */}
+                <div className="flex items-center gap-4 bg-white rounded-xl px-5 py-4 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] border border-gray-100 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-xl bg-[#ff5e14]/10 flex items-center justify-center shrink-0 group-hover:bg-[#ff5e14] transition-colors">
+                    <svg className="w-5 h-5 text-[#ff5e14] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-xs font-semibold tracking-wider uppercase mb-0.5">Call Us</p>
+                    <a href="tel:01590631671" className="text-[#0d1033] font-bold text-lg hover:text-[#ff5e14] transition-colors">01590 631671</a>
+                    <p className="text-gray-400 text-xs mt-0.5">Mon-Sat, 8am - 6pm</p>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-center gap-4 bg-white rounded-xl px-5 py-4 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] border border-gray-100 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-xl bg-[#00d0bb]/10 flex items-center justify-center shrink-0 group-hover:bg-[#00d0bb] transition-colors">
+                    <svg className="w-5 h-5 text-[#00d0bb] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-xs font-semibold tracking-wider uppercase mb-0.5">Email Us</p>
+                    <a href="mailto:info@tomsuttonheating.co.uk" className="text-[#0d1033] font-bold text-sm sm:text-base hover:text-[#00d0bb] transition-colors">info@tomsuttonheating.co.uk</a>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-center gap-4 bg-white rounded-xl px-5 py-4 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] border border-gray-100 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0 group-hover:bg-blue-500 transition-colors">
+                    <svg className="w-5 h-5 text-blue-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-xs font-semibold tracking-wider uppercase mb-0.5">Our Service Area</p>
+                    <p className="text-[#0d1033] font-bold text-base leading-snug">New Milton, Hampshire<br/>BH25, United Kingdom</p>
+                  </div>
+                </div>
+
+                {/* Emergency */}
+                <div className="flex items-center gap-4 bg-white rounded-xl px-5 py-4 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] border border-gray-100 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center shrink-0 group-hover:bg-red-500 transition-colors">
+                    <svg className="w-5 h-5 text-red-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-xs font-semibold tracking-wider uppercase mb-0.5">Emergency Callout</p>
+                    <p className="text-[#0d1033] font-bold text-base">Out-of-hours available</p>
+                    <p className="text-gray-400 text-xs mt-0.5">24/7 for existing customers</p>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <Link href="/contact" className="group mt-2 w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] rounded-xl font-bold text-white text-base hover:from-[#ff6a00] hover:to-[#ff9c52] transition-all shadow-lg hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-5px_rgba(255,94,20,0.4)]">
+                  Contact Us Today
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </Link>
+
+              </div>
+            </ScrollAnimate>
           </div>
         </div>
       </section>

@@ -4,11 +4,11 @@ import React, { useRef, useState, useEffect } from 'react';
 export default function InteractiveSlider({ children }: { children: React.ReactNode }) {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isDown, setIsDown] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const [scrollLeftState, setScrollLeftState] = useState(0);
 
-  // Seamless Infinite Auto-Scroll Logic RESTORED
+  // Seamless Infinite Auto-Scroll Logic
   useEffect(() => {
     let animationId: number;
     let lastTime = performance.now();
@@ -16,7 +16,7 @@ export default function InteractiveSlider({ children }: { children: React.ReactN
     
     const renderLoop = (time: number) => {
       const isDesktop = window.innerWidth >= 1024;
-      if (slider && !isHovered && !isDown && isDesktop) {
+      if (slider && !isPaused && !isDown && isDesktop) {
         const delta = time - lastTime;
         
         // Protect against massive delta spikes when tab is backgrounded
@@ -35,7 +35,7 @@ export default function InteractiveSlider({ children }: { children: React.ReactN
     
     animationId = requestAnimationFrame(renderLoop);
     return () => cancelAnimationFrame(animationId);
-  }, [isHovered, isDown]);
+  }, [isPaused, isDown]);
 
   // SMART Wheel Translation (Strictly releases Vertical Scroll after 1 cycle)
   useEffect(() => {
@@ -50,12 +50,10 @@ export default function InteractiveSlider({ children }: { children: React.ReactN
       
       const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
       
-      // If trailing down past the horizontal track limit, unlock scrolling
       if (e.deltaY > 0 && slider.scrollLeft >= maxScrollLeft - 1) {
         hasReachedEnd = true;
         return; 
       }
-      // If trailing up above the horizontal track limit, unlock scrolling
       if (e.deltaY < 0 && slider.scrollLeft <= 1) {
         return; 
       }
@@ -72,21 +70,42 @@ export default function InteractiveSlider({ children }: { children: React.ReactN
     return () => slider.removeEventListener('wheel', handleWheel);
   }, []);
 
+  // Mouse handlers
   const onMouseDown = (e: React.MouseEvent) => {
     setIsDown(true);
     if (!sliderRef.current) return;
     setStartX(e.pageX - sliderRef.current.offsetLeft);
-    setScrollLeft(sliderRef.current.scrollLeft);
+    setScrollLeftState(sliderRef.current.scrollLeft);
   };
-  const onMouseLeave = () => { setIsDown(false); setIsHovered(false); };
+  const onMouseLeave = () => { setIsDown(false); setIsPaused(false); };
   const onMouseUp = () => setIsDown(false);
-  const onMouseEnter = () => setIsHovered(true);
+  const onMouseEnter = () => setIsPaused(true);
   const onMouseMove = (e: React.MouseEvent) => {
     if (!isDown || !sliderRef.current) return;
     e.preventDefault();
     const x = e.pageX - sliderRef.current.offsetLeft;
     const walk = (x - startX) * 2; 
-    sliderRef.current.scrollLeft = scrollLeft - walk;
+    sliderRef.current.scrollLeft = scrollLeftState - walk;
+  };
+
+  // Touch handlers for tablets
+  const onTouchStart = (e: React.TouchEvent) => {
+    setIsPaused(true);
+    setIsDown(true);
+    if (!sliderRef.current) return;
+    setStartX(e.touches[0].pageX - sliderRef.current.offsetLeft);
+    setScrollLeftState(sliderRef.current.scrollLeft);
+  };
+  const onTouchEnd = () => {
+    setIsDown(false);
+    // Resume auto-scroll after a short delay
+    setTimeout(() => setIsPaused(false), 2000);
+  };
+  const onTouchMove = (e: React.TouchEvent) => {
+    if (!isDown || !sliderRef.current) return;
+    const x = e.touches[0].pageX - sliderRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    sliderRef.current.scrollLeft = scrollLeftState - walk;
   };
 
   return (
@@ -95,20 +114,35 @@ export default function InteractiveSlider({ children }: { children: React.ReactN
       onMouseDown={onMouseDown}
       onMouseLeave={onMouseLeave}
       onMouseUp={onMouseUp}
+      onMouseEnter={onMouseEnter}
       onMouseMove={onMouseMove}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+      onTouchMove={onTouchMove}
       className="responsive-service-track hide-scrollbar cursor-grab active:cursor-grabbing w-full px-4 sm:px-6 lg:px-0"
     >
       <style dangerouslySetInnerHTML={{__html: `
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
-        /* Mobile / Tablet Grid Mode (Vertical Stack) */
-        @media (max-width: 1023px) {
+        /* Mobile Grid Mode (Single Column) */
+        @media (max-width: 639px) {
           .responsive-service-track {
             display: grid !important;
             grid-template-columns: 1fr;
             overflow-x: hidden !important;
             gap: 2.5rem;
+            justify-items: center;
+          }
+        }
+        
+        /* Tablet Grid Mode (Two Columns) */
+        @media (min-width: 640px) and (max-width: 1023px) {
+          .responsive-service-track {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+            overflow-x: hidden !important;
+            gap: 1.5rem;
             justify-items: center;
           }
         }
@@ -119,10 +153,10 @@ export default function InteractiveSlider({ children }: { children: React.ReactN
             display: flex !important;
             gap: 2rem;
             overflow-x: auto;
-            scroll-behavior: auto; /* Required for JS manipulation */
+            scroll-behavior: auto;
           }
           .responsive-service-track > div {
-             min-width: 400px; /* Force card widths mathematically for clean CSS infinite layout */
+             min-width: 400px;
           }
         }
       `}} />

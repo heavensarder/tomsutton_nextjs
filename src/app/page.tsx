@@ -161,6 +161,11 @@ export default function Home() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5e14] to-[#ff8c42]">Heating</span>
                 <svg className="absolute -bottom-1 left-0 w-full h-2" viewBox="0 0 200 10" fill="none"><path d="M2 7 C50 2, 150 2, 198 7" stroke="url(#underline_grad)" strokeWidth="3.5" strokeLinecap="round"/><defs><linearGradient id="underline_grad" x1="0" y1="0" x2="200" y2="0"><stop stopColor="#ff5e14" /><stop offset="1" stopColor="#ff8c42" /></linearGradient></defs></svg>
               </span>
+              {' & '}
+              <span className="relative inline-block">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00b4d8] to-[#90e0ef]">Cooling</span>
+                <svg className="absolute -bottom-1 left-0 w-full h-2" viewBox="0 0 200 10" fill="none"><path d="M2 7 C50 2, 150 2, 198 7" stroke="url(#underline_grad_cool)" strokeWidth="3.5" strokeLinecap="round"/><defs><linearGradient id="underline_grad_cool" x1="0" y1="0" x2="200" y2="0"><stop stopColor="#00b4d8" /><stop offset="1" stopColor="#90e0ef" /></linearGradient></defs></svg>
+              </span>
               {' '}Solutions and Unmatched Comfort for Homes Across the New Forest
             </h2>
           </div>

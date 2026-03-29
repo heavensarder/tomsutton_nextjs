@@ -305,7 +305,7 @@ export default function NewBoilerInstallationPage() {
             <p className="text-gray-500 max-w-2xl mx-auto text-lg font-medium">We offer straightforward, premium heating solutions tailored to any home. No hidden fees, just absolute highest-tier quality.</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-start">
 
             {/* Package 1: Standard */}
             <div className="bg-white rounded-3xl p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col hover:-translate-y-2 transition-transform duration-500">

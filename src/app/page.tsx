@@ -132,219 +132,271 @@ export default function Home() {
 
           </div>
 
+
         </div>
       </section>
 
-      {/* Unified Premium Trust & Partners Section */}
-      <section className="pt-10 pb-20 relative overflow-hidden bg-slate-50 border-y border-gray-100">
-        {/* Dynamic Background Elements */}
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-        <div className="absolute -top-[300px] right-[-100px] w-[600px] h-[600px] bg-blue-100/40 rounded-full blur-[100px] pointer-events-none"></div>
-        <div className="absolute -bottom-[200px] left-[-100px] w-[500px] h-[500px] bg-orange-100/40 rounded-full blur-[80px] pointer-events-none"></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
-          {/* Top Logo Slider */}
-          <div className="relative overflow-hidden w-full mb-12 sm:mb-16">
-            {/* Gradient Masks matched to bg-slate-50 */}
-            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
-
-            <style dangerouslySetInnerHTML={{
-              __html: `
-              @keyframes infiniteScroll {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-              }
-              .animate-infinite-scroll {
-                animation: infiniteScroll 45s linear infinite;
-                width: max-content;
-              }
-              .animate-infinite-scroll:hover {
-                animation-play-state: paused;
-              }
-            `}} />
-
-            <div className="flex items-center gap-12 sm:gap-20 md:gap-28 animate-infinite-scroll pl-12 sm:pl-20 md:pl-28 py-2">
-              {[0, 1].map((half) => (
-                <React.Fragment key={half}>
-                  {[0, 1, 2].map((group) => (
-                    <React.Fragment key={`${half}-${group}`}>
-                      <Image src="https://i.postimg.cc/d3k7Dghd/logo_1.webp" alt="Brand Partner 1" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
-                      <Image src="https://i.postimg.cc/Fzdf1wY3/logo_2.webp" alt="Brand Partner 2" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
-                      <Image src="https://i.postimg.cc/NF9yLZKr/logo_3.webp" alt="Brand Partner 3" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
-                      <Image src="https://i.postimg.cc/tJZ178sF/logo_4.webp" alt="Brand Partner 4" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
-                    </React.Fragment>
-                  ))}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-
-            {/* Checkatrade Premium Card */}
-            <a href="https://www.checkatrade.com/trades/slenergytomsuttonheating" target="_blank" rel="noopener noreferrer" className="group relative bg-white rounded-3xl p-1.5 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] hover:-translate-y-3 transition-all duration-500 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0bdacb]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="bg-white rounded-[1.4rem] h-full p-8 lg:p-10 flex flex-col items-center justify-between relative z-10 border border-gray-100 group-hover:border-[#0bdacb]/40 transition-colors">
-                <div className="absolute top-5 right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
-                  <svg className="w-6 h-6 text-[#0bdacb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </div>
-                <div className="flex-1 flex items-center justify-center w-full mb-8 pt-6 relative group-hover:scale-105 transition-transform duration-500">
-                  <Image src="https://i.postimg.cc/3rfJdKQY/checktrade.webp" alt="Checkatrade" width={240} height={100} className="object-contain max-h-12 sm:max-h-16 w-auto" />
-                </div>
-                <div className="w-full text-center border-t border-gray-100 pt-6">
-                  <div className="flex items-center justify-center gap-1.5 text-[#0bdacb] mb-3">
-                    {[1, 2, 3, 4, 5].map(i => <svg key={i} className="w-7 h-7 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
-                  </div>
-                  <span className="font-extrabold text-gray-900 text-xl tracking-tight">9.94/10 <span className="text-gray-400 font-semibold text-sm ml-1">(360+ Reviews)</span></span>
-                </div>
-              </div>
-            </a>
-
-            {/* Google Premium Card */}
-            <a href="https://www.google.com/maps/place/Tom+Sutton+Heating/@50.7572451,-1.6704168,688m/data=!3m2!1e3!4b1!4m6!3m5!1s0x487383d967293ef5:0x722abc9b62d8ffc2!8m2!3d50.7572451!4d-1.6704168!16s%2Fg%2F11b5pjq4ng?entry=ttu&g_ep=EgoyMDI2MDMxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="group relative bg-white rounded-3xl p-1.5 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] hover:-translate-y-3 transition-all duration-500 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#4285F4]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="bg-white rounded-[1.4rem] h-full p-8 lg:p-10 flex flex-col items-center justify-between relative z-10 border border-gray-100 group-hover:border-[#4285F4]/40 transition-colors">
-                <div className="absolute top-5 right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
-                  <svg className="w-6 h-6 text-[#4285F4]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </div>
-                <div className="flex-1 flex flex-col items-center justify-center w-full mb-8 pt-6">
-                  <div className="flex items-center text-[3.5rem] lg:text-[4rem] font-bold tracking-tighter leading-none mb-1 group-hover:scale-105 transition-transform duration-500">
-                    <span className="text-[#4285F4]">G</span><span className="text-[#EA4335]">o</span><span className="text-[#FBBC05]">o</span><span className="text-[#4285F4]">g</span><span className="text-[#34A853]">l</span><span className="text-[#EA4335]">e</span>
-                  </div>
-                </div>
-                <div className="w-full text-center border-t border-gray-100 pt-6">
-                  <div className="flex items-center justify-center gap-1.5 text-[#FBBC05] mb-3">
-                    {[1, 2, 3, 4, 5].map(i => <svg key={i} className="w-7 h-7 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
-                  </div>
-                  <span className="font-extrabold text-gray-900 text-xl tracking-tight">5.0/5 <span className="text-gray-400 font-semibold text-sm ml-1">(Top Rated)</span></span>
-                </div>
-              </div>
-            </a>
-
-            {/* Facebook Premium Card */}
-            <a href="https://www.facebook.com/tomsuttonheating/reviews" target="_blank" rel="noopener noreferrer" className="group relative bg-white rounded-3xl p-1.5 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] hover:-translate-y-3 transition-all duration-500 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1877F2]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="bg-white rounded-[1.4rem] h-full p-8 lg:p-10 flex flex-col items-center justify-between relative z-10 border border-gray-100 group-hover:border-[#1877F2]/40 transition-colors">
-                <div className="absolute top-5 right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
-                  <svg className="w-6 h-6 text-[#1877F2]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </div>
-                <div className="flex-1 flex flex-col items-center justify-center w-full mb-8 pt-6">
-                  {/* Pristine Facebook Layout (Zero blurry images) */}
-                  <div className="flex items-center justify-center gap-3 group-hover:scale-105 transition-transform duration-500">
-                    <svg className="w-14 h-14 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
-                    <span className="text-[2.75rem] font-bold text-[#1877F2] tracking-tighter mt-1">facebook</span>
-                  </div>
-                </div>
-                <div className="w-full text-center border-t border-gray-100 pt-6">
-                  <div className="flex items-center justify-center gap-1.5 text-[#1877F2] mb-3">
-                    {[1, 2, 3, 4, 5].map(i => <svg key={i} className="w-7 h-7 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
-                  </div>
-                  <span className="font-extrabold text-gray-900 text-xl tracking-tight">5.0/5 <span className="text-gray-400 font-semibold text-sm ml-1">(Excellent)</span></span>
-                </div>
-              </div>
-            </a>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Renewables Feature Section */}
-      <section className="bg-slate-50 relative overflow-hidden flex flex-col lg:flex-row items-stretch border-y border-gray-100">
-
-        {/* Image Side (Left) - Full Edge Bleed */}
-        <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-[600px] xl:min-h-[700px] overflow-hidden group">
-          <Image
-            src="https://i.postimg.cc/wTQkkY7r/renwable-energy.jpg"
-            alt="Modern solar panels on a premium residential roof"
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-slate-50/20 hidden lg:block z-10 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent lg:hidden z-10 pointer-events-none"></div>
-        </div>
-
-        {/* Content Side (Right) */}
-        <div className="w-full lg:w-1/2 flex items-center bg-slate-50 relative z-20 py-16 sm:py-20 lg:py-24">
-          <div className="w-full px-6 sm:px-12 lg:px-16 xl:px-20 2xl:px-24 max-w-[800px] mx-auto lg:mx-0 lg:ml-0 lg:mr-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-600 w-max mb-6 lg:mb-8 shadow-sm">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" /></svg>
-              <span className="text-xs font-extrabold tracking-widest uppercase">Eco-Friendly Future</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-extrabold text-[#0d1033] tracking-tighter leading-[1.12] mb-6">
-              Renewable Energy Technology & Air Source Heat Pumps
-            </h2>
-
-            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 font-medium">
-              Renewable technology in recent years has become a massive market globally. With more awareness of the environmental changes, rising fuel costs, and a need to move away from fossil fuels, Tom Sutton Heating now provide alternative heating and hot water solutions.
-            </p>
-
-            <Link href="/renewable-technology" className="group/btn relative w-max flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-[#ff6a00] text-white rounded-xl font-bold text-lg hover:from-orange-600 hover:to-[#e65c00] transition-all shadow-[0_10px_20px_-10px_rgba(255,106,0,0.5)] hover:shadow-[0_15px_25px_-10px_rgba(255,106,0,0.6)] hover:-translate-y-0.5 overflow-hidden">
-              <span className="relative z-10">Learn more</span>
-              <svg className="w-5 h-5 relative z-10 group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out"></div>
-            </Link>
-          </div>
-        </div>
-
-      </section>
-
-      {/* Boiler Installation CTA */}
-      <section className="py-12 bg-white relative z-20">
+      {/* Who We Are — Premium About Section */}
+      <section className="py-14 sm:py-20 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#0b1021] rounded-[2rem] p-8 sm:p-12 md:p-14 shadow-2xl flex flex-col lg:flex-row items-stretch justify-start relative overflow-hidden group">
-            {/* Left side glowing gradient */}
-            <div className="absolute -left-[20%] top-1/2 -translate-y-1/2 w-[60%] h-[150%] bg-[#00e5cc] opacity-20 blur-[100px] pointer-events-none z-0"></div>
 
-            {/* Left Column (Text & Button) */}
-            <div className="w-full lg:w-[50%] relative z-10 flex flex-col justify-center">
-              <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-bold mb-8 leading-[1.05] tracking-tight">
-                <span className="text-[#00e5cc]">Need a new boiler?</span><br className="hidden lg:block" />
-                <span className="text-white">No problem! We can <br className="hidden lg:block" />help!</span>
+          {/* ROW 1: Badge left + Headline right — same line on desktop */}
+          <div className="flex flex-col items-center text-center lg:text-left lg:items-start lg:flex-row gap-4 lg:gap-12 mb-8 lg:mb-10">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-orange-50 px-5 py-2.5 rounded-full shrink-0 w-max lg:mt-2">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              Who We Are
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] xl:text-[3.2rem] font-black text-[#0d1033] tracking-tight leading-[1.15]">
+              Delivering Reliable{' '}
+              <span className="relative inline-block">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5e14] to-[#ff8c42]">Heating</span>
+                <svg className="absolute -bottom-1 left-0 w-full h-2" viewBox="0 0 200 10" fill="none"><path d="M2 7 C50 2, 150 2, 198 7" stroke="url(#underline_grad)" strokeWidth="3.5" strokeLinecap="round"/><defs><linearGradient id="underline_grad" x1="0" y1="0" x2="200" y2="0"><stop stopColor="#ff5e14" /><stop offset="1" stopColor="#ff8c42" /></linearGradient></defs></svg>
+              </span>
+              {' '}Solutions and Unmatched Comfort for Homes Across the New Forest
+            </h2>
+          </div>
+
+          {/* ROW 2: Stats Card left + Content right */}
+          <div className="flex flex-col items-center lg:items-start lg:flex-row gap-8 lg:gap-14">
+
+            {/* Stats Card — matching reference: number + vertical strip + rating + avatars */}
+            <div className="shrink-0 order-2 lg:order-1 self-center lg:self-start">
+              <div className="bg-gradient-to-br from-[#eef1fa] to-[#f5f7ff] rounded-[1.5rem] overflow-hidden inline-flex">
+                {/* Left part: number + rating + avatars */}
+                <div className="py-6 pl-6 pr-3 sm:py-7 sm:pl-7 sm:pr-4 flex flex-col">
+                  <span className="text-[7rem] sm:text-[8rem] font-black text-[#0d1033] leading-[0.8] tracking-tighter mb-4">30</span>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[1.75rem] font-black text-[#0d1033] tracking-tight">9.94</span>
+                    <div className="flex gap-0.5">
+                      {[1,2,3,4,5].map(i => (
+                        <svg key={i} className="w-3.5 h-3.5 text-[#ff5e14] fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-400 text-[11px] font-semibold mb-3">Based on 360+ Reviews</p>
+                  <div className="flex -space-x-2">
+                    {['🔧','⚡','🏠','🔥'].map((emoji, i) => (
+                      <div key={i} className="w-9 h-9 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 border-[2.5px] border-white flex items-center justify-center text-sm shadow-sm">{emoji}</div>
+                    ))}
+                    <div className="w-9 h-9 rounded-full bg-[#ff5e14] border-[2.5px] border-white flex items-center justify-center shadow-sm">
+                      <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 4v16m8-8H4" /></svg>
+                    </div>
+                  </div>
+                </div>
+                {/* Right strip: vertical text */}
+                <div className="bg-[#e8ecf8] flex items-center justify-center px-3 sm:px-4">
+                  <span className="text-[#0d1033] font-bold text-[13px] sm:text-sm italic whitespace-nowrap" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
+                    Years of Work Experience
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content: text + image + button */}
+            <div className="flex-1 order-1 lg:order-2 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <p className="text-gray-500 text-[15px] sm:text-base leading-[1.7] mb-6 max-w-xl">
+                We&apos;re not just installing boilers—we&apos;re the local team New Forest families trust when it matters most. Led by Managing Director Ronan Sutton, our engineers combine three decades of heritage with the forward-thinking technology of SL Energy Ltd, delivering next-day installations and out-of-hours emergency calls across New Milton, Lymington, and Christchurch.
+              </p>
+
+              {/* YouTube Video with decorative accents */}
+              <div className="relative w-full sm:max-w-lg mb-5">
+                <div className="absolute -left-2.5 top-3 bottom-3 w-1 bg-[#ff5e14] rounded-full z-20"></div>
+                <div className="absolute -right-2.5 top-6 bottom-6 w-1 bg-[#0bdacb] rounded-full z-20"></div>
+                <div className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#0bdacb] rounded-full z-20"></div>
+                <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_12px_30px_-8px_rgba(0,0,0,0.15)]">
+                  <iframe
+                    src="https://www.youtube.com/embed/wxsnvRy0I34?rel=0&modestbranding=1"
+                    title="Tom Sutton Heating - Company Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full border-0"
+                  />
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <Link href="/about" className="group inline-flex items-center gap-3 px-6 py-3 bg-[#0d1033] text-white rounded-xl font-bold text-[15px] hover:bg-[#ff5e14] transition-all duration-300 shadow-lg hover:-translate-y-0.5 w-max">
+                Discover More
+                <div className="w-7 h-7 rounded-lg bg-[#ff5e14] group-hover:bg-white/20 flex items-center justify-center transition-colors">
+                  <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 19L19 5M19 5v10M19 5H9" /></svg>
+                </div>
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Responsive Services Section (Grid on Mobile, Infinite Slider on Desktop) */}
+      <section className="py-24 bg-[#eef2f9] overflow-hidden relative">
+        <style dangerouslySetInnerHTML={{
+          __html: `
+          .text-outline-watermark {
+            -webkit-text-stroke: 2px #eef2f9;
+            color: transparent;
+          }
+        `}} />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16 text-center">
+          <span className="inline-flex items-center gap-2 text-[#ff4c24] text-sm font-bold uppercase tracking-wider mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#ff4c24]"></span>
+            Our Services
+          </span>
+          <h2 className="text-3xl md:text-5xl font-black text-[#0d1b42] mb-6 leading-tight max-w-3xl mx-auto">
+            What We are Offering to Our Potential Client
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+            Tom Sutton Heating specialises in services ranging from boiler breakdowns to plumbing repairs and bathroom installations.
+          </p>
+        </div>
+
+        {/* The Track (Grid / Interactive Slider) */}
+        <div className="relative w-full max-w-md mx-auto sm:max-w-2xl lg:max-w-none px-4 sm:px-6 lg:px-0 lg:flex lg:overflow-hidden">
+          <InteractiveSlider>
+            {/* The base array maps seamlessly. The duplicated tail array clones are hidden via CSS on mobile/tablet to prevent double-stacking in the grid. */}
+            {[...servicesData, ...servicesData].map((service, idx) => (
+              <div
+                key={idx}
+                className={`bg-white w-full lg:w-[380px] shrink-0 rounded-[2rem] p-4 pb-8 relative group shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(30,58,138,0.15)] transition-shadow duration-300 ${idx >= servicesData.length ? 'hidden lg:block' : ''}`}
+              >
+
+                {/* Image Container with Top Right Indent/Notch */}
+                <div className="relative w-full h-[220px] sm:h-[260px] lg:h-[220px] rounded-[1.5rem] rounded-tr-[4rem] overflow-hidden mb-6 bg-gray-200 isolation-auto z-10">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply group-hover:bg-transparent transition-colors duration-500"></div>
+                </div>
+
+                {/* Overlapping Circular Icon Badge */}
+                <div className="absolute top-[210px] sm:top-[250px] lg:top-[210px] left-8 sm:left-10 w-16 h-16 bg-[#2563eb] rounded-full border-[6px] border-white flex items-center justify-center z-20 text-white shadow-sm group-hover:bg-[#1d4ed8] transition-colors">
+                  {service.icon}
+                </div>
+
+                <div className="px-4 sm:px-6 pt-8 sm:pt-10 relative z-20">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#0d1b42] mb-3">{service.title}</h3>
+                  <p className="text-gray-500 text-[0.95rem] sm:text-base leading-[1.6] mb-8 line-clamp-3">
+                    {service.description}
+                  </p>
+                  <Link href={service.link} className="inline-flex items-center gap-2 text-[#ff4c24] font-bold text-[0.9rem] sm:text-base hover:text-[#d93a18] transition-colors group/link">
+                    View More
+                    <svg className="w-4 h-4 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 19L19 5M19 5v10M19 5H9" /></svg>
+                  </Link>
+                </div>
+
+                {/* Outlined Watermark Number */}
+                <div className="absolute bottom-1 right-2 lg:right-4 text-7xl sm:text-8xl font-black text-outline-watermark select-none pointer-events-none z-10 group-hover:text-gray-50 transition-colors duration-500">
+                  {String((idx % 6) + 1).padStart(2, '0')}
+                </div>
+              </div>
+            ))}
+          </InteractiveSlider>
+        </div>
+      </section>
+
+      {/* Why Choose Tom Sutton Heating Section */}
+      <section className="py-16 sm:py-24 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+
+            {/* Left: Image with overlapping cards */}
+            <div className="w-full lg:w-[48%] relative">
+              {/* Main Image */}
+              <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)]">
+                <Image
+                  src="https://i.postimg.cc/TYFRhPbV/My-Post.webp"
+                  alt="Tom Sutton Heating - Professional Engineer"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* 98% Stats Card - overlapping top right */}
+              <div className="absolute top-6 -right-2 sm:right-4 lg:-right-4 bg-white rounded-2xl px-6 py-5 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.1)] border border-gray-100 z-20">
+                <span className="text-[3rem] sm:text-[3.5rem] font-black text-[#0d1033] leading-none block tracking-tight">98%</span>
+                <p className="text-gray-400 text-xs sm:text-sm font-semibold mt-1">Clients Satisfied and<br/>Repeating</p>
+              </div>
+
+              {/* Quote Card - overlapping bottom */}
+              <div className="absolute -bottom-6 left-4 right-4 sm:left-8 sm:right-auto sm:max-w-[340px] bg-[#0d1033] rounded-2xl p-5 sm:p-6 shadow-xl z-20">
+                <div className="text-[#ff5e14] text-3xl font-serif mb-2">&ldquo;</div>
+                <p className="text-white/90 text-sm sm:text-[15px] font-medium italic leading-[1.6] mb-4">
+                  Every project, big or small, deserves our best effort and that&apos;s what we deliver.
+                </p>
+                <div className="border-t border-white/15 pt-3">
+                  <p className="text-white font-bold text-sm">Ronan Sutton</p>
+                  <p className="text-[#ff5e14] text-xs font-semibold">Managing Director</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Content */}
+            <div className="flex-1 pt-8 lg:pt-0">
+              {/* Badge */}
+              <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-orange-50 px-5 py-2.5 rounded-full mb-5">
+                <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+                Why Choose Us
+              </span>
+
+              {/* Headline */}
+              <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.6rem] font-black text-[#0d1033] tracking-tight leading-[1.15] mb-5">
+                Why Choose Tom Sutton Heating?
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8 mb-10 lg:mb-12">
-                {[
-                  "Express Boiler Installation",
-                  "Next Day Boiler Install",
-                  "Finance Options Available",
-                  "13 Year Warranty on Selected Boilers"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 relative z-10">
-                    <div className="w-6 h-6 rounded-full bg-[#ff6a00] flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" /></svg>
-                    </div>
-                    <span className="font-bold text-white text-[0.95rem] tracking-wide">{item}</span>
+              {/* Paragraph */}
+              <p className="text-gray-500 text-[15px] sm:text-base leading-[1.7] mb-8 max-w-xl">
+                With over 30 years of engineering heritage and a commitment to excellence, we deliver trusted heating solutions across Hampshire and Dorset — backed by industry-leading certifications.
+              </p>
+
+              {/* Feature Cards */}
+              <div className="space-y-4 mb-8">
+                {/* Card 1 */}
+                <div className="flex gap-5 items-start p-5 sm:p-6 bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] border-l-[3px] border-l-[#ff5e14] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-shadow">
+                  <div className="w-14 h-14 rounded-full bg-[#eef1fa] flex items-center justify-center shrink-0">
+                    <svg className="w-6 h-6 text-[#0d1033]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                   </div>
-                ))}
+                  <div>
+                    <h3 className="font-extrabold text-[#0d1033] text-base sm:text-lg mb-1.5">MCS & OFTEC Accredited</h3>
+                    <p className="text-gray-400 text-[13px] sm:text-sm leading-[1.65]">From high-efficiency Air Source Heat Pumps to traditional oil boilers, our certifications guarantee the highest safety and performance standards.</p>
+                  </div>
+                </div>
+                {/* Card 2 */}
+                <div className="flex gap-5 items-start p-5 sm:p-6 bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] border-l-[3px] border-l-[#ff5e14] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-shadow">
+                  <div className="w-14 h-14 rounded-full bg-[#eef1fa] flex items-center justify-center shrink-0">
+                    <svg className="w-6 h-6 text-[#0d1033]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  </div>
+                  <div>
+                    <h3 className="font-extrabold text-[#0d1033] text-base sm:text-lg mb-1.5">Hampshire & Dorset Specialists</h3>
+                    <p className="text-gray-400 text-[13px] sm:text-sm leading-[1.65]">30 years navigating the unique heating requirements of the New Forest. From Bournemouth to Christchurch — local service backed by global engineering.</p>
+                  </div>
+                </div>
+                {/* Card 3 */}
+                <div className="flex gap-5 items-start p-5 sm:p-6 bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] border-l-[3px] border-l-[#ff5e14] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-shadow">
+                  <div className="w-14 h-14 rounded-full bg-[#eef1fa] flex items-center justify-center shrink-0">
+                    <svg className="w-6 h-6 text-[#0d1033]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                  </div>
+                  <div>
+                    <h3 className="font-extrabold text-[#0d1033] text-base sm:text-lg mb-1.5">Personal Care, Professional Power</h3>
+                    <p className="text-gray-400 text-[13px] sm:text-sm leading-[1.65]">The personal touch of a family business with the robust resources of SL Energy. We design the perfect hot water solution for your specific floor plan.</p>
+                  </div>
+                </div>
               </div>
 
-              {/* Button moved to the left side below checkmarks */}
-              <div className="flex justify-start relative z-10 w-full mt-4 sm:mt-0">
-                <Link href="/online-boiler-quote" className="group/quote w-full sm:w-max flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-4 bg-[#ff6a00] text-white rounded-xl font-bold text-[16px] sm:text-lg hover:bg-[#e65c00] transition-all shadow-[0_0_30px_rgba(255,106,0,0.4)] hover:shadow-[0_0_40px_rgba(255,106,0,0.6)] hover:-translate-y-1">
-                  <span className="text-center whitespace-nowrap">Get an online quote today</span>
-                  <svg className="w-5 h-5 shrink-0 group-hover/quote:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Column (Vertical Image) */}
-            <div className="w-full lg:w-[45%] lg:absolute lg:inset-y-6 lg:right-6 relative min-h-[350px] sm:min-h-[450px] lg:min-h-0 rounded-[1.5rem] overflow-hidden mt-10 lg:mt-0 shadow-2xl z-10 hidden sm:block border-4 border-[#121a36]">
-              <Image
-                src="https://i.postimg.cc/XNcGYZVS/boiler-installation.webp"
-                alt="Boiler system installation"
-                fill
-                className="object-cover object-center transition-transform duration-1000 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-slate-900/10 hover:bg-transparent transition-colors duration-500"></div>
+              {/* CTA Button */}
+              <Link href="/about" className="group inline-flex items-center gap-3 px-7 py-3.5 bg-[#0d1033] text-white rounded-xl font-bold text-[15px] hover:bg-[#ff5e14] transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+                Discover More
+                <div className="w-7 h-7 rounded-lg bg-[#ff5e14] group-hover:bg-white/20 flex items-center justify-center transition-colors">
+                  <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 19L19 5M19 5v10M19 5H9" /></svg>
+                </div>
+              </Link>
             </div>
 
           </div>
         </div>
       </section>
-
       {/* Popular Packages Section */}
       <section className="py-20 sm:py-32 bg-[#f8fafd] relative overflow-hidden">
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#00d0bb]/30 to-transparent"></div>
@@ -358,7 +410,7 @@ export default function Home() {
             <p className="text-gray-500 max-w-2xl mx-auto text-lg font-medium">We offer straightforward, premium heating solutions tailored to any home. No hidden fees, just absolute highest-tier quality.</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-start">
 
             {/* Package 1: Standard */}
             <div className="bg-white rounded-3xl p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col hover:-translate-y-2 transition-transform duration-500">
@@ -513,6 +565,102 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Renewables Feature Section */}
+      <section className="bg-slate-50 relative overflow-hidden flex flex-col lg:flex-row items-stretch border-y border-gray-100">
+
+        {/* Image Side (Left) - Full Edge Bleed */}
+        <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-[600px] xl:min-h-[700px] overflow-hidden group">
+          <Image
+            src="https://i.postimg.cc/wTQkkY7r/renwable-energy.jpg"
+            alt="Modern solar panels on a premium residential roof"
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-slate-50/20 hidden lg:block z-10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent lg:hidden z-10 pointer-events-none"></div>
+        </div>
+
+        {/* Content Side (Right) */}
+        <div className="w-full lg:w-1/2 flex items-center bg-slate-50 relative z-20 py-16 sm:py-20 lg:py-24">
+          <div className="w-full px-6 sm:px-12 lg:px-16 xl:px-20 2xl:px-24 max-w-[800px] mx-auto lg:mx-0 lg:ml-0 lg:mr-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-600 w-max mb-6 lg:mb-8 shadow-sm">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" /></svg>
+              <span className="text-xs font-extrabold tracking-widest uppercase">Eco-Friendly Future</span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-extrabold text-[#0d1033] tracking-tighter leading-[1.12] mb-6">
+              Renewable Energy Technology & Air Source Heat Pumps
+            </h2>
+
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 font-medium">
+              Renewable technology in recent years has become a massive market globally. With more awareness of the environmental changes, rising fuel costs, and a need to move away from fossil fuels, Tom Sutton Heating now provide alternative heating and hot water solutions.
+            </p>
+
+            <Link href="/renewable-technology" className="group/btn relative w-max flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-[#ff6a00] text-white rounded-xl font-bold text-lg hover:from-orange-600 hover:to-[#e65c00] transition-all shadow-[0_10px_20px_-10px_rgba(255,106,0,0.5)] hover:shadow-[0_15px_25px_-10px_rgba(255,106,0,0.6)] hover:-translate-y-0.5 overflow-hidden">
+              <span className="relative z-10">Learn more</span>
+              <svg className="w-5 h-5 relative z-10 group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out"></div>
+            </Link>
+          </div>
+        </div>
+
+      </section>
+
+      {/* Boiler Installation CTA */}
+      <section className="py-12 bg-white relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#0b1021] rounded-[2rem] p-8 sm:p-12 md:p-14 shadow-2xl flex flex-col lg:flex-row items-stretch justify-start relative overflow-hidden group">
+            {/* Left side glowing gradient */}
+            <div className="absolute -left-[20%] top-1/2 -translate-y-1/2 w-[60%] h-[150%] bg-[#00e5cc] opacity-20 blur-[100px] pointer-events-none z-0"></div>
+
+            {/* Left Column (Text & Button) */}
+            <div className="w-full lg:w-[50%] relative z-10 flex flex-col justify-center">
+              <h2 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-bold mb-8 leading-[1.05] tracking-tight">
+                <span className="text-[#00e5cc]">Need a new boiler?</span><br className="hidden lg:block" />
+                <span className="text-white">No problem! We can <br className="hidden lg:block" />help!</span>
+              </h2>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8 mb-10 lg:mb-12">
+                {[
+                  "Express Boiler Installation",
+                  "Next Day Boiler Install",
+                  "Finance Options Available",
+                  "13 Year Warranty on Selected Boilers"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 relative z-10">
+                    <div className="w-6 h-6 rounded-full bg-[#ff6a00] flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" /></svg>
+                    </div>
+                    <span className="font-bold text-white text-[0.95rem] tracking-wide">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Button moved to the left side below checkmarks */}
+              <div className="flex justify-start relative z-10 w-full mt-4 sm:mt-0">
+                <Link href="/online-boiler-quote" className="group/quote w-full sm:w-max flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-4 bg-[#ff6a00] text-white rounded-xl font-bold text-[16px] sm:text-lg hover:bg-[#e65c00] transition-all shadow-[0_0_30px_rgba(255,106,0,0.4)] hover:shadow-[0_0_40px_rgba(255,106,0,0.6)] hover:-translate-y-1">
+                  <span className="text-center whitespace-nowrap">Get an online quote today</span>
+                  <svg className="w-5 h-5 shrink-0 group-hover/quote:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Column (Vertical Image) */}
+            <div className="w-full lg:w-[45%] lg:absolute lg:inset-y-6 lg:right-6 relative min-h-[350px] sm:min-h-[450px] lg:min-h-0 rounded-[1.5rem] overflow-hidden mt-10 lg:mt-0 shadow-2xl z-10 hidden sm:block border-4 border-[#121a36]">
+              <Image
+                src="https://i.postimg.cc/XNcGYZVS/boiler-installation.webp"
+                alt="Boiler system installation"
+                fill
+                className="object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-slate-900/10 hover:bg-transparent transition-colors duration-500"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
       {/* Ultra-Premium Smart Home Section */}
       <section className="relative py-24 sm:py-32 bg-[#050B14] overflow-hidden">
         {/* Ambient Glowing Background Orbs */}
@@ -598,75 +746,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Responsive Services Section (Grid on Mobile, Infinite Slider on Desktop) */}
-      <section className="py-24 bg-[#eef2f9] overflow-hidden relative">
-        <style dangerouslySetInnerHTML={{
-          __html: `
-          .text-outline-watermark {
-            -webkit-text-stroke: 2px #eef2f9;
-            color: transparent;
-          }
-        `}} />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16 text-center">
-          <span className="inline-flex items-center gap-2 text-[#ff4c24] text-sm font-bold uppercase tracking-wider mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#ff4c24]"></span>
-            Our Services
-          </span>
-          <h2 className="text-3xl md:text-5xl font-black text-[#0d1b42] mb-6 leading-tight max-w-3xl mx-auto">
-            What We are Offering to Our Potential Client
-          </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            Tom Sutton Heating specialises in services ranging from boiler breakdowns to plumbing repairs and bathroom installations.
-          </p>
-        </div>
-
-        {/* The Track (Grid / Interactive Slider) */}
-        <div className="relative w-full max-w-md mx-auto sm:max-w-2xl lg:max-w-none px-4 sm:px-6 lg:px-0 lg:flex lg:overflow-hidden">
-          <InteractiveSlider>
-            {/* The base array maps seamlessly. The duplicated tail array clones are hidden via CSS on mobile/tablet to prevent double-stacking in the grid. */}
-            {[...servicesData, ...servicesData].map((service, idx) => (
-              <div
-                key={idx}
-                className={`bg-white w-full lg:w-[380px] shrink-0 rounded-[2rem] p-4 pb-8 relative group shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(30,58,138,0.15)] transition-shadow duration-300 ${idx >= servicesData.length ? 'hidden lg:block' : ''}`}
-              >
-
-                {/* Image Container with Top Right Indent/Notch */}
-                <div className="relative w-full h-[220px] sm:h-[260px] lg:h-[220px] rounded-[1.5rem] rounded-tr-[4rem] overflow-hidden mb-6 bg-gray-200 isolation-auto z-10">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                  />
-                  <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply group-hover:bg-transparent transition-colors duration-500"></div>
-                </div>
-
-                {/* Overlapping Circular Icon Badge */}
-                <div className="absolute top-[210px] sm:top-[250px] lg:top-[210px] left-8 sm:left-10 w-16 h-16 bg-[#2563eb] rounded-full border-[6px] border-white flex items-center justify-center z-20 text-white shadow-sm group-hover:bg-[#1d4ed8] transition-colors">
-                  {service.icon}
-                </div>
-
-                <div className="px-4 sm:px-6 pt-8 sm:pt-10 relative z-20">
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#0d1b42] mb-3">{service.title}</h3>
-                  <p className="text-gray-500 text-[0.95rem] sm:text-base leading-[1.6] mb-8 line-clamp-3">
-                    {service.description}
-                  </p>
-                  <Link href={service.link} className="inline-flex items-center gap-2 text-[#ff4c24] font-bold text-[0.9rem] sm:text-base hover:text-[#d93a18] transition-colors group/link">
-                    View More
-                    <svg className="w-4 h-4 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 19L19 5M19 5v10M19 5H9" /></svg>
-                  </Link>
-                </div>
-
-                {/* Outlined Watermark Number */}
-                <div className="absolute bottom-1 right-2 lg:right-4 text-7xl sm:text-8xl font-black text-outline-watermark select-none pointer-events-none z-10 group-hover:text-gray-50 transition-colors duration-500">
-                  {String((idx % 6) + 1).padStart(2, '0')}
-                </div>
-              </div>
-            ))}
-          </InteractiveSlider>
-        </div>
-      </section>
       {/* About Us Premium Section */}
       <section className="py-24 bg-slate-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -804,6 +884,119 @@ export default function Home() {
                 <svg className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
               </a>
             </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Unified Premium Trust & Partners Section */}
+      <section className="pt-10 pb-20 relative overflow-hidden bg-slate-50 border-y border-gray-100">
+        {/* Dynamic Background Elements */}
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+        <div className="absolute -top-[300px] right-[-100px] w-[600px] h-[600px] bg-blue-100/40 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute -bottom-[200px] left-[-100px] w-[500px] h-[500px] bg-orange-100/40 rounded-full blur-[80px] pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+          {/* Top Logo Slider */}
+          <div className="relative overflow-hidden w-full mb-12 sm:mb-16">
+            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
+
+            <style dangerouslySetInnerHTML={{
+              __html: `
+              @keyframes infiniteScroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              .animate-infinite-scroll {
+                animation: infiniteScroll 45s linear infinite;
+                width: max-content;
+              }
+              .animate-infinite-scroll:hover {
+                animation-play-state: paused;
+              }
+            `}} />
+
+            <div className="flex items-center gap-12 sm:gap-20 md:gap-28 animate-infinite-scroll pl-12 sm:pl-20 md:pl-28 py-2">
+              {[0, 1].map((half) => (
+                <React.Fragment key={half}>
+                  {[0, 1, 2].map((group) => (
+                    <React.Fragment key={`${half}-${group}`}>
+                      <Image src="https://i.postimg.cc/d3k7Dghd/logo_1.webp" alt="Brand Partner 1" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="https://i.postimg.cc/Fzdf1wY3/logo_2.webp" alt="Brand Partner 2" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="https://i.postimg.cc/NF9yLZKr/logo_3.webp" alt="Brand Partner 3" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="https://i.postimg.cc/tJZ178sF/logo_4.webp" alt="Brand Partner 4" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                    </React.Fragment>
+                  ))}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+
+            {/* Checkatrade Premium Card */}
+            <a href="https://www.checkatrade.com/trades/slenergytomsuttonheating" target="_blank" rel="noopener noreferrer" className="group relative bg-white rounded-3xl p-1.5 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] hover:-translate-y-3 transition-all duration-500 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0bdacb]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="bg-white rounded-[1.4rem] h-full p-8 lg:p-10 flex flex-col items-center justify-between relative z-10 border border-gray-100 group-hover:border-[#0bdacb]/40 transition-colors">
+                <div className="absolute top-5 right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+                  <svg className="w-6 h-6 text-[#0bdacb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </div>
+                <div className="flex-1 flex items-center justify-center w-full mb-8 pt-6 relative group-hover:scale-105 transition-transform duration-500">
+                  <Image src="https://i.postimg.cc/3rfJdKQY/checktrade.webp" alt="Checkatrade" width={240} height={100} className="object-contain max-h-12 sm:max-h-16 w-auto" />
+                </div>
+                <div className="w-full text-center border-t border-gray-100 pt-6">
+                  <div className="flex items-center justify-center gap-1.5 text-[#0bdacb] mb-3">
+                    {[1, 2, 3, 4, 5].map(i => <svg key={i} className="w-7 h-7 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
+                  </div>
+                  <span className="font-extrabold text-gray-900 text-xl tracking-tight">9.94/10 <span className="text-gray-400 font-semibold text-sm ml-1">(360+ Reviews)</span></span>
+                </div>
+              </div>
+            </a>
+
+            {/* Google Premium Card */}
+            <a href="https://www.google.com/maps/place/Tom+Sutton+Heating/@50.7572451,-1.6704168,688m/data=!3m2!1e3!4b1!4m6!3m5!1s0x487383d967293ef5:0x722abc9b62d8ffc2!8m2!3d50.7572451!4d-1.6704168!16s%2Fg%2F11b5pjq4ng?entry=ttu&g_ep=EgoyMDI2MDMxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="group relative bg-white rounded-3xl p-1.5 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] hover:-translate-y-3 transition-all duration-500 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#4285F4]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="bg-white rounded-[1.4rem] h-full p-8 lg:p-10 flex flex-col items-center justify-between relative z-10 border border-gray-100 group-hover:border-[#4285F4]/40 transition-colors">
+                <div className="absolute top-5 right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+                  <svg className="w-6 h-6 text-[#4285F4]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </div>
+                <div className="flex-1 flex flex-col items-center justify-center w-full mb-8 pt-6">
+                  <div className="flex items-center text-[3.5rem] lg:text-[4rem] font-bold tracking-tighter leading-none mb-1 group-hover:scale-105 transition-transform duration-500">
+                    <span className="text-[#4285F4]">G</span><span className="text-[#EA4335]">o</span><span className="text-[#FBBC05]">o</span><span className="text-[#4285F4]">g</span><span className="text-[#34A853]">l</span><span className="text-[#EA4335]">e</span>
+                  </div>
+                </div>
+                <div className="w-full text-center border-t border-gray-100 pt-6">
+                  <div className="flex items-center justify-center gap-1.5 text-[#FBBC05] mb-3">
+                    {[1, 2, 3, 4, 5].map(i => <svg key={i} className="w-7 h-7 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
+                  </div>
+                  <span className="font-extrabold text-gray-900 text-xl tracking-tight">5.0/5 <span className="text-gray-400 font-semibold text-sm ml-1">(Top Rated)</span></span>
+                </div>
+              </div>
+            </a>
+
+            {/* Facebook Premium Card */}
+            <a href="https://www.facebook.com/tomsuttonheating/reviews" target="_blank" rel="noopener noreferrer" className="group relative bg-white rounded-3xl p-1.5 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] hover:-translate-y-3 transition-all duration-500 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1877F2]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="bg-white rounded-[1.4rem] h-full p-8 lg:p-10 flex flex-col items-center justify-between relative z-10 border border-gray-100 group-hover:border-[#1877F2]/40 transition-colors">
+                <div className="absolute top-5 right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+                  <svg className="w-6 h-6 text-[#1877F2]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </div>
+                <div className="flex-1 flex flex-col items-center justify-center w-full mb-8 pt-6">
+                  <div className="flex items-center justify-center gap-3 group-hover:scale-105 transition-transform duration-500">
+                    <svg className="w-14 h-14 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+                    <span className="text-[2.75rem] font-bold text-[#1877F2] tracking-tighter mt-1">facebook</span>
+                  </div>
+                </div>
+                <div className="w-full text-center border-t border-gray-100 pt-6">
+                  <div className="flex items-center justify-center gap-1.5 text-[#1877F2] mb-3">
+                    {[1, 2, 3, 4, 5].map(i => <svg key={i} className="w-7 h-7 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
+                  </div>
+                  <span className="font-extrabold text-gray-900 text-xl tracking-tight">5.0/5 <span className="text-gray-400 font-semibold text-sm ml-1">(Excellent)</span></span>
+                </div>
+              </div>
+            </a>
 
           </div>
         </div>

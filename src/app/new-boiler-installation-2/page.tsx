@@ -1,5 +1,8 @@
 import Image from 'next/image';
-import InteractiveSlider from '@/components/InteractiveSlider';
+import PopularPackages from '@/components/PopularPackages';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import FaqAccordion from '@/components/FaqAccordion';
+import LocationContact from '@/components/LocationContact';
 import Link from 'next/link';
 import ReviewWidget from '@/components/ReviewWidget';
 
@@ -292,173 +295,8 @@ export default function NewBoilerInstallationPage() {
         </div>
       </section>
 
-      {/* Popular Packages Section - Ported from Home Page */}
-      <section className="py-20 sm:py-32 bg-[#f8fafd] relative overflow-hidden">
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#00d0bb]/30 to-transparent"></div>
-        <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
-
-          <div className="text-center mb-16 lg:mb-24">
-            <span className="text-[#00d0bb] font-extrabold tracking-widest uppercase text-xs sm:text-sm mb-4 block">Transparent Pricing</span>
-            <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-black text-[#0d1033] tracking-tighter leading-tight mb-6">
-              Our Most Popular Packages
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto text-lg font-medium">We offer straightforward, premium heating solutions tailored to any home. No hidden fees, just absolute highest-tier quality.</p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-start">
-
-            {/* Package 1: Standard */}
-            <div className="bg-white rounded-3xl p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col hover:-translate-y-2 transition-transform duration-500">
-              <div className="mb-8 relative z-10">
-                <h3 className="text-[1.75rem] font-black mb-2 tracking-tight">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00d0bb] to-teal-600">Standard</span>
-                </h3>
-                <div className="text-slate-500 font-bold text-[0.85rem] tracking-wider uppercase mb-6">Worcester Bosch 1000 Range</div>
-
-                {/* Transparent Product Showcase Container */}
-                <div className="relative w-full h-64 sm:h-72 lg:h-64 mb-4 flex items-center justify-center rounded-2xl bg-[radial-gradient(circle_at_center,theme(colors.teal.50),transparent_70%)]">
-                  <Image src="https://i.postimg.cc/jjGCP7w6/Worcester-Bosch-1000-Range.png" alt="Standard Package - Worcester Bosch 1000 Range" fill className="object-contain p-4 drop-shadow-[0_20px_25px_rgba(0,208,187,0.15)] transition-transform duration-700 group-hover:scale-110" />
-                </div>
-              </div>
-
-              <div className="flex flex-col flex-1">
-                <div className="flex items-baseline gap-2 mb-8">
-                  <span className="text-gray-500 font-bold text-lg">from</span>
-                  <span className="text-4xl sm:text-5xl font-black text-[#0d1033] tracking-tight">£2,028</span>
-                </div>
-
-                <Link href="/online-boiler-quote" className="w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold text-center mb-10 transition-colors shadow-lg shadow-green-600/20">Get a quote now</Link>
-
-                <ul className="space-y-4 flex-1">
-                  {[
-                    "5-year warranty for peace of mind",
-                    "Efficient 24kW output",
-                    "Compact design (Ideal for fitting into kitchen cupboards)",
-                    "Quiet Operation (Quiet Mark certified)",
-                    "High-quality engineering from a market-leading brand",
-                    "Magnaclean Magnetic filter included",
-                    "Magnetic scale reducer included",
-                    "Programmable room thermostat included"
-                  ].map((feature, idx) => (
-                    <li key={idx} className="flex gap-3 text-gray-600 text-[0.95rem] font-medium items-start">
-                      <svg className="w-5 h-5 mt-0.5 shrink-0 text-[#00d0bb]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
-                      <span className="leading-snug">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Package 2: Premium (PREMIUM CENTER) */}
-            <div className="bg-[#0b1021] rounded-[2.5rem] p-10 shadow-[0_30px_60px_-15px_rgba(255,106,0,0.3)] border border-[#1e274a] flex flex-col hover:-translate-y-2 transition-transform duration-500 scale-100 lg:scale-[1.05] z-10 relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-gradient-to-r from-orange-500 to-[#ff6a00] text-white text-xs font-black px-4 py-1.5 rounded-bl-[1.5rem] uppercase tracking-widest shadow-lg">Most Popular</div>
-              <div className="absolute -left-32 -top-32 w-64 h-64 bg-orange-500/20 rounded-full blur-[80px] pointer-events-none"></div>
-
-              <div className="mb-8 relative z-10">
-                <h3 className="text-4xl font-black mb-2 tracking-tight">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-[#ff6a00] drop-shadow-sm">Premium</span>
-                </h3>
-                <div className="text-white/60 font-bold text-[0.85rem] tracking-wider uppercase mb-6">Worcester Bosch 4000 Range</div>
-
-                {/* Transparent Product Showcase Container (No Glow) */}
-                <div className="relative w-full h-64 sm:h-72 lg:h-64 mb-4 flex items-center justify-center">
-                  <Image src="https://i.postimg.cc/NfJsRHSn/Worcester-Bosch-4000-Range.webp" alt="Premium Package - Worcester Bosch 4000 Range" fill className="object-contain p-4 drop-shadow-[0_25px_35px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:scale-110" unoptimized />
-                </div>
-              </div>
-
-              <div className="flex flex-col flex-1 relative z-10">
-                <div className="flex items-baseline gap-2 mb-8">
-                  <span className="text-white/60 font-bold text-lg">from</span>
-                  <span className="text-5xl sm:text-6xl font-black text-white tracking-tight">£2,750</span>
-                </div>
-
-                <Link href="/online-boiler-quote" className="w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold text-lg text-center mb-10 transition-all shadow-[0_15px_30px_-10px_rgba(22,163,74,0.5)]">Get a quote now</Link>
-
-                <ul className="space-y-4 flex-1">
-                  {[
-                    "10-year warranty (Long-term peace of mind)",
-                    "Optimal 25kW output (Perfect for small to medium homes)",
-                    "Reduced gas consumption: Wide power range lowers energy bills",
-                    "Innovative 'Quick Tap': Water-saving function reduces water waste",
-                    "Modern interface: New design featuring an easy-to-use color display",
-                    "Low-pressure performance: Operates extremely well in low water pressure areas for powerful showers",
-                    "Whisper-quiet operation: One of the quietest combi boilers available",
-                    "Smart connectivity: Features wireless connectivity with the Bosch EasyControl",
-                    "Magnaclean Magnetic filter included",
-                    "Magnetic scale reducer included"
-                  ].map((feature, idx) => (
-                    <li key={idx} className="flex gap-3 text-white/90 text-[0.95rem] font-medium items-start">
-                      <svg className="w-5 h-5 mt-0.5 shrink-0 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
-                      <span className="leading-snug">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Package 3: Premium Plus */}
-            <div className="bg-white rounded-3xl p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col hover:-translate-y-2 transition-transform duration-500">
-              <div className="mb-8 relative z-10">
-                <h3 className="text-[1.75rem] font-black mb-2 tracking-tight">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0d1033] to-slate-600">Premium Plus</span>
-                </h3>
-                <div className="text-slate-500 font-bold text-[0.85rem] tracking-wider uppercase mb-6">Worcester Bosch 8000+ Range</div>
-
-                {/* Transparent Product Showcase Container */}
-                <div className="relative w-full h-64 sm:h-72 lg:h-64 mb-4 flex items-center justify-center rounded-2xl bg-[radial-gradient(circle_at_center,theme(colors.slate.100),transparent_70%)]">
-                  <Image src="https://i.postimg.cc/fbbgm3nz/Worcester-Bosch-8000-Style.webp" alt="Premium Plus Package - Worcester Bosch 8000+ Range" fill className="object-contain p-2 drop-shadow-[0_20px_25px_rgba(13,16,51,0.15)] transition-transform duration-700 group-hover:scale-110" unoptimized />
-                </div>
-              </div>
-
-              <div className="flex flex-col flex-1">
-                <div className="flex items-baseline gap-2 mb-8">
-                  <span className="text-gray-500 font-bold text-lg">from</span>
-                  <span className="text-4xl sm:text-5xl font-black text-[#0d1033] tracking-tight">£3,205</span>
-                </div>
-
-                <Link href="/online-boiler-quote" className="w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold text-center mb-10 transition-colors shadow-lg shadow-green-600/20">Get a quote now</Link>
-
-                <ul className="space-y-4 flex-1">
-                  {[
-                    "Unrivalled 12-year warranty: Complete peace of mind for over a decade",
-                    "High Performance 32kW output: Perfect for larger homes with multiple bathrooms",
-                    "High Flow Rates: Delivers powerful hot water even with high demand",
-                    "Advanced \"A\" Rated Efficiency: Wide modulation range drastically reduces gas consumption",
-                    "Sleek Glass Front Design: Available in Black or White to suit modern interiors",
-                    "Intuitive Full-Color Touchscreen: Simplifies control and diagnostics",
-                    "Ultra-Quiet Performance: One of the quietest high-output boilers on the market",
-                    "Intelligent Filling System: Automatically maintains optimum system pressure",
-                    "Full Wireless Connectivity: Integrated with the Bosch EasyControl app",
-                    "Magnaclean Magnetic filter & Scale reducer included"
-                  ].map((feature, idx) => (
-                    <li key={idx} className="flex gap-3 text-gray-600 text-[0.95rem] font-medium items-start">
-                      <svg className="w-5 h-5 mt-0.5 shrink-0 text-[#00d0bb]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
-                      <span className="leading-snug">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Simple Finance Note */}
-          <div className="mt-16 max-w-4xl mx-auto text-center px-4">
-            <h3 className="text-xl sm:text-2xl font-black text-[#51a7be] mb-4">
-              We also offer finance options!
-            </h3>
-            <div className="space-y-3 text-gray-500 font-medium text-[0.95rem] sm:text-base leading-relaxed">
-              <p>
-                Are you looking to replace your current boiler? Tom Sutton Heating are offering brand new boiler installations for just £1,692!
-              </p>
-              <p>
-                All our new boilers come with full parts and labour warranties, ranging from 6 to 13 years. Replacing your old boiler with a modern efficient boiler can improve efficiency by 10 to 12%.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
+      {/* Dynamic Popular Packages Section */}
+      <PopularPackages />
 
       {/* Types of Boiler Informational Section */}
       <section className="bg-white py-16 lg:py-24 border-t border-slate-100">
@@ -639,94 +477,8 @@ export default function NewBoilerInstallationPage() {
         </div>
       </section>
 
-      {/* About Us Premium Section */}
-      <section className="py-24 bg-slate-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
-
-            {/* Left Column: Content */}
-            <div className="w-full lg:w-[55%] flex flex-col items-start">
-              <span className="inline-flex items-center gap-2 text-[#ff4c24] text-sm font-bold uppercase tracking-wider mb-4">
-                <span className="w-2 h-2 rounded-full bg-[#ff4c24]"></span>
-                Who We Are
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-[#0d1b42] mb-8 tracking-tight">
-                About Tom Sutton Heating
-              </h2>
-
-              <div className="space-y-5 text-gray-600 font-medium text-[1.05rem] leading-[1.7] mb-10">
-                <p>
-                  Tom Sutton Heating is a Gas, LPG, Oil, Heating and plumbing company based in Lymington and surrounding areas. We are a family run business, established for over 30 years we offer valuable knowledge on heating systems both modern and old.
-                </p>
-                <p>
-                  We carry out boiler installations, and boiler repairs in New Milton, Lymington, Brockenhurst, Southampton, Bournemouth, Ringwood, Christchurch, Highcliffe, and all the surrounding villages and towns in the New Forest area.
-                </p>
-                <p>
-                  All work is carried out to the highest standards as we pride ourselves on keeping our customers happy and delivering their requirements at a competitive price.
-                </p>
-                <p>
-                  We are Gas Safe and OFTEC registered.
-                </p>
-                <p className="text-[#0d1b42] font-semibold">
-                  We understand that sometimes your gas, heating and plumbing needs can't wait, this is why we offer an out of hours call out service.<br />
-                  So, if you need a plumber or a gas engineer in Lymington and surrounding areas, contact us now!
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-4 mb-12">
-                <Link href="/about" className="px-8 py-4 bg-[#0d1b42] hover:bg-emerald-600 text-white font-bold rounded-xl shadow-[0_10px_20px_rgba(13,27,66,0.3)] transition-all hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(5,150,105,0.4)]">
-                  More about us
-                </Link>
-                <Link href="/contact" className="px-8 py-4 bg-white hover:bg-gray-50 text-[#0d1b42] border-[3px] border-[#0d1b42] font-bold rounded-xl transition-all hover:-translate-y-1">
-                  Contact us
-                </Link>
-              </div>
-
-              {/* Accreditations */}
-              <div className="relative w-[280px] h-[90px] md:w-[320px] md:h-[110px]">
-                <Image
-                  src="https://i.postimg.cc/dtqCn4Nf/oftec-gassafe.webp"
-                  alt="Gas Safe and OFTEC Registered"
-                  fill
-                  className="object-contain object-left"
-                />
-              </div>
-            </div>
-
-            {/* Right Column: Image & Quote Card */}
-            <div className="w-full lg:w-[45%] flex flex-col gap-8 mt-10 lg:mt-0">
-              {/* Square Image Container (Fully Visible) */}
-              <div className="relative w-full aspect-square sm:w-[90%] md:w-[80%] lg:w-full mx-auto rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(13,27,66,0.15)] ring-1 ring-gray-900/5 group z-10">
-                <Image
-                  src="https://i.postimg.cc/TYFRhPbV/My-Post.webp"
-                  alt="Ronan Sutton - Managing Director"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
-              </div>
-
-              {/* Stacked Quote Card (Moved down to prevent image hiding) */}
-              <div className="w-full bg-[#0d1b42] rounded-3xl p-8 sm:p-10 shadow-xl border border-white/10 relative transition-transform duration-500 hover:-translate-y-1">
-                <div className="absolute -top-6 right-8 text-[#ff4c24] text-7xl font-serif opacity-30 select-none pointer-events-none">"</div>
-                <p className="text-white/90 font-medium text-[1.05rem] sm:text-lg leading-[1.8] italic mb-6 relative z-10">
-                  "At Tom Sutton Heating, our goal is not to just simply sell you a new boiler, but to find for you and offer you the perfect solution to your homes heating and hot water needs."
-                </p>
-                <div className="flex items-center gap-4 border-t border-white/10 pt-6">
-                  <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center border border-emerald-500/30">
-                    <svg className="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-lg tracking-wide">Ronan Sutton</h4>
-                    <span className="text-emerald-400 text-sm font-semibold tracking-widest uppercase block mt-0.5">Managing Director</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* Dynamic Why Choose Us Section */}
+      <WhyChooseUs />
 
       {/* Premium Compact Logo Ribbon */}
       <section className="bg-[#1f1f1f] py-6 sm:py-8 border-t border-white/5">
@@ -802,6 +554,47 @@ export default function NewBoilerInstallationPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-white relative overflow-hidden border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#00d0bb] text-sm font-bold uppercase tracking-wider border-2 border-[#00d0bb]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#00d0bb]"></span>
+              Boiler FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
+          </div>
+
+          <FaqAccordion items={[
+            {
+              question: "How long does a new boiler installation take?",
+              answer: "Most straightforward boiler replacements take just 1 day. If we are completely changing the system type or relocating the boiler, the process can take 2 to 3 days. We will always give you a precise timeframe during your survey."
+            },
+            {
+              question: "Which boiler brands do you install?",
+              answer: "We are proudly accredited installers for Worcester Bosch, allowing us to offer up to 12-year extended warranties on their premium models. We also regularly install other top-tier brands like Alpha and Baxi depending on your budget and heating requirements."
+            },
+            {
+              question: "Do you offer finance for new boilers?",
+              answer: "Yes, we do! We offer a variety of flexible finance plans to help you spread the cost of a brand new boiler installation. We can discuss these options during your free, no-obligation quote."
+            },
+            {
+              question: "Will you dispose of my old boiler?",
+              answer: "Absolutely. We ensure your old boiler, along with any redundant tanks, cylinders, and all associated packaging, are safely removed from your property and responsibly recycled, leaving your home spotless."
+            },
+            {
+              question: "Will my new boiler come with a warranty?",
+              answer: "Yes, every boiler we install comes with a comprehensive manufacturer’s parts and labour warranty ranging from 5 to 13 years depending on the exact model chosen, giving you absolute peace of mind."
+            }
+          ]} />
+        </div>
+      </section>
+
+      {/* Location & Contact Section */}
+      <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer */}
       <section className="relative bg-[#0b1021] py-8 sm:py-10 overflow-hidden">

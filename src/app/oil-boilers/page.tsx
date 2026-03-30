@@ -1,18 +1,13 @@
-﻿'use client';
-
+﻿
 import Image from 'next/image';
 import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
-import dynamic from 'next/dynamic';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import LeadForm from '@/components/LeadForm';
 import WhyChooseUs from '@/components/WhyChooseUs';
 
-const QuoteComponent = dynamic(() => import('@/components/QuoteComponent'), {
-  ssr: false,
-  loading: () => <p className="text-gray-400 py-10 font-bold tracking-widest uppercase">Initializing Interface...</p>
-});
+import QuoteComponent from '@/components/QuoteComponent';
 
 export default function OilBoilersPage() {
   return (

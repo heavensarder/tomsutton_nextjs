@@ -1,18 +1,8 @@
-'use client';
-import dynamic from 'next/dynamic';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
 
-const QuoteComponent = dynamic(() => import('@/components/QuoteComponent'), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full min-h-[500px] flex flex-col items-center justify-center">
-      <div className="w-12 h-12 border-4 border-slate-200 border-t-[#f38230] rounded-full animate-spin mb-4"></div>
-      <p className="text-gray-400 font-bold tracking-widest uppercase">Booting Application...</p>
-    </div>
-  )
-});
+import QuoteComponent from '@/components/QuoteComponent';
 
 export default function OnlineBoilerQuotePage() {
   return (

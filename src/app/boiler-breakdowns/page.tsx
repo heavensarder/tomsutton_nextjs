@@ -1,6 +1,3 @@
-
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
@@ -121,7 +118,7 @@ export default function BoilerBreakdownsPage() {
                  Leave your details below and we'll get in touch to discuss your new boiler.
                </p>
 
-               <form className="w-full space-y-4" onSubmit={(e) => e.preventDefault()}>
+               <form className="w-full space-y-4" action="/contact">
                  <div className="w-full">
                    <input type="text" placeholder="Name *" className="w-full px-5 py-3.5 border border-slate-200 rounded-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-colors bg-white font-medium text-slate-700 placeholder-slate-400 text-[0.95rem]" required />
                  </div>

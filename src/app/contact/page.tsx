@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -125,7 +123,7 @@ export default function ContactPage() {
                   Leave your details below and we'll get in touch to discuss your new boiler.
                 </p>
 
-                <form className="space-y-7" onSubmit={(e) => { e.preventDefault(); alert("System Message: Ensure LeadForm backend is wired securely before production deploys."); }}>
+                <form className="space-y-7" action="/contact">
                   
                   {/* Grid fields */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7">

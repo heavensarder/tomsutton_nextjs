@@ -25,6 +25,7 @@ const Footer = () => {
                                 height={80}
                                 className="object-contain"
                                 unoptimized
+                                suppressHydrationWarning
                             />
                         </a>
 

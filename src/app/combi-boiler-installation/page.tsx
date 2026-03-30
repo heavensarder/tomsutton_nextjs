@@ -1,9 +1,12 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import LocationContact from '@/components/LocationContact';
+import FaqAccordion from '@/components/FaqAccordion';
 import dynamic from 'next/dynamic';
 import TestimonialSlider from '@/components/TestimonialSlider';
+import WhyChooseUs from '@/components/WhyChooseUs';
 import LeadForm from '@/components/LeadForm';
 
 const QuoteComponent = dynamic(() => import('@/components/QuoteComponent'), {
@@ -95,7 +98,7 @@ export default function CombiBoilerInstallationPage() {
 
               <div className="space-y-6 text-slate-600 font-medium text-[1.05rem] leading-[1.8]">
                 <p>
-                  A combination or ‘combi’ boiler is both a high-efficiency water heater and a central heating boiler in a single compact unit. Combi boilers heat water directly from the mains when you turn on a tap, so you won’t need a hot water storage cylinder or a cold water storage tank in the roof space.
+                  A combination or â€˜combiâ€™ boiler is both a high-efficiency water heater and a central heating boiler in a single compact unit. Combi boilers heat water directly from the mains when you turn on a tap, so you wonâ€™t need a hot water storage cylinder or a cold water storage tank in the roof space.
                 </p>
                 <p>
                   They are also very cost-effective and energy-efficient as water is heated instantly rather than being heated and then stored in a cylinder. An added benefit is that hot water is delivered at mains pressure, which means that you could get a powerful shower without the need for a separate pump.
@@ -249,6 +252,45 @@ export default function CombiBoilerInstallationPage() {
                    />
                  </div>
                </div>
+      {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
+          </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: "What is a combi boiler and is it right for my home?",
+              answer: "A combi (combination) boiler provides both central heating and instant hot water from a single compact unit, without the need for a separate hot water tank or cylinder. They are ideal for small to medium-sized homes with 1-2 bathrooms."
+            },
+            {
+              question: "How long does a combi boiler installation take?",
+              answer: "A like-for-like combi boiler replacement typically takes just one day. If we are converting from a system or regular boiler to a combi, it may take 2-3 days as we will need to remove the old tanks and cylinders and modify the pipework."
+            },
+            {
+              question: "Which combi boiler brands do you recommend?",
+              answer: "We are accredited installers for Worcester Bosch and Alpha, two of the most reliable and efficient brands on the market. We also install Baxi, Ideal, and Vaillant. We will recommend the best brand and model for your specific needs and budget."
+            },
+            {
+              question: "How much does a new combi boiler installation cost?",
+              answer: "The cost of a combi boiler installation varies depending on the model, your existing system, and any additional work required. We offer free, no-obligation surveys and quotes. We also provide flexible finance options to spread the cost."
+            },
+            {
+              question: "Will a combi boiler save me money on energy bills?",
+              answer: "Yes! Modern combi boilers are A-rated for efficiency, typically operating at 90%+ efficiency compared to 60-70% for older boilers. This can reduce your gas bills by up to £300 per year. You also save space by removing the hot water cylinder and tanks."
+            }
+          ]} />
+        </div>
+      </section>
+
 
                {/* Why Choose Us Section */}
                <div className="w-full bg-[#f8f9fa] rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 flex flex-col items-center">
@@ -320,6 +362,13 @@ export default function CombiBoilerInstallationPage() {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+
+      {/* Location & Contact Section */}
+      <LocationContact />
+
       {/* Premium Dark Gradient Contact Footer */}
       <section className="relative bg-[#0b1021] py-8 sm:py-10 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"></div>
@@ -341,6 +390,7 @@ export default function CombiBoilerInstallationPage() {
           </div>
         </div>
       </section>
+
 
     </main>
   );

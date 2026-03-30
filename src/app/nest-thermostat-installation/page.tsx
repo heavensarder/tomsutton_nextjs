@@ -1,8 +1,11 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import LocationContact from '@/components/LocationContact';
+import FaqAccordion from '@/components/FaqAccordion';
 import LeadForm from '@/components/LeadForm';
+import WhyChooseUs from '@/components/WhyChooseUs';
 
 export default function NestThermostatInstallationPage() {
   return (
@@ -182,6 +185,52 @@ export default function NestThermostatInstallationPage() {
           </div>
         </div>
       </section>
+      {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
+          </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: "What is a Nest thermostat and how does it work?",
+              answer: "The Google Nest Learning Thermostat is a smart thermostat that learns your schedule and preferred temperatures over time, then automatically adjusts your heating to keep you comfortable while reducing energy waste. You can control it from your phone, tablet, or laptop from anywhere."
+            },
+            {
+              question: "Will a Nest thermostat work with my existing boiler?",
+              answer: "The Nest thermostat is compatible with most conventional and combi boilers. During our free survey, we will check your existing system to confirm compatibility and advise on the best model for your setup. It works with gas, oil, and heat pump systems."
+            },
+            {
+              question: "How much can I save with a Nest thermostat?",
+              answer: "Independent studies show the Nest thermostat can save up to 26% on heating bills. By learning your routine and using features like Home/Away Assist, it ensures your heating only runs when needed, reducing energy waste significantly."
+            },
+            {
+              question: "How long does a Nest thermostat installation take?",
+              answer: "A standard Nest thermostat installation typically takes around 1-2 hours. This includes removing your old thermostat, wiring in the new Nest unit, setting up your Wi-Fi connection, and configuring the Nest app on your phone."
+            },
+            {
+              question: "Can I control my Nest thermostat remotely?",
+              answer: "Yes! With the Nest app on your smartphone, you can adjust your heating from anywhere with an internet connection. You can also set schedules, view energy usage history, and receive maintenance reminders. It also works with Google Home and Amazon Alexa for voice control."
+            }
+          ]} />
+        </div>
+      </section>
+
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+
+      {/* Location & Contact Section */}
+      <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer Bridge */}
       <section className="relative bg-[#0b1021] py-8 sm:py-10 overflow-hidden">
@@ -203,6 +252,7 @@ export default function NestThermostatInstallationPage() {
           </div>
         </div>
       </section>
+
 
     </main>
   );

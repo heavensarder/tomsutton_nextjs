@@ -1,5 +1,8 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
+import LocationContact from '@/components/LocationContact';
+import FaqAccordion from '@/components/FaqAccordion';
+import WhyChooseUs from '@/components/WhyChooseUs';
 
 export default function UnventedHotWaterPage() {
   return (
@@ -149,66 +152,48 @@ export default function UnventedHotWaterPage() {
           </div>
         </div>
       </section>
-
-      {/* Meet the Director & Why Choose Us */}
-      <section className="bg-white py-20 lg:py-32 relative overflow-hidden border-b border-slate-100">
-        <div className="container mx-auto px-4 max-w-[1100px] relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-            
-            {/* Left: Ronan Photo Card */}
-            <div className="lg:col-span-5 relative group">
-              <div className="relative w-full sm:max-w-[400px] mx-auto lg:max-w-none aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] ring-4 ring-white transform transition-transform duration-700 group-hover:-translate-y-2">
-                <Image 
-                  src="https://i.postimg.cc/P5V7VFJw/Ronan-Sutton-Managing-director.webp" 
-                  alt="Ronan Sutton - Managing Director" 
-                  fill 
-                  className="object-cover object-top scale-[1.03] group-hover:scale-105 transition-transform duration-700 ease-out" 
-                  unoptimized 
-                />
-                
-                {/* Modern Gradient Name Tag Overlay */}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent pt-32 pb-8 px-6 text-center transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 backdrop-blur-[2px]">
-                  <h3 className="text-white text-2xl font-black tracking-tight drop-shadow-md">Ronan Sutton</h3>
-                  <p className="text-[#f38230] font-bold tracking-widest text-[0.85rem] uppercase mt-1">Managing Director</p>
-                </div>
-              </div>
-              
-              {/* Decorative Orbs */}
-              <div className="absolute -z-10 -bottom-8 -left-8 w-40 h-40 bg-blue-100 rounded-full blur-[40px] pointer-events-none"></div>
-              <div className="absolute -z-10 -top-8 -right-8 w-40 h-40 bg-orange-50 rounded-full blur-[40px] pointer-events-none"></div>
-            </div>
-
-            {/* Right: Checklist */}
-            <div className="lg:col-span-7 flex flex-col justify-center">
-              <h2 className="text-[2rem] sm:text-[2.75rem] font-black text-slate-800 tracking-tight leading-[1.1] mb-10 text-center lg:text-left">
-                WHY CHOOSE US?
-              </h2>
-              
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
-                {[
-                  "Highly trained Gas Safe, OFTEC registered engineers",
-                  "Friendly Attitude & A Commitment To Customer Service",
-                  "Rate 5* On Google & 9.9/10 On Checkatrade",
-                  "No Obligation Free Quotes",
-                  "Honest & Upfront Pricing",
-                  "Local Business & Team",
-                  "Extended Boiler Guarantee's",
-                  "Reliable Boilers & Products",
-                  "Fast, Reliable Service"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 sm:gap-4 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-colors group cursor-default">
-                    <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-green-50 flex items-center justify-center border border-green-200 group-hover:bg-green-500 transition-colors duration-300">
-                      <svg className="w-3.5 h-3.5 text-green-600 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7"/></svg>
-                    </div>
-                    <span className="text-slate-700 font-bold text-[0.95rem] leading-[1.4] text-balance">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
+      {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
           </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: "What is an unvented hot water cylinder?",
+              answer: "An unvented hot water cylinder is a pressurised hot water storage system that is fed directly from the mains water supply, rather than from a cold water tank in the loft. This provides mains-pressure hot water to all outlets, giving you powerful showers and fast-filling baths."
+            },
+            {
+              question: "What are the benefits of an unvented cylinder over a vented system?",
+              answer: "Unvented cylinders deliver mains-pressure hot water for better shower performance, eliminate the need for a cold water tank in the loft (freeing up space), reduce the risk of contamination, and provide more consistent water pressure to multiple outlets simultaneously."
+            },
+            {
+              question: "Do I need special qualifications to install an unvented cylinder?",
+              answer: "Yes, unvented hot water cylinders must be installed by a qualified engineer who holds the G3 unvented hot water qualification. All our engineers are G3 certified, ensuring your installation meets Building Regulations and is carried out safely."
+            },
+            {
+              question: "How long does an unvented cylinder installation take?",
+              answer: "A straightforward replacement typically takes one day. If we are converting from a vented to an unvented system, it may take 1-2 days as additional work such as fitting expansion vessels and safety valves is required to comply with regulations."
+            },
+            {
+              question: "Can an unvented cylinder work with my existing boiler?",
+              answer: "Unvented cylinders are compatible with most system boilers, regular boilers, and renewable heating systems such as heat pumps and solar thermal. They are not used with combi boilers, as combis provide hot water directly without a cylinder."
+            }
+          ]} />
         </div>
       </section>
+
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
 
       {/* Embedded Map Tier */}
       <section className="bg-slate-50 py-20 lg:py-28 relative overflow-hidden">
@@ -239,6 +224,10 @@ export default function UnventedHotWaterPage() {
 
         </div>
       </section>
+
+
+      {/* Location & Contact Section */}
+      <LocationContact />
 
     </main>
   );

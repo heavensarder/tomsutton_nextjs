@@ -1,5 +1,8 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
+import LocationContact from '@/components/LocationContact';
+import FaqAccordion from '@/components/FaqAccordion';
+import WhyChooseUs from '@/components/WhyChooseUs';
 
 export default function AlphaETecSystemPage() {
   return (
@@ -149,83 +152,50 @@ export default function AlphaETecSystemPage() {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Us Section (Imported directly from /alpha config) */}
-      <section className="bg-slate-50 py-20 lg:py-32 border-t border-slate-200 relative overflow-hidden">
-        <div className="container mx-auto px-4 max-w-[1200px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            
-            {/* Left Column: Text & Checklist */}
-            <div className="flex flex-col">
-              <h2 className="text-[2rem] sm:text-[2.25rem] lg:text-[2.5rem] font-black text-slate-800 tracking-tight leading-[1.1] mb-10 text-balance">
-                Why choose us to Install your new Alpha Boiler?
-              </h2>
-              
-              <ul className="space-y-5 mb-14">
-                {[
-                  "Highly trained Gas Safe, OFTEC registered engineers",
-                  "Friendly Attitude & A Commitment To Customer Service",
-                  "Rate 5* On Google & 9.9/10 On Checkatrade",
-                  "No Obligation Free Quotes",
-                  "Honest & Upfront Pricing",
-                  "Local Business & Team",
-                  "Reliable Boilers & Products",
-                  "Extended Boiler Guarantee's",
-                  "Fast, Reliable Service"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-4 group">
-                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center border border-green-200 group-hover:bg-green-500 transition-colors">
-                      <svg className="w-4 h-4 text-green-600 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7"/></svg>
-                    </div>
-                    <span className="text-slate-700 font-bold text-[1.05rem] leading-snug">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Quote Block */}
-              <div className="relative pl-8 border-l-[3px] border-[#0ea5e9]">
-                <p className="text-slate-600 text-lg sm:text-[1.35rem] font-bold italic leading-relaxed mb-4 text-balance">
-                  "At Tom Sutton Heating, our goal is not to just simply sell you a new boiler, but to find for you and offer you the perfect solution to your homes heating and hot water needs."
-                </p>
-                <span className="text-slate-400 font-bold text-xs uppercase tracking-widest">RONAN SUTTON, MANAGING DIRECTOR</span>
-              </div>
-            </div>
-
-            {/* Right Column: Media & Trust Signals */}
-            <div className="flex flex-col gap-8 lg:gap-10">
-              
-              {/* Team Photo */}
-              <div className="relative w-full h-[300px] sm:h-[400px] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-[6px] border-white transform transition-transform hover:scale-[1.02] duration-500">
-                <Image src="https://i.postimg.cc/SsZTFfMC/people-photo.jpg" alt="Tom Sutton Heating Team" fill className="object-cover" unoptimized />
-              </div>
-
-              {/* Trust Logos Array */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 bg-white px-8 py-10 rounded-[3rem] shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-slate-100">
-                <a href="https://www.google.com/maps/place/Tom+Sutton+Heating/@50.7572451,-1.6704168,688m/data=!3m2!1e3!4b1!4m6!3m5!1s0x487383d967293ef5:0x722abc9b62d8ffc2!8m2!3d50.7572451!4d-1.6704168!16s%2Fg%2F11b5pjq4ng?entry=ttu&g_ep=EgoyMDI2MDMxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="relative w-[180px] h-[55px] hover:scale-[1.05] transition-transform duration-300 transform origin-center">
-                  <Image src="https://i.postimg.cc/5yrxGmSh/google.webp" alt="Google Customer Reviews" fill className="object-contain" unoptimized />
-                </a>
-                
-                <div className="w-full sm:w-px h-px sm:h-16 bg-slate-100"></div>
-                
-                <a href="https://www.checkatrade.com/trades/slenergytomsuttonheating" target="_blank" rel="noopener noreferrer" className="relative w-[210px] h-[65px] hover:scale-[1.05] transition-transform duration-300 transform origin-center">
-                  <Image src="https://i.postimg.cc/3rfJdKQY/checktrade.webp" alt="Checkatrade Approved" fill className="object-contain pointer-events-none" unoptimized />
-                </a>
-              </div>
-
-              {/* Alpha Logo Standalone */}
-              <div className="relative w-full h-[150px] px-10 py-8 bg-white rounded-[3rem] shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-slate-100 flex items-center justify-center mt-2 group border-b-[6px] border-b-[#d91d29] hover:border-b-blue-600 transition-colors duration-500 overflow-hidden cursor-default">
-                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] pointer-events-none mix-blend-overlay"></div>
-                 <div className="relative w-[320px] h-full opacity-90 group-hover:opacity-100 transition-opacity group-hover:scale-[1.04] duration-500">
-                   <Image src="https://i.postimg.cc/fRHSzQpt/alpha_logo.png" alt="Alpha Heating Innovation" fill className="object-contain" unoptimized />
-                 </div>
-              </div>
-
-            </div>
-
+      {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
           </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: "What is the Alpha E-Tec System boiler?",
+              answer: "The Alpha E-Tec System is a system boiler that works with a hot water cylinder to provide central heating and stored hot water. It is ideal for homes with multiple bathrooms where simultaneous hot water use is required."
+            },
+            {
+              question: "When should I choose the E-Tec System over the E-Tec Plus combi?",
+              answer: "Choose the E-Tec System if your home has two or more bathrooms and needs to deliver hot water to multiple outlets simultaneously. The stored hot water in the cylinder ensures consistent pressure and temperature, unlike a combi which can struggle with multiple outlets."
+            },
+            {
+              question: "What warranty does the E-Tec System come with?",
+              answer: "The Alpha E-Tec System comes with a competitive warranty as standard. We ensure full manufacturer registration during installation so your warranty is active from day one, giving you long-term protection."
+            },
+            {
+              question: "Is the E-Tec System compatible with renewable energy?",
+              answer: "Yes, the E-Tec System can be paired with solar thermal panels to pre-heat stored water, reducing your reliance on gas and lowering your energy bills. We can advise on the best renewable options for your home."
+            }
+          ]} />
         </div>
       </section>
+
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+
+      {/* Location & Contact Section */}
+      <LocationContact />
 
     </main>
   );
 }
+

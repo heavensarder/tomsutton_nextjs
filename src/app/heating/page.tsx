@@ -2,7 +2,10 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import LocationContact from '@/components/LocationContact';
+import FaqAccordion from '@/components/FaqAccordion';
 import LeadForm from '@/components/LeadForm';
+import WhyChooseUs from '@/components/WhyChooseUs';
 
 export default function HeatingPage() {
   return (
@@ -23,7 +26,7 @@ export default function HeatingPage() {
             {/* Left Content Area */}
             <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start text-center lg:text-left text-white pt-8 lg:pt-0">
               <h3 className="text-xs sm:text-sm font-bold tracking-[0.15em] text-blue-200 uppercase mb-4">
-                Heating & Plumbing Experts
+                Heating &amp; Plumbing Experts
               </h3>
 
               <h1 className="text-[2rem] sm:text-4xl lg:text-[3rem] font-black tracking-tight leading-[1.05] mb-6 drop-shadow-md uppercase">
@@ -32,10 +35,10 @@ export default function HeatingPage() {
               
               <div className="space-y-4 text-[1.05rem] sm:text-[1.15rem] font-medium leading-[1.7] text-white/95 mb-10 max-w-[650px]">
                 <p>
-                  At Tom Sutton heating we offer solutions to all your heating & plumbing needs.
+                  At Tom Sutton heating we offer solutions to all your heating &amp; plumbing needs.
                 </p>
                 <p>
-                  We understand that sometimes your heating & plumbing needs cant wait, so we aim to get to any heating system breakdowns within 24Hrs!!
+                  We understand that sometimes your heating &amp; plumbing needs cant wait, so we aim to get to any heating system breakdowns within 24Hrs!!
                 </p>
               </div>
 
@@ -68,7 +71,7 @@ export default function HeatingPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1250px] relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start justify-between">
 
-            {/* Left Column: Typography Content & Checklist */}
+            {/* Left Column: Typography Content & Service Cards */}
             <div className="w-full lg:w-[55%] flex flex-col items-start lg:pr-4">
               
               <h2 className="text-[2.25rem] sm:text-[2.75rem] font-black text-[#334155] mb-8 tracking-tight leading-[1.1] uppercase">
@@ -77,34 +80,34 @@ export default function HeatingPage() {
 
               <div className="space-y-6 text-[#64748b] font-medium text-[1.1rem] leading-[1.8] mb-10 w-full">
                 <p>
-                  We understand that plumbing and heating repairs can be costly, with this in mind we use a wide range of manufacturers and materials to suit everybody's budget across the New Forest.
+                  We understand that plumbing and heating repairs can be costly, with this in mind we use a wide range of manufacturers and materials to suit everybody&apos;s budget across the New Forest.
                 </p>
                 <p>We offer the following heating services:</p>
                 
-                {/* Immersive Checklist */}
-                <ul className="space-y-3 w-full bg-white/60 p-6 md:p-8 rounded-3xl border border-slate-200 mt-6 !mb-8 shadow-sm">
+                {/* Premium Service Cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mt-6 !mb-8">
                   {[
-                    "Radiator installations",
-                    "Thermostatic radiator valve replacement",
-                    "Cylinder repair and installations",
-                    "Unvented cylinder installations",
-                    "Heating system fault finding",
-                    "Heating system repair",
-                    "Heating system upgrades",
-                    "Power flushing",
-                    "Pipe work installation and repair"
+                    { text: "Radiator installations", icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" },
+                    { text: "Thermostatic radiator valve replacement", icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z" },
+                    { text: "Cylinder repair & installations", icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" },
+                    { text: "Unvented cylinder installations", icon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" },
+                    { text: "Heating system fault finding", icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" },
+                    { text: "Heating system repair", icon: "M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" },
+                    { text: "Heating system upgrades", icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" },
+                    { text: "Power flushing", icon: "M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" },
+                    { text: "Pipe work installation & repair", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" }
                   ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-4 group">
-                      <div className="flex-shrink-0">
-                        <div className="w-2 h-2 rounded-full bg-slate-400 group-hover:bg-blue-500 group-hover:scale-125 transition-all duration-300"></div>
+                    <div key={i} className="flex items-center gap-3.5 bg-white rounded-xl px-4 py-3.5 shadow-[0_2px_12px_-3px_rgba(0,0,0,0.06)] border border-slate-100 hover:shadow-[0_8px_25px_-5px_rgba(255,94,20,0.12)] hover:border-[#ff5e14]/20 hover:-translate-y-0.5 transition-all duration-300 group cursor-default">
+                      <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#ff5e14] to-[#ff8c42] flex items-center justify-center shrink-0 shadow-sm group-hover:shadow-md group-hover:shadow-[#ff5e14]/20 transition-all duration-300">
+                        <svg className="w-[18px] h-[18px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} /></svg>
                       </div>
-                      <span className="font-semibold text-slate-700 text-[1.05rem] leading-[1.4] group-hover:text-slate-900 transition-colors duration-300">{item}</span>
-                    </li>
+                      <span className="font-semibold text-slate-700 text-[0.92rem] leading-[1.35] group-hover:text-[#0d1033] transition-colors duration-300">{item.text}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
 
                 <p>
-                  To speak with us regarding heating services, please call <strong className="text-slate-800">01590 631671</strong> or <strong className="text-slate-800">07774 673109</strong> or leave your details on our contact form and we'll get back to you as soon as possible.
+                  To speak with us regarding heating services, please call <strong className="text-slate-800">01590 631671</strong> or <strong className="text-slate-800">07774 673109</strong> or leave your details on our contact form and we&apos;ll get back to you as soon as possible.
                 </p>
               </div>
 
@@ -130,7 +133,6 @@ export default function HeatingPage() {
             <div className="w-full lg:w-[45%] flex flex-col space-y-12 relative z-10">
               {/* Native LeadForm Component Instance */}
               <div className="w-full relative z-10 block rounded-3xl overflow-hidden shadow-2xl bg-white sticky top-24">
-                {/* The global Lead Form dynamically includes its title and internal UI safely */}
                 <LeadForm />
               </div>
             </div>
@@ -138,6 +140,51 @@ export default function HeatingPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
+          </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: "What types of heating systems do you install?",
+              answer: "We install a wide range of heating systems including gas central heating, oil-fired heating, underfloor heating, radiator upgrades, smart heating controls, and renewable systems such as air source heat pumps. We will recommend the best solution for your home and budget."
+            },
+            {
+              question: "How can I improve the efficiency of my central heating?",
+              answer: "There are several ways to improve efficiency: upgrading to a modern condensing boiler, installing thermostatic radiator valves (TRVs), adding smart heating controls like a Nest thermostat, power flushing your system to remove sludge, and ensuring adequate loft and wall insulation."
+            },
+            {
+              question: "My radiators have cold spots \u2014 what does this mean?",
+              answer: "Cold spots on radiators usually indicate trapped air or a build-up of sludge in the system. Bleeding radiators can resolve air pockets. If sludge is the issue, a professional power flush will clear the debris and restore full heat output to all radiators."
+            },
+            {
+              question: "How long does a central heating installation take?",
+              answer: "A straightforward boiler swap typically takes one day. A full central heating system installation, including new radiators and pipework, usually takes 3-5 days depending on the size of your property and the complexity of the system layout."
+            },
+            {
+              question: "Do you offer smart thermostat installations?",
+              answer: "Yes, we are approved installers for the Google Nest Learning Thermostat and other smart heating controls. Smart thermostats can save you up to 26% on your heating bills by learning your schedule and only heating your home when needed."
+            }
+          ]} />
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+      {/* Location & Contact Section */}
+      <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer Bridge */}
       <section className="relative bg-[#0b1021] py-8 sm:py-10 overflow-hidden">

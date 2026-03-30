@@ -179,7 +179,8 @@ const NavBar = () => {
                                 <svg className={`w-4 h-4 ml-1 opacity-60 group-hover:rotate-180 transition-transform duration-300 ${isServicing ? 'text-orange-500 rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                     <span className={`absolute bottom-[20px] left-1/2 -translate-x-1/2 h-0.5 bg-orange-500 transition-all duration-300 ease-out ${isServicing ? 'w-full' : 'w-0 group-hover/nav:w-full'}`}></span>
                                 </Link>
-                                <div className="absolute left-0 top-full opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 translate-y-2 transition-all duration-300 w-60 bg-white border-t-4 border-orange-500 shadow-2xl z-50 py-2 rounded-b-lg">
+                                <div className="absolute left-0 top-full opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 translate-y-2 transition-all duration-300 w-72 bg-white border-t-4 border-orange-500 shadow-2xl z-50 py-2 rounded-b-lg">
+                                    <Link href="/boiler-servicing" className={`block px-6 py-3.5 text-sm font-semibold transition-colors ${pathname === '/boiler-servicing' ? 'text-orange-500 bg-orange-50' : 'text-gray-700 hover:text-orange-500 hover:bg-orange-50'}`}>Boiler Servicing & Care Plans</Link>
                                     <Link href="/boiler-maintenance-plans" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Boiler Care Plans</Link>
                                 </div>
                             </div>
@@ -303,7 +304,8 @@ const NavBar = () => {
                                 <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileDropdown === 'service' ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
                                     <div className="bg-slate-50 px-6 py-2 pb-4 shadow-inner">
                                         <div className="border-l-2 border-orange-200 ml-2 pl-4">
-                                            <Link href="/boiler-servicing" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-800 border-b border-gray-200/50 hover:text-[#ff5e14]">Boiler Servicing</Link>
+                                            <Link href="/boiler-servicing" onClick={() => setIsMobileOpen(false)} className={`block py-2.5 text-[14px] font-semibold border-b border-gray-200/50 ${pathname === '/boiler-servicing' ? 'text-[#ff5e14]' : 'text-slate-800 hover:text-[#ff5e14]'}`}>Boiler Servicing & Care Plans</Link>
+                                            <Link href="/boiler-servicing" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Boiler Servicing</Link>
                                             <Link href="/boiler-maintenance-plans" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 hover:text-[#ff5e14]">Boiler Care Plans</Link>
                                         </div>
                                     </div>

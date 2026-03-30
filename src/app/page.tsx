@@ -5,6 +5,8 @@ import InteractiveSlider from '@/components/InteractiveSlider';
 import FaqAccordion from '@/components/FaqAccordion';
 import SlidingGallery from '@/components/SlidingGallery';
 import ScrollAnimate from '@/components/ScrollAnimate';
+import LocationContact from '@/components/LocationContact';
+import VideoLightbox from '@/components/VideoLightbox';
 
 export default function Home() {
   return (
@@ -190,8 +192,13 @@ export default function Home() {
                   </div>
                   <p className="text-gray-400 text-[11px] font-semibold mb-3">Based on 360+ Reviews</p>
                   <div className="flex -space-x-2">
-                    {['🔧','⚡','🏠','🔥'].map((emoji, i) => (
-                      <div key={i} className="w-9 h-9 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 border-[2.5px] border-white flex items-center justify-center text-sm shadow-sm">{emoji}</div>
+                    {[
+                      <svg key={0} className="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
+                      <svg key={1} className="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
+                      <svg key={2} className="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>,
+                      <svg key={3} className="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
+                    ].map((icon, i) => (
+                      <div key={i} className="w-9 h-9 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 border-[2.5px] border-white flex items-center justify-center shadow-sm">{icon}</div>
                     ))}
                     <div className="w-9 h-9 rounded-full bg-[#ff5e14] border-[2.5px] border-white flex items-center justify-center shadow-sm">
                       <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 4v16m8-8H4" /></svg>
@@ -218,15 +225,7 @@ export default function Home() {
                 <div className="absolute -left-2.5 top-3 bottom-3 w-1 bg-[#ff5e14] rounded-full z-20"></div>
                 <div className="absolute -right-2.5 top-6 bottom-6 w-1 bg-[#0bdacb] rounded-full z-20"></div>
                 <div className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#0bdacb] rounded-full z-20"></div>
-                <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_12px_30px_-8px_rgba(0,0,0,0.15)]">
-                  <iframe
-                    src="https://www.youtube.com/embed/wxsnvRy0I34?rel=0&modestbranding=1"
-                    title="Tom Sutton Heating - Company Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full border-0"
-                  />
-                </div>
+                <VideoLightbox videoId="wxsnvRy0I34" title="Tom Sutton Heating - Company Video" />
               </div>
 
               {/* CTA Button */}
@@ -241,10 +240,10 @@ export default function Home() {
             {/* Far Right: Service Highlights & Accreditations */}
             <div className="hidden xl:flex shrink-0 w-[240px] order-3 flex-col justify-center gap-4">
               {[
-                { icon: '🛡️', text: 'Gas Safe Registered' },
-                { icon: '🔧', text: 'OFTEC Registered' },
-                { icon: '⚡', text: 'Next Day Installations' },
-                { icon: '📞', text: 'Out of Hours Service' },
+                { icon: <svg className="w-5 h-5 text-[#ff5e14]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>, text: 'Gas Safe Registered' },
+                { icon: <svg className="w-5 h-5 text-[#ff5e14]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>, text: 'OFTEC Registered' },
+                { icon: <svg className="w-5 h-5 text-[#ff5e14]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>, text: 'Next Day Installations' },
+                { icon: <svg className="w-5 h-5 text-[#ff5e14]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>, text: 'Out of Hours Service' },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 bg-gradient-to-br from-[#f8f9fc] to-white rounded-xl px-4 py-3.5 shadow-sm border border-gray-100 hover:border-[#ff5e14]/30 hover:shadow-md transition-all duration-300 group/item">
                   <span className="text-xl">{item.icon}</span>

@@ -1,8 +1,11 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import LocationContact from '@/components/LocationContact';
+import FaqAccordion from '@/components/FaqAccordion';
 import LeadForm from '@/components/LeadForm';
+import WhyChooseUs from '@/components/WhyChooseUs';
 
 export default function OilPage() {
   return (
@@ -119,7 +122,7 @@ export default function OilPage() {
                 </p>
                 
                 <p className="text-[#334155] font-bold text-[0.95rem] tracking-wide mt-2">
-                  OFTEC — Company Reg No: C103319
+                  OFTEC â€” Company Reg No: C103319
                 </p>
               </div>
 
@@ -166,6 +169,52 @@ export default function OilPage() {
           </div>
         </div>
       </section>
+      {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
+          </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: "What oil heating services do you offer?",
+              answer: "We provide oil boiler installations, servicing, and repairs, oil tank inspections, oil-fired range cooker servicing, and system upgrades. Our OFTEC registered engineers are qualified to work on all major oil heating brands."
+            },
+            {
+              question: "How often should my oil boiler be serviced?",
+              answer: "We recommend servicing your oil boiler at least once a year. Regular servicing ensures optimal efficiency, reduces fuel consumption, extends the lifespan of your boiler, and helps prevent costly breakdowns during the colder months."
+            },
+            {
+              question: "Can you convert my oil boiler to a more efficient system?",
+              answer: "Yes, we can assess your current oil heating system and recommend upgrades or replacements with modern, high-efficiency condensing oil boilers. We can also discuss renewable alternatives such as air source heat pumps if you are considering moving away from oil."
+            },
+            {
+              question: "What should I do if my oil boiler breaks down?",
+              answer: "Contact us immediately and our team will arrange an emergency callout. We carry a wide range of common spare parts in our service vehicles, enabling us to complete most repairs on the first visit. We also offer a 24/7 emergency service for existing customers."
+            },
+            {
+              question: "Are your engineers OFTEC registered?",
+              answer: "Yes, all our oil heating engineers are OFTEC certified, which is the industry standard for oil heating. This ensures all work meets the highest safety and quality standards. We also hold Gas Safe registration for gas appliance work."
+            }
+          ]} />
+        </div>
+      </section>
+
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+
+      {/* Location & Contact Section */}
+      <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer Bridge */}
       <section className="relative bg-[#0b1021] py-8 sm:py-10 overflow-hidden">
@@ -187,6 +236,7 @@ export default function OilPage() {
           </div>
         </div>
       </section>
+
 
     </main>
   );

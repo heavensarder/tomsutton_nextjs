@@ -4,6 +4,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import FaqAccordion from '@/components/FaqAccordion';
+import LocationContact from '@/components/LocationContact';
 
 export default function BoilerBreakdownsPage() {
   return (
@@ -158,6 +161,50 @@ export default function BoilerBreakdownsPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#2563eb] text-sm font-bold uppercase tracking-wider border-2 border-[#2563eb]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#2563eb]"></span>
+              Breakdown FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
+          </div>
+
+          <FaqAccordion items={[
+            {
+              question: "How fast can you repair my boiler?",
+              answer: "We aim to attend to any boiler breakdown within 24 hours. Because our engineers carry many standard heating parts in their vans, we are often able to fix the problem on our very first visit."
+            },
+            {
+              question: "What is your diagnosis fee?",
+              answer: "We charge a transparent £95 diagnosis fee for appointments within normal working hours. Once we find the fault, we will give you a clear, fixed-price quote to repair it before commencing any additional work."
+            },
+            {
+              question: "Do you repair all makes and models of boilers?",
+              answer: "Yes, our Gas Safe and OFTEC registered engineers are highly experienced and trained to repair all major gas and oil boiler brands, including Worcester Bosch, Baxi, Alpha, Vaillant, Ideal, and more."
+            },
+            {
+              question: "Will my repair be guaranteed?",
+              answer: "Absolutely. All parts installed during a repair come with the standard manufacturer's warranty, and all of our own workmanship is fully guaranteed for your peace of mind."
+            },
+            {
+              question: "Is it worth repairing an old boiler?",
+              answer: "If your boiler is very old, inefficient, frequently breaking down, or requires highly expensive replacement parts, we may recommend a full replacement as a more economical long-term choice. However, we'll always provide an honest assessment of the condition so you can make an informed decision."
+            }
+          ]} />
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+      {/* Location & Contact Section */}
+      <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer */}
       <section className="relative bg-[#0b1021] py-8 sm:py-10 overflow-hidden">

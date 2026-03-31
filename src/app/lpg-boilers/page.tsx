@@ -206,45 +206,6 @@ export default function NewBoilersPage() {
           </div>
         </div>
       </section>
-      {/* FAQs Section */}
-      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
-              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
-              FAQs
-            </span>
-            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
-              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
-            </h2>
-          </div>
-
-          {/* Accordion */}
-          <FaqAccordion items={[
-            {
-              question: "What is an LPG boiler and who needs one?",
-              answer: "An LPG (Liquefied Petroleum Gas) boiler is designed for homes that are not connected to the mains gas supply. It runs on LPG stored in an external tank, providing the same level of central heating and hot water as a natural gas boiler."
-            },
-            {
-              question: "Can my natural gas boiler be converted to LPG?",
-              answer: "Many modern boilers can be converted from natural gas to LPG with a conversion kit. However, it is often more cost-effective and efficient to install a purpose-built LPG boiler. We can assess your current boiler and recommend the best option."
-            },
-            {
-              question: "How is LPG stored and supplied?",
-              answer: "LPG is stored in an external tank in your garden, which is refilled by your LPG supplier as needed. Tanks can be either above ground or underground. We can advise on tank placement during installation and work with your LPG supplier to ensure a smooth setup."
-            },
-            {
-              question: "Are LPG boilers as efficient as natural gas boilers?",
-              answer: "Yes, modern LPG boilers are just as efficient as their natural gas counterparts, with A-rated condensing models achieving over 90% efficiency. They provide excellent heating performance and can significantly reduce energy costs compared to oil or electric heating systems."
-            },
-            {
-              question: "Do you install and service LPG boilers?",
-              answer: "Yes, our engineers are fully qualified to install, service, and repair LPG boilers. We are registered with Gas Safe for LPG work, which requires additional training and certification beyond standard gas registration."
-            }
-          ]} />
-        </div>
-      </section>
-
 
       {/* Why Choose Us Section */}
       <WhyChooseUs />
@@ -284,8 +245,47 @@ export default function NewBoilersPage() {
         </div>
       </section>
 
-
       {/* Location & Contact Section */}
+
+    {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
+          </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: "What is an LPG boiler and who needs one?",
+              answer: "An LPG (Liquefied Petroleum Gas) boiler is designed for homes that are not connected to the mains gas supply. It runs on LPG stored in an external tank, providing the same level of central heating and hot water as a natural gas boiler."
+            },
+            {
+              question: "Can my natural gas boiler be converted to LPG?",
+              answer: "Many modern boilers can be converted from natural gas to LPG with a conversion kit. However, it is often more cost-effective and efficient to install a purpose-built LPG boiler. We can assess your current boiler and recommend the best option."
+            },
+            {
+              question: "How is LPG stored and supplied?",
+              answer: "LPG is stored in an external tank in your garden, which is refilled by your LPG supplier as needed. Tanks can be either above ground or underground. We can advise on tank placement during installation and work with your LPG supplier to ensure a smooth setup."
+            },
+            {
+              question: "Are LPG boilers as efficient as natural gas boilers?",
+              answer: "Yes, modern LPG boilers are just as efficient as their natural gas counterparts, with A-rated condensing models achieving over 90% efficiency. They provide excellent heating performance and can significantly reduce energy costs compared to oil or electric heating systems."
+            },
+            {
+              question: "Do you install and service LPG boilers?",
+              answer: "Yes, our engineers are fully qualified to install, service, and repair LPG boilers. We are registered with Gas Safe for LPG work, which requires additional training and certification beyond standard gas registration."
+            }
+          ]} />
+        </div>
+      </section>
+
       <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer */}
@@ -309,7 +309,6 @@ export default function NewBoilersPage() {
           </div>
         </div>
       </section>
-
 
     </main>
   );

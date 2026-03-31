@@ -58,9 +58,15 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
         </div>
 
         <div className="container mx-auto px-4 max-w-[1200px] relative z-20 text-center">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 font-bold text-xs tracking-[0.2em] uppercase mb-6">
-            Insights & Guides
-          </span>
+          <div className="flex flex-col items-center justify-center gap-4 mb-6">
+            <Link href="/" className="text-slate-400 hover:text-blue-400 font-bold text-sm tracking-widest uppercase flex items-center gap-2 transition-colors">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+              Home
+            </Link>
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 font-bold text-xs tracking-[0.2em] uppercase">
+              Insights & Guides
+            </span>
+          </div>
           <h1 className="text-[2.5rem] sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] mb-6 text-white drop-shadow-lg">
             HEATING & PLUMBING BLOG
           </h1>

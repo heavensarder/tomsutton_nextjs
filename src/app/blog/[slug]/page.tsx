@@ -66,9 +66,9 @@ export default async function SingleBlogPost({ params }: { params: Promise<{ slu
         <div className="container mx-auto px-4 max-w-[900px] relative z-20 text-center">
           
           <div className="flex items-center justify-center gap-4 mb-8">
-            <Link href="/blog" className="text-slate-400 hover:text-blue-600 font-bold text-sm tracking-widest uppercase flex items-center gap-2 transition-colors">
+            <Link href="/blog" className="text-slate-50 hover:bg-[#1d4ed8] bg-slate-900 px-4 py-2 rounded-full font-bold text-sm tracking-widest uppercase flex items-center gap-2 transition-all shadow-md w-max">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-              Back to Blog
+              Back to Guides
             </Link>
             <span className="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
             {post.category_name && (
@@ -89,6 +89,16 @@ export default async function SingleBlogPost({ params }: { params: Promise<{ slu
               {new Date(post.published_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
             </span>
           </div>
+
+          {post.meta_keywords && (
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
+              {post.meta_keywords.split(',').map((tag: string, i: number) => (
+                <span key={i} className="px-3 py-1 bg-white border border-slate-200 text-slate-500 text-xs font-bold rounded-full lowercase shadow-sm">
+                  #{tag.trim()}
+                </span>
+              ))}
+            </div>
+          )}
 
         </div>
       </section>

@@ -237,47 +237,6 @@ export default function NewBoilersPage() {
         </div>
       </section>
 
-
-      {/* FAQs Section */}
-      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
-              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
-              FAQs
-            </span>
-            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
-              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
-            </h2>
-          </div>
-
-          {/* Accordion */}
-          <FaqAccordion items={[
-            {
-              question: "How do I know when I need a new boiler?",
-              answer: "Common signs you need a new boiler include frequent breakdowns, rising energy bills, the boiler being over 10-15 years old, uneven heating, strange noises, and difficulty finding replacement parts. If you are experiencing any of these, we offer a free survey to assess your options."
-            },
-            {
-              question: "What types of new boilers do you install?",
-              answer: "We install combi boilers, system boilers, and regular (heat only) boilers from leading manufacturers including Worcester Bosch, Alpha, Baxi, and Grant. We will recommend the best type based on your home size, hot water demand, and number of bathrooms."
-            },
-            {
-              question: "Do new boilers come with a warranty?",
-              answer: "Yes, all our new boiler installations come with manufacturer warranties of up to 13 years depending on the brand and model. As accredited installers, we can offer extended warranty cover that gives you long-term protection and peace of mind."
-            },
-            {
-              question: "Can you help me choose the right boiler size?",
-              answer: "Absolutely. During our free home survey, we assess your property size, number of radiators, bathrooms, hot water usage, and insulation levels to calculate the exact output (kW) needed. This ensures you get a boiler that is perfectly matched to your home."
-            },
-            {
-              question: "Do you offer finance for new boiler installations?",
-              answer: "Yes, we offer flexible finance options with plans starting from as little as £30 per month. This allows you to spread the cost of your new boiler installation over a period that suits you, making a high-efficiency boiler affordable for every homeowner."
-            }
-          ]} />
-        </div>
-      </section>
-
-
       {/* Why Choose Us Section */}
       <WhyChooseUs />
 
@@ -316,8 +275,47 @@ export default function NewBoilersPage() {
         </div>
       </section>
 
-
       {/* Location & Contact Section */}
+
+    {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
+          </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: "How do I know when I need a new boiler?",
+              answer: "Common signs you need a new boiler include frequent breakdowns, rising energy bills, the boiler being over 10-15 years old, uneven heating, strange noises, and difficulty finding replacement parts. If you are experiencing any of these, we offer a free survey to assess your options."
+            },
+            {
+              question: "What types of new boilers do you install?",
+              answer: "We install combi boilers, system boilers, and regular (heat only) boilers from leading manufacturers including Worcester Bosch, Alpha, Baxi, and Grant. We will recommend the best type based on your home size, hot water demand, and number of bathrooms."
+            },
+            {
+              question: "Do new boilers come with a warranty?",
+              answer: "Yes, all our new boiler installations come with manufacturer warranties of up to 13 years depending on the brand and model. As accredited installers, we can offer extended warranty cover that gives you long-term protection and peace of mind."
+            },
+            {
+              question: "Can you help me choose the right boiler size?",
+              answer: "Absolutely. During our free home survey, we assess your property size, number of radiators, bathrooms, hot water usage, and insulation levels to calculate the exact output (kW) needed. This ensures you get a boiler that is perfectly matched to your home."
+            },
+            {
+              question: "Do you offer finance for new boiler installations?",
+              answer: "Yes, we offer flexible finance options with plans starting from as little as £30 per month. This allows you to spread the cost of your new boiler installation over a period that suits you, making a high-efficiency boiler affordable for every homeowner."
+            }
+          ]} />
+        </div>
+      </section>
+
       <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer */}
@@ -341,7 +339,6 @@ export default function NewBoilersPage() {
           </div>
         </div>
       </section>
-
 
     </main>
   );

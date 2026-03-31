@@ -168,7 +168,13 @@ export default function OilPage() {
           </div>
         </div>
       </section>
-      {/* FAQs Section */}
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+      {/* Location & Contact Section */}
+
+    {/* FAQs Section */}
       <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -207,12 +213,6 @@ export default function OilPage() {
         </div>
       </section>
 
-
-      {/* Why Choose Us Section */}
-      <WhyChooseUs />
-
-
-      {/* Location & Contact Section */}
       <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer Bridge */}
@@ -235,7 +235,6 @@ export default function OilPage() {
           </div>
         </div>
       </section>
-
 
     </main>
   );

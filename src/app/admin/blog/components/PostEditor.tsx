@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import 'react-quill-new/dist/quill.snow.css';
 import MediaPicker from '@/components/MediaPicker';
@@ -86,7 +87,7 @@ export default function PostEditor({ initialData = null }: { initialData?: any }
     const payload = {
       title, slug, content, excerpt, featured_image: featuredImage,
       category_id: categoryId ? parseInt(categoryId) : null,
-      meta_title: metaTitle, meta_description: metaDescription, meta_keywords: metaKeywords,
+      meta_title: metaTitle, meta_description: excerpt, meta_keywords: metaKeywords,
       status: postStatus
     };
 
@@ -142,9 +143,14 @@ export default function PostEditor({ initialData = null }: { initialData?: any }
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 pb-4 border-b border-slate-200">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-slate-800 tracking-tight">
-            {initialData ? 'Edit Post' : 'Create New Post'}
-          </h1>
+          <div className="flex items-center gap-3 mb-2">
+            <Link href="/admin/blog" className="text-slate-400 hover:text-slate-600 transition-colors bg-slate-100 hover:bg-slate-200 p-1.5 rounded-lg" title="Back to Articles">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+            </Link>
+            <h1 className="text-2xl sm:text-3xl font-black text-slate-800 tracking-tight">
+              {initialData ? 'Edit Post' : 'Create New Post'}
+            </h1>
+          </div>
           <p className="text-slate-500 font-medium text-sm mt-1">
             Write and publish beautiful stories
           </p>
@@ -166,6 +172,18 @@ export default function PostEditor({ initialData = null }: { initialData?: any }
           >
             Save Draft
           </button>
+          
+          {initialData?.id && (
+            <a
+              href={`/blog/${slug}?preview=true`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 font-bold rounded-xl transition-all flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z" /></svg>
+              Preview
+            </a>
+          )}
           <button
             onClick={() => handleSave('published')}
             disabled={saving}
@@ -195,15 +213,18 @@ export default function PostEditor({ initialData = null }: { initialData?: any }
               />
             </div>
             
-            <div className="flex items-center text-sm font-medium text-slate-400 bg-slate-50 p-2 rounded-lg">
+            <div className="flex items-center text-sm font-medium text-slate-400 bg-slate-50 p-2 rounded-lg relative">
               <span className="shrink-0 mr-2 text-slate-500 font-bold pl-2">Permanent Link:</span>
               <span className="hidden sm:inline">tomsuttonheating.co.uk/blog/</span>
               <input
                 type="text"
                 value={slug}
-                onChange={(e) => setSlug(e.target.value)}
-                className="bg-transparent border-b border-dashed border-slate-300 text-[#1d4ed8] focus:border-[#1d4ed8] outline-none flex-1 font-semibold"
+                onChange={(e) => setSlug(e.target.value.substring(0, 75))}
+                className="bg-transparent border-b border-dashed border-slate-300 text-[#1d4ed8] focus:border-[#1d4ed8] outline-none flex-1 font-semibold pr-16"
               />
+              <span className={`absolute right-3 text-xs font-bold ${slug.length > 70 ? 'text-orange-500' : 'text-slate-400'}`}>
+                {slug.length}/75
+              </span>
             </div>
             
             <div className="pt-4 border-t border-slate-100 quill-editor-wrapper">
@@ -220,13 +241,21 @@ export default function PostEditor({ initialData = null }: { initialData?: any }
           </div>
           
           {/* Excerpt */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-            <h3 className="text-sm font-black text-slate-800 uppercase tracking-widest mb-4">Post Excerpt</h3>
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 relative">
+            <h3 className="text-sm font-black text-slate-800 uppercase tracking-widest mb-1">Google Meta Description</h3>
+            <p className="text-xs text-slate-400 mb-4 font-medium tracking-tight">This will simultaneously be used as your <strong className="text-slate-600">Blog Post Excerpt</strong> on the main feed.</p>
+            <span className={`absolute top-6 right-6 text-xs font-bold ${excerpt.length > 150 ? 'text-orange-500' : 'text-slate-400'}`}>
+              {excerpt.length}/160
+            </span>
             <textarea
               rows={3}
               value={excerpt}
-              onChange={(e) => setExcerpt(e.target.value)}
-              placeholder="A brief summary of your post that appears on the blog listing page..."
+              onChange={(e) => {
+                const val = e.target.value.substring(0, 160);
+                setExcerpt(val);
+                setMetaDescription(val); // Keep state synced for API payload
+              }}
+              placeholder="A brief summary of your post that appears on the blog listing page and Google search..."
               className="w-full text-sm font-medium text-slate-900 leading-relaxed bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-y"
             ></textarea>
           </div>
@@ -280,28 +309,22 @@ export default function PostEditor({ initialData = null }: { initialData?: any }
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
             <h3 className="text-sm font-black text-slate-800 uppercase tracking-widest mb-4">SEO Settings</h3>
             <div className="space-y-4">
-              <div>
+              <div className="relative">
                 <label className="block text-xs font-bold text-slate-500 mb-1.5">Meta Title</label>
+                <span className={`absolute top-0 right-0 text-xs font-bold ${metaTitle.length > 55 ? 'text-orange-500' : 'text-slate-400'}`}>
+                  {metaTitle.length}/60
+                </span>
                 <input
                   type="text"
                   value={metaTitle}
-                  onChange={(e) => setMetaTitle(e.target.value)}
+                  onChange={(e) => setMetaTitle(e.target.value.substring(0, 60))}
                   placeholder="Defaults to post title"
                   className="w-full text-xs font-medium text-slate-900 bg-white border border-slate-200 rounded-lg px-3 py-2 outline-none focus:border-blue-500"
                 />
               </div>
+              {/* Meta Description input has been visually removed since it perfectly mirrors the Excerpt */}
               <div>
-                <label className="block text-xs font-bold text-slate-500 mb-1.5">Meta Description</label>
-                <textarea
-                  rows={4}
-                  value={metaDescription}
-                  onChange={(e) => setMetaDescription(e.target.value)}
-                  placeholder="Enter a compelling description for Google search results..."
-                  className="w-full text-xs font-medium text-slate-900 bg-white border border-slate-200 rounded-lg px-3 py-2 outline-none focus:border-blue-500 resize-none"
-                ></textarea>
-              </div>
-              <div>
-                <label className="block text-xs font-bold text-slate-500 mb-1.5">SEO Keywords</label>
+                <label className="block text-xs font-bold text-slate-500 mb-1.5">Tags / SEO Keywords</label>
                 <input
                   type="text"
                   value={metaKeywords}

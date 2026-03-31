@@ -10,6 +10,7 @@ import DynamicSlidingGallery from '@/components/DynamicSlidingGallery';
 import ScrollAnimate from '@/components/ScrollAnimate';
 import LocationContact from '@/components/LocationContact';
 import VideoLightbox from '@/components/VideoLightbox';
+import BlogSlider from '@/components/BlogSlider';
 import pool from '@/lib/db';
 
 export const revalidate = 60;
@@ -158,7 +159,6 @@ export default async function Home() {
 
           </div>
 
-
         </div>
       </section>
 
@@ -282,61 +282,6 @@ export default async function Home() {
       <PopularPackages />
 
       {/* FAQ Section */}
-      <section className="py-20 sm:py-28 bg-[#eef1fa] relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-8 lg:left-20 w-16 h-16 text-[#0d1033]/10 pointer-events-none select-none">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
-        </div>
-        <div className="absolute top-16 right-12 lg:right-32 w-12 h-12 text-[#ff5e14]/15 pointer-events-none select-none">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
-        </div>
-        <div className="absolute bottom-24 right-20 lg:right-40 w-20 h-20 text-[#0bdacb]/10 pointer-events-none select-none rotate-12">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
-        </div>
-        {/* Subtle diagonal pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #0d1033 0, #0d1033 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }}></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
-              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
-              FAQs
-            </span>
-            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
-              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
-            </h2>
-          </div>
-
-          {/* Accordion */}
-          <FaqAccordion items={[
-            {
-              question: 'What types of boilers do you install?',
-              answer: 'We install a full range of boilers including combi boilers, system boilers, and regular (heat-only) boilers. We are accredited installers for Worcester Bosch, Alpha, Baxi, and Grant, ensuring you get the best quality products with manufacturer-backed warranties of up to 13 years.'
-            },
-            {
-              question: 'How do I know which boiler is best for my home?',
-              answer: 'Every home is different, which is why we offer a free home survey. Our Gas Safe registered engineers will assess your property size, hot water demand, number of bathrooms, and existing pipework to recommend the most efficient and cost-effective boiler for your needs.'
-            },
-            {
-              question: 'How quickly can you install a new boiler?',
-              answer: 'We offer a next-day installation service for urgent cases. A standard like-for-like boiler swap typically takes one day. More complex installations involving re-routing pipework or moving the boiler location may take 2-3 days. We will always give you a clear timeline during your survey.'
-            },
-            {
-              question: 'Do you offer finance options for boiler installations?',
-              answer: 'Yes! We offer flexible finance options to help spread the cost of your new boiler installation. With plans starting from as little as £30 per month, getting a new, efficient boiler has never been more affordable. Ask us for details during your free survey.'
-            },
-            {
-              question: 'What areas do you cover?',
-              answer: 'We cover the entire New Forest region and beyond, including Lymington, New Milton, Brockenhurst, Bournemouth, Christchurch, Highcliffe, Ringwood, Southampton, and all surrounding villages and towns in Hampshire and Dorset.'
-            },
-            {
-              question: 'Are your engineers certified and insured?',
-              answer: 'Absolutely. All our engineers are Gas Safe registered, OFTEC certified, and fully insured. We are also MCS accredited for renewable energy installations including Air Source Heat Pumps, giving you complete peace of mind.'
-            }
-          ]} />
-        </div>
-      </section>
 
       {/* Full-Width CTA Banner Section */}
       <section className="relative w-full overflow-hidden" style={{ minHeight: '380px' }}>
@@ -477,7 +422,6 @@ export default async function Home() {
       {/* Services Marquee Ticker */}
       <section className="py-8 sm:py-10 bg-white relative overflow-hidden border-y border-gray-100">
         <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#ff5e14] via-[#ff8c42] to-[#ff5e14]"></div>
-
 
         <style dangerouslySetInnerHTML={{ __html: `
           @keyframes marqueeLeft {
@@ -682,6 +626,63 @@ export default async function Home() {
       </section>
 
       {/* Location & Contact Section */}
+
+    <section className="py-20 sm:py-28 bg-[#eef1fa] relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-8 lg:left-20 w-16 h-16 text-[#0d1033]/10 pointer-events-none select-none">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
+        </div>
+        <div className="absolute top-16 right-12 lg:right-32 w-12 h-12 text-[#ff5e14]/15 pointer-events-none select-none">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
+        </div>
+        <div className="absolute bottom-24 right-20 lg:right-40 w-20 h-20 text-[#0bdacb]/10 pointer-events-none select-none rotate-12">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
+        </div>
+        {/* Subtle diagonal pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #0d1033 0, #0d1033 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }}></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
+          </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: 'What types of boilers do you install?',
+              answer: 'We install a full range of boilers including combi boilers, system boilers, and regular (heat-only) boilers. We are accredited installers for Worcester Bosch, Alpha, Baxi, and Grant, ensuring you get the best quality products with manufacturer-backed warranties of up to 13 years.'
+            },
+            {
+              question: 'How do I know which boiler is best for my home?',
+              answer: 'Every home is different, which is why we offer a free home survey. Our Gas Safe registered engineers will assess your property size, hot water demand, number of bathrooms, and existing pipework to recommend the most efficient and cost-effective boiler for your needs.'
+            },
+            {
+              question: 'How quickly can you install a new boiler?',
+              answer: 'We offer a next-day installation service for urgent cases. A standard like-for-like boiler swap typically takes one day. More complex installations involving re-routing pipework or moving the boiler location may take 2-3 days. We will always give you a clear timeline during your survey.'
+            },
+            {
+              question: 'Do you offer finance options for boiler installations?',
+              answer: 'Yes! We offer flexible finance options to help spread the cost of your new boiler installation. With plans starting from as little as £30 per month, getting a new, efficient boiler has never been more affordable. Ask us for details during your free survey.'
+            },
+            {
+              question: 'What areas do you cover?',
+              answer: 'We cover the entire New Forest region and beyond, including Lymington, New Milton, Brockenhurst, Bournemouth, Christchurch, Highcliffe, Ringwood, Southampton, and all surrounding villages and towns in Hampshire and Dorset.'
+            },
+            {
+              question: 'Are your engineers certified and insured?',
+              answer: 'Absolutely. All our engineers are Gas Safe registered, OFTEC certified, and fully insured. We are also MCS accredited for renewable energy installations including Air Source Heat Pumps, giving you complete peace of mind.'
+            }
+          ]} />
+        </div>
+      </section>
+
       <LocationContact />
 
       {/* Unified Premium Trust & Partners Section */}
@@ -749,81 +750,8 @@ export default async function Home() {
               </div>
 
               {/* Seamless Infinite Slider Container */}
-              <div className="w-full overflow-hidden relative group my-2">
-                
-                {/* CSS Animation defined inline to prevent global scope bleeding */}
-                <style dangerouslySetInnerHTML={{__html:`
-                  @keyframes slide-blog-cards {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(-50%); }
-                  }
-                  .animate-slide-blog {
-                    animation: slide-blog-cards 40s linear infinite;
-                    will-change: transform;
-                  }
-                  .animate-slide-blog:hover {
-                    animation-play-state: paused;
-                  }
-                `}} />
-
-                {/* Left/Right Fade Multipliers */}
-                <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-20 bg-gradient-to-r from-[#f8fafc] to-transparent z-10 pointer-events-none"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-20 bg-gradient-to-l from-[#f8fafc] to-transparent z-10 pointer-events-none"></div>
-
-                <div className="flex animate-slide-blog w-max items-stretch pb-8">
-                  {/* Render the 4 posts twice to create seamless loop */}
-                  {[...latestPosts, ...latestPosts].map((post, index) => (
-                    <Link 
-                      href={`/blog/${post.slug}`} 
-                      key={`${post.slug}-${index}`} 
-                      className="flex-shrink-0 w-[85vw] sm:w-[320px] lg:w-[380px] mx-3 sm:mx-4 group bg-white rounded-3xl shadow-[0_8px_30px_-10px_rgba(0,0,0,0.06)] border border-slate-100 flex flex-col overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.12)] transition-all duration-500 h-full"
-                    >
-                      {/* Image Frame */}
-                      <div className="relative w-full aspect-[16/10] bg-slate-100 overflow-hidden">
-                        {post.featured_image ? (
-                          <Image 
-                            src={post.featured_image} 
-                            alt={post.title} 
-                            fill 
-                            className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" 
-                            unoptimized
-                          />
-                        ) : (
-                          <div className="absolute inset-0 flex items-center justify-center bg-slate-100/50">
-                            <svg className="w-10 h-10 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                          </div>
-                        )}
-                        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
-                        {post.category_name && (
-                          <div className="absolute bottom-4 left-4 z-10 w-[calc(100%-2rem)]">
-                            <span className="inline-block px-3 py-1 bg-[#ff5e14] text-white text-[10px] sm:text-xs font-black tracking-widest uppercase rounded shadow-md backdrop-blur-sm">
-                              {post.category_name}
-                            </span>
-                          </div>
-                        )}
-                      </div>
-                      
-                      {/* Content Frame */}
-                      <div className="p-6 sm:p-8 flex flex-col flex-1">
-                        <p className="text-slate-400 font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-3">
-                          {new Date(post.published_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
-                        </p>
-                        <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-[1.3] mb-4 group-hover:text-[#1d4ed8] transition-colors line-clamp-2">
-                          {post.title}
-                        </h3>
-                        <p className="text-slate-500 font-medium text-xs sm:text-sm leading-relaxed mb-6 line-clamp-2">
-                          {post.excerpt}
-                        </p>
-                        <div className="mt-auto pt-5 border-t border-slate-50 flex items-center">
-                          <span className="text-xs font-black text-[#1d4ed8] tracking-widest uppercase flex items-center gap-2 group-hover:gap-3 transition-all">
-                            READ ARTICLE
-                            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+              <div className="w-full relative group my-2">
+                <BlogSlider posts={latestPosts} />
               </div>
             </div>
           )}

@@ -152,7 +152,43 @@ export default function UnventedHotWaterPage() {
           </div>
         </div>
       </section>
-      {/* FAQs Section */}
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+      {/* Embedded Map Tier */}
+      <section className="bg-slate-50 py-20 lg:py-28 relative overflow-hidden">
+        <div className="container mx-auto px-4 max-w-[1200px] text-center relative z-10">
+          
+          <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[2.75rem] font-black text-slate-800 tracking-tight mb-4 uppercase">
+            UNVENTED HOT WATER CYLINDERS IN NEW MILTON AND BEYOND
+          </h2>
+          
+          <p className="text-slate-600 text-[1.1rem] sm:text-[1.25rem] mb-16 font-medium max-w-[900px] mx-auto text-balance">
+            We install unvented hot water cylinders in New Milton, Lymington, Christchurch, Highcliffe, Bournemouth, Brockenhurst, and all across the New Forest!
+          </p>
+
+          <div className="relative w-full h-[350px] sm:h-[450px] lg:h-[550px] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] ring-[6px] ring-white transform transition-transform duration-700 hover:-translate-y-2 group bg-slate-200 mx-auto">
+            {/* The Google Maps iframe injected securely into a full-width wrapper */}
+            <iframe 
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47892.66346250181!2d-1.6574833!3d50.767538599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873834296e6f56f%3A0x7e53183828716970!2sNew%20Milton!5e1!3m2!1sen!2suk!4v1774535325320!5m2!1sen!2suk" 
+               className="absolute inset-0 w-full h-full border-0 filter brightness-[0.98] contrast-100 group-hover:brightness-100 transition-all duration-700"
+               allowFullScreen={true}
+               loading="lazy" 
+               referrerPolicy="no-referrer-when-downgrade"
+               title="Tom Sutton Heating Coverage Map in New Milton"
+            ></iframe>
+            
+            {/* Embedded interactive glass overlay that fades out on hover so users know it's a map */}
+            <div className="absolute inset-0 bg-blue-900/5 group-hover:opacity-0 transition-opacity duration-700 pointer-events-none"></div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Location & Contact Section */}
+
+    {/* FAQs Section */}
       <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -191,42 +227,6 @@ export default function UnventedHotWaterPage() {
         </div>
       </section>
 
-
-      {/* Why Choose Us Section */}
-      <WhyChooseUs />
-
-      {/* Embedded Map Tier */}
-      <section className="bg-slate-50 py-20 lg:py-28 relative overflow-hidden">
-        <div className="container mx-auto px-4 max-w-[1200px] text-center relative z-10">
-          
-          <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[2.75rem] font-black text-slate-800 tracking-tight mb-4 uppercase">
-            UNVENTED HOT WATER CYLINDERS IN NEW MILTON AND BEYOND
-          </h2>
-          
-          <p className="text-slate-600 text-[1.1rem] sm:text-[1.25rem] mb-16 font-medium max-w-[900px] mx-auto text-balance">
-            We install unvented hot water cylinders in New Milton, Lymington, Christchurch, Highcliffe, Bournemouth, Brockenhurst, and all across the New Forest!
-          </p>
-
-          <div className="relative w-full h-[350px] sm:h-[450px] lg:h-[550px] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] ring-[6px] ring-white transform transition-transform duration-700 hover:-translate-y-2 group bg-slate-200 mx-auto">
-            {/* The Google Maps iframe injected securely into a full-width wrapper */}
-            <iframe 
-               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47892.66346250181!2d-1.6574833!3d50.767538599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873834296e6f56f%3A0x7e53183828716970!2sNew%20Milton!5e1!3m2!1sen!2suk!4v1774535325320!5m2!1sen!2suk" 
-               className="absolute inset-0 w-full h-full border-0 filter brightness-[0.98] contrast-100 group-hover:brightness-100 transition-all duration-700"
-               allowFullScreen={true}
-               loading="lazy" 
-               referrerPolicy="no-referrer-when-downgrade"
-               title="Tom Sutton Heating Coverage Map in New Milton"
-            ></iframe>
-            
-            {/* Embedded interactive glass overlay that fades out on hover so users know it's a map */}
-            <div className="absolute inset-0 bg-blue-900/5 group-hover:opacity-0 transition-opacity duration-700 pointer-events-none"></div>
-          </div>
-
-        </div>
-      </section>
-
-
-      {/* Location & Contact Section */}
       <LocationContact />
 
     </main>

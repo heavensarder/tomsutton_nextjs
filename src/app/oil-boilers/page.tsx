@@ -206,45 +206,6 @@ export default function OilBoilersPage() {
           </div>
         </div>
       </section>
-      {/* FAQs Section */}
-      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
-              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
-              FAQs
-            </span>
-            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
-              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
-            </h2>
-          </div>
-
-          {/* Accordion */}
-          <FaqAccordion items={[
-            {
-              question: "What types of oil boilers do you install?",
-              answer: "We install the full range of oil-fired boilers including combi, system, and regular models. We work with leading manufacturers such as Grant and Worcester Bosch, offering efficient condensing oil boilers suitable for all property sizes."
-            },
-            {
-              question: "How efficient are modern oil boilers?",
-              answer: "Modern condensing oil boilers achieve efficiency ratings of over 90%, which is a massive improvement over older non-condensing models which may only be 60-70% efficient. Upgrading to a new oil boiler can significantly reduce your fuel bills."
-            },
-            {
-              question: "How often should an oil boiler be serviced?",
-              answer: "We recommend an annual oil boiler service carried out by an OFTEC registered technician. Regular servicing ensures safe operation, maintains efficiency, and prevents costly breakdowns. It also keeps your manufacturer warranty valid."
-            },
-            {
-              question: "Are your engineers qualified for oil boiler work?",
-              answer: "Yes, all our oil heating engineers are fully OFTEC registered, which is the industry-recognized certification for oil heating work in the UK. We carry out installations, servicing, and repairs to the highest professional standards."
-            },
-            {
-              question: "Can I switch from oil to an alternative heating system?",
-              answer: "Yes, we can help you transition from oil to more sustainable options such as air source heat pumps. As MCS accredited installers, we can also advise on available government grants like the Boiler Upgrade Scheme that can contribute towards the cost of a heat pump installation."
-            }
-          ]} />
-        </div>
-      </section>
-
 
       {/* Why Choose Us Section */}
       <WhyChooseUs />
@@ -284,8 +245,47 @@ export default function OilBoilersPage() {
         </div>
       </section>
 
-
       {/* Location & Contact Section */}
+
+    {/* FAQs Section */}
+      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
+            </h2>
+          </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: "What types of oil boilers do you install?",
+              answer: "We install the full range of oil-fired boilers including combi, system, and regular models. We work with leading manufacturers such as Grant and Worcester Bosch, offering efficient condensing oil boilers suitable for all property sizes."
+            },
+            {
+              question: "How efficient are modern oil boilers?",
+              answer: "Modern condensing oil boilers achieve efficiency ratings of over 90%, which is a massive improvement over older non-condensing models which may only be 60-70% efficient. Upgrading to a new oil boiler can significantly reduce your fuel bills."
+            },
+            {
+              question: "How often should an oil boiler be serviced?",
+              answer: "We recommend an annual oil boiler service carried out by an OFTEC registered technician. Regular servicing ensures safe operation, maintains efficiency, and prevents costly breakdowns. It also keeps your manufacturer warranty valid."
+            },
+            {
+              question: "Are your engineers qualified for oil boiler work?",
+              answer: "Yes, all our oil heating engineers are fully OFTEC registered, which is the industry-recognized certification for oil heating work in the UK. We carry out installations, servicing, and repairs to the highest professional standards."
+            },
+            {
+              question: "Can I switch from oil to an alternative heating system?",
+              answer: "Yes, we can help you transition from oil to more sustainable options such as air source heat pumps. As MCS accredited installers, we can also advise on available government grants like the Boiler Upgrade Scheme that can contribute towards the cost of a heat pump installation."
+            }
+          ]} />
+        </div>
+      </section>
+
       <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer */}
@@ -309,7 +309,6 @@ export default function OilBoilersPage() {
           </div>
         </div>
       </section>
-
 
     </main>
   );

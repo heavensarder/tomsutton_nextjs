@@ -59,7 +59,12 @@ export default function AdminBlogList() {
     <div className="p-8 max-w-7xl mx-auto">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 pb-6 border-b border-slate-200">
         <div>
-          <h1 className="text-3xl font-bold text-slate-800 tracking-tight">Blog Posts</h1>
+          <div className="flex items-center gap-3 mb-2">
+            <Link href="/admin/dashboard" className="text-slate-400 hover:text-slate-600 transition-colors bg-white hover:bg-slate-50 p-1.5 rounded-lg shadow-sm" title="Back to Dashboard">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+            </Link>
+            <h1 className="text-3xl lg:text-4xl font-black text-slate-800 tracking-tight">Blog Management</h1>
+          </div>
           <p className="text-slate-500 mt-2 font-medium">Manage all articles and publications</p>
         </div>
         <div className="flex gap-3 mt-4 sm:mt-0">
@@ -141,6 +146,16 @@ export default function AdminBlogList() {
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">
+                        {post.status === 'published' && (
+                          <Link 
+                            href={`/blog/${post.slug}`} 
+                            target="_blank"
+                            className="p-2 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors"
+                            title="View Live Article"
+                          >
+                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z" /></svg>
+                          </Link>
+                        )}
                         <Link 
                           href={`/admin/blog/${post.id}`}
                           className="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"

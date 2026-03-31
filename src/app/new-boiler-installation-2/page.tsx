@@ -555,7 +555,9 @@ export default function NewBoilerInstallationPage() {
         </div>
       </section>
 
-      {/* FAQs Section */}
+      {/* Location & Contact Section */}
+
+    {/* FAQs Section */}
       <section className="py-16 sm:py-24 bg-white relative overflow-hidden border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -593,7 +595,6 @@ export default function NewBoilerInstallationPage() {
         </div>
       </section>
 
-      {/* Location & Contact Section */}
       <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer */}
@@ -621,7 +622,6 @@ export default function NewBoilerInstallationPage() {
     </main>
   );
 }
-
 
 // Data Array for Slider
 const servicesData = [

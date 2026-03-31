@@ -28,9 +28,18 @@ export default function QuoteComponent() {
       observer = new MutationObserver((mutationsList) => {
         for (const mutation of mutationsList) {
           if (mutation.addedNodes.length > 0) {
-            // Once the external API populates the DOM with the iFrame UI, disable loading flag securely.
-            if (isMounted.current) setIsLoading(false);
-            if (observer) observer.disconnect();
+            let hasNonScript = false;
+            mutation.addedNodes.forEach(node => {
+              if (node.nodeName !== 'SCRIPT') {
+                hasNonScript = true;
+              }
+            });
+            
+            // Once the external API populates the DOM with the iFrame UI (not just our script), disable loading flag securely.
+            if (hasNonScript) {
+              if (isMounted.current) setIsLoading(false);
+              if (observer) observer.disconnect();
+            }
           }
         }
       });
@@ -57,6 +66,11 @@ export default function QuoteComponent() {
     return () => {
       isMounted.current = false;
       if (observer) observer.disconnect();
+      // Remove the script locally to allow fresh re-injection upon return visits
+      const localScript = document.getElementById('truequote_script');
+      if (localScript) {
+        localScript.remove();
+      }
     };
   }, []);
 

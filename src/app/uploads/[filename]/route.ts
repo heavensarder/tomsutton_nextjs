@@ -45,6 +45,7 @@ export async function GET(
     return new NextResponse(fileBuffer, {
       headers: {
         'Content-Type': contentType,
+        'Content-Length': fileBuffer.byteLength.toString(),
         // Cache dynamically uploaded images aggressively 
         'Cache-Control': 'public, max-age=31536000, immutable',
       },

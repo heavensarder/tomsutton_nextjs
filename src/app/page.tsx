@@ -10,8 +10,21 @@ import DynamicSlidingGallery from '@/components/DynamicSlidingGallery';
 import ScrollAnimate from '@/components/ScrollAnimate';
 import LocationContact from '@/components/LocationContact';
 import VideoLightbox from '@/components/VideoLightbox';
+import pool from '@/lib/db';
 
-export default function Home() {
+export const revalidate = 60;
+
+export default async function Home() {
+  // Fetch Latest Blog Posts
+  const [rows] = await pool.execute(`
+    SELECT p.title, p.slug, p.excerpt, p.featured_image, p.published_at, c.name as category_name
+    FROM blog_posts p
+    LEFT JOIN blog_categories c ON p.category_id = c.id
+    WHERE p.status = 'published'
+    ORDER BY p.published_at DESC
+    LIMIT 4
+  `);
+  const latestPosts = rows as any[];
   return (
     <main className="flex-1 w-full bg-slate-50 relative overflow-x-hidden">
       {/* Hero Section - Matching New Design Pattern */}
@@ -715,6 +728,105 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          {/* Latest Heating Hub Articles Slider */}
+          {latestPosts.length > 0 && (
+            <div className="mt-20 sm:mt-28 mb-12 flex flex-col items-center">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-[#ff5e14] font-bold text-xs tracking-[0.2em] uppercase mb-4 text-center shadow-inner">
+                From the Heating Hub
+              </span>
+              <div className="flex flex-col sm:flex-row items-center justify-between w-full mb-10 pb-4 border-b border-gray-100 gap-6">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight text-center sm:text-left drop-shadow-sm">
+                  Latest Expert <span className="text-[#0ea5e9]">Advice</span>
+                </h2>
+                <Link 
+                  href="/blog"
+                  className="group flex flex-row items-center justify-center gap-3 px-6 py-3 w-max bg-gray-50 hover:bg-[#0ea5e9] hover:text-white rounded-2xl text-sm font-bold text-gray-600 transition-all shadow-sm ring-1 ring-inset ring-gray-200 hover:ring-[#0ea5e9]"
+                >
+                  View All Guides
+                  <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </Link>
+              </div>
+
+              {/* Seamless Infinite Slider Container */}
+              <div className="w-full overflow-hidden relative group my-2">
+                
+                {/* CSS Animation defined inline to prevent global scope bleeding */}
+                <style dangerouslySetInnerHTML={{__html:`
+                  @keyframes slide-blog-cards {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                  }
+                  .animate-slide-blog {
+                    animation: slide-blog-cards 40s linear infinite;
+                    will-change: transform;
+                  }
+                  .animate-slide-blog:hover {
+                    animation-play-state: paused;
+                  }
+                `}} />
+
+                {/* Left/Right Fade Multipliers */}
+                <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-20 bg-gradient-to-r from-[#f8fafc] to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-20 bg-gradient-to-l from-[#f8fafc] to-transparent z-10 pointer-events-none"></div>
+
+                <div className="flex animate-slide-blog w-max items-stretch pb-8">
+                  {/* Render the 4 posts twice to create seamless loop */}
+                  {[...latestPosts, ...latestPosts].map((post, index) => (
+                    <Link 
+                      href={`/blog/${post.slug}`} 
+                      key={`${post.slug}-${index}`} 
+                      className="flex-shrink-0 w-[85vw] sm:w-[320px] lg:w-[380px] mx-3 sm:mx-4 group bg-white rounded-3xl shadow-[0_8px_30px_-10px_rgba(0,0,0,0.06)] border border-slate-100 flex flex-col overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.12)] transition-all duration-500 h-full"
+                    >
+                      {/* Image Frame */}
+                      <div className="relative w-full aspect-[16/10] bg-slate-100 overflow-hidden">
+                        {post.featured_image ? (
+                          <Image 
+                            src={post.featured_image} 
+                            alt={post.title} 
+                            fill 
+                            className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" 
+                            unoptimized
+                          />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center bg-slate-100/50">
+                            <svg className="w-10 h-10 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                          </div>
+                        )}
+                        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+                        {post.category_name && (
+                          <div className="absolute bottom-4 left-4 z-10 w-[calc(100%-2rem)]">
+                            <span className="inline-block px-3 py-1 bg-[#ff5e14] text-white text-[10px] sm:text-xs font-black tracking-widest uppercase rounded shadow-md backdrop-blur-sm">
+                              {post.category_name}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                      
+                      {/* Content Frame */}
+                      <div className="p-6 sm:p-8 flex flex-col flex-1">
+                        <p className="text-slate-400 font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-3">
+                          {new Date(post.published_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                        </p>
+                        <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-[1.3] mb-4 group-hover:text-[#1d4ed8] transition-colors line-clamp-2">
+                          {post.title}
+                        </h3>
+                        <p className="text-slate-500 font-medium text-xs sm:text-sm leading-relaxed mb-6 line-clamp-2">
+                          {post.excerpt}
+                        </p>
+                        <div className="mt-auto pt-5 border-t border-slate-50 flex items-center">
+                          <span className="text-xs font-black text-[#1d4ed8] tracking-widest uppercase flex items-center gap-2 group-hover:gap-3 transition-all">
+                            READ ARTICLE
+                            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
 

@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import pool from '@/lib/db';
 import { verifySessionToken, SESSION_COOKIE_NAME } from '@/lib/auth';
 import { cookies } from 'next/headers';
+import { generateSitemap } from '@/lib/sitemap';
 
 // GET: Get single post by ID
 export async function GET(
@@ -90,6 +91,9 @@ export async function PUT(
       ]
     );
 
+    // Rebuild sitemap whenever a post is updated (e.g. status changes, or title changes)
+    await generateSitemap();
+
     return NextResponse.json({ success: true, message: 'Post updated successfully' });
   } catch (error: any) {
     if (error.code === 'ER_DUP_ENTRY') {
@@ -113,6 +117,9 @@ export async function DELETE(
     }
 
     await pool.execute('DELETE FROM blog_posts WHERE id = ?', [id]);
+
+    // Rebuild sitemap to remove the deleted post URL
+    await generateSitemap();
 
     return NextResponse.json({ success: true, message: 'Post deleted successfully' });
   } catch (error: unknown) {

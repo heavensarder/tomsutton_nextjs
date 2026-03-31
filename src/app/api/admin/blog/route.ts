@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import pool from '@/lib/db';
 import { verifySessionToken, SESSION_COOKIE_NAME } from '@/lib/auth';
 import { cookies } from 'next/headers';
+import { generateSitemap } from '@/lib/sitemap';
 
 // GET: List all posts
 export async function GET() {
@@ -66,6 +67,10 @@ export async function POST(request: Request) {
     );
 
     const insertId = (result as { insertId: number }).insertId;
+
+    if (status === 'published') {
+      await generateSitemap(); // Auto rebuild sitemap seamlessly
+    }
 
     return NextResponse.json({ success: true, id: insertId, slug });
   } catch (error: any) {

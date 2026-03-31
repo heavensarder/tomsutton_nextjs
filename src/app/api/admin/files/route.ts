@@ -13,6 +13,8 @@ function getFilePath(filename: string): string | null {
   return null;
 }
 
+import { generateSitemap } from '@/lib/sitemap';
+
 // GET: Read current sitemap.xml and robots.txt
 export async function GET() {
   try {
@@ -65,7 +67,7 @@ export async function PUT(request: Request) {
   }
 }
 
-// POST: Auto-generate sitemap.xml from site pages
+// POST: Auto-generate sitemap.xml from site pages + dynamic blogs
 export async function POST() {
   try {
     const cookieStore = await cookies();
@@ -74,40 +76,11 @@ export async function POST() {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const baseUrl = 'https://tomsuttonheating.co.uk';
-    const today = new Date().toISOString().split('T')[0];
-
-    let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-    xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-
-    for (const page of SITE_PAGES) {
-      const loc = page.path === '/' ? baseUrl : `${baseUrl}${page.path}`;
-      const priority = page.path === '/' ? '1.0' : page.category === 'Services' ? '0.8' : '0.6';
-      const changefreq = page.path === '/' ? 'weekly' : 'monthly';
-
-      xml += `  <url>\n`;
-      xml += `    <loc>${loc}</loc>\n`;
-      xml += `    <lastmod>${today}</lastmod>\n`;
-      xml += `    <changefreq>${changefreq}</changefreq>\n`;
-      xml += `    <priority>${priority}</priority>\n`;
-      xml += `  </url>\n`;
-    }
-
-    xml += `</urlset>\n`;
-
-    const filePath = join(PUBLIC_DIR, 'sitemap.xml');
-    writeFileSync(filePath, xml, 'utf-8');
-
-    // Also generate robots.txt if it doesn't exist
-    const robotsPath = join(PUBLIC_DIR, 'robots.txt');
-    if (!existsSync(robotsPath)) {
-      const robotsContent = `User-agent: *\nAllow: /\n\nSitemap: ${baseUrl}/sitemap.xml\n`;
-      writeFileSync(robotsPath, robotsContent, 'utf-8');
-    }
+    const xml = await generateSitemap();
 
     return NextResponse.json({
       success: true,
-      message: `Sitemap generated with ${SITE_PAGES.length} URLs.`,
+      message: `Dynamic sitemap generated successfully.`,
       content: xml,
     });
   } catch (error: unknown) {

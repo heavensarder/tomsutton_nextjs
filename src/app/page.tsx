@@ -232,12 +232,20 @@ export default async function Home() {
 
             {/* Right Content: text + image + button */}
             <ScrollAnimate animation="fadeRight" delay={200} className="flex-1 order-1 lg:order-2 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <p className="text-gray-500 text-[15px] sm:text-base leading-[1.7] mb-6 max-w-xl">
-                We&apos;re not just installing boilers—we&apos;re the local team New Forest families trust when it matters most. Led by Managing Director Ronan Sutton, our engineers combine three decades of heritage with the forward-thinking technology of SL Energy Ltd, delivering next-day installations and out-of-hours emergency calls across New Milton, Lymington, and Christchurch.
-              </p>
+              <div className="space-y-5 mb-8 max-w-2xl">
+                <p className="text-gray-500 text-[15px] sm:text-base leading-[1.7]">
+                  We&apos;re not just installing boilers—we&apos;re the local team New Forest families trust when it matters most. Led by Managing Director Ronan Sutton, our engineering fleet combines three decades of heritage with the forward-thinking technology of SL Energy Ltd, delivering next-day installations and out-of-hours emergency calls across New Milton, Lymington, and Christchurch.
+                </p>
+                
+                <div className="px-5 py-4 bg-gradient-to-r from-orange-50 to-transparent border-l-[3px] border-[#ff5e14] rounded-r-2xl">
+                  <p className="text-[#0d1033] font-semibold text-[14.5px] sm:text-[15.5px] leading-[1.65]">
+                    Whether you are facing an unexpected winter breakdown, looking to upgrade to a high-efficiency green system, or preparing your home for seasonal changes, our fully accredited Gas Safe and OFTEC registered team is stationed locally to guarantee rapid response times and the highest standards of workmanship.
+                  </p>
+                </div>
+              </div>
 
               {/* YouTube Video with decorative accents */}
-              <div className="relative w-full sm:max-w-lg mb-5">
+              <div className="relative w-full sm:max-w-lg mb-6">
                 <div className="absolute -left-2.5 top-3 bottom-3 w-1 bg-[#ff5e14] rounded-full z-20"></div>
                 <div className="absolute -right-2.5 top-6 bottom-6 w-1 bg-[#0bdacb] rounded-full z-20"></div>
                 <div className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#0bdacb] rounded-full z-20"></div>
@@ -252,21 +260,6 @@ export default async function Home() {
                 </div>
               </Link>
             </ScrollAnimate>
-
-            {/* Far Right: Service Highlights & Accreditations */}
-            <div className="hidden xl:flex shrink-0 w-[240px] order-3 flex-col justify-center gap-4">
-              {[
-                { icon: <svg className="w-5 h-5 text-[#ff5e14]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>, text: 'Gas Safe Registered' },
-                { icon: <svg className="w-5 h-5 text-[#ff5e14]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>, text: 'OFTEC Registered' },
-                { icon: <svg className="w-5 h-5 text-[#ff5e14]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>, text: 'Next Day Installations' },
-                { icon: <svg className="w-5 h-5 text-[#ff5e14]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>, text: 'Out of Hours Service' },
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-gradient-to-br from-[#f8f9fc] to-white rounded-xl px-4 py-3.5 shadow-sm border border-gray-100 hover:border-[#ff5e14]/30 hover:shadow-md transition-all duration-300 group/item">
-                  <span className="text-xl">{item.icon}</span>
-                  <span className="text-[13px] font-bold text-[#0d1033] group-hover/item:text-[#ff5e14] transition-colors">{item.text}</span>
-                </div>
-              ))}
-            </div>
 
           </div>
         </div>

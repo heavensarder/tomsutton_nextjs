@@ -11,6 +11,7 @@ import ScrollAnimate from '@/components/ScrollAnimate';
 import LocationContact from '@/components/LocationContact';
 import VideoLightbox from '@/components/VideoLightbox';
 import BlogSlider from '@/components/BlogSlider';
+import ReviewWidget from '@/components/ReviewWidget';
 import pool from '@/lib/db';
 
 export const revalidate = 60;
@@ -757,6 +758,25 @@ export default async function Home() {
               </div>
             </a>
 
+          </div>
+
+          {/* Live Google Reviews Widget Area */}
+          <div className="mt-16 sm:mt-24 w-full relative z-20">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[#4285F4] font-bold text-xs tracking-[0.2em] uppercase mb-4 text-center shadow-inner">
+                Verified Feedback
+              </span>
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight mb-4">
+                What Our Customers Say
+              </h3>
+              <p className="text-slate-500 font-medium text-[1.05rem] sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Don't just take our word for it. Read our latest verified reviews directly from Google.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-[2rem] p-4 sm:p-8 lg:p-10 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] border border-slate-100">
+              <ReviewWidget />
+            </div>
           </div>
         </div>
       </section>

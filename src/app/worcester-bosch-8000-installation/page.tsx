@@ -232,7 +232,14 @@ export default function WorcesterBosch8000Page() {
 
       {/* Location & Contact Section */}
 
-    {/* FAQs Section */}
+    
+
+      <LocationContact />
+
+    
+
+      {/* ----- FAQ Section Mounted at the Very End ----- */}
+      {/* FAQs Section */}
       <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -266,8 +273,6 @@ export default function WorcesterBosch8000Page() {
           ]} />
         </div>
       </section>
-
-      <LocationContact />
 
     </main>
   );

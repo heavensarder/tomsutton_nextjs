@@ -277,7 +277,36 @@ export default function NewBoilersPage() {
 
       {/* Location & Contact Section */}
 
-    {/* FAQs Section */}
+    
+
+      <LocationContact />
+
+      {/* Premium Dark Gradient Contact Footer */}
+      <section className="relative bg-[#0b1021] py-8 sm:py-10 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"></div>
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
+
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-8 py-4 sm:py-3 shadow-2xl">
+            <span className="text-blue-100 font-medium text-base sm:text-lg tracking-wide">
+              Need immediate assistance? Call our dedicated team on
+            </span>
+            <div className="flex items-center gap-3 font-bold text-white text-lg sm:text-xl shrink-0">
+              <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.4-1.2-.6-2.4-.6-3.6 0-.6-.4-1-1-1H4.4c-.6 0-1 .4-1 1C3.4 13.6 10.4 20.6 19 20.6c.6 0 1-.4 1-1v-3.1c0-.6-.4-1-1-1z" /></svg>
+              </div>
+              <span className="hover:text-blue-400 transition-colors cursor-pointer select-all">01590 540188</span>
+              <span className="text-blue-500/50 mx-1 font-normal text-base">|</span>
+              <span className="hover:text-blue-400 transition-colors cursor-pointer select-all">07774 673109</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+
+      {/* ----- FAQ Section Mounted at the Very End ----- */}
+      {/* FAQs Section */}
       <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -313,30 +342,6 @@ export default function NewBoilersPage() {
               answer: "Yes, we offer flexible finance options with plans starting from as little as £30 per month. This allows you to spread the cost of your new boiler installation over a period that suits you, making a high-efficiency boiler affordable for every homeowner."
             }
           ]} />
-        </div>
-      </section>
-
-      <LocationContact />
-
-      {/* Premium Dark Gradient Contact Footer */}
-      <section className="relative bg-[#0b1021] py-8 sm:py-10 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"></div>
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
-
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-8 py-4 sm:py-3 shadow-2xl">
-            <span className="text-blue-100 font-medium text-base sm:text-lg tracking-wide">
-              Need immediate assistance? Call our dedicated team on
-            </span>
-            <div className="flex items-center gap-3 font-bold text-white text-lg sm:text-xl shrink-0">
-              <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.4-1.2-.6-2.4-.6-3.6 0-.6-.4-1-1-1H4.4c-.6 0-1 .4-1 1C3.4 13.6 10.4 20.6 19 20.6c.6 0 1-.4 1-1v-3.1c0-.6-.4-1-1-1z" /></svg>
-              </div>
-              <span className="hover:text-blue-400 transition-colors cursor-pointer select-all">01590 540188</span>
-              <span className="text-blue-500/50 mx-1 font-normal text-base">|</span>
-              <span className="hover:text-blue-400 transition-colors cursor-pointer select-all">07774 673109</span>
-            </div>
-          </div>
         </div>
       </section>
 

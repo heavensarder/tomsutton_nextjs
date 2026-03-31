@@ -85,6 +85,7 @@ export default function AdminBlogList() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-slate-50 border-b border-slate-100 uppercase text-xs font-bold text-slate-500 tracking-wider">
+                <th className="px-6 py-4 w-24">Image</th>
                 <th className="px-6 py-4">Title</th>
                 <th className="px-6 py-4">Status</th>
                 <th className="px-6 py-4">Category</th>
@@ -95,13 +96,24 @@ export default function AdminBlogList() {
             <tbody className="divide-y divide-slate-100">
               {posts.length === 0 ? (
                 <tr>
-                  <td colSpan={5} className="px-6 py-12 text-center text-slate-400 font-medium">
+                  <td colSpan={6} className="px-6 py-12 text-center text-slate-400 font-medium">
                     No blog posts found. Create your first post!
                   </td>
                 </tr>
               ) : (
                 posts.map((post) => (
                   <tr key={post.id} className="hover:bg-slate-50/50 transition-colors">
+                    <td className="px-6 py-4">
+                      {post.featured_image ? (
+                        <div className="w-16 h-12 relative rounded overflow-hidden shadow-sm border border-slate-200 bg-slate-100">
+                           <img src={post.featured_image} alt="Thumbnail" className="w-full h-full object-cover" />
+                        </div>
+                      ) : (
+                        <div className="w-16 h-12 bg-slate-50 border border-slate-100 flex items-center justify-center rounded shadow-sm">
+                          <svg className="w-4 h-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        </div>
+                      )}
+                    </td>
                     <td className="px-6 py-4">
                       <p className="font-bold text-slate-800 text-[0.95rem]">{post.title}</p>
                       <p className="text-slate-400 text-xs font-medium mt-1">/{post.slug}</p>

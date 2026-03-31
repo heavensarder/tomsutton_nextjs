@@ -114,12 +114,12 @@ export default async function SingleBlogPost({ params }: { params: Promise<{ slu
         <div className="container mx-auto px-4 max-w-[800px]">
           <article 
             className="prose prose-slate prose-lg md:prose-xl max-w-none 
-              text-slate-700
-              prose-headings:font-black prose-headings:tracking-tight prose-headings:text-slate-900 
-              prose-p:leading-relaxed prose-p:text-slate-700 prose-p:font-medium
-              prose-a:text-[#1d4ed8] prose-a:font-bold hover:prose-a:text-[#1e40af] prose-a:no-underline
-              prose-img:rounded-2xl prose-img:shadow-xl
-              prose-blockquote:border-l-[#ff5e14] prose-blockquote:bg-slate-50 prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:rounded-r-2xl prose-blockquote:text-slate-700 prose-blockquote:font-medium prose-blockquote:italic
+              text-slate-700 break-words w-full overflow-hidden
+              prose-headings:font-black prose-headings:tracking-tight prose-headings:text-slate-900 prose-headings:break-words
+              prose-p:leading-relaxed prose-p:text-slate-700 prose-p:font-medium prose-p:break-words
+              prose-a:text-[#1d4ed8] prose-a:font-bold hover:prose-a:text-[#1e40af] prose-a:no-underline prose-a:break-all
+              prose-img:rounded-2xl prose-img:shadow-xl prose-img:max-w-full
+              prose-blockquote:border-l-[#ff5e14] prose-blockquote:bg-slate-50 prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:rounded-r-2xl prose-blockquote:text-slate-700 prose-blockquote:font-medium prose-blockquote:italic prose-blockquote:break-words
               prose-li:text-slate-700 prose-li:font-medium
               prose-strong:text-slate-900 prose-strong:font-bold"
             dangerouslySetInnerHTML={{ __html: post.content }}

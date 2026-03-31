@@ -620,53 +620,6 @@ export default async function Home() {
 
       {/* Location & Contact Section */}
 
-    <section className="py-20 sm:py-28 bg-[#eef1fa] relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-8 lg:left-20 w-16 h-16 text-[#0d1033]/10 pointer-events-none select-none">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
-        </div>
-        <div className="absolute top-16 right-12 lg:right-32 w-12 h-12 text-[#ff5e14]/15 pointer-events-none select-none">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
-        </div>
-        <div className="absolute bottom-24 right-20 lg:right-40 w-20 h-20 text-[#0bdacb]/10 pointer-events-none select-none rotate-12">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
-        </div>
-        {/* Subtle diagonal pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #0d1033 0, #0d1033 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }}></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-
-          {/* Accordion */}
-          <FaqAccordion items={[
-            {
-              question: 'What types of boilers do you install?',
-              answer: 'We install a full range of boilers including combi boilers, system boilers, and regular (heat-only) boilers. We are accredited installers for Worcester Bosch, Alpha, Baxi, and Grant, ensuring you get the best quality products with manufacturer-backed warranties of up to 13 years.'
-            },
-            {
-              question: 'How do I know which boiler is best for my home?',
-              answer: 'Every home is different, which is why we offer a free home survey. Our Gas Safe registered engineers will assess your property size, hot water demand, number of bathrooms, and existing pipework to recommend the most efficient and cost-effective boiler for your needs.'
-            },
-            {
-              question: 'How quickly can you install a new boiler?',
-              answer: 'We offer a next-day installation service for urgent cases. A standard like-for-like boiler swap typically takes one day. More complex installations involving re-routing pipework or moving the boiler location may take 2-3 days. We will always give you a clear timeline during your survey.'
-            },
-            {
-              question: 'Do you offer finance options for boiler installations?',
-              answer: 'Yes! We offer flexible finance options to help spread the cost of your new boiler installation. With plans starting from as little as £30 per month, getting a new, efficient boiler has never been more affordable. Ask us for details during your free survey.'
-            },
-            {
-              question: 'What areas do you cover?',
-              answer: 'We cover the entire New Forest region and beyond, including Lymington, New Milton, Brockenhurst, Bournemouth, Christchurch, Highcliffe, Ringwood, Southampton, and all surrounding villages and towns in Hampshire and Dorset.'
-            },
-            {
-              question: 'Are your engineers certified and insured?',
-              answer: 'Absolutely. All our engineers are Gas Safe registered, OFTEC certified, and fully insured. We are also MCS accredited for renewable energy installations including Air Source Heat Pumps, giving you complete peace of mind.'
-            }
-          ]} />
-        </div>
-      </section>
-
       <LocationContact />
 
       {/* Unified Premium Trust & Partners Section */}
@@ -811,7 +764,22 @@ export default async function Home() {
     
 
       {/* ----- FAQ Section Mounted at the Very End ----- */}
-      {/* Header */}
+      <section className="py-20 sm:py-28 bg-[#eef1fa] relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-8 lg:left-20 w-16 h-16 text-[#0d1033]/10 pointer-events-none select-none">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
+        </div>
+        <div className="absolute top-16 right-12 lg:right-32 w-12 h-12 text-[#ff5e14]/15 pointer-events-none select-none">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
+        </div>
+        <div className="absolute bottom-24 right-20 lg:right-40 w-20 h-20 text-[#0bdacb]/10 pointer-events-none select-none rotate-12">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
+        </div>
+        {/* Subtle diagonal pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #0d1033 0, #0d1033 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }}></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Header */}
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
               <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
@@ -821,6 +789,36 @@ export default async function Home() {
               Answers to Your Most<br className="hidden sm:block" /> Common Queries!
             </h2>
           </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: 'What types of boilers do you install?',
+              answer: 'We install a full range of boilers including combi boilers, system boilers, and regular (heat-only) boilers. We are accredited installers for Worcester Bosch, Alpha, Baxi, and Grant, ensuring you get the best quality products with manufacturer-backed warranties of up to 13 years.'
+            },
+            {
+              question: 'How do I know which boiler is best for my home?',
+              answer: 'Every home is different, which is why we offer a free home survey. Our Gas Safe registered engineers will assess your property size, hot water demand, number of bathrooms, and existing pipework to recommend the most efficient and cost-effective boiler for your needs.'
+            },
+            {
+              question: 'How quickly can you install a new boiler?',
+              answer: 'We offer a next-day installation service for urgent cases. A standard like-for-like boiler swap typically takes one day. More complex installations involving re-routing pipework or moving the boiler location may take 2-3 days. We will always give you a clear timeline during your survey.'
+            },
+            {
+              question: 'Do you offer finance options for boiler installations?',
+              answer: 'Yes! We offer flexible finance options to help spread the cost of your new boiler installation. With plans starting from as little as £30 per month, getting a new, efficient boiler has never been more affordable. Ask us for details during your free survey.'
+            },
+            {
+              question: 'What areas do you cover?',
+              answer: 'We cover the entire New Forest region and beyond, including Lymington, New Milton, Brockenhurst, Bournemouth, Christchurch, Highcliffe, Ringwood, Southampton, and all surrounding villages and towns in Hampshire and Dorset.'
+            },
+            {
+              question: 'Are your engineers certified and insured?',
+              answer: 'Absolutely. All our engineers are Gas Safe registered, OFTEC certified, and fully insured. We are also MCS accredited for renewable energy installations including Air Source Heat Pumps, giving you complete peace of mind.'
+            }
+          ]} />
+        </div>
+      </section>
 
     </main>
   );

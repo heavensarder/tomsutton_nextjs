@@ -103,8 +103,8 @@ const NavBar = () => {
                             {/* Complex Dropdown: Boiler Installation (Top Level) -> Our Brands (2nd Level) -> Brands (3rd Level) */}
                             <div className="group/nav relative h-full flex items-center">
                                 <Link href="/new-boiler-installation-2" className={`group px-2 xl:px-3 py-6 text-[14px] xl:text-[15px] font-semibold  transition-colors flex items-center cursor-pointer whitespace-nowrap ${isInstall ? 'text-orange-500' : 'text-slate-800 hover:text-orange-500'}`}>
-                                Boiler Installation
-                                <svg className={`w-4 h-4 ml-1 opacity-60 group-hover:rotate-180 transition-transform duration-300 ${isInstall ? 'text-orange-500 rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    Boiler Installation
+                                    <svg className={`w-4 h-4 ml-1 opacity-60 group-hover:rotate-180 transition-transform duration-300 ${isInstall ? 'text-orange-500 rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                     <span className={`absolute bottom-[20px] left-1/2 -translate-x-1/2 h-0.5 bg-orange-500 transition-all duration-300 ease-out ${isInstall ? 'w-full' : 'w-0 group-hover/nav:w-full'}`}></span>
                                 </Link>
 
@@ -171,8 +171,8 @@ const NavBar = () => {
 
                             <div className="group/nav relative h-full flex items-center">
                                 <Link href="/boiler-servicing" className={`group px-2 xl:px-3 py-6 text-[14px] xl:text-[15px] font-semibold  transition-colors flex items-center cursor-pointer whitespace-nowrap ${isServicing ? 'text-orange-500' : 'text-slate-800 hover:text-orange-500'}`}>
-                                Servicing
-                                <svg className={`w-4 h-4 ml-1 opacity-60 group-hover:rotate-180 transition-transform duration-300 ${isServicing ? 'text-orange-500 rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    Servicing
+                                    <svg className={`w-4 h-4 ml-1 opacity-60 group-hover:rotate-180 transition-transform duration-300 ${isServicing ? 'text-orange-500 rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                     <span className={`absolute bottom-[20px] left-1/2 -translate-x-1/2 h-0.5 bg-orange-500 transition-all duration-300 ease-out ${isServicing ? 'w-full' : 'w-0 group-hover/nav:w-full'}`}></span>
                                 </Link>
                                 <div className="absolute left-0 top-full opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 translate-y-2 transition-all duration-300 w-72 bg-white border-t-4 border-orange-500 shadow-2xl z-50 py-2 rounded-b-lg">
@@ -184,8 +184,8 @@ const NavBar = () => {
                             {/* Service Area Dropdown */}
                             <div className="group/nav relative h-full flex items-center">
                                 <div className={`group px-2 xl:px-3 py-6 text-[14px] xl:text-[15px] font-semibold transition-colors flex items-center cursor-pointer whitespace-nowrap ${isServiceArea ? 'text-orange-500' : 'text-slate-800 hover:text-orange-500'}`}>
-                                Service Area
-                                <svg className={`w-4 h-4 ml-1 opacity-60 group-hover:rotate-180 transition-transform duration-300 ${isServiceArea ? 'text-orange-500 rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    Service Areas
+                                    <svg className={`w-4 h-4 ml-1 opacity-60 group-hover:rotate-180 transition-transform duration-300 ${isServiceArea ? 'text-orange-500 rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                     <span className={`absolute bottom-[20px] left-1/2 -translate-x-1/2 h-0.5 bg-orange-500 transition-all duration-300 ease-out ${isServiceArea ? 'w-full' : 'w-0 group-hover/nav:w-full'}`}></span>
                                 </div>
                                 <div className="absolute left-0 top-full opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 translate-y-2 transition-all duration-300 w-72 bg-white border-t-4 border-orange-500 shadow-2xl z-50 py-2 rounded-b-lg">
@@ -212,8 +212,8 @@ const NavBar = () => {
 
                             <div className="group/nav relative h-full flex items-center">
                                 <div className={`group px-2 xl:px-3 py-6 text-[14px] xl:text-[15px] font-semibold  transition-colors flex items-center cursor-pointer whitespace-nowrap ${isMore ? 'text-orange-500' : 'text-slate-800 hover:text-orange-500'}`}>
-                                More
-                                <svg className={`w-4 h-4 ml-1 opacity-60 group-hover:rotate-180 transition-transform duration-300 ${isMore ? 'text-orange-500 rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    More
+                                    <svg className={`w-4 h-4 ml-1 opacity-60 group-hover:rotate-180 transition-transform duration-300 ${isMore ? 'text-orange-500 rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                     <span className={`absolute bottom-[20px] left-1/2 -translate-x-1/2 h-0.5 bg-orange-500 transition-all duration-300 ease-out ${isMore ? 'w-full' : 'w-0 group-hover/nav:w-full'}`}></span>
                                 </div>
                                 <div className="absolute right-0 top-full opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 translate-y-2 transition-all duration-300 w-72 bg-white border-t-4 border-orange-500 shadow-2xl z-50 py-2 rounded-b-lg">
@@ -274,7 +274,7 @@ const NavBar = () => {
                         <div className="flex flex-col select-none">
                             <Link href="/" onClick={() => setIsMobileOpen(false)} className={`px-6 py-4 text-[15px] font-semibold border-b border-gray-100 transition-colors  ${pathname === '/' ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}>
                                 Home
-                                </Link>
+                            </Link>
 
                             {/* BOILER INSTALLATION Dropdown */}
                             <div className="border-b border-gray-100">
@@ -282,8 +282,8 @@ const NavBar = () => {
                                     onClick={() => toggleMobileDropdown('install')}
                                     className={`w-full flex justify-between items-center px-6 py-4 text-[15px] font-semibold transition-colors  ${isInstall ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}
                                 >
-                                Boiler Installation
-                                <svg className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'install' || isInstall ? 'rotate-180 text-[#ff5e14]' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    Boiler Installation
+                                    <svg className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'install' || isInstall ? 'rotate-180 text-[#ff5e14]' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                 </button>
 
                                 <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileDropdown === 'install' ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
@@ -303,7 +303,7 @@ const NavBar = () => {
 
                             <Link href="/boiler-breakdowns" onClick={() => setIsMobileOpen(false)} className={`px-6 py-4 text-[15px] font-semibold border-b border-gray-100 transition-colors  ${isBreakdowns ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}>
                                 Boiler Breakdowns
-                                </Link>
+                            </Link>
 
                             {/* SERVICING Dropdown */}
                             <div className="border-b border-gray-100">
@@ -311,8 +311,8 @@ const NavBar = () => {
                                     onClick={() => toggleMobileDropdown('service')}
                                     className={`w-full flex justify-between items-center px-6 py-4 text-[15px] font-semibold transition-colors  ${isServicing ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}
                                 >
-                                Servicing
-                                <svg className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'service' || isServicing ? 'rotate-180 text-[#ff5e14]' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    Servicing
+                                    <svg className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'service' || isServicing ? 'rotate-180 text-[#ff5e14]' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                 </button>
 
                                 <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileDropdown === 'service' ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
@@ -332,8 +332,8 @@ const NavBar = () => {
                                     onClick={() => toggleMobileDropdown('serviceArea')}
                                     className={`w-full flex justify-between items-center px-6 py-4 text-[15px] font-semibold transition-colors  ${isServiceArea ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}
                                 >
-                                Service Area
-                                <svg className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'serviceArea' || isServiceArea ? 'rotate-180 text-[#ff5e14]' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    Service Area
+                                    <svg className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'serviceArea' || isServiceArea ? 'rotate-180 text-[#ff5e14]' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                 </button>
 
                                 <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileDropdown === 'serviceArea' ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
@@ -355,11 +355,11 @@ const NavBar = () => {
 
                             <Link href="/renewable-technology" onClick={() => setIsMobileOpen(false)} className={`px-6 py-4 text-[15px] font-semibold border-b border-gray-100 transition-colors  ${isRenewables ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}>
                                 Renewables
-                                </Link>
+                            </Link>
 
                             <Link href="/contact" onClick={() => setIsMobileOpen(false)} className={`px-6 py-4 text-[15px] font-semibold border-b border-gray-100 transition-colors  ${isContact ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}>
                                 Contact
-                                </Link>
+                            </Link>
 
                             {/* MORE Dropdown */}
                             <div className="border-b border-gray-100">
@@ -367,8 +367,8 @@ const NavBar = () => {
                                     onClick={() => toggleMobileDropdown('more')}
                                     className={`w-full flex justify-between items-center px-6 py-4 text-[15px] font-semibold transition-colors  ${isMore ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}
                                 >
-                                More...
-                                <svg className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'more' || isMore ? 'rotate-180 text-[#ff5e14]' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    More...
+                                    <svg className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'more' || isMore ? 'rotate-180 text-[#ff5e14]' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                 </button>
 
                                 <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileDropdown === 'more' ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>

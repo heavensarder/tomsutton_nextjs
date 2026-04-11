@@ -52,7 +52,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   footer_logo_url: 'https://i.postimg.cc/MKPVK7HV/SLEnergy-logo.webp',
   footer_logo_link: 'https://www.sl-energy.co.uk/',
   footer_phone_1: '01590 631671',
-  footer_phone_2: '07774 673109',
+  footer_phone_2: '',
   footer_email: 'info@tomsuttonheating.co.uk',
   footer_address: '19 Longleat Gardens, New Milton, Hampshire, BH25 5UZ',
   footer_copyright: 'Tom Sutton Heating. All Rights Reserved.',

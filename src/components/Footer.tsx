@@ -31,19 +31,23 @@ const Footer = () => {
 
                         <div className="space-y-4 text-[15px]">
                             <div>
-                                <h4 className="text-white font-semibold mb-1">Phone</h4>
+                                <h4 className="text-white font-semibold mb-1">Name</h4>
+                                <p className="leading-relaxed">'Tom Sutton Heating'</p>
+                            </div>
+
+                            <div>
+                                <h4 className="text-white font-semibold mb-1">Address</h4>
+                                <p className="leading-relaxed">{s?.footer_address || '19 Longleat Gardens, New Milton, Hampshire, BH25 5UZ'}</p>
+                            </div>
+
+                            <div>
+                                <h4 className="text-white font-semibold mb-1">Phone Number</h4>
                                 <p>{s?.footer_phone_1 || '01590 631671'}</p>
-                                <p>{s?.footer_phone_2 || '07774 673109'}</p>
                             </div>
 
                             <div>
                                 <h4 className="text-white font-semibold mb-1">Email</h4>
                                 <a href={`mailto:${s?.footer_email || 'info@tomsuttonheating.co.uk'}`} className="hover:text-white transition-colors">{s?.footer_email || 'info@tomsuttonheating.co.uk'}</a>
-                            </div>
-
-                            <div>
-                                <h4 className="text-white font-semibold mb-1">Office</h4>
-                                <p className="leading-relaxed">{s?.footer_address || '19 Longleat Gardens, New Milton, Hampshire, BH25 5UZ'}</p>
                             </div>
                         </div>
 

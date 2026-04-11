@@ -18,9 +18,10 @@ const NavBar = () => {
     const isInstall = ['/new-boiler', '/our-boiler-brands', '/alpha', '/worcester', '/online-boiler', '/combi-', '/lpg-boilers', '/oil-boilers', '/unvented'].some(p => pathname.includes(p));
     const isBreakdowns = pathname === '/boiler-breakdowns';
     const isServicing = pathname.includes('servic') || pathname.includes('maintenance');
+    const isServiceArea = ['/hampshire', '/bournemouth', '/southbourne', '/christchurch', '/new-milton', '/lymington', '/brockenhurst', '/ringwood', '/southampton'].some(p => pathname.includes(p));
     const isRenewables = pathname === '/renewable-technology';
     const isContact = pathname === '/contact';
-    const isMore = ['/about', '/blog', '/gas', '/heating', '/oil', '/nest-thermostat', '/book-services'].some(p => pathname.includes(p));
+    const isMore = ['/about', '/blog', '/gas', '/heating', '/oil', '/nest-thermostat', '/book-services', '/our-reviews'].some(p => pathname.includes(p));
 
     const toggleMobileDropdown = (menu: string) => {
         setOpenMobileDropdown(prev => prev === menu ? null : menu);
@@ -97,11 +98,6 @@ const NavBar = () => {
                             <Link href="/" className={`group relative px-2 xl:px-3 py-6 text-[14px] xl:text-[15px] font-semibold  transition-colors whitespace-nowrap ${isHome ? 'text-orange-500' : 'text-slate-800 hover:text-orange-500'}`}>
                                 Home
                                 <span className={`absolute bottom-[20px] left-1/2 -translate-x-1/2 h-0.5 bg-orange-500 transition-all duration-300 ease-out ${isHome ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-                            </Link>
-
-                            <Link href="/our-reviews" className={`group relative px-2 xl:px-3 py-6 text-[14px] xl:text-[15px] font-semibold  transition-colors whitespace-nowrap ${isReviews ? 'text-orange-500' : 'text-slate-800 hover:text-orange-500'}`}>
-                                Reviews
-                                <span className={`absolute bottom-[20px] left-1/2 -translate-x-1/2 h-0.5 bg-orange-500 transition-all duration-300 ease-out ${isReviews ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                             </Link>
 
                             {/* Complex Dropdown: Boiler Installation (Top Level) -> Our Brands (2nd Level) -> Brands (3rd Level) */}
@@ -185,6 +181,26 @@ const NavBar = () => {
                                 </div>
                             </div>
 
+                            {/* Service Area Dropdown */}
+                            <div className="group/nav relative h-full flex items-center">
+                                <div className={`group px-2 xl:px-3 py-6 text-[14px] xl:text-[15px] font-semibold transition-colors flex items-center cursor-pointer whitespace-nowrap ${isServiceArea ? 'text-orange-500' : 'text-slate-800 hover:text-orange-500'}`}>
+                                Service Area
+                                <svg className={`w-4 h-4 ml-1 opacity-60 group-hover:rotate-180 transition-transform duration-300 ${isServiceArea ? 'text-orange-500 rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    <span className={`absolute bottom-[20px] left-1/2 -translate-x-1/2 h-0.5 bg-orange-500 transition-all duration-300 ease-out ${isServiceArea ? 'w-full' : 'w-0 group-hover/nav:w-full'}`}></span>
+                                </div>
+                                <div className="absolute left-0 top-full opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 translate-y-2 transition-all duration-300 w-72 bg-white border-t-4 border-orange-500 shadow-2xl z-50 py-2 rounded-b-lg">
+                                    <Link href="/hampshire" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Hampshire</Link>
+                                    <Link href="/bournemouth" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Bournemouth</Link>
+                                    <Link href="/southbourne" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Southbourne</Link>
+                                    <Link href="/christchurch" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Christchurch</Link>
+                                    <Link href="/new-milton" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">New Milton</Link>
+                                    <Link href="/lymington" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Lymington</Link>
+                                    <Link href="/brockenhurst" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Brockenhurst</Link>
+                                    <Link href="/ringwood" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Ringwood</Link>
+                                    <Link href="/southampton" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Southampton</Link>
+                                </div>
+                            </div>
+
                             <Link href="/renewable-technology" className={`group relative px-2 xl:px-3 py-6 text-[14px] xl:text-[15px] font-semibold  transition-colors whitespace-nowrap ${isRenewables ? 'text-orange-500' : 'text-slate-800 hover:text-orange-500'}`}>
                                 Renewables
                                 <span className={`absolute bottom-[20px] left-1/2 -translate-x-1/2 h-0.5 bg-orange-500 transition-all duration-300 ease-out ${isRenewables ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
@@ -202,6 +218,7 @@ const NavBar = () => {
                                 </div>
                                 <div className="absolute right-0 top-full opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 translate-y-2 transition-all duration-300 w-72 bg-white border-t-4 border-orange-500 shadow-2xl z-50 py-2 rounded-b-lg">
                                     <a href="https://book.servicem8.com/request_service_online_booking?strVendorUUID=b00bca15-4f6a-44c6-8974-1b55a86bb7cb" target="_blank" rel="noopener noreferrer" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Book Services Online</a>
+                                    <Link href="/our-reviews" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Reviews</Link>
                                     <Link href="/unvented-hot-water" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Unvented Cylinders</Link>
                                     <Link href="/gas" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Gas</Link>
                                     <Link href="/heating" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Heating</Link>
@@ -258,9 +275,6 @@ const NavBar = () => {
                             <Link href="/" onClick={() => setIsMobileOpen(false)} className={`px-6 py-4 text-[15px] font-semibold border-b border-gray-100 transition-colors  ${pathname === '/' ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}>
                                 Home
                                 </Link>
-                            <Link href="/our-reviews" onClick={() => setIsMobileOpen(false)} className="px-6 py-4 text-[15px] font-semibold text-slate-800 border-b border-gray-100 hover:text-[#ff5e14] hover:bg-orange-50 transition-colors ">
-                                Reviews
-                                </Link>
 
                             {/* BOILER INSTALLATION Dropdown */}
                             <div className="border-b border-gray-100">
@@ -312,6 +326,33 @@ const NavBar = () => {
                                 </div>
                             </div>
 
+                            {/* SERVICE AREA Dropdown */}
+                            <div className="border-b border-gray-100">
+                                <button
+                                    onClick={() => toggleMobileDropdown('serviceArea')}
+                                    className={`w-full flex justify-between items-center px-6 py-4 text-[15px] font-semibold transition-colors  ${isServiceArea ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}
+                                >
+                                Service Area
+                                <svg className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'serviceArea' || isServiceArea ? 'rotate-180 text-[#ff5e14]' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                </button>
+
+                                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileDropdown === 'serviceArea' ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                    <div className="bg-slate-50 px-6 py-2 pb-4 shadow-inner">
+                                        <div className="border-l-2 border-orange-200 ml-2 pl-4">
+                                            <Link href="/hampshire" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Hampshire</Link>
+                                            <Link href="/bournemouth" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Bournemouth</Link>
+                                            <Link href="/southbourne" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Southbourne</Link>
+                                            <Link href="/christchurch" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Christchurch</Link>
+                                            <Link href="/new-milton" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">New Milton</Link>
+                                            <Link href="/lymington" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Lymington</Link>
+                                            <Link href="/brockenhurst" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Brockenhurst</Link>
+                                            <Link href="/ringwood" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Ringwood</Link>
+                                            <Link href="/southampton" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 hover:text-[#ff5e14]">Southampton</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <Link href="/renewable-technology" onClick={() => setIsMobileOpen(false)} className={`px-6 py-4 text-[15px] font-semibold border-b border-gray-100 transition-colors  ${isRenewables ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}>
                                 Renewables
                                 </Link>
@@ -334,6 +375,7 @@ const NavBar = () => {
                                     <div className="bg-slate-50 px-6 py-2 pb-4 shadow-inner">
                                         <div className="border-l-2 border-orange-200 ml-2 pl-4 space-y-1">
                                             <a href="https://book.servicem8.com/request_service_online_booking?strVendorUUID=b00bca15-4f6a-44c6-8974-1b55a86bb7cb" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Book Services Online</a>
+                                            <Link href="/our-reviews" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Reviews</Link>
                                             <Link href="/gas" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Gas</Link>
                                             <Link href="/heating" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Heating</Link>
                                             <Link href="/nest-thermostat-installation" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Nest Thermostat</Link>

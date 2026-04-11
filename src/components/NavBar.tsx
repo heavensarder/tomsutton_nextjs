@@ -160,7 +160,7 @@ const NavBar = () => {
 
                                     <Link href="/lpg-boilers" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">LPG Boilers</Link>
                                     <Link href="/oil-boilers" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Oil Boilers</Link>
-                                    <Link href="/combi-boiler-installation" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Combi Boiler Install</Link>
+                                    <Link href="/combi-boiler-installation" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Combi Boiler</Link>
                                 </div>
                             </div>
 

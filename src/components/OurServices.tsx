@@ -9,7 +9,12 @@ import { ourServicesDefault } from '@/lib/defaultComponentsData';
 
 
 
-export default async function OurServices() {
+interface OurServicesProps {
+  title?: React.ReactNode;
+  subtitle?: React.ReactNode;
+}
+
+export default async function OurServices({ title, subtitle }: OurServicesProps = {}) {
   const data = await getComponentData('our_services', ourServicesDefault);
   const servicesList = data.services || [];
 
@@ -27,10 +32,10 @@ export default async function OurServices() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16 text-center">
         <span className="inline-flex items-center gap-2 text-[#ff4c24] text-sm font-bold uppercase tracking-wider mb-4">
           <span className="w-2 h-2 rounded-full bg-[#ff4c24] pulse-glow"></span>
-          {data.subtitle}
+          {subtitle || data.subtitle}
         </span>
         <h2 className="text-3xl md:text-5xl font-black text-[#0d1b42] mb-6 leading-tight max-w-3xl mx-auto">
-          {data.title}
+          {title || data.title}
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto text-lg">
           {data.description}

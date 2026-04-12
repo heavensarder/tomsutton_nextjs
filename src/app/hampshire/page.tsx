@@ -4,6 +4,7 @@ import Image from 'next/image';
 import InfiniteReviewSlider from '@/components/InfiniteReviewSlider';
 import ScrollAnimate from '@/components/ScrollAnimate';
 import FaqAccordion from '@/components/FaqAccordion';
+import OurServices from '@/components/OurServices';
 
 export const metadata = {
   title: 'Heating & Plumbing Services in Hampshire | Tom Sutton Heating',
@@ -236,73 +237,11 @@ export default function HampshireAreaPage() {
       </section>
 
       {/* Services Offered in Location Section (Clean Grid, No Images) */}
-      <section className="py-16 lg:py-24 bg-white relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1200px]">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f172a] tracking-tight mb-4">
-              Services Offered in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5e14] to-orange-500">Hampshire</span>
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-[#ff5e14] to-orange-400 mx-auto rounded-full"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            
-            {/* Service 1: Boiler Services */}
-            <div className="group flex gap-6 p-2">
-              <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center text-[#ff5e14] flex-shrink-0 group-hover:bg-[#ff5e14] group-hover:text-white transition-colors duration-300">
-                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              </div>
-              <div className="pt-1">
-                <h3 className="text-xl font-bold text-[#0f172a] mb-2 group-hover:text-[#ff5e14] transition-colors">Boiler Services</h3>
-                <p className="text-slate-600 leading-relaxed font-medium">
-                  Expert installations, emergency repairs, and comprehensive annual servicing for all major boiler brands to keep your home warm safely.
-                </p>
-              </div>
-            </div>
-
-            {/* Service 2: Renewable Energy */}
-            <div className="group flex gap-6 p-2">
-              <div className="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
-                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              </div>
-              <div className="pt-1">
-                <h3 className="text-xl font-bold text-[#0f172a] mb-2 group-hover:text-green-600 transition-colors">Renewable Energy</h3>
-                <p className="text-slate-600 leading-relaxed font-medium">
-                  Air Source Heat Pump (ASHP) specialists dedicated to helping you seamlessly transition to efficient, sustainable, and green home energy.
-                </p>
-              </div>
-            </div>
-
-            {/* Service 3: Plumbing Repairs */}
-            <div className="group flex gap-6 p-2">
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
-              </div>
-              <div className="pt-1">
-                <h3 className="text-xl font-bold text-[#0f172a] mb-2 group-hover:text-blue-600 transition-colors">Plumbing Repairs</h3>
-                <p className="text-slate-600 leading-relaxed font-medium">
-                  From minor fixes like leaky taps to comprehensive full-system plumbing upgrades, our engineers deliver flawless water solutions.
-                </p>
-              </div>
-            </div>
-
-            {/* Service 4: Landlord Services */}
-            <div className="group flex gap-6 p-2">
-              <div className="w-14 h-14 rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-600 flex-shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
-                <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-              </div>
-              <div className="pt-1">
-                <h3 className="text-xl font-bold text-[#0f172a] mb-2 group-hover:text-indigo-600 transition-colors">Landlord Services</h3>
-                <p className="text-slate-600 leading-relaxed font-medium">
-                  Fast, professional, and fully certified Gas Safety Checks (CP12) to ensure your rental properties remain compliant and safe.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* Services Offered in Location Section (Using the Full-Width Homepage Component) */}
+      <OurServices 
+        title={<>Services Offered in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5e14] to-orange-500">Hampshire</span></>} 
+        subtitle="Hampshire Services" 
+      />
 
       {/* Live Google Reviews Full-Width Section */}
       <section className="w-full relative z-20 bg-[#0a0f1c] py-20 lg:py-24 shadow-[0_30px_60px_rgba(0,0,0,0.15)] overflow-hidden">

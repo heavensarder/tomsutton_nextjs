@@ -42,7 +42,9 @@ const Footer = () => {
 
                             <div>
                                 <h4 className="text-white font-semibold mb-1">Phone Number</h4>
-                                <p>{s?.footer_phone_1 || '01590 631671'}</p>
+                                <a href={s?.footer_phone_1 ? `tel:${String(s.footer_phone_1).replace(/\\s+/g,'')}` : "tel:01590631671"} className="block hover:text-white transition-colors">
+                                    {s?.footer_phone_1 || '01590 631671'}
+                                </a>
                             </div>
 
                             <div>

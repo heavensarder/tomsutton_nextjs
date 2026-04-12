@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import InfiniteReviewSlider from '@/components/InfiniteReviewSlider';
 import ScrollAnimate from '@/components/ScrollAnimate';
+import FaqAccordion from '@/components/FaqAccordion';
 
 export const metadata = {
   title: 'Heating & Plumbing Services in Hampshire | Tom Sutton Heating',
@@ -450,6 +451,55 @@ export default function HampshireAreaPage() {
               </div>
             </ScrollAnimate>
           </div>
+        </div>
+      </section>
+
+      {/* ----- Localized FAQ Section Mounted at the Very End ----- */}
+      <section className="py-20 sm:py-28 bg-[#eef1fa] relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-8 lg:left-20 w-16 h-16 text-[#0d1033]/10 pointer-events-none select-none">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
+        </div>
+        <div className="absolute top-16 right-12 lg:right-32 w-12 h-12 text-[#ff5e14]/15 pointer-events-none select-none">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
+        </div>
+        <div className="absolute bottom-24 right-20 lg:right-40 w-20 h-20 text-[#0bdacb]/10 pointer-events-none select-none rotate-12">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
+        </div>
+        {/* Subtle diagonal pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #0d1033 0, #0d1033 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }}></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
+              Hampshire FAQs
+            </span>
+            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
+              Common Queries About<br className="hidden sm:block" /> Our Local Services!
+            </h2>
+          </div>
+
+          {/* Accordion */}
+          <FaqAccordion items={[
+            {
+              question: 'Do you cover all areas inside Hampshire?',
+              answer: 'Yes! We cover the entire New Forest region and beyond, including Lymington, New Milton, Brockenhurst, Christchurch, Highcliffe, Ringwood, and Southampton.'
+            },
+            {
+              question: 'How quickly can an engineer reach me in a heating emergency?',
+              answer: 'Because we are locally based in New Milton, our engineers can offer extremely rapid response times across Hampshire for emergency boiler repairs.'
+            },
+            {
+              question: 'Are your engineers Gas Safe registered in the local area?',
+              answer: 'Absolutely. All our local Hampshire engineers are fully Gas Safe registered, OFTEC certified, and insured to work on both residential and commercial heating systems.'
+            },
+            {
+              question: 'Do you offer free quotes for boiler installations in Hampshire?',
+              answer: 'Yes! We provide 100% free, no-obligation home surveys and quotes across the entire Hampshire and Dorset area so we can accurately assess what boiler your home needs.'
+            }
+          ]} />
         </div>
       </section>
 

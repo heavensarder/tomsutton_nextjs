@@ -60,3 +60,9 @@ html {
   scrollbar-width: thin;
   scrollbar-color: #ff5e14 #f1f5f9;
 }
+
+/* Custom Animations */
+@keyframes slide-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 16px)); } /* Accounts for the gap */
+}

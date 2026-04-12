@@ -11,6 +11,7 @@ export const SITE_PAGES: SitePage[] = [
   { path: '/contact', name: 'Contact', category: 'Main Pages' },
   { path: '/blog', name: 'Blog', category: 'Main Pages' },
   { path: '/our-reviews', name: 'Our Reviews', category: 'Main Pages' },
+  { path: '/energy-events', name: 'Energy Events', category: 'Main Pages' },
 
   // Core Services
   { path: '/new-boilers', name: 'New Boilers', category: 'Services' },
@@ -46,6 +47,17 @@ export const SITE_PAGES: SitePage[] = [
   { path: '/worcester-bosch-cdi-compact', name: 'Worcester Bosch CDi Compact', category: 'Worcester Bosch' },
   { path: '/worcester-bosch-greenstar-ri-installation', name: 'Worcester Bosch Greenstar Ri', category: 'Worcester Bosch' },
   { path: '/worcester-bosch-i-system', name: 'Worcester Bosch i-System', category: 'Worcester Bosch' },
+
+  // Service Areas
+  { path: '/hampshire', name: 'Hampshire', category: 'Service Areas' },
+  { path: '/bournemouth', name: 'Bournemouth', category: 'Service Areas' },
+  { path: '/southbourne', name: 'Southbourne', category: 'Service Areas' },
+  { path: '/christchurch', name: 'Christchurch', category: 'Service Areas' },
+  { path: '/new-milton', name: 'New Milton', category: 'Service Areas' },
+  { path: '/lymington', name: 'Lymington', category: 'Service Areas' },
+  { path: '/brockenhurst', name: 'Brockenhurst', category: 'Service Areas' },
+  { path: '/ringwood', name: 'Ringwood', category: 'Service Areas' },
+  { path: '/southampton', name: 'Southampton', category: 'Service Areas' }
 ];
 
 export const PAGE_CATEGORIES = [...new Set(SITE_PAGES.map(p => p.category))];

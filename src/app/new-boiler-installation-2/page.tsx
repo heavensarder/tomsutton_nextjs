@@ -5,6 +5,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 import LocationContact from '@/components/LocationContact';
 import Link from 'next/link';
 import ReviewWidget from '@/components/ReviewWidget';
+import ContactSection from '@/components/ContactSection';
 
 export const metadata = {
   title: 'New Boiler Installation Bournemouth - Tom Sutton Heating',
@@ -67,7 +68,7 @@ export default function NewBoilerInstallationPage() {
               <div className="pt-2 sm:pt-3 w-full flex justify-center lg:justify-start">
                 <Link
                   href="/online-boiler-quote"
-                  className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold text-white uppercase tracking-wider bg-[#3b82f6] hover:bg-[#2563eb] rounded shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] transition-all duration-300 hover:-translate-y-1"
+                  className="inline-flex items-center justify-center whitespace-nowrap px-6 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold text-white uppercase tracking-wider bg-[#3b82f6] hover:bg-[#2563eb] rounded shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] transition-all duration-300 hover:-translate-y-1"
                 >
                   Request a Quote Now
                 </Link>
@@ -284,7 +285,7 @@ export default function NewBoilerInstallationPage() {
               <p className="text-[#64748b] leading-[1.8] max-w-[420px] mx-auto mb-8 text-[14px] sm:text-[15px]">
                 We now offer a fast boiler installation service. Our Team can install your new boiler in as little as 48 hours. Simply click the button <strong className="text-slate-800">below</strong> to request a quote, and we’ll contact you to schedule a home survey, which will be followed by a quote for your new boiler installation.
               </p>
-              <Link href="/online-boiler-quote" className="inline-flex items-center justify-center px-10 py-3 sm:py-4 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-sm sm:text-[15px] uppercase tracking-wider rounded shadow-[0_8px_16px_rgba(249,115,22,0.25)] hover:shadow-[0_12px_24px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1">
+              <Link href="/online-boiler-quote" className="inline-flex items-center justify-center whitespace-nowrap px-10 py-3 sm:py-4 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-sm sm:text-[15px] uppercase tracking-wider rounded shadow-[0_8px_16px_rgba(249,115,22,0.25)] hover:shadow-[0_12px_24px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1">
                 Request a Quote
               </Link>
             </div>
@@ -296,7 +297,10 @@ export default function NewBoilerInstallationPage() {
               <p className="text-[#64748b] leading-[1.8] max-w-[420px] mx-auto mb-8 text-[14px] sm:text-[15px]">
                 We believe our boiler installation service is one of the best in the area. To find out more about our installation service from the survey to the installation, just simply click the link below.
               </p>
-              <Link href="/contact" className="inline-flex items-center justify-center px-10 py-3 sm:py-4 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-sm sm:text-[15px] uppercase tracking-wider rounded shadow-[0_8px_16px_rgba(249,115,22,0.25)] hover:shadow-[0_12px_24px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1">
+              <Link href="/online-boiler-quote" className="inline-flex items-center justify-center whitespace-nowrap px-10 py-3 sm:py-4 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-sm sm:text-[15px] uppercase tracking-wider rounded shadow-[0_8px_16px_rgba(249,115,22,0.25)] hover:shadow-[0_12px_24px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1">
+                More Info
+              </Link>
+                <Link href="#contact" className="inline-flex items-center justify-center whitespace-nowrap px-10 py-3 sm:py-4 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-sm sm:text-[15px] uppercase tracking-wider rounded shadow-[0_8px_16px_rgba(249,115,22,0.25)] hover:shadow-[0_12px_24px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1">
                 More Info
               </Link>
             </div>
@@ -632,6 +636,7 @@ export default function NewBoilerInstallationPage() {
         </div>
       </section>
 
+      <ContactSection />
     </main>
   );
 }

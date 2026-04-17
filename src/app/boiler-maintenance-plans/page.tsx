@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ContactSection from '@/components/ContactSection';
 
 export default function BoilerMaintenancePlansPage() {
   return (
@@ -434,9 +435,9 @@ export default function BoilerMaintenancePlansPage() {
               </div>
               <h3 className="text-[1.35rem] lg:text-[1.5rem] font-bold text-slate-800 mb-5 leading-tight group-hover:text-sky-600 transition-colors">Have a Question?</h3>
               <p className="text-slate-600 text-[0.95rem] leading-[1.8] font-medium mb-8 flex-grow">
-                Call us today on <a href="tel:01590631671" className="font-bold text-slate-800 hover:text-sky-600 transition-colors">01590 631671</a> if you have any questions about our Boiler Maintenance Plans, or, complete the form on our <Link href="/contact" className="text-sky-600 hover:text-sky-800 font-bold hover:underline">contact page</Link>, and we will be back in touch as soon as possible.
+                Call us today on <a href="tel:01590631671" className="font-bold text-slate-800 hover:text-sky-600 transition-colors">01590 631671</a> if you have any questions about our Boiler Maintenance Plans, or, complete the form on our <Link href="#contact" className="text-sky-600 hover:text-sky-800 font-bold hover:underline">contact page</Link>, and we will be back in touch as soon as possible.
               </p>
-              <Link href="/contact" className="mt-auto block w-full border-2 border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white px-2 py-3.5 rounded-full font-bold text-[0.8rem] tracking-wider transition-all uppercase">
+              <Link href="/online-boiler-quote" className="mt-auto block w-full border-2 border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white px-2 py-3.5 rounded-full font-bold text-[0.8rem] tracking-wider transition-all uppercase">
                 GO TO OUR CONTACT PAGE
               </Link>
             </div>
@@ -446,6 +447,7 @@ export default function BoilerMaintenancePlansPage() {
         </div>
       </section>
 
+      <ContactSection />
     </main>
   );
 }

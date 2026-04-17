@@ -5,6 +5,7 @@ import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
 
 import WhyChooseUs from '@/components/WhyChooseUs';
+import ContactSection from '@/components/ContactSection';
 
 export default function GasPage() {
   return (
@@ -41,8 +42,8 @@ export default function GasPage() {
                 </p>
               </div>
 
-              <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-4 sm:px-12 sm:py-5 bg-white text-[#0f172a] font-black text-[0.85rem] tracking-widest uppercase rounded-2xl transition-all shadow-[0_15px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1">
-                <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">CONTACT US</span>
+              <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-4 sm:px-12 sm:py-5 bg-white text-[#0f172a] font-black text-[0.85rem] tracking-widest uppercase rounded-2xl transition-all shadow-[0_15px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1">
+                <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">GET IN TOUCH</span>
               </Link>
             </div>
 
@@ -114,8 +115,8 @@ export default function GasPage() {
                 </p>
               </div>
 
-              <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-4.5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold tracking-widest uppercase text-sm rounded-2xl shadow-[0_10px_30px_-10px_rgba(37,99,235,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(37,99,235,0.7)] hover:-translate-y-1 transition-all">
-                <span>CONTACT US</span>
+              <Link href="/contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-4.5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold tracking-widest uppercase text-sm rounded-2xl shadow-[0_10px_30px_-10px_rgba(37,99,235,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(37,99,235,0.7)] hover:-translate-y-1 transition-all">
+                <span>GET IN TOUCH</span>
                 <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
               </Link>
               
@@ -217,6 +218,7 @@ export default function GasPage() {
         </div>
       </section>
 
+      <ContactSection />
     </main>
   );
 }

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import ContactSection from '@/components/ContactSection';
 
 export default function WorcesterBoschPage() {
   return (
@@ -43,7 +44,7 @@ export default function WorcesterBoschPage() {
                 CHOOSE FROM ONE OF OUR WORCESTER BOSCH RANGES
               </h1>
 
-              <Link href="/online-boiler-quote" className="group relative inline-flex items-center justify-center px-8 py-4 sm:px-10 sm:py-5 bg-[#fb923c] text-white font-black text-[0.85rem] sm:text-[0.95rem] tracking-[0.15em] uppercase rounded-xl transition-all duration-500 shadow-[0_15px_30px_rgba(251,146,60,0.25)] hover:shadow-[0_20px_40px_rgba(251,146,60,0.4)] hover:-translate-y-1 hover:bg-[#f97316]">
+              <Link href="/online-boiler-quote" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 sm:px-10 sm:py-5 bg-[#fb923c] text-white font-black text-[0.85rem] sm:text-[0.95rem] tracking-[0.15em] uppercase rounded-xl transition-all duration-500 shadow-[0_15px_30px_rgba(251,146,60,0.25)] hover:shadow-[0_20px_40px_rgba(251,146,60,0.4)] hover:-translate-y-1 hover:bg-[#f97316]">
                 <div className="absolute inset-0 rounded-xl bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-overlay"></div>
                 <span className="relative z-10 group-hover:scale-105 transition-transform duration-500 flex items-center gap-3">
                   ONLINE BOILER QUOTE NOW
@@ -193,6 +194,7 @@ export default function WorcesterBoschPage() {
         </div>
       </section>
 
+      <ContactSection />
     </main>
   );
 }

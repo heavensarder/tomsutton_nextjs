@@ -5,6 +5,7 @@ import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
 
 import WhyChooseUs from '@/components/WhyChooseUs';
+import ContactSection from '@/components/ContactSection';
 
 export default function NestThermostatInstallationPage() {
   return (
@@ -48,8 +49,8 @@ export default function NestThermostatInstallationPage() {
                 </p>
               </div>
 
-              <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-4.5 sm:px-12 sm:py-5 bg-white text-blue-600 font-bold tracking-widest uppercase text-sm rounded-2xl shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.25)] hover:-translate-y-1 hover:bg-slate-50 transition-all duration-300">
-                <span>CONTACT US</span>
+              <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-4.5 sm:px-12 sm:py-5 bg-white text-blue-600 font-bold tracking-widest uppercase text-sm rounded-2xl shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.25)] hover:-translate-y-1 hover:bg-slate-50 transition-all duration-300">
+                <span>GET IN TOUCH</span>
                 <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
               </Link>
             </div>
@@ -152,7 +153,7 @@ export default function NestThermostatInstallationPage() {
                 </p>
               </div>
 
-              <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-5 bg-[#1d4ed8] text-white font-bold tracking-widest uppercase text-sm rounded-2xl shadow-[0_10px_30px_-10px_rgba(29,78,216,0.6)] hover:shadow-[0_15px_40px_-10px_rgba(29,78,216,0.8)] hover:-translate-y-1 hover:bg-[#1e40af] transition-all">
+              <Link href="/contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-5 bg-[#1d4ed8] text-white font-bold tracking-widest uppercase text-sm rounded-2xl shadow-[0_10px_30px_-10px_rgba(29,78,216,0.6)] hover:shadow-[0_15px_40px_-10px_rgba(29,78,216,0.8)] hover:-translate-y-1 hover:bg-[#1e40af] transition-all">
                 <span>READ SPEC SHEET</span>
                 <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
               </Link>
@@ -251,6 +252,7 @@ export default function NestThermostatInstallationPage() {
         </div>
       </section>
 
+      <ContactSection />
     </main>
   );
 }

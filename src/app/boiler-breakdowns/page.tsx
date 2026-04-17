@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import FaqAccordion from '@/components/FaqAccordion';
 import LocationContact from '@/components/LocationContact';
+import ContactSection from '@/components/ContactSection';
 
 export default function BoilerBreakdownsPage() {
   return (
@@ -45,9 +46,14 @@ export default function BoilerBreakdownsPage() {
                 </p>
               </div>
 
-              <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-4 sm:px-12 sm:py-4 bg-white text-blue-700 font-bold text-[0.85rem] tracking-widest uppercase rounded-sm transition-all shadow-[0_15px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1">
-                <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">CONTACT US</span>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
+                <Link href="/online-boiler-quote" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-4 sm:px-12 sm:py-4 bg-white text-blue-700 font-bold text-[0.85rem] tracking-widest uppercase rounded-xl transition-all shadow-[0_15px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1">
+                  <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">GET ONLINE QUOTE</span>
+                </Link>
+                <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-4 sm:px-12 sm:py-4 bg-white/10 border border-white/20 text-white font-bold text-[0.85rem] tracking-widest uppercase rounded-xl transition-all hover:bg-white/20 backdrop-blur-sm">
+                  <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">GET IN TOUCH</span>
+                </Link>
+              </div>
             </div>
 
             {/* Right Media Area */}
@@ -162,10 +168,6 @@ export default function BoilerBreakdownsPage() {
       {/* Why Choose Us Section */}
       <WhyChooseUs />
 
-      {/* Location & Contact Section */}
-
-
-
       <LocationContact />
 
       {/* Premium Dark Gradient Contact Footer */}
@@ -187,8 +189,6 @@ export default function BoilerBreakdownsPage() {
           </div>
         </div>
       </section>
-
-
 
       {/* ----- FAQ Section Mounted at the Very End ----- */}
       {/* FAQs Section */}
@@ -229,6 +229,7 @@ export default function BoilerBreakdownsPage() {
         </div>
       </section>
 
+      <ContactSection />
     </main>
   );
 }

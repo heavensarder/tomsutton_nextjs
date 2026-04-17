@@ -5,6 +5,7 @@ import InfiniteReviewSlider from '@/components/InfiniteReviewSlider';
 import ScrollAnimate from '@/components/ScrollAnimate';
 import FaqAccordion from '@/components/FaqAccordion';
 import OurServices from '@/components/OurServices';
+import ContactSection from '@/components/ContactSection';
 
 export const metadata = {
   title: 'Heating & Plumbing Services in Ringwood | Tom Sutton Heating',
@@ -56,17 +57,17 @@ export default function RingwoodAreaPage() {
 
               {/* CTAs and Social Proof */}
               <div className="flex flex-col sm:flex-row items-center gap-6 w-full justify-center lg:justify-start">
-                <Link 
-                  href="/online-boiler-quote" 
-                  className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#ff5e14] to-[#ea580c] text-white rounded-xl font-bold text-base sm:text-lg tracking-wide hover:shadow-[0_0_30px_rgba(255,94,20,0.4)] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Get a Free Quote
-                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                <Link href="/online-boiler-quote" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 sm:px-10 bg-gradient-to-r from-[#ff5e14] to-[#ea580c] text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all shadow-[0_10px_30px_rgba(255,94,20,0.3)] hover:shadow-[0_15px_40px_rgba(255,94,20,0.5)] hover:-translate-y-1">
+                  <span className="flex items-center">
+                    GET A FREE QUOTE
+                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                   </span>
-                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
                 </Link>
-
+                <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 sm:px-10 bg-slate-800 border border-slate-700 text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all hover:bg-slate-700">
+                  <span className="flex items-center">
+                    GET IN TOUCH
+                  </span>
+                </Link>
                 <div className="flex items-center gap-4 border-l-0 sm:border-l border-slate-700 sm:pl-6">
                   <div className="flex -space-x-3">
                     {[1, 2, 3, 4].map((i) => (
@@ -87,7 +88,6 @@ export default function RingwoodAreaPage() {
                     <span className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-0.5">Top Rated</span>
                   </div>
                 </div>
-
               </div>
             </div>
 
@@ -386,6 +386,10 @@ export default function RingwoodAreaPage() {
                   Contact Us Today
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>
+                <Link href="#contact" className="group mt-2 w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] rounded-xl font-bold text-white text-base hover:from-[#ff6a00] hover:to-[#ff9c52] transition-all shadow-lg hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-5px_rgba(255,94,20,0.4)]">
+                  Contact Us Today
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </Link>
 
               </div>
             </ScrollAnimate>
@@ -442,6 +446,7 @@ export default function RingwoodAreaPage() {
         </div>
       </section>
 
+      <ContactSection />
     </main>
   );
 }

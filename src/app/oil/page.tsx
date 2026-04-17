@@ -5,6 +5,7 @@ import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
 
 import WhyChooseUs from '@/components/WhyChooseUs';
+import ContactSection from '@/components/ContactSection';
 
 export default function OilPage() {
   return (
@@ -43,11 +44,11 @@ export default function OilPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                <Link href="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all shadow-[0_10px_30px_rgba(255,94,20,0.3)] hover:shadow-[0_15px_40px_rgba(255,94,20,0.5)] hover:-translate-y-1">
-                  <span>CONTACT US</span>
+                <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all shadow-[0_10px_30px_rgba(255,94,20,0.3)] hover:shadow-[0_15px_40px_rgba(255,94,20,0.5)] hover:-translate-y-1">
+                  <span>GET IN TOUCH</span>
                   <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>
-                <a href="tel:01590631671" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 border border-white/20 text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all hover:bg-white/20 backdrop-blur-sm">
+                <a href="tel:01590631671" className="inline-flex items-center justify-center whitespace-nowrap px-8 py-4 bg-white/10 border border-white/20 text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all hover:bg-white/20 backdrop-blur-sm">
                   01590 631671
                 </a>
               </div>
@@ -145,7 +146,7 @@ export default function OilPage() {
               </div>
 
               <div className="flex items-center gap-6 mt-2">
-                <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-4 bg-[#0d1033] text-white font-bold tracking-widest uppercase text-[0.9rem] rounded-xl shadow-[0_10px_30px_-10px_rgba(13,16,51,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(13,16,51,0.6)] hover:-translate-y-1 hover:bg-[#1a2050] transition-all">
+                <Link href="/contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-4 bg-[#0d1033] text-white font-bold tracking-widest uppercase text-[0.9rem] rounded-xl shadow-[0_10px_30px_-10px_rgba(13,16,51,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(13,16,51,0.6)] hover:-translate-y-1 hover:bg-[#1a2050] transition-all">
                   <span>BOOK A SERVICE</span>
                   <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>
@@ -226,6 +227,7 @@ export default function OilPage() {
         </div>
       </section>
 
+      <ContactSection />
     </main>
   );
 }

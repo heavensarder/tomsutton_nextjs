@@ -8,6 +8,7 @@ import TestimonialSlider from '@/components/TestimonialSlider';
 import WhyChooseUs from '@/components/WhyChooseUs';
 
 import QuoteComponent from '@/components/QuoteComponent';
+import ContactSection from '@/components/ContactSection';
 
 export default function NewBoilersPage() {
   return (
@@ -51,7 +52,7 @@ export default function NewBoilersPage() {
                 </span>
               </div>
 
-              <Link href="/online-boiler-quote" className="group relative inline-flex items-center justify-center px-8 py-4 sm:px-10 sm:py-5 bg-white text-blue-700 font-black text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_15px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1">
+              <Link href="/online-boiler-quote" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 sm:px-10 sm:py-5 bg-white text-blue-700 font-black text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_15px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1">
                 <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">ONLINE BOILER QUOTE NOW</span>
               </Link>
             </div>
@@ -103,7 +104,7 @@ export default function NewBoilersPage() {
 
               <Link
                 href="/our-boiler-brands/"
-                className="group relative inline-flex items-center justify-center px-8 py-4 sm:px-10 sm:py-4 bg-slate-900 hover:bg-black text-white font-bold tracking-widest text-sm uppercase rounded-xl transition-all hover:-translate-y-1 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.3)]"
+                className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 sm:px-10 sm:py-4 bg-slate-900 hover:bg-black text-white font-bold tracking-widest text-sm uppercase rounded-xl transition-all hover:-translate-y-1 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.3)]"
               >
                 <span>View All Brands</span>
                 <svg className="w-5 h-5 ml-2.5 opacity-80 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
@@ -150,7 +151,7 @@ export default function NewBoilersPage() {
                 </h2>
 
                 <p className="text-gray-500 text-[1.1rem] sm:text-[1.15rem] font-light leading-[1.8]">
-                  At Tom Sutton Heating we are completely upfront with our pricing. This is why we offer FIXED PRICE BOILER PACKAGES. <Link href="/contact" className="text-[#2563eb] hover:text-[#1d4ed8] underline underline-offset-2 decoration-1 transition-colors">Contact us</Link> today to discuss our fixed price boiler installation packages or use the quote tool below to find out how much your new boiler could cost you.
+                  At Tom Sutton Heating we are completely upfront with our pricing. This is why we offer FIXED PRICE BOILER PACKAGES. <Link href="#contact" className="text-[#2563eb] hover:text-[#1d4ed8] underline underline-offset-2 decoration-1 transition-colors">Contact us</Link> today to discuss our fixed price boiler installation packages or use the quote tool below to find out how much your new boiler could cost you.
                 </p>
               </div>
 
@@ -233,7 +234,7 @@ export default function NewBoilersPage() {
             </p>
 
             <div className="mt-12 flex justify-center w-full">
-              <Link href="/contact" className="inline-flex items-center justify-center px-10 py-5 text-[1.1rem] font-bold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 to-blue-500 border border-transparent rounded-[1.25rem] shadow-[0_15px_30px_rgba(37,99,235,0.3)] hover:from-blue-700 hover:to-blue-600 hover:shadow-[0_20px_40px_rgba(37,99,235,0.4)] hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 uppercase tracking-wide group">
+              <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap px-10 py-5 text-[1.1rem] font-bold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 to-blue-500 border border-transparent rounded-[1.25rem] shadow-[0_15px_30px_rgba(37,99,235,0.3)] hover:from-blue-700 hover:to-blue-600 hover:shadow-[0_20px_40px_rgba(37,99,235,0.4)] hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 uppercase tracking-wide group">
                 Contact Us Today
                 <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
               </Link>
@@ -311,6 +312,7 @@ export default function NewBoilersPage() {
         </div>
       </section>
 
+      <ContactSection />
     </main>
   );
 }

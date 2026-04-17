@@ -6,6 +6,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import HeatingServiceSlider from '@/components/HeatingServiceSlider';
 import { getComponentData } from '@/lib/components';
 import { heatingSliderDefault } from '@/lib/defaultComponentsData';
+import ContactSection from '@/components/ContactSection';
 
 export default async function HeatingPage() {
   const heatingSliderData = await getComponentData('heating_slider', heatingSliderDefault);
@@ -46,11 +47,14 @@ export default async function HeatingPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                <Link href="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all shadow-[0_10px_30px_rgba(255,94,20,0.3)] hover:shadow-[0_15px_40px_rgba(255,94,20,0.5)] hover:-translate-y-1">
+                <Link href="/online-boiler-quote" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 bg-white/10 border border-white/20 text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all hover:bg-white/20 backdrop-blur-sm">
+                  <span>GET ONLINE QUOTE</span>
+                </Link>
+                <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all shadow-[0_10px_30px_rgba(255,94,20,0.3)] hover:shadow-[0_15px_40px_rgba(255,94,20,0.5)] hover:-translate-y-1">
                   <span>GET IN TOUCH</span>
                   <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>
-                <a href="tel:01590631671" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 border border-white/20 text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all hover:bg-white/20 backdrop-blur-sm">
+                <a href="tel:01590631671" className="inline-flex items-center justify-center whitespace-nowrap px-8 py-4 bg-white/10 border border-white/20 text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all hover:bg-white/20 backdrop-blur-sm">
                   01590 631671
                 </a>
               </div>
@@ -132,7 +136,7 @@ export default async function HeatingPage() {
                   <h4 className="font-bold text-slate-800 tracking-tight">Fair Pricing</h4>
                 </div>
                 <p className="text-sm font-medium text-slate-500 leading-relaxed">
-                  Working with all budgets across the New Forest layout.
+                  Working with all budgets across the New Forest area.
                 </p>
               </div>
             </div>
@@ -142,104 +146,72 @@ export default async function HeatingPage() {
               <h2 className="text-[2rem] sm:text-[2.5rem] font-black text-[#0d1033] tracking-tight leading-[1.15] mb-6">
                 Reliable Experts, <br className="hidden sm:block"/> <span className="text-[#ff5e14]">Honest Solutions.</span>
               </h2>
-              
-              <div className="space-y-6 text-[#64748b] font-medium text-[1.1rem] leading-[1.8] mb-10 w-full">
+              <div className="space-y-6 text-slate-600 font-medium text-[1.1rem] leading-[1.8] mb-10 w-full">
                 <p>
-                  We understand that plumbing and heating repairs can be costly or unexpected. With this in mind, we use a wide range of manufacturers and materials to flexibly suit everyone&apos;s budget.
+                  Heating issues can be incredibly stressful – that's why we pride ourselves on delivering rapid, completely transparent, and long-lasting fixes.
                 </p>
-                <div className="flex items-start gap-4 p-5 bg-gradient-to-br from-white to-slate-50 rounded-2xl border border-slate-100 shadow-sm">
-                  <div className="w-12 h-12 rounded-full bg-[#0d1033]/5 flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6 text-[#0d1033]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-800 text-lg mb-1">Need immediate advice?</h4>
-                    <p className="text-slate-500 text-sm mb-2">Speak directly with our engineers to discuss your heating system.</p>
-                    <a href="tel:01590631671" className="text-[#1d4ed8] font-bold hover:text-blue-800 transition-colors">Call 01590 631671 →</a>
-                  </div>
+                <div className="space-y-4 pt-2">
+                  {[
+                    "Fully insured and highly certified engineers",
+                    "Energy efficient system optimizations",
+                    "Rapid response times across Hampshire",
+                    "Up to 12 year warranties on new boiler installs"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-4 bg-white px-5 py-4 rounded-xl border border-slate-100 shadow-sm">
+                      <div className="w-7 h-7 rounded-lg bg-[#ff5e14]/10 flex items-center justify-center shrink-0">
+                        <svg className="w-4 h-4 text-[#ff5e14]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7"/></svg>
+                      </div>
+                      <span className="text-slate-700 font-bold">{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-
-              <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-4 bg-[#0d1033] text-white font-bold tracking-widest uppercase text-[0.9rem] rounded-xl shadow-[0_10px_30px_-10px_rgba(13,16,51,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(13,16,51,0.6)] hover:-translate-y-1 hover:bg-[#1a2050] transition-all">
-                <span>REQUEST A QUOTE</span>
-                <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-              </Link>
             </div>
-
           </div>
         </div>
       </section>
 
-
-      {/* Why Choose Us Section */}
       <WhyChooseUs />
-
-      {/* Location & Contact Section */}
-
-    
+      
+      {/* Brands Accordion Section */}
+      <section className="py-20 lg:py-28 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1250px] relative z-10">
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+            <div className="w-full lg:w-1/2">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-[#0d1033] text-xs font-bold tracking-widest uppercase mb-6">
+                Partnered Excellence
+              </span>
+              <h2 className="text-[2rem] sm:text-[2.5rem] font-black text-slate-800 tracking-tight leading-[1.15] mb-6">
+                Working with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Industry Leaders</span>
+              </h2>
+              <p className="text-slate-500 font-medium text-[1.1rem] leading-[1.8] mb-8">
+                As certified partners with top-tier manufacturers, we bring you extended warranties, priority support, and the very best equipment on the market.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-slate-50 p-6 rounded-2xl flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100 border border-slate-100">
+                  <Image src="https://i.postimg.cc/85zX6X6F/Viessmann-logo-svg.png" alt="Viessmann" width={150} height={50} className="object-contain" unoptimized />
+                </div>
+                <div className="bg-slate-50 p-6 rounded-2xl flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100 border border-slate-100">
+                  <Image src="https://i.postimg.cc/PqjZ6d0B/Worcester-Bosch-logo.webp" alt="Worcester Bosch" width={150} height={50} className="object-contain" unoptimized />
+                </div>
+              </div>
+            </div>
+            
+            <div className="w-full lg:w-1/2">
+              <FaqAccordion items={[
+                { q: "How quickly can you fix a broken boiler?", a: "We aim to diagnose and repair almost all boiler breakdowns within our initial 24-hour response window, fully equipped with most common replacement parts." },
+                { q: "Are your heating engineers fully insured?", a: "Absolutely. All our heating engineers are fully insured and Gas Safe / OFTEC registered for guaranteed peace of mind." },
+                { q: "Do you offer warranties on new installations?", a: "Yes! Because we are accredited installers, we can offer extended warranties ranging from 7 up to 12 years on select boiler models." },
+                { q: "What areas do you cover?", a: "We primarily cover Lymington, Brockenhurst, New Milton, Ringwood, and all surrounding areas of the New Forest and wider Hampshire area." }
+              ]} />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <LocationContact />
-
-      {/* Premium Dark Gradient Contact Footer Bridge */}
-      <section className="relative bg-[#0b1021] py-8 sm:py-10 overflow-hidden">
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
-
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-8 py-4 sm:py-3 shadow-2xl">
-            <span className="text-blue-100 font-medium text-base sm:text-lg tracking-wide">
-              Need immediate assistance? Call our dedicated team on
-            </span>
-            <div className="flex items-center gap-3 font-bold text-white text-lg sm:text-xl shrink-0">
-              <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.4-1.2-.6-2.4-.6-3.6 0-.6-.4-1-1-1H4.4c-.6 0-1 .4-1 1C3.4 13.6 10.4 20.6 19 20.6c.6 0 1-.4 1-1v-3.1c0-.6-.4-1-1-1z" /></svg>
-              </div>
-              <a href="tel:01590631671" className="hover:text-blue-400 transition-colors cursor-pointer inline-block">01590 631671</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    
-
-      {/* ----- FAQ Section Mounted at the Very End ----- */}
-      {/* FAQs Section */}
-      <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider border-2 border-[#ff5e14]/20 bg-white px-5 py-2.5 rounded-full mb-5">
-              <span className="w-2 h-2 rounded-full bg-[#ff5e14]"></span>
-              FAQs
-            </span>
-            <h2 className="text-[1.75rem] sm:text-4xl lg:text-[2.8rem] font-black text-[#0d1033] tracking-tight leading-[1.15] italic">
-              Answers to Your Most<br className="hidden sm:block" /> Common Queries!
-            </h2>
-          </div>
-
-          {/* Accordion */}
-          <FaqAccordion items={[
-            {
-              question: "What types of heating systems do you install?",
-              answer: "We install a wide range of heating systems including gas central heating, oil-fired heating, underfloor heating, radiator upgrades, smart heating controls, and renewable systems such as air source heat pumps. We will recommend the best solution for your home and budget."
-            },
-            {
-              question: "How can I improve the efficiency of my central heating?",
-              answer: "There are several ways to improve efficiency: upgrading to a modern condensing boiler, installing thermostatic radiator valves (TRVs), adding smart heating controls like a Nest thermostat, power flushing your system to remove sludge, and ensuring adequate loft and wall insulation."
-            },
-            {
-              question: "My radiators have cold spots \u2014 what does this mean?",
-              answer: "Cold spots on radiators usually indicate trapped air or a build-up of sludge in the system. Bleeding radiators can resolve air pockets. If sludge is the issue, a professional power flush will clear the debris and restore full heat output to all radiators."
-            },
-            {
-              question: "How long does a central heating installation take?",
-              answer: "A straightforward boiler swap typically takes one day. A full central heating system installation, including new radiators and pipework, usually takes 3-5 days depending on the size of your property and the complexity of the system layout."
-            },
-            {
-              question: "Do you offer smart thermostat installations?",
-              answer: "Yes, we are approved installers for the Google Nest Learning Thermostat and other smart heating controls. Smart thermostats can save you up to 26% on your heating bills by learning your schedule and only heating your home when needed."
-            }
-          ]} />
-        </div>
-      </section>
-
+      <ContactSection />
     </main>
   );
 }

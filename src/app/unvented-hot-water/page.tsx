@@ -3,6 +3,7 @@ import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import ContactSection from '@/components/ContactSection';
 
 export default function UnventedHotWaterPage() {
   return (
@@ -51,8 +52,8 @@ export default function UnventedHotWaterPage() {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                <Link href="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 sm:px-10 sm:py-5 bg-[#f38230] text-white font-black text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_15px_30px_rgba(243,130,48,0.3)] hover:shadow-[0_20px_40px_rgba(243,130,48,0.45)] hover:-translate-y-1">
-                  <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">CONTACT US</span>
+                <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 sm:px-10 sm:py-5 bg-[#f38230] text-white font-black text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_15px_30px_rgba(243,130,48,0.3)] hover:shadow-[0_20px_40px_rgba(243,130,48,0.45)] hover:-translate-y-1">
+                  <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">GET IN TOUCH</span>
                 </Link>
               </div>
 
@@ -114,7 +115,7 @@ export default function UnventedHotWaterPage() {
               </p>
             </div>
 
-            <Link href="/contact" className="inline-flex items-center justify-center px-10 py-5 bg-[#f38230] text-white font-black tracking-widest text-sm uppercase rounded-xl transition-all shadow-[0_15px_30px_rgba(243,130,48,0.3)] hover:shadow-[0_20px_40px_rgba(243,130,48,0.45)] hover:-translate-y-1">
+            <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap px-10 py-5 bg-[#f38230] text-white font-black tracking-widest text-sm uppercase rounded-xl transition-all shadow-[0_15px_30px_rgba(243,130,48,0.3)] hover:shadow-[0_20px_40px_rgba(243,130,48,0.45)] hover:-translate-y-1">
               CONTACT US TODAY
             </Link>
 
@@ -234,6 +235,7 @@ export default function UnventedHotWaterPage() {
         </div>
       </section>
 
+      <ContactSection />
     </main>
   );
 }

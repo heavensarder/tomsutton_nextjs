@@ -8,7 +8,8 @@ import {
   slidingGalleryDefault, 
   locationContactDefault,
   ourServicesDefault,
-  heatingSliderDefault
+  heatingSliderDefault,
+  gasSliderDefault
 } from '@/lib/defaultComponentsData';
 
 const COMPONENTS_MAP = [
@@ -17,7 +18,8 @@ const COMPONENTS_MAP = [
   { id: 'sliding_gallery', label: 'Sliding Gallery', default: slidingGalleryDefault },
   { id: 'location_contact', label: 'Location Contact', default: locationContactDefault },
   { id: 'our_services', label: 'Our Services', default: ourServicesDefault },
-  { id: 'heating_slider', label: 'Heating Slider', default: heatingSliderDefault }
+  { id: 'heating_slider', label: 'Heating Slider', default: heatingSliderDefault },
+  { id: 'gas_slider', label: 'Gas Slider', default: gasSliderDefault }
 ];
 
 export default function ComponentsAdminPage() {
@@ -361,6 +363,43 @@ export default function ComponentsAdminPage() {
               <button 
                 type="button"
                 onClick={() => updateField('services', [...(data.services || []), { title: 'New Service', desc: '', icon: '' }])}
+                className="w-full bg-[#ff5e14]/10 hover:bg-[#ff5e14]/20 text-[#ff5e14] font-bold py-3 rounded-xl border border-[#ff5e14]/30 border-dashed transition-colors"
+                title="Add Slider Item"
+              >
+                + Add Slider Item
+              </button>
+            </div>
+          </div>
+        );
+
+      case 'gas_slider':
+        return (
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold border-b pb-2">Gas Slider Services</h3>
+            <div className="space-y-6">
+              {(data.services || []).map((service: any, idx: number) => (
+                <div key={idx} className="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="font-bold text-[#0d1033]">Service {idx + 1}</span>
+                    <button 
+                      onClick={() => {
+                        const newSvcs = [...data.services];
+                        newSvcs.splice(idx, 1);
+                        updateField('services', newSvcs);
+                      }}
+                      className="text-red-500 hover:text-red-700 text-sm font-bold disabled:opacity-30"
+                      disabled={data.services.length <= 1}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                  <TextField label="Service Text" value={service.text} onChange={(v) => updateField(`services.${idx}.text`, v)} />
+                  <TextAreaField label="SVG Path Data (icon)" value={service.icon} onChange={(v) => updateField(`services.${idx}.icon`, v)} />
+                </div>
+              ))}
+              <button 
+                type="button"
+                onClick={() => updateField('services', [...(data.services || []), { text: 'New Target Service', icon: '' }])}
                 className="w-full bg-[#ff5e14]/10 hover:bg-[#ff5e14]/20 text-[#ff5e14] font-bold py-3 rounded-xl border border-[#ff5e14]/30 border-dashed transition-colors"
                 title="Add Slider Item"
               >

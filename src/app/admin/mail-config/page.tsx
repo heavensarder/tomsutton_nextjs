@@ -106,8 +106,23 @@ export default function MailConfigPage() {
         </div>
       )}
 
+      {/* Critical Area Notice */}
+      <div className="bg-red-600 p-5 mx-6 mt-6 rounded-2xl shadow-md border border-red-700">
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 rounded-full bg-white/20 shadow-inner flex items-center justify-center shrink-0">
+            <svg className="w-5 h-5 text-white drop-shadow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+          </div>
+          <div>
+            <h3 className="text-white font-black text-[15px] tracking-widest uppercase drop-shadow-sm">Critical Security Area — Do Not Modify</h3>
+            <p className="text-red-50 text-[13px] mt-1.5 font-semibold leading-relaxed max-w-3xl drop-shadow-sm">
+              These settings control the core infrastructure binding your contact forms to Google's secured mailing API. Changing any values without professional authorization will instantly break the website's ability to process and send customer enquiries.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Tabs Header */}
-      <div className="flex items-center border-b border-slate-200 overflow-x-auto">
+      <div className="flex items-center border-b border-slate-200 overflow-x-auto mt-6">
         {tabs.map((tab) => (
           <button
             key={tab.id}

@@ -1,9 +1,9 @@
-﻿
+
 import Image from 'next/image';
 import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
-import TestimonialSlider from '@/components/TestimonialSlider';
+import InfiniteReviewSlider from '@/components/InfiniteReviewSlider';
 import WhyChooseUs from '@/components/WhyChooseUs';
 
 
@@ -94,7 +94,7 @@ export default function CombiBoilerInstallationPage() {
 
               <div className="space-y-6 text-slate-600 font-medium text-[1.05rem] leading-[1.8]">
                 <p>
-                  A combination or â€˜combiâ€™ boiler is both a high-efficiency water heater and a central heating boiler in a single compact unit. Combi boilers heat water directly from the mains when you turn on a tap, so you wonâ€™t need a hot water storage cylinder or a cold water storage tank in the roof space.
+                  A combination or &apos;combi&apos; boiler is both a high-efficiency water heater and a central heating boiler in a single compact unit. Combi boilers heat water directly from the mains when you turn on a tap, so you won&apos;t need a hot water storage cylinder or a cold water storage tank in the roof space.
                 </p>
                 <p>
                   They are also very cost-effective and energy-efficient as water is heated instantly rather than being heated and then stored in a cylinder. An added benefit is that hot water is delivered at mains pressure, which means that you could get a powerful shower without the need for a separate pump.
@@ -123,57 +123,148 @@ export default function CombiBoilerInstallationPage() {
         </div>
       </section>
 
-      {/* Premium Boiler Brands Layout Redesign */}
-      <section className="bg-slate-50 py-20 sm:py-32 relative overflow-hidden border-b border-gray-100">
-        {/* Subtle Split-Background Layout Accent */}
-        <div className="absolute top-0 right-0 w-full lg:w-[45%] h-full bg-slate-50/50 lg:rounded-l-[8rem] -z-10"></div>
-
-        <div className="container mx-auto px-4 max-w-[1200px]">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-20">
-
-            {/* Left Column: Typography & Corporate Pitch */}
-            <div className="w-full lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start relative z-10">
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 font-bold text-[0.7rem] sm:text-xs tracking-[0.15em] uppercase mb-6 shadow-sm">
-                <svg className="w-3.5 h-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                Accredited Specialists
-              </span>
-
-              <h2 className="text-[2.25rem] sm:text-[3.25rem] font-black text-slate-800 tracking-tight leading-[1.05] mb-6">
-                OUR PREMIER <br className="hidden lg:block" /> BOILER BRANDS
-              </h2>
-
-              <div className="w-16 h-1.5 bg-[#ff9e0b] rounded-full mx-auto lg:mx-0 mb-8"></div>
-
-              <p className="text-slate-500 text-[1.05rem] sm:text-[1.15rem] font-light leading-[1.8] max-w-[550px] mb-10">
-                At Tom Sutton Heating we work with a select tier of premium thermal manufacturers. As <strong className="text-slate-800 font-bold">Worcester Accredited Installers</strong>, their pioneering systems represent our absolute number one boiler recommendation and top sellers globally.
-              </p>
-
-              <Link
-                href="/our-boiler-brands/"
-                className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 sm:px-10 sm:py-4 bg-slate-900 hover:bg-black text-white font-bold tracking-widest text-sm uppercase rounded-xl transition-all hover:-translate-y-1 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.3)]"
-              >
-                <span>View All Brands</span>
-                <svg className="w-5 h-5 ml-2.5 opacity-80 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-              </Link>
+      {/* Vortex Pro Internal Combi Section */}
+      <section className="bg-white py-20 sm:py-28 relative overflow-hidden border-b border-gray-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1200px]">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
+            
+            {/* Left Column: Image */}
+            <div className="w-full lg:w-[40%] flex justify-center lg:sticky lg:top-32 relative z-10 pt-4">
+              <div className="relative w-full max-w-[450px] aspect-[4/5] sm:aspect-[3/4] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 group flex items-center justify-center">
+                <Image
+                  src="https://i.postimg.cc/bYQzjs84/grant-vortex-internal-combi.jpg"
+                  alt="Grant Vortex Pro Internal Combi Boiler"
+                  fill
+                  className="object-contain p-6 transform group-hover:scale-105 transition-transform duration-700"
+                  unoptimized
+                />
+              </div>
             </div>
 
-            {/* Right Column: Visual Showcase Display Component */}
-            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative z-10">
-              <div className="relative w-full max-w-[500px] aspect-auto sm:aspect-[4/3] bg-white rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] border border-slate-100 flex items-center justify-center p-10 sm:p-16 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-500 group">
+            {/* Right Column: Content */}
+            <div className="w-full lg:w-[60%] flex flex-col items-start relative z-10 bg-white">
+              <span className="font-black text-slate-800 uppercase tracking-widest text-[0.8rem] mb-3">
+                Oil Boilers
+              </span>
+              <h2 className="text-[2.25rem] sm:text-[3.25rem] font-black text-slate-800 tracking-tight leading-[1.05] mb-8">
+                Vortex Pro: Internal Combi
+              </h2>
 
-                {/* Embedded Ambient Glow FX behind the logo */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-blue-100/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0 pointer-events-none"></div>
-
-                {/* Physical Logo Bounding Box ensuring absolute structural integrity */}
-                <div className="relative w-full h-[70px] sm:h-[100px] z-10 transition-transform duration-500 group-hover:scale-105">
-                  <Image
-                    src="https://i.postimg.cc/PqXwb81V/WAI-Bosch-Logo-WHITE-BOXES-SGRight-2-300x73.webp"
-                    alt="Worcester Bosch Accredited Installer Partnership Logo"
-                    fill
-                    className="object-contain object-center mix-blend-multiply"
-                    unoptimized
-                  />
+              {/* Tags */}
+              <div className="flex flex-wrap items-center gap-6 sm:gap-8 mb-10">
+                {/* A Heating */}
+                <div className="flex items-center">
+                  <div className="relative h-[1.8rem] w-[3.5rem] bg-[#beda38] flex items-center justify-center font-black text-white text-[1rem] pl-1.5" style={{ clipPath: 'polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%, 15% 50%)' }}>
+                    A
+                  </div>
+                  <span className="ml-3 font-bold text-slate-600 text-[1.1rem]">Heating</span>
                 </div>
+                {/* B Water */}
+                <div className="flex items-center">
+                  <div className="relative h-[1.8rem] w-[3.5rem] bg-[#5eb44b] flex items-center justify-center font-black text-white text-[1rem] pl-1.5" style={{ clipPath: 'polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%, 15% 50%)' }}>
+                    B
+                  </div>
+                  <span className="ml-3 font-bold text-slate-600 text-[1.1rem]">Water</span>
+                </div>
+                {/* 10 Year Guarantee */}
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-[2.2rem] bg-slate-500 flex items-center justify-center text-white pb-1" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)' }}>
+                    <span className="font-black text-[1rem] tracking-tighter">10</span>
+                  </div>
+                  <span className="font-bold text-slate-600 text-[1.1rem]">Year Guarantee</span>
+                </div>
+              </div>
+
+              {/* Description */}
+              <div className="space-y-6 text-[1.05rem] text-slate-700 leading-[1.8] mb-12">
+                <p className="font-bold text-slate-800 text-[1.1rem]">
+                  Grant Vortex Pro Internal Combi boiler range features four models including the slimline Vortex Pro Combi XS which is only 515mm wide.
+                </p>
+                <p>
+                  The Grant Vortex Pro Internal Combi range is a popular choice for installers. Each model can operate in condensing mode for central heating while also maintaining instant hot water production. Reliable in operation, easy to install and straightforward to service, the Vortex Pro Internal <span className="text-[#cc0000] font-medium">Combination oil boilers</span> can fulfil a home's heating and hot water requirements in a single appliance.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Features List placed full width underneath to exactly match the screenshot layout */}
+          <div className="w-full mt-16 max-w-[1000px] mx-auto hidden-unless-required">
+            <h3 className="text-[1.6rem] font-black text-[#2e2e2e] mb-6 tracking-tight">Features & benefits</h3>
+            <ul className="w-full border-t border-gray-200">
+              {[
+                "*10 year guarantee when installed by a G1 Installer (Terms and Conditions apply)",
+                "Models include 21kW, 26kW and 36kW Combis plus the slimline Vortex Pro Combi XS",
+                "Achieves space heating efficiencies of 91.7 - 94.5%",
+                "The compact Vortex Pro Combi XS is just 515mm wide and is specifically designed to replace older oil-fired combi boilers",
+                "Innovative design featuring large heat exchanges with low water content and large surface area to increase hot water performance",
+                "Two accurate electronic temperature controls",
+                "24ltr expansion vessel supplied as standard (supplied externally with Combi XS model)",
+                "Neon diagnostic indicators designed to aid heating engineers with diagnostics and maintenance",
+                <span>Compatible with <span className="text-[#cc0000]">Grant EZ-Fit flue systems</span></span>,
+                <span>This range is <span className="text-[#cc0000]">biofuel compatible</span> (depending on the type of biofuel and % blend)</span>
+              ].map((feature, i) => (
+                <li key={i} className="flex items-start border-b border-gray-200 py-4">
+                  <div className="mt-[0.6rem] w-[5px] h-[5px] bg-[#333333] rounded-full shrink-0 mr-5"></div>
+                  <div className="text-[#444444] text-[1.05rem] font-medium leading-[1.6]">{feature}</div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <style dangerouslySetInnerHTML={{ __html: `.hidden-unless-required { display: block; }` }} />
+
+        </div>
+      </section>
+
+      {/* Premium Finance & Pricing Section */}
+      <section className="bg-slate-50 py-20 sm:py-28 relative overflow-hidden border-b border-white">
+        <div className="container mx-auto px-4 lg:px-8 max-w-[1200px]">
+          <div className="bg-[#0b1021] rounded-[2.5rem] lg:rounded-[3.5rem] p-8 sm:p-16 relative overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            {/* Aesthetic Background FX */}
+            <div className="absolute top-0 right-0 w-[50%] h-[150%] bg-gradient-to-l from-blue-600/20 to-transparent rotate-12 blur-[80px] pointer-events-none"></div>
+            <div className="absolute bottom-[-20%] left-[-10%] w-[40%] h-[80%] bg-blue-400/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            {/* Left Content Area (Pricing/Finance logic) */}
+            <div className="w-full lg:w-1/2 relative z-10 flex flex-col items-start lg:pr-4">
+              <span className="inline-flex items-center gap-2 text-blue-400 text-xs sm:text-sm font-bold uppercase tracking-[0.15em] mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Transparent Pricing
+              </span>
+              <h2 className="text-[2rem] sm:text-[2.75rem] font-black text-white tracking-tight leading-[1.05] mb-6 uppercase">
+                How much does a new combi boiler cost?
+              </h2>
+              <p className="text-blue-50/80 text-[1.1rem] sm:text-[1.15rem] leading-[1.8] font-light mb-8">
+                At Tom Sutton Heating we are completely upfront with our pricing. This is why we offer <strong className="text-white font-semibold">FIXED PRICE BOILER PACKAGES</strong>. Contact us today to discuss our fixed price boiler installation packages and find out exactly what your new boiler will cost you, with zero hidden fees.
+              </p>
+
+              {/* Spread the cost card */}
+              <div className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-md">
+                <h3 className="text-white font-bold text-xl mb-4 italic">NEED A NEW BOILER FAST, BUT YOU JUST CAN'T AFFORD IT RIGHT NOW?</h3>
+                <p className="text-blue-100 font-medium mb-3">Don't panic! Tom Sutton Heating has you covered!</p>
+                <p className="text-slate-300 text-[0.95rem] leading-relaxed mb-6">
+                  Tom Sutton Heating offer brand new boiler installations with low-cost finance packages (including <strong className="text-white font-bold">0% finance packages!</strong>). If you are looking to spread the cost over a longer period, speak with a member of our team who can put you in touch with our finance partner to discuss your options.
+                </p>
+                <Link href="/contact" className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-bold tracking-wider uppercase text-sm px-8 py-3.5 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)]">
+                  Discuss Finance Options
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Media Area */}
+            <div className="w-full lg:w-1/2 relative z-10 flex flex-col">
+              <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] ring-1 ring-white/10 mb-6 group">
+                <Image
+                  src="https://i.postimg.cc/769bY98K/payment-pic.webp"
+                  alt="Card Payment Terminal for Boiler Finance"
+                  fill
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
+              </div>
+
+              {/* Regulatory Text */}
+              <div className="text-white/40 text-[0.65rem] sm:text-[0.7rem] leading-[1.6] italic text-justify px-2">
+                (Tom Sutton Heating) is an Introducer Appointed Representative of (and provides a pure client Introduction through) hiber Energy Ltd., a company registered in England and Wales (Co. Reg. No. 11228917). Registered Office: Linen Court, 10 East Road, London, N1 6AD. hiber Energy Ltd. is authorised and regulated by the Financial Conduct Authority (FRN 810654) as a Broker, not a Lender, and offers credit facilities from a panel of lenders. The credit is subject to application and status.
               </div>
             </div>
 
@@ -181,104 +272,23 @@ export default function CombiBoilerInstallationPage() {
         </div>
       </section>
 
-      {/* Interactive Quoting Engine Tier */}
-      <section className="bg-slate-50 py-16 sm:py-24 border-b border-gray-100">
-        <div className="container mx-auto px-4 max-w-[1200px]">
-
-          <div className="flex flex-col lg:flex-row items-start justify-start">
-
-            {/* Left Content Area: Typography & Interactive Quote Engine (50% Width) */}
-            <div className="w-full lg:w-1/2 flex flex-col items-start pr-0 lg:pr-8">
-
-              {/* Screenshot Typography Block */}
-              <div className="w-full text-center lg:text-left mb-10">
-                <h2 className="text-[2rem] sm:text-[2.75rem] font-bold text-[#334155] tracking-tight leading-[1.1] mb-6 uppercase">
-                  How much does a new combi boiler cost?
-                </h2>
-
-                <p className="text-gray-500 text-[1.1rem] sm:text-[1.15rem] font-light leading-[1.8]">
-                  At Tom Sutton Heating we are completely upfront with our pricing. This is why we offer FIXED PRICE BOILER PACKAGES. <Link href="#contact" className="text-[#2563eb] hover:text-[#1d4ed8] underline underline-offset-2 decoration-1 transition-colors">Contact us</Link> today to discuss our fixed price boiler installation packages or use the quote tool below to find out how much your new boiler could cost you.
-                </p>
-              </div>
-
-              {/* Quote Component Wrapper */}
-              <div className="w-full bg-white rounded-[2rem] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] border border-slate-100 p-6 sm:p-10 relative overflow-hidden transition-all duration-500">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50/50 rounded-bl-full -z-10 transition-transform duration-700"></div>
-                <div className="relative z-10 w-full min-h-[400px]">
-                  <QuoteComponent />
-                </div>
-              </div>
-
-            </div>
-
-            {/* Right Content Area: Testimonial Slider & Lead Form (50% Width) */}
-            <div className="w-full lg:w-1/2 mt-12 lg:mt-0 lg:pl-8 xl:pl-16 flex flex-col space-y-12">
-              <TestimonialSlider />
-              
-
-              {/* Finance Info Section */}
-              <div className="w-full bg-[#f8f9fa] rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 flex flex-col space-y-6">
-                <div className="space-y-4">
-                  <h3 className="text-[#64748b] font-bold text-lg sm:text-lg uppercase tracking-tight leading-snug">
-                    NEED A NEW BOILER FAST, BUT YOU JUST CAN'T AFFORD IT RIGHT NOW?
-                  </h3>
-                  <p className="text-slate-600 font-medium">
-                    Don't panic! Tom Sutton Heating has you covered!
-                  </p>
-                  <p className="text-slate-600 leading-relaxed text-[0.95rem]">
-                    Tom Sutton Heating offer brand new boiler installations with low-cost finance packages (including <strong className="text-slate-800">0% finance packages!</strong>)
-                  </p>
-                  <p className="text-slate-600 leading-relaxed text-[0.95rem]">
-                    If you are looking to spread the cost over a longer period, speak with a member of our team who can put you in touch with our finance partner to discuss your options.
-                  </p>
-                  <p className="text-slate-700 text-[0.7rem] sm:text-xs italic leading-relaxed text-justify mt-2 font-semibold">
-                    (Tom Sutton Heating) is an Introducer Appointed Representative of (and provides a pure client Introduction through) hiber Energy Ltd., a company registered in England and Wales (Co. Reg. No. 11228917). Registered Office: Linen Court, 10 East Road, London, N1 6AD. hiber Energy Ltd. is authorised and regulated by the Financial Conduct Authority (FRN 810654) as a Broker, not a Lender, and offers credit facilities from a panel of lenders. The credit is subject to application and status
-                  </p>
-                </div>
-
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md">
-                  <Image
-                    src="https://i.postimg.cc/769bY98K/payment-pic.webp"
-                    alt="Card Payment Terminal"
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-              </div>
-
-              {/* Why Choose Us Section */}
-              <div className="w-full bg-[#f8f9fa] rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 flex flex-col items-center">
-                <h3 className="text-[1.35rem] sm:text-2xl text-center text-[#475569] mb-8 font-light">
-                  Why Choose us?
-                </h3>
-                <ul className="space-y-4 w-full max-w-[420px]">
-                  {[
-                    "Highly trained Gas Safe, OFTEC registered\nengineers",
-                    "Friendly Attitude & A Commitment To Customer\nService",
-                    "Rate 5* On Google & 9.9/10 On Checkatrade",
-                    "No Obligation Free Quotes",
-                    "Honest & Upfront Pricing",
-                    "Local Business & Team",
-                    "Reliable Boilers & Products",
-                    "Extended Boiler Guarantee's",
-                    "Fast, Reliable Service"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <div className="mt-1 flex-shrink-0">
-                        {/* Exact matching green checkbox box */}
-                        <div className="w-[1.1rem] h-[1.1rem] border-[1.5px] border-[#7cb342] rounded-[2px] flex items-center justify-center bg-transparent">
-                          <svg className="w-3.5 h-3.5 text-[#8bc34a] transform translate-y-[-1px] translate-x-[0.5px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={3.5} d="M5 12l4 4L19 6" /></svg>
-                        </div>
-                      </div>
-                      <span className="font-bold text-[#334155] text-[0.95rem] leading-[1.3] whitespace-pre-line">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-            </div>
-          </div>
+      {/* Live Google Reviews Full-Width Section */}
+      <section className="w-full relative z-20 bg-[#0a0f1c] py-20 lg:py-24 shadow-[0_30px_60px_rgba(0,0,0,0.15)] overflow-hidden">
+        <div className="text-center mb-8 relative z-30 px-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#ffc107] font-bold text-xs tracking-[0.2em] uppercase mb-5 text-center">
+            5.0 Google Rating
+          </span>
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-5">
+            Loved by our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5e14] to-amber-500">Community</span>
+          </h3>
+          <p className="text-slate-400 font-medium text-[1.05rem] sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            We pride ourselves on an uncompromising standard of technical excellence. See what your neighbors think.
+          </p>
+        </div>
+        
+        {/* The Infinite Slider natively spans the full browser width securely without negative margin hacks. */}
+        <div className="w-full">
+          <InfiniteReviewSlider />
         </div>
       </section>
 

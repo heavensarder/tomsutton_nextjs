@@ -1,4 +1,4 @@
-﻿
+
 import Image from 'next/image';
 import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
@@ -79,103 +79,105 @@ export default function NestThermostatInstallationPage() {
         </div>
       </section>
 
-      {/* Main Dual-Column Content Interface */}
-      <section className="py-20 lg:py-28 bg-[#f8fafc] relative overflow-hidden">
+      {/* Redesigned Premium Product Showcase Section */}
+      <section className="py-20 lg:py-32 bg-[#f8fafc] relative overflow-hidden">
+        {/* Dynamic Architectural Background Elements */}
+        <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-slate-100 rounded-bl-full pointer-events-none hidden lg:block border-b border-slate-200/50"></div>
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-100/40 rounded-full blur-[100px] pointer-events-none"></div>
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1250px] relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start justify-between">
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+            
+            {/* Left Column: Sticky Summary & Image */}
+            <div className="w-full lg:w-[45%] lg:sticky lg:top-36 relative z-20 flex flex-col items-center lg:items-start text-center lg:text-left">
+               <span className="inline-flex items-center gap-2 text-blue-600 font-bold uppercase tracking-[0.2em] text-xs mb-4">
+                 <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                 Smart Technology
+               </span>
+               <h2 className="text-[2.5rem] lg:text-[3.25rem] font-black text-[#1e293b] tracking-tight leading-[1.05] mb-6">
+                 MEET THE NEST THERMOSTAT
+               </h2>
+               <p className="text-slate-500 font-medium leading-[1.8] mb-12 text-[1.1rem]">
+                 The 3rd-gen Nest Thermostat learns what temperatures you like, turns itself down when you're away, and connects to your mobile. It seamlessly keeps you comfortable while dramatically reducing your energy consumption.
+               </p>
 
-            {/* Left Column: Typography Content & Checklist */}
-            <div className="w-full lg:w-[60%] flex flex-col items-start lg:pr-4">
-              
-              <h2 className="text-[2.25rem] sm:text-[2.75rem] font-black text-[#334155] mb-8 tracking-tight leading-[1.1] uppercase">
-                MEET THE NEST THERMOSTAT
-              </h2>
+               <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(37,99,235,0.15)] ring-1 ring-slate-200/60 bg-white group p-4 border border-white">
+                  <div className="absolute inset-0 bg-blue-50/20 bg-gradient-to-tr from-transparent to-blue-100/10 pointer-events-none"></div>
+                  <Image 
+                    src="https://i.postimg.cc/bJCBgW2n/Nest.webp" 
+                    alt="Nest Thermostat Device Mounted" 
+                    fill 
+                    className="object-cover rounded-[2rem] transform group-hover:scale-105 transition-transform duration-1000 ease-in-out mix-blend-multiply" 
+                    unoptimized 
+                  />
+               </div>
 
-              <div className="text-[#64748b] font-medium text-[1.1rem] leading-[1.8] mb-10 w-full space-y-6">
-                <p>
-                  We are now Nest Pro installers. This means we can offer fantastic deals on Nest thermostats.
-                </p>
-                <p>
-                  If you haven't heard about Nest take a look at the details below to see how Nest can save you money on your heating bills.
-                </p>
-
-                <div className="mt-8 space-y-8 bg-white/70 p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200">
-                  
-                  <div>
-                    <h3 className="text-slate-800 font-bold mb-1">Meet the Nest Learning Thermostat</h3>
-                    <p className="text-[1.05rem]">The 3rd-gen Nest Thermostat learns what temperatures you like, turns itself down when you're away and connects to your mobile. So it can keep you comfortable and help save energy.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-slate-800 font-bold mb-1">No more programming</h3>
-                    <p className="text-[1.05rem]">Just turn it up and down. With Auto-Schedule, Nest learns from you and programs itself.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-slate-800 font-bold mb-1">Control it remotely</h3>
-                    <p className="text-[1.05rem]">Change the temperature from anywhere using your mobile, tablet or laptop.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-slate-800 font-bold mb-1">Check your Energy History</h3>
-                    <p className="text-[1.05rem]">See how much energy you used and why. The more you know, the more you can save.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-slate-800 font-bold mb-1">Say goodbye to guessing</h3>
-                    <p className="text-[1.05rem]">True Radiant turns the heat on just in time to reach the temperature you want, when you want.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-slate-800 font-bold mb-1">Save while you're away</h3>
-                    <p className="text-[1.05rem]">Don't heat an empty home. Home/Away Assist adjusts the temperature after you leave.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-slate-800 font-bold mb-1">Manage your hot water</h3>
-                    <p className="text-[1.05rem]">Nest can control your hot water tank. You can even adjust the hot water schedule from your mobile.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-slate-800 font-bold mb-1">Hello, Leaf</h3>
-                    <p className="text-[1.05rem]">Know you're saving energy. Look for the Nest Leaf when you change the temperature.</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-slate-800 font-bold mb-1">Get it installed</h3>
-                    <p className="text-[1.05rem]">The Nest Thermostat should be installed by a professional. Find a local pro at nest.com/install</p>
-                  </div>
-
-                </div>
-
-                <p className="pt-4">
-                  To speak with us regarding Nest installations, please call <a href="tel:01590631671" className="font-bold text-slate-800 hover:text-blue-600 transition-colors inline-block">01590 631671</a> or leave your details on our contact form and we'll get back to you as soon as possible.
-                </p>
-              </div>
-
-              <Link href="/contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-5 bg-[#1d4ed8] text-white font-bold tracking-widest uppercase text-sm rounded-2xl shadow-[0_10px_30px_-10px_rgba(29,78,216,0.6)] hover:shadow-[0_15px_40px_-10px_rgba(29,78,216,0.8)] hover:-translate-y-1 hover:bg-[#1e40af] transition-all">
-                <span>READ SPEC SHEET</span>
-                <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-              </Link>
-              
+               <Link href="/contact" className="mt-10 inline-flex items-center justify-center w-full max-w-[500px] px-8 py-5 bg-slate-900 text-white hover:bg-[#2563eb] font-bold uppercase tracking-widest text-[0.8rem] rounded-2xl shadow-xl hover:shadow-[0_20px_40px_rgba(37,99,235,0.25)] transition-all duration-300 hover:-translate-y-1 group">
+                 <span>Request Installation Quote</span>
+                 <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+               </Link>
             </div>
 
-            {/* Right Column: Lead Form Mapping */}
-            <div className="w-full lg:w-[40%] flex flex-col space-y-12 relative z-10 w-full">
-              
-              {/* Media Block Port - Using standard layout image mapping */}
-              <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.1)] ring-1 ring-slate-100 group bg-white p-2">
-                <Image
-                  src="https://i.postimg.cc/bJCBgW2n/Nest.webp"
-                  alt="Nest Thermostat Device Mounted on Wall"
-                  fill
-                  className="object-cover rounded-[1.3rem] transform group-hover:scale-105 transition-transform duration-700"
-                  unoptimized
-                />
-              </div>
-
-              
-              
+            {/* Right Column: Scrollable Bento Grid of Features */}
+            <div className="w-full lg:w-[55%] relative z-10 pt-2 lg:pt-0">
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                 
+                 {[
+                   { 
+                     title: "No more programming", 
+                     desc: "Just turn it up and down. With Auto-Schedule, Nest learns from you and programs itself perfectly.", 
+                     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                   },
+                   { 
+                     title: "Control it remotely", 
+                     desc: "Change the temperature from anywhere using your mobile, tablet or laptop.", 
+                     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                   },
+                   { 
+                     title: "Check Energy History", 
+                     desc: "See how much energy you used and exactly why. The more you know, the more you save.", 
+                     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                   },
+                   { 
+                     title: "Say goodbye to guessing", 
+                     desc: "True Radiant turns the heat on just in time to reach the temperature you want, when you want.", 
+                     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                   },
+                   { 
+                     title: "Save while you're away", 
+                     desc: "Don't heat an empty home. Home/Away Assist intelligently adjusts the temperature after you leave.", 
+                     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                   },
+                   { 
+                     title: "Manage your hot water", 
+                     desc: "Nest can control your hot water tank. You can even adjust the hot water schedule straight from your mobile.", 
+                     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                   },
+                   { 
+                     title: "Hello, Leaf", 
+                     desc: "Know you're actively saving energy. Look for the green Nest Leaf when you change the temperature efficiently.", 
+                     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                   },
+                   { 
+                     title: "Get it installed", 
+                     desc: "The Nest Thermostat should be installed by a professional. We are your official local accredited Pro.", 
+                     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                   }
+                 ].map((feat, i) => (
+                   <div key={i} className="bg-white rounded-3xl p-6 sm:p-8 shadow-[0_5px_15px_-5px_rgba(0,0,0,0.05)] border border-slate-100 hover:shadow-[0_15px_30px_-5px_rgba(37,99,235,0.12)] hover:border-blue-200 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden">
+                     {/* Hover Glow Effect */}
+                     <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
+                     <div className="relative z-10">
+                       <div className="w-14 h-14 rounded-[1.1rem] bg-gradient-to-br from-blue-50 to-blue-100/50 flex items-center justify-center text-blue-600 mb-6 ring-1 ring-blue-100/50 group-hover/card:scale-110 transition-transform duration-500 shadow-sm">
+                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">{feat.icon}</svg>
+                       </div>
+                       <h3 className="text-[#1e293b] font-bold text-[1.15rem] leading-tight mb-3 tracking-tight group-hover/card:text-blue-700 transition-colors">{feat.title}</h3>
+                       <p className="text-slate-500 text-[0.95rem] leading-[1.65] font-medium">{feat.desc}</p>
+                     </div>
+                   </div>
+                 ))}
+                 
+               </div>
             </div>
 
           </div>

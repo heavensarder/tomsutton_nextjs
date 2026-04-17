@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
-import LeadForm from '@/components/LeadForm';
+
 import WhyChooseUs from '@/components/WhyChooseUs';
 
 export default function NestThermostatInstallationPage() {
@@ -84,7 +84,7 @@ export default function NestThermostatInstallationPage() {
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start justify-between">
 
             {/* Left Column: Typography Content & Checklist */}
-            <div className="w-full lg:w-[55%] flex flex-col items-start lg:pr-4">
+            <div className="w-full lg:w-[60%] flex flex-col items-start lg:pr-4">
               
               <h2 className="text-[2.25rem] sm:text-[2.75rem] font-black text-[#334155] mb-8 tracking-tight leading-[1.1] uppercase">
                 MEET THE NEST THERMOSTAT
@@ -160,7 +160,7 @@ export default function NestThermostatInstallationPage() {
             </div>
 
             {/* Right Column: Lead Form Mapping */}
-            <div className="w-full lg:w-[45%] flex flex-col space-y-12 relative z-10 w-full">
+            <div className="w-full lg:w-[40%] flex flex-col space-y-12 relative z-10 w-full">
               
               {/* Media Block Port - Using standard layout image mapping */}
               <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.1)] ring-1 ring-slate-100 group bg-white p-2">
@@ -173,11 +173,7 @@ export default function NestThermostatInstallationPage() {
                 />
               </div>
 
-              {/* Native LeadForm Component Instance */}
-              <div className="w-full relative z-10 block rounded-3xl overflow-hidden shadow-2xl bg-white sticky top-24">
-                {/* The global Lead Form dynamically includes its title and internal UI safely */}
-                <LeadForm />
-              </div>
+              
               
             </div>
 

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
-import LeadForm from '@/components/LeadForm';
+
 import WhyChooseUs from '@/components/WhyChooseUs';
 
 export default function GasPage() {
@@ -71,7 +71,7 @@ export default function GasPage() {
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start justify-between">
 
             {/* Left Column: Typography Content & Service Cards */}
-            <div className="w-full lg:w-[55%] flex flex-col items-start pr-0 lg:pr-4">
+            <div className="w-full lg:w-[60%] flex flex-col items-start pr-0 lg:pr-4">
               
               <h2 className="text-[2.25rem] sm:text-[2.75rem] font-black text-slate-800 mb-8 tracking-tight leading-[1.1] uppercase">
                 GAS SERVICING &amp; MAINTENANCE
@@ -122,7 +122,7 @@ export default function GasPage() {
             </div>
 
             {/* Right Column: Visual Element & Lead Form Mapping */}
-            <div className="w-full lg:w-[45%] flex flex-col space-y-12 relative z-10">
+            <div className="w-full lg:w-[40%] flex flex-col space-y-12 relative z-10">
               
               {/* Media Block Port - Using standard layout image mapping */}
               <div className="relative w-full aspect-[16/8] sm:aspect-[16/7] lg:aspect-[16/9] rounded-3xl overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.1)] ring-1 ring-slate-100 group">
@@ -139,10 +139,7 @@ export default function GasPage() {
                 </div>
               </div>
 
-              {/* Native LeadForm Component Instance */}
-              <div className="w-full relative z-10 block rounded-3xl overflow-hidden border border-slate-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] bg-white">
-                <LeadForm />
-              </div>
+              
               
             </div>
 

@@ -121,21 +121,6 @@ const NavBar = () => {
                                         </Link>
                                         {/* 3rd Level Dropdown Box */}
                                         <div className="absolute left-[95%] top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible group-hover/sub:translate-x-2 transition-all duration-300 w-64 bg-white border-t-4 border-blue-900 shadow-2xl z-50 py-2 rounded-b-lg rounded-tr-lg">
-                                            {/* Alpha sub-sub menu */}
-                                            <div className="relative group/sub2">
-                                                <Link href="/alpha" className="flex items-center justify-between px-5 py-3 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors border-b border-gray-50">
-                                                    Alpha
-                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                                                </Link>
-                                                {/* 4th Level */}
-                                                <div className="absolute left-[95%] top-0 opacity-0 invisible group-hover/sub2:opacity-100 group-hover/sub2:visible group-hover/sub2:translate-x-2 transition-all duration-300 w-max min-w-[14rem] bg-white border-l-4 border-orange-500 shadow-2xl py-2 rounded-r-lg rounded-bl-lg">
-                                                    <Link href="/alpha-e-tec-plus" className="block px-5 py-2.5 text-[13px] font-medium text-gray-600 hover:text-orange-500 hover:bg-orange-50 whitespace-nowrap">Alpha E-Tec Plus</Link>
-                                                    <Link href="/alpha-evoke" className="block px-5 py-2.5 text-[13px] font-medium text-gray-600 hover:text-orange-500 hover:bg-orange-50 whitespace-nowrap">Alpha Evoke</Link>
-                                                    <Link href="/alpha-e-tec-system" className="block px-5 py-2.5 text-[13px] font-medium text-gray-600 hover:text-orange-500 hover:bg-orange-50 whitespace-nowrap">Alpha E-Tec System</Link>
-                                                    <Link href="/alpha-e-tec-regular" className="block px-5 py-2.5 text-[13px] font-medium text-gray-600 hover:text-orange-500 hover:bg-orange-50 whitespace-nowrap">Alpha E-Tec Regular</Link>
-                                                </div>
-                                            </div>
-
                                             {/* Worcester Bosch sub-sub menu */}
                                             <div className="relative group/sub3">
                                                 <Link href="/worcester-bosch" className="flex items-center justify-between px-5 py-3 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">
@@ -148,7 +133,6 @@ const NavBar = () => {
                                                     <Link href="/worcester-bosch-4000-combi" className="block px-5 py-2.5 text-[13px] font-medium text-gray-600 hover:text-orange-500 hover:bg-orange-50 whitespace-nowrap">Worcester Bosch 4000 Combi</Link>
                                                     <Link href="/worcester-bosch-cdi-compact" className="block px-5 py-2.5 text-[13px] font-medium text-gray-600 hover:text-orange-500 hover:bg-orange-50 whitespace-nowrap">Worcester Bosch CDi Compact</Link>
                                                     <Link href="/worcester-bosch-4000-system" className="block px-5 py-2.5 text-[13px] font-medium text-gray-600 hover:text-orange-500 hover:bg-orange-50 whitespace-nowrap">Worcester Bosch 4000 System</Link>
-                                                    <Link href="/worcester-bosch-i-system" className="block px-5 py-2.5 text-[13px] font-medium text-gray-600 hover:text-orange-500 hover:bg-orange-50 whitespace-nowrap">Worcester Bosch i System</Link>
                                                     <Link href="/worcester-bosch-greenstar-ri-installation" className="block px-5 py-2.5 text-[13px] font-medium text-gray-600 hover:text-orange-500 hover:bg-orange-50 whitespace-nowrap">Worcester Bosch Greenstar Ri</Link>
                                                 </div>
                                             </div>
@@ -177,6 +161,7 @@ const NavBar = () => {
                                 <div className="absolute left-0 top-full opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 translate-y-2 transition-all duration-300 w-72 bg-white border-t-4 border-orange-500 shadow-2xl z-50 py-2 rounded-b-lg">
                                     <Link href="/boiler-servicing" className={`block px-6 py-3.5 text-sm font-semibold transition-colors ${pathname === '/boiler-servicing' ? 'text-orange-500 bg-orange-50' : 'text-gray-700 hover:text-orange-500 hover:bg-orange-50'}`}>Boiler Servicing & Care Plans</Link>
                                     <Link href="/boiler-maintenance-plans" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Boiler Care Plans</Link>
+                                    <Link href="/oil" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors border-t border-gray-100">LPG & Oil Checks</Link>
                                 </div>
                             </div>
 
@@ -222,8 +207,7 @@ const NavBar = () => {
                                     <Link href="/unvented-hot-water" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Unvented Cylinders</Link>
                                     <Link href="/gas" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Gas</Link>
                                     <Link href="/heating" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Heating</Link>
-                                    <Link href="/nest-thermostat-installation" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Nest Thermostat</Link>
-                                    <Link href="/oil" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">LPG & Oil</Link>
+                                    <Link href="/smart-thermostat-installation" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">Smart Thermostat</Link>
                                     <Link href="/blog" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors border-t border-gray-100">Tips, how to & blogs</Link>
                                     <Link href="/about" className="block px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">About Us</Link>
                                 </div>
@@ -292,7 +276,6 @@ const NavBar = () => {
                                             <Link href="/new-boiler-installation-2" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-800 border-b border-gray-200/50 hover:text-[#ff5e14]">Boiler Installation</Link>
                                             <Link href="/new-boilers" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">New Boilers</Link>
                                             <Link href="/our-boiler-brands" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Our Boiler Brands</Link>
-                                            <Link href="/alpha" onClick={() => setIsMobileOpen(false)} className="block py-2 text-[13px] font-medium text-slate-500 pl-4 border-l border-gray-200 hover:text-[#ff5e14]">- Alpha</Link>
                                             <Link href="/worcester-bosch" onClick={() => setIsMobileOpen(false)} className="block py-2 text-[13px] font-medium text-slate-500 pl-4 border-l border-gray-200 hover:text-[#ff5e14]">- Worcester Bosch</Link>
                                             <Link href="/online-boiler-quote" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-[#ff5e14] hover:text-orange-700 mt-2">Online Boiler Quote &rarr;</Link>
                                         </div>
@@ -319,7 +302,8 @@ const NavBar = () => {
                                         <div className="border-l-2 border-orange-200 ml-2 pl-4">
                                             <Link href="/boiler-servicing" onClick={() => setIsMobileOpen(false)} className={`block py-2.5 text-[14px] font-semibold border-b border-gray-200/50 ${pathname === '/boiler-servicing' ? 'text-[#ff5e14]' : 'text-slate-800 hover:text-[#ff5e14]'}`}>Boiler Servicing & Care Plans</Link>
                                             <Link href="/boiler-servicing" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Boiler Servicing</Link>
-                                            <Link href="/boiler-maintenance-plans" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 hover:text-[#ff5e14]">Boiler Care Plans</Link>
+                                            <Link href="/boiler-maintenance-plans" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Boiler Care Plans</Link>
+                                            <Link href="/oil" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 hover:text-[#ff5e14]">LPG & Oil Checks</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -378,8 +362,7 @@ const NavBar = () => {
                                             <Link href="/energy-events" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Energy Events</Link>
                                             <Link href="/gas" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Gas</Link>
                                             <Link href="/heating" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Heating</Link>
-                                            <Link href="/nest-thermostat-installation" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Nest Thermostat</Link>
-                                            <Link href="/oil" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">LPG & Oil</Link>
+                                            <Link href="/smart-thermostat-installation" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Smart Thermostat</Link>
                                             <Link href="/blog" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Tips, how to & blogs</Link>
                                             <Link href="/about" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 hover:text-[#ff5e14]">About Us</Link>
                                         </div>

@@ -5,7 +5,7 @@ import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import LeadForm from '@/components/LeadForm';
+
 
 import QuoteComponent from '@/components/QuoteComponent';
 
@@ -213,9 +213,7 @@ export default function CombiBoilerInstallationPage() {
             {/* Right Content Area: Testimonial Slider & Lead Form (50% Width) */}
             <div className="w-full lg:w-1/2 mt-12 lg:mt-0 lg:pl-8 xl:pl-16 flex flex-col space-y-12">
               <TestimonialSlider />
-              <div className="w-full relative z-10 block">
-                <LeadForm />
-              </div>
+              
 
               {/* Finance Info Section */}
               <div className="w-full bg-[#f8f9fa] rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 flex flex-col space-y-6">

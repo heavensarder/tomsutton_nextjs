@@ -82,7 +82,7 @@ const Footer = () => {
                                 { name: 'Gas', path: '/gas' },
                                 { name: 'Heating', path: '/heating' },
                                 { name: 'LPG & Oil', path: '/oil' },
-                                { name: 'Nest Thermostat Installation', path: '/nest-thermostat-installation' }
+                                { name: 'Smart Thermostat Installation', path: '/smart-thermostat-installation' }
                             ].map((service, index) => (
                                 <li key={index} className="border-b border-gray-800 last:border-b-0">
                                     <Link href={service.path} className="flex items-center group py-3 md:py-3.5 w-full hover:text-white transition-colors">

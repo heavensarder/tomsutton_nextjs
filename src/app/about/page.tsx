@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import LeadForm from '@/components/LeadForm';
+
 
 export default function AboutPage() {
   const whyChooseUsItems = [
@@ -90,10 +90,10 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start justify-between">
+          <div className="flex flex-col items-center justify-center">
             
             {/* Left Column: Interactive Checkmark List */}
-            <div className="w-full lg:w-[45%] flex flex-col justify-center">
+            <div className="w-full max-w-3xl flex flex-col justify-center mx-auto">
               <ul className="space-y-6">
                 {whyChooseUsItems.map((item, index) => (
                   <li key={index} className="flex items-start gap-4 group cursor-default">
@@ -113,19 +113,7 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            {/* Right Column: Lead Form Wrapper */}
-            <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-end">
-              <div className="w-full max-w-[650px]">
-                <h3 className="text-[1.75rem] font-bold text-slate-800 text-center mb-8 uppercase tracking-wide">
-                  GET IN TOUCH
-                </h3>
-                
-                {/* Embed robust LeadForm Component securely */}
-                <div className="bg-white rounded-3xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100 p-2 sm:p-4">
-                  <LeadForm />
-                </div>
-              </div>
-            </div>
+            
 
           </div>
         </div>

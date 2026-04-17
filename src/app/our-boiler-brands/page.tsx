@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import LeadForm from '@/components/LeadForm';
+
 
 export default function OurBoilerBrandsPage() {
   return (
@@ -208,9 +208,7 @@ export default function OurBoilerBrandsPage() {
               <div className="bg-white rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.08)] border border-slate-100 p-6 sm:p-10 relative overflow-hidden transition-all duration-500 hover:shadow-[0_30px_70px_-15px_rgba(37,99,235,0.15)] ring-1 ring-slate-900/5">
                 <div className="absolute -top-32 -right-32 w-64 h-64 bg-blue-50/50 flex-shrink-0 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
                 <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-orange-50/50 flex-shrink-0 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-                <div className="relative z-10 w-full min-h-[400px]">
-                  <LeadForm />
-                </div>
+                
               </div>
             </div>
 

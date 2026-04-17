@@ -40,9 +40,10 @@ export async function PUT(request: Request) {
 
     const conn = await pool.getConnection();
     for (const [key, value] of Object.entries(settings)) {
+      const group = key.startsWith('mail_') ? 'Mail' : 'General';
       await conn.execute(
-        'UPDATE site_settings SET setting_value = ? WHERE setting_key = ?',
-        [value as string, key]
+        'INSERT INTO site_settings (setting_key, setting_value, setting_group) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE setting_value = VALUES(setting_value)',
+        [key, value as string, group]
       );
     }
     conn.release();

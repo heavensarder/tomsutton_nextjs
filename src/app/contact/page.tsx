@@ -174,6 +174,20 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Address */}
+                  <div className="space-y-2.5">
+                    <label htmlFor="address" className="block text-[0.85rem] font-bold text-slate-700 tracking-wide">
+                      Address <span className="text-rose-500">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="address" 
+                      required
+                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 focus:bg-white transition-all font-medium text-slate-800 placeholder-slate-400"
+                      placeholder="123 Example Street, Town"
+                    />
+                  </div>
+
                   {/* Service Dropdown */}
                   <div className="space-y-2.5">
                     <label htmlFor="service" className="block text-[0.85rem] font-bold text-slate-700 tracking-wide">

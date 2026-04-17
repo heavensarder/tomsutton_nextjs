@@ -1,4 +1,4 @@
-﻿
+
 import Image from 'next/image';
 import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
@@ -10,155 +10,146 @@ export default function OilPage() {
   return (
     <main className="min-h-screen bg-slate-50">
       
-      {/* Premium Compact Hero Section */}
-      <section className="relative w-full flex items-center bg-slate-900 text-white pt-20 pb-10 lg:pt-24 lg:pb-12 overflow-hidden z-10 min-h-[60vh]">
-        {/* Deep Blurred Background Image Overlay - Ported from /new-boilers architecture */}
+      {/* Ultra-Premium Hero Section */}
+      <section className="relative w-full flex items-center bg-[#0d1033] text-white pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden z-10">
+        {/* Deep Blurred Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-30 blur-md scale-110"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-slate-800/90 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-10 blur-xl scale-110"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0d1033] via-[#0d1033]/95 to-[#0d1033]/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0d1033] via-transparent to-transparent"></div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1200px] relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1280px] relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
             
             {/* Left Content Area */}
-            <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start text-center lg:text-left text-white">
-              
-              <h3 className="text-xs sm:text-sm font-bold tracking-widest text-[#60a5fa] uppercase mb-4">
-                SPECIALIST RURAL HEATING SERVICES
-              </h3>
+            <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start text-center lg:text-left z-20">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[#ff5e14] text-sm font-bold tracking-wider uppercase mb-6 backdrop-blur-sm">
+                <span className="w-2 h-2 rounded-full bg-[#ff5e14] animate-pulse"></span>
+                Specialist Rural Services
+              </span>
 
-              <h1 className="text-[2rem] sm:text-3xl lg:text-[3rem] font-black tracking-tight leading-[1.1] mb-6 drop-shadow-md uppercase max-w-[600px]">
-                LPG & OIL - FOR HOMES IN RURAL AREAS
+              <h1 className="text-[2.5rem] sm:text-[3.5rem] lg:text-[4rem] font-black tracking-tight leading-[1.05] mb-6 text-white drop-shadow-lg uppercase">
+                LPG & OIL FOR <br className="hidden lg:block"/> RURAL <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5e14] to-[#ff8c42]">HOMES</span>
               </h1>
               
-              <div className="space-y-4 text-[1.05rem] sm:text-[1.15rem] font-medium leading-[1.6] text-white overflow-hidden mb-10 max-w-[600px]">
+              <div className="space-y-4 text-[1.1rem] sm:text-[1.25rem] font-medium leading-[1.6] text-slate-300 mb-10 max-w-[600px]">
                 <p>
-                  Tom Sutton Heating now offer a range of Liquid Petroleum Gas (LPG) & Oil services, including installing and servicing.
+                  Tom Sutton Heating offers a premium range of Liquid Petroleum Gas (LPG) & Oil services, from expert installations to rigorous annual servicing.
                 </p>
-                <p>
-                  If you live in a location that does not have a direct connection to the mains gas supply, then LPG or Oil may be the convenient solution for you!
+                <p className="text-white/80 text-[1rem]">
+                  No mains gas? No problem. We provide robust off-grid heating solutions designed to deliver <strong className="text-white">maximum comfort</strong>.
                 </p>
               </div>
 
-              <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-5 bg-white text-blue-700 font-black text-[0.85rem] tracking-widest uppercase rounded-2xl transition-all shadow-[0_15px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1">
-                <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">CONTACT US</span>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Link href="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all shadow-[0_10px_30px_rgba(255,94,20,0.3)] hover:shadow-[0_15px_40px_rgba(255,94,20,0.5)] hover:-translate-y-1">
+                  <span>CONTACT US</span>
+                  <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </Link>
+                <a href="tel:01590631671" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 border border-white/20 text-white font-bold tracking-widest uppercase text-sm rounded-xl transition-all hover:bg-white/20 backdrop-blur-sm">
+                  01590 631671
+                </a>
+              </div>
             </div>
 
             {/* Right Media Area */}
-            <div className="w-full lg:w-[45%] relative mt-10 lg:mt-0 group z-20">
-              <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-white/10 transform transition-transform duration-700 group-hover:-translate-y-2 group-hover:ring-white/30">
+            <div className="w-full lg:w-[45%] relative mt-8 lg:mt-0 group z-20">
+              <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-10px_rgba(0,0,0,0.5)] ring-1 ring-white/20 transform transition-transform duration-700 group-hover:-translate-y-2">
                 <Image 
                   src="https://i.postimg.cc/5NnSCLL4/Oil-2-534x310.webp" 
-                  alt="LPG & Oil Heating Installation Before and After" 
+                  alt="LPG & Oil Heating Installation" 
                   fill 
                   className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700 ease-out" 
                   unoptimized 
                 />
-                <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-[#0d1033]/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
               </div>
-              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-sky-400/20 rounded-full blur-[50px] pointer-events-none"></div>
-              <div className="absolute -top-8 -right-8 w-40 h-40 bg-white/10 rounded-full blur-[60px] pointer-events-none"></div>
+              
+              {/* Decorative Elements */}
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#ff5e14]/20 rounded-full blur-[40px] pointer-events-none"></div>
+              <div className="absolute -top-6 -right-6 w-40 h-40 bg-orange-400/20 rounded-full blur-[50px] pointer-events-none"></div>
             </div>
 
           </div>
         </div>
-        
-        {/* Elegant Bottom Curve Divider */}
-        <div className="absolute bottom-0 w-full overflow-hidden leading-none z-10">
-          <svg className="relative block w-full h-[40px] sm:h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C52.16,93.2,105.51,86.74,157.43,80.12h0c58-7.46,115.42-15.68,172-23.7Z" fill="#f8fafc"></path>
-          </svg>
-        </div>
       </section>
 
-      {/* Main Dual-Column Content Interface */}
-      <section className="py-20 lg:py-28 bg-[#f4f6f8] relative overflow-hidden">
+      {/* Premium Split Layout: Image + Services Text */}
+      <section className="py-20 lg:py-28 bg-[#f8fafc] relative overflow-hidden border-t border-slate-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1250px] relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start justify-between">
-
-            {/* Left Column: Typography Content & Checklist */}
-            <div className="w-full lg:w-[60%] flex flex-col items-start lg:pr-4">
-              
-              <h2 className="text-[2.25rem] sm:text-[2.75rem] font-black text-[#334155] mb-8 tracking-tight leading-[1.1] uppercase">
-                LPG &amp; OIL SERVICES
-              </h2>
-
-              <div className="space-y-6 text-[#64748b] font-medium text-[1.1rem] leading-[1.8] mb-10 w-full">
-                <p>
-                  At Tom Sutton Heating we also provide heating services for many off grid homes across the new forest. This usually includes, LPG & Oil fired appliances. Just like natural gas appliances, it is paramount that these appliances are checked for safety and efficiency on an annual basis.
-                </p>
-                <p>
-                  It is especially important to have LPG & Oil fired appliances checked annually due to the volatility levels of propane & butane and the flammability of Oil. It is also recommended that Oil fired appliances have a full burner service along with their baffle's removed and cleaned at least every 12 months.
-                </p>
-                <p>
-                  We are fully OFTEC registered and have all the relevant LPG qualifications with The Gas Safe Register.
-                </p>
-                
-                {/* Immersive Checklist */}
-                <ul className="space-y-3 w-full bg-white/60 p-6 md:p-8 rounded-3xl border border-slate-200 mt-6 !mb-8 shadow-sm">
-                  {[
-                    "LPG & Oil boiler servicing",
-                    "LPG & Oil boiler installation",
-                    "LPG & Oil maintenance & repair",
-                    "Mobile homes servicing and safety checks",
-                    "0% Finance available",
-                    "Grant UK registered installers able to provide 10 year warranties"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-4 group">
-                      <div className="flex-shrink-0">
-                        <div className="w-2 h-2 rounded-full bg-slate-400 group-hover:bg-blue-500 group-hover:scale-125 transition-all duration-300"></div>
-                      </div>
-                      <span className="font-semibold text-slate-700 text-[1.05rem] leading-[1.4] group-hover:text-slate-900 transition-colors duration-300">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <p>
-                  To speak with us regarding LPG or oil, please call <a href="tel:01590631671" className="font-bold text-slate-800 hover:text-blue-600 transition-colors inline-block">01590 631671</a> or leave your details on our contact form and we'll get back to you as soon as possible.
-                </p>
-                
-                <p className="text-[#334155] font-bold text-[0.95rem] tracking-wide mt-2">
-                  OFTEC â€” Company Reg No: C103319
-                </p>
-              </div>
-
-              <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-5 bg-[#1d4ed8] text-white font-bold tracking-widest uppercase text-sm rounded-2xl shadow-[0_10px_30px_-10px_rgba(29,78,216,0.6)] hover:shadow-[0_15px_40px_-10px_rgba(29,78,216,0.8)] hover:-translate-y-1 hover:bg-[#1e40af] mb-10 transition-all">
-                <span>CONTACT US</span>
-                <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-              </Link>
-              
-              {/* Lower Inner Image Block - Provided Asset 2 */}
-              <div className="relative w-full aspect-[21/9] sm:aspect-[24/11] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.1)] ring-1 ring-slate-200 group">
-                <Image
-                  src="https://i.postimg.cc/FRp7Bg9f/Oil.webp"
-                  alt="Outdoor Rural Oil Heating Tank Installation"
-                  fill
-                  className="object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  unoptimized
-                />
-              </div>
-
-            </div>
-
-            {/* Right Column: Visual Element & Lead Form Mapping */}
-            <div className="w-full lg:w-[40%] flex flex-col space-y-12 relative z-10 w-full">
-              
-              {/* Media Block Port - Top Right Asset 1 */}
-              <div className="relative w-full aspect-[21/9] rounded-[2rem] overflow-hidden shadow-lg ring-1 ring-slate-200 group bg-white">
+          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+            
+            {/* Left Image Area */}
+            <div className="w-full lg:w-[45%] relative group max-w-lg mx-auto lg:mx-0">
+              <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)] ring-1 ring-slate-200">
                 <Image
                   src="https://i.postimg.cc/cHhrbMsv/LPG_1.webp"
-                  alt="Industrial LPG Gas Cylinders Array"
+                  alt="Industrial LPG Gas Cylinders"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                   unoptimized
                 />
               </div>
+              
+              {/* Floating Glass Tag */}
+              <div className="absolute -bottom-4 sm:-bottom-8 -right-4 sm:-right-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white max-w-[240px] transform group-hover:-translate-y-2 transition-transform duration-500">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-10 h-10 rounded-full bg-[#ff5e14]/10 flex items-center justify-center shrink-0">
+                    <svg className="w-5 h-5 text-[#ff5e14]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                  </div>
+                  <h4 className="font-bold text-slate-800 tracking-tight text-sm">OFTEC Registered</h4>
+                </div>
+                <p className="text-xs font-medium text-slate-500 leading-relaxed uppercase tracking-widest mt-1">
+                  Company Reg: C103319
+                </p>
+              </div>
+            </div>
 
+            {/* Right Text Area */}
+            <div className="w-full lg:w-[55%] flex flex-col items-start pt-8 lg:pt-0">
+              <span className="inline-flex items-center gap-2 text-[#ff5e14] text-sm font-bold uppercase tracking-wider mb-4">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                Our Expertise
+              </span>
+              <h2 className="text-[2rem] sm:text-[2.5rem] font-black text-[#0d1033] tracking-tight leading-[1.15] mb-6 uppercase">
+                LPG & OIL <span className="text-[#ff5e14]">MAINTENANCE.</span>
+              </h2>
               
-              
+              <div className="space-y-5 text-[#64748b] font-medium text-[1.05rem] leading-[1.8] mb-8 w-full max-w-xl">
+                <p>
+                  At Tom Sutton Heating, we provide top-tier heating services for off-grid homes across the New Forest. It is paramount that LPG and Oil-fired appliances are checked for safety and maximum efficiency annually.
+                </p>
+                <p>
+                  Due to the volatility of propane, butane, and heating oil, annual checks prevent dangerous faults. Oil boilers additionally require a full burner service with their baffles removed and thoroughly cleaned every 12 months.
+                </p>
+              </div>
+
+              {/* Premium Checklist Grid Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-10">
+                {[
+                  "LPG & Oil boiler servicing",
+                  "LPG & Oil boiler installation",
+                  "LPG & Oil maintenance & repair",
+                  "Mobile homes safety checks",
+                  "0% Finance available",
+                  "Grant UK 10 year warranties"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-100 shadow-[0_2px_15px_-4px_rgba(0,0,0,0.03)] hover:shadow-md transition-shadow group">
+                    <div className="w-8 h-8 rounded-full bg-[#0d1033]/5 flex items-center justify-center shrink-0 group-hover:bg-[#ff5e14] transition-colors">
+                      <svg className="w-4 h-4 text-[#0d1033] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <span className="font-bold text-slate-800 text-[0.95rem]">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-6 mt-2">
+                <Link href="/contact" className="group relative inline-flex items-center justify-center px-10 py-4 bg-[#0d1033] text-white font-bold tracking-widest uppercase text-[0.9rem] rounded-xl shadow-[0_10px_30px_-10px_rgba(13,16,51,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(13,16,51,0.6)] hover:-translate-y-1 hover:bg-[#1a2050] transition-all">
+                  <span>BOOK A SERVICE</span>
+                  <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </Link>
+              </div>
             </div>
 
           </div>

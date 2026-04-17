@@ -4,8 +4,12 @@ import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import HeatingServiceSlider from '@/components/HeatingServiceSlider';
+import { getComponentData } from '@/lib/components';
+import { heatingSliderDefault } from '@/lib/defaultComponentsData';
 
-export default function HeatingPage() {
+export default async function HeatingPage() {
+  const heatingSliderData = await getComponentData('heating_slider', heatingSliderDefault);
+
   return (
     <main className="min-h-screen bg-slate-50">
       
@@ -98,7 +102,7 @@ export default function HeatingPage() {
 
         {/* The Component Slider wrapped beautifully */}
         <div className="w-full max-w-[1600px] mx-auto">
-          <HeatingServiceSlider />
+          <HeatingServiceSlider data={heatingSliderData} />
         </div>
       </section>
 

@@ -200,10 +200,10 @@ export default async function HeatingPage() {
             
             <div className="w-full lg:w-1/2">
               <FaqAccordion items={[
-                { q: "How quickly can you fix a broken boiler?", a: "We aim to diagnose and repair almost all boiler breakdowns within our initial 24-hour response window, fully equipped with most common replacement parts." },
-                { q: "Are your heating engineers fully insured?", a: "Absolutely. All our heating engineers are fully insured and Gas Safe / OFTEC registered for guaranteed peace of mind." },
-                { q: "Do you offer warranties on new installations?", a: "Yes! Because we are accredited installers, we can offer extended warranties ranging from 7 up to 12 years on select boiler models." },
-                { q: "What areas do you cover?", a: "We primarily cover Lymington, Brockenhurst, New Milton, Ringwood, and all surrounding areas of the New Forest and wider Hampshire area." }
+                { question: "How quickly can you fix a broken boiler?", answer: "We aim to diagnose and repair almost all boiler breakdowns within our initial 24-hour response window, fully equipped with most common replacement parts." },
+                { question: "Are your heating engineers fully insured?", answer: "Absolutely. All our heating engineers are fully insured and Gas Safe / OFTEC registered for guaranteed peace of mind." },
+                { question: "Do you offer warranties on new installations?", answer: "Yes! Because we are accredited installers, we can offer extended warranties ranging from 7 up to 12 years on select boiler models." },
+                { question: "What areas do you cover?", answer: "We primarily cover Lymington, Brockenhurst, New Milton, Ringwood, and all surrounding areas of the New Forest and wider Hampshire area." }
               ]} />
             </div>
           </div>

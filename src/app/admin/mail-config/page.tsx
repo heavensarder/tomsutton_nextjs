@@ -30,7 +30,7 @@ export default function MailConfigPage() {
 
   const fetchSettings = useCallback(async () => {
     try {
-      const res = await fetch('/api/admin/site-settings');
+      const res = await fetch('/api/admin/site-settings?_t=' + Date.now(), { cache: 'no-store' });
       const json = await res.json();
       if (json.success && json.data) {
         const map: Record<string, string> = {};

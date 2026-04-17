@@ -201,12 +201,14 @@ export default function ComponentsAdminPage() {
             <h3 className="text-xl font-bold border-b pb-2 mt-8">Features List</h3>
             <p className="text-sm text-slate-500 mb-4 mt-2">Manage the 8-point checklist features displayed in the component.</p>
             <div className="space-y-2">
-              {(data.features || []).map((feat: string, idx: number) => (
+              {(data.features || []).map((featItem: any, idx: number) => {
+                const textValue = typeof featItem === 'object' ? (featItem.title || featItem.description || featItem.text || '') : featItem;
+                return (
                 <div key={idx} className="flex gap-2 group">
                   <input 
                     type="text" 
                     className="flex-1 bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-[#ff5e14]/20 focus:border-[#ff5e14] transition-all text-slate-900" 
-                    value={feat || ''}
+                    value={textValue || ''}
                     onChange={(e) => {
                       const newFeats = [...(data.features || [])];
                       newFeats[idx] = e.target.value;
@@ -228,7 +230,7 @@ export default function ComponentsAdminPage() {
                     ×
                   </button>
                 </div>
-              ))}
+              )})}
               <button 
                 type="button"
                 onClick={() => updateField('features', [...(data.features || []), ''])}

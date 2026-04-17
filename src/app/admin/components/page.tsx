@@ -199,12 +199,44 @@ export default function ComponentsAdminPage() {
             </div>
 
             <h3 className="text-xl font-bold border-b pb-2 mt-8">Features List</h3>
-            {(data.features || []).map((feature: any, idx: number) => (
-              <div key={idx} className="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-4">
-                <TextField label={`Feature ${idx + 1} Title`} value={feature.title} onChange={(v) => updateField(`features.${idx}.title`, v)} />
-                <TextAreaField label="Description" value={feature.description} onChange={(v) => updateField(`features.${idx}.description`, v)} />
-              </div>
-            ))}
+            <p className="text-sm text-slate-500 mb-4 mt-2">Manage the 8-point checklist features displayed in the component.</p>
+            <div className="space-y-2">
+              {(data.features || []).map((feat: string, idx: number) => (
+                <div key={idx} className="flex gap-2 group">
+                  <input 
+                    type="text" 
+                    className="flex-1 bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-[#ff5e14]/20 focus:border-[#ff5e14] transition-all text-slate-900" 
+                    value={feat || ''}
+                    onChange={(e) => {
+                      const newFeats = [...(data.features || [])];
+                      newFeats[idx] = e.target.value;
+                      updateField('features', newFeats);
+                    }}
+                    placeholder="e.g. Highly trained Gas Safe engineers..."
+                  />
+                  <button 
+                    type="button"
+                    onClick={() => {
+                      const newFeats = [...(data.features || [])];
+                      newFeats.splice(idx, 1);
+                      updateField('features', newFeats);
+                    }}
+                    className="w-10 flex items-center justify-center bg-red-50 text-red-500 hover:bg-red-500 hover:text-white rounded-xl transition-all font-bold text-lg opacity-0 group-hover:opacity-100 disabled:opacity-0 focus:opacity-100"
+                    title="Remove feature"
+                    disabled={(data.features || []).length <= 1}
+                  >
+                    ×
+                  </button>
+                </div>
+              ))}
+              <button 
+                type="button"
+                onClick={() => updateField('features', [...(data.features || []), ''])}
+                className="mt-2 text-xs font-bold text-[#ff5e14] bg-[#ff5e14]/5 hover:bg-[#ff5e14] hover:text-white border border-[#ff5e14]/20 rounded-xl px-4 py-2 transition-all border-dashed"
+              >
+                + Add Feature
+              </button>
+            </div>
 
             <h3 className="text-xl font-bold border-b pb-2 mt-8">Action Button</h3>
             <div className="grid grid-cols-2 gap-4">

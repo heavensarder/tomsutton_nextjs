@@ -73,18 +73,14 @@ export const whyChooseUsDefault = {
   heading: "Why Choose Tom Sutton Heating?",
   description: "With over 30 years of engineering heritage and a commitment to excellence, we deliver trusted heating solutions across Hampshire and Dorset — backed by industry-leading certifications.",
   features: [
-    {
-      title: "Decades of Local Heritage",
-      description: "Founded on the principles of reliability and quality, we have become a household name in the New Forest area."
-    },
-    {
-      title: "Highly Qualified Engineers",
-      description: "Both Gas Safe and OFTEC registered, our team handles complex multi-fuel systems with ease."
-    },
-    {
-      title: "Premium Tech Partnerships",
-      description: "Partnered closely with SL Energy Ltd to provide forward-thinking, energy-efficient solutions."
-    }
+    "Highly trained Gas Safe, OFTEC engineers",
+    "Friendly Attitude & Commitment To Customer",
+    "Rate 5* On Google & 9.9/10 Checkatrade",
+    "No Obligation Free Quotes",
+    "Honest & Upfront Pricing",
+    "Local Business & Team",
+    "Reliable Boilers & Products",
+    "Extended Boiler Guarantees"
   ],
   buttonText: "About Our Heritage",
   buttonLink: "/about"

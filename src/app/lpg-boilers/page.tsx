@@ -3,14 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
-import TestimonialSlider from '@/components/TestimonialSlider';
-
 import WhyChooseUs from '@/components/WhyChooseUs';
-
-import QuoteComponent from '@/components/QuoteComponent';
 import ContactSection from '@/components/ContactSection';
 
-export default function NewBoilersPage() {
+export default function LPGBoilersPage() {
   return (
     <main className="min-h-screen bg-slate-50">
 
@@ -28,12 +24,12 @@ export default function NewBoilersPage() {
 
             {/* Left Content Area */}
             <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start text-center lg:text-left text-white">
-              <h1 className="text-[1.75rem] sm:text-3xl lg:text-[2.75rem] font-black tracking-tight leading-[1.1] mb-3 drop-shadow-md">
-                NEW BOILER INSTALLATION
+              <h1 className="text-[1.75rem] sm:text-3xl lg:text-[2.75rem] font-black tracking-tight leading-[1.1] mb-3 drop-shadow-md uppercase">
+                LPG Boiler Installation
               </h1>
 
               <h3 className="text-xs sm:text-sm font-bold tracking-widest text-blue-100 uppercase mb-6">
-                NEW BOILER INSTALLATION BY THE SPECIALISTS!
+                LPG BOILER INSTALLATION BY THE SPECIALISTS!
               </h3>
 
               <div className="space-y-2 text-[0.9rem] sm:text-[0.95rem] font-medium leading-[1.6] text-white overflow-hidden mb-6 max-w-[600px]">
@@ -77,128 +73,344 @@ export default function NewBoilersPage() {
         </div>
       </section>
 
-      {/* Premium Boiler Brands Layout Redesign */}
-      <section className="bg-white py-20 sm:py-32 relative overflow-hidden border-b border-gray-100">
-        {/* Subtle Split-Background Layout Accent */}
-        <div className="absolute top-0 right-0 w-full lg:w-[45%] h-full bg-slate-50/50 lg:rounded-l-[8rem] -z-10"></div>
-
+      {/* What is an LPG Boiler Section */}
+      <section className="bg-white py-16 sm:py-24 relative overflow-hidden border-b border-gray-100">
         <div className="container mx-auto px-4 max-w-[1200px]">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-20">
-
-            {/* Left Column: Typography & Corporate Pitch */}
-            <div className="w-full lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left relative z-10">
               <span className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 font-bold text-[0.7rem] sm:text-xs tracking-[0.15em] uppercase mb-6 shadow-sm">
-                <svg className="w-3.5 h-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                Accredited Specialists
+                 Off-Grid Heating
               </span>
-
-              <h2 className="text-[2.25rem] sm:text-[3.25rem] font-black text-slate-800 tracking-tight leading-[1.05] mb-6">
-                OUR PREMIER <br className="hidden lg:block" /> BOILER BRANDS
+              <h2 className="text-[2.25rem] sm:text-[3rem] font-black text-slate-800 tracking-tight leading-[1.1] mb-6">
+                What is an LPG Boiler?
               </h2>
-
               <div className="w-16 h-1.5 bg-[#ff9e0b] rounded-full mx-auto lg:mx-0 mb-8"></div>
-
-              <p className="text-slate-500 text-[1.05rem] sm:text-[1.15rem] font-light leading-[1.8] max-w-[550px] mb-10">
-                At Tom Sutton Heating we work with a select tier of premium thermal manufacturers. As <strong className="text-slate-800 font-bold">Worcester Accredited Installers</strong>, their pioneering systems represent our absolute number one boiler recommendation and top sellers globally.
-              </p>
-
-
-            </div>
-
-            {/* Right Column: Visual Showcase Display Component */}
-            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative z-10">
-              <div className="relative w-full max-w-[500px] aspect-auto sm:aspect-[4/3] bg-white rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] border border-slate-100 flex items-center justify-center p-10 sm:p-16 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-500 group">
-
-                {/* Embedded Ambient Glow FX behind the logo */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-blue-100/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0 pointer-events-none"></div>
-
-                {/* Physical Logo Bounding Box ensuring absolute structural integrity */}
-                <div className="relative w-full h-[70px] sm:h-[100px] z-10 transition-transform duration-500 group-hover:scale-105">
-                  <Image
-                    src="https://i.postimg.cc/PqXwb81V/WAI-Bosch-Logo-WHITE-BOXES-SGRight-2-300x73.webp"
-                    alt="Worcester Bosch Accredited Installer Partnership Logo"
-                    fill
-                    className="object-contain object-center mix-blend-multiply"
-                    unoptimized
-                  />
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Quoting Engine Tier */}
-      <section className="bg-slate-50 py-16 sm:py-24 border-b border-gray-100">
-        <div className="container mx-auto px-4 max-w-[1200px]">
-
-          <div className="flex flex-col lg:flex-row items-start justify-start">
-
-            {/* Left Content Area: Typography & Interactive Quote Engine (50% Width) */}
-            <div className="w-full lg:w-1/2 flex flex-col items-start pr-0 lg:pr-8">
-
-              {/* Screenshot Typography Block */}
-              <div className="w-full text-center lg:text-left mb-10">
-                <h2 className="text-[2rem] sm:text-[2.75rem] font-bold text-[#334155] tracking-tight leading-[1.1] mb-6">
-                  HOW MUCH DOES A NEW BOILER COST?
-                </h2>
-
-                <p className="text-gray-500 text-[1.1rem] sm:text-[1.15rem] font-light leading-[1.8]">
-                  At Tom Sutton Heating we are completely upfront with our pricing. This is why we offer FIXED PRICE BOILER PACKAGES. <Link href="#contact" className="text-[#2563eb] hover:text-[#1d4ed8] underline underline-offset-2 decoration-1 transition-colors">Contact us</Link> today to discuss our fixed price boiler installation packages or use the quote tool below to find out how much your new boiler could cost you.
+              
+              <div className="space-y-6 text-slate-600 text-[1.05rem] sm:text-[1.15rem] leading-[1.8] max-w-[600px] font-medium text-left">
+                <p>
+                  An <strong className="text-slate-800">LPG (Liquefied Petroleum Gas)</strong> boiler works almost identically to a standard natural gas boiler, but it burns fuel stored in a tank or bottles rather than fuel delivered through the main gas grid.
+                </p>
+                <p>
+                  Modern LPG boilers are high-efficiency <strong className="text-slate-800">condensing units</strong>, meaning they capture heat from waste exhaust gases to save energy. They are available as Combi, System, or Regular (Heat Only) models, making them a direct alternative for those off-the-grid.
                 </p>
               </div>
-
-              {/* Quote Component Wrapper */}
-              <div className="w-full bg-white rounded-[2rem] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] border border-slate-100 p-6 sm:p-10 relative overflow-hidden transition-all duration-500">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50/50 rounded-bl-full -z-10 transition-transform duration-700"></div>
-                <div className="relative z-10 w-full min-h-[400px]">
-                  <QuoteComponent />
-                </div>
+              
+              <div className="mt-8">
+                <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-3.5 bg-blue-600 text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:shadow-[0_15px_30px_rgba(37,99,235,0.3)] hover:bg-blue-700 hover:-translate-y-0.5">
+                  Get a Free Quote
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </Link>
               </div>
-
             </div>
 
-            {/* Right Content Area: Testimonial Slider & Lead Form (50% Width) */}
-            <div className="w-full lg:w-1/2 mt-12 lg:mt-0 lg:pl-8 xl:pl-16 flex flex-col space-y-12">
-              <TestimonialSlider />
-              
-
-              {/* Finance Info Section */}
-              <div className="w-full bg-[#f8f9fa] rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 flex flex-col space-y-6">
-                <div className="space-y-4">
-                  <h3 className="text-[#64748b] font-bold text-lg sm:text-lg uppercase tracking-tight leading-snug">
-                    NEED A NEW BOILER FAST, BUT YOU JUST CAN'T AFFORD IT RIGHT NOW?
-                  </h3>
-                  <p className="text-slate-600 font-medium">
-                    Don't panic! Tom Sutton Heating has you covered!
-                  </p>
-                  <p className="text-slate-600 leading-relaxed text-[0.95rem]">
-                    Tom Sutton Heating offer brand new boiler installations with low-cost finance packages (including <strong className="text-slate-800">0% finance packages!</strong>)
-                  </p>
-                  <p className="text-slate-600 leading-relaxed text-[0.95rem]">
-                    If you are looking to spread the cost over a longer period, speak with a member of our team who can put you in touch with our finance partner to discuss your options.
-                  </p>
-                  <p className="text-slate-700 text-[0.7rem] sm:text-xs italic leading-relaxed text-justify mt-2 font-semibold">
-                    (Tom Sutton Heating) is an Introducer Appointed Representative of (and provides a pure client Introduction through) hiber Energy Ltd., a company registered in England and Wales (Co. Reg. No. 11228917). Registered Office: Linen Court, 10 East Road, London, N1 6AD. hiber Energy Ltd. is authorised and regulated by the Financial Conduct Authority (FRN 810654) as a Broker, not a Lender, and offers credit facilities from a panel of lenders. The credit is subject to application and status
-                  </p>
-                </div>
-
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md">
-                  <Image
-                    src="https://i.postimg.cc/769bY98K/payment-pic.webp"
-                    alt="Card Payment Terminal"
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
+            <div className="w-full lg:w-1/2 relative z-10 mt-10 lg:mt-0">
+              <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-slate-900/5 group">
+                <Image
+                  src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&q=80&w=1200"
+                  alt="LPG Boiler Installation"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  unoptimized
+                />
               </div>
-
             </div>
           </div>
         </div>
       </section>
+
+      {/* What is LPG Heating Section */}
+      <section className="bg-slate-50 py-16 sm:py-24 relative overflow-hidden border-b border-gray-100">
+        <div className="container mx-auto px-4 max-w-[1200px]">
+          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-12 lg:gap-20">
+            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left relative z-10">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-orange-50 border border-orange-100 text-[#ff5e14] font-bold text-[0.7rem] sm:text-xs tracking-[0.15em] uppercase mb-6 shadow-sm">
+                 Complete Solutions
+              </span>
+              <h2 className="text-[2.25rem] sm:text-[3rem] font-black text-slate-800 tracking-tight leading-[1.1] mb-6">
+                What is LPG Heating?
+              </h2>
+              <div className="w-16 h-1.5 bg-blue-600 rounded-full mx-auto lg:mx-0 mb-8"></div>
+              
+              <div className="space-y-6 text-slate-600 text-[1.05rem] sm:text-[1.15rem] leading-[1.8] max-w-[600px] font-medium text-left">
+                <p className="text-center lg:text-left">
+                  LPG heating is a complete central heating solution for homes not connected to the UK's natural gas network.
+                </p>
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-left">
+                  <h4 className="font-bold text-slate-800 text-lg mb-2 flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm shrink-0">1</span> 
+                    The Fuel
+                  </h4>
+                  <p className="pl-11 text-base text-slate-500">LPG (usually propane) is a liquid under pressure but turns into gas when released.</p>
+                </div>
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-left">
+                  <h4 className="font-bold text-slate-800 text-lg mb-2 flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm shrink-0">2</span> 
+                    Storage
+                  </h4>
+                  <p className="pl-11 text-base text-slate-500">The fuel is stored on your property in a large bulk tank (installed above or below ground) or in smaller 47kg replaceable cylinders.</p>
+                </div>
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-left">
+                  <h4 className="font-bold text-slate-800 text-lg mb-2 flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm shrink-0">3</span> 
+                    The System
+                  </h4>
+                  <p className="pl-11 text-base text-slate-500">The gas travels from the storage unit to your boiler, which then heats your water and radiators just like a standard city home.</p>
+                </div>
+              </div>
+              
+              <div className="mt-8 w-full flex justify-center lg:justify-start">
+                <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-3.5 bg-[#ff5e14] text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_10px_20px_rgba(255,94,20,0.2)] hover:shadow-[0_15px_30px_rgba(255,94,20,0.3)] hover:bg-[#ea530e] hover:-translate-y-0.5">
+                  Get an LPG Heating Quote
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-1/2 relative z-10 mt-10 lg:mt-0">
+              <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-slate-900/5 group">
+                <Image
+                  src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&q=80&w=1200"
+                  alt="LPG Heating Storage System"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Can I run a boiler on LPG gas Section */}
+      <section className="bg-white py-16 sm:py-24 relative overflow-hidden border-b border-gray-100">
+        <div className="container mx-auto px-4 max-w-[1200px]">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left relative z-10">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 font-bold text-[0.7rem] sm:text-xs tracking-[0.15em] uppercase mb-6 shadow-sm">
+                 Boiler Compatibility
+              </span>
+              <h2 className="text-[2.25rem] sm:text-[3rem] font-black text-slate-800 tracking-tight leading-[1.1] mb-6">
+                Can I run a boiler on LPG gas?
+              </h2>
+              <div className="w-16 h-1.5 bg-[#ff9e0b] rounded-full mx-auto lg:mx-0 mb-8"></div>
+              
+              <div className="space-y-6 text-slate-600 text-[1.05rem] sm:text-[1.15rem] leading-[1.8] max-w-[600px] font-medium text-left">
+                <p>
+                  <strong className="text-slate-800">Yes, you can, provided the boiler is designed for it.</strong> Most leading manufacturers (like Worcester Bosch, Vaillant, or Ideal) produce boilers specifically for LPG, or "Natural Gas" models that can be converted.
+                </p>
+                <div className="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100">
+                  <h4 className="font-bold text-slate-800 text-lg mb-2 flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-[#1d4ed8] text-white flex items-center justify-center text-sm shrink-0">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    </span> 
+                    The Conversion
+                  </h4>
+                  <p className="pl-11 text-base text-slate-500">If you have a natural gas boiler, it requires an <strong className="text-slate-700">LPG Conversion Kit</strong>. This involves changing the burner jets and recalibrating the gas valve.</p>
+                </div>
+                <div className="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100">
+                  <h4 className="font-bold text-slate-800 text-lg mb-2 flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center text-sm shrink-0">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                    </span> 
+                    The Rule
+                  </h4>
+                  <p className="pl-11 text-base text-slate-500">You cannot simply plug an LPG bottle into a natural gas boiler. The conversion <strong className="text-slate-700">must be performed by a Gas Safe registered engineer</strong> who is specifically qualified to work with LPG (as this is a separate qualification from natural gas).</p>
+                </div>
+              </div>
+              
+              <div className="mt-8">
+                <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-3.5 bg-blue-600 text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:shadow-[0_15px_30px_rgba(37,99,235,0.3)] hover:bg-blue-700 hover:-translate-y-0.5">
+                  Book a Conversion Quote
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-1/2 relative z-10 mt-10 lg:mt-0">
+              <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-slate-900/5 group">
+                <Image
+                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1200"
+                  alt="LPG Conversion Engineering"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose LPG? Section */}
+      <section className="bg-slate-50 py-16 sm:py-24 relative overflow-hidden border-b border-gray-100">
+        <div className="container mx-auto px-4 max-w-[1200px]">
+          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-12 lg:gap-20">
+            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left relative z-10">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-[#059669] font-bold text-[0.7rem] sm:text-xs tracking-[0.15em] uppercase mb-6 shadow-sm">
+                 Key Benefits
+              </span>
+              <h2 className="text-[2.25rem] sm:text-[3rem] font-black text-slate-800 tracking-tight leading-[1.1] mb-6">
+                Why Choose LPG?
+              </h2>
+              <div className="w-16 h-1.5 bg-blue-600 rounded-full mx-auto lg:mx-0 mb-8"></div>
+              
+              <div className="space-y-4 w-full">
+                <div className="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                  <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-1">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                  </div>
+                  <div className="text-left">
+                    <h4 className="font-bold text-slate-800 text-lg mb-1">High Efficiency</h4>
+                    <p className="text-base text-slate-500">Modern LPG boilers are typically 90% or more efficient.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                  <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-1">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l5-5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
+                  </div>
+                  <div className="text-left">
+                    <h4 className="font-bold text-slate-800 text-lg mb-1">Compact</h4>
+                    <p className="text-base text-slate-500">LPG boilers are often the same size as standard boilers, saving space compared to oil-fired units.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                  <div className="w-10 h-10 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center shrink-0 mt-1">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  </div>
+                  <div className="text-left">
+                    <h4 className="font-bold text-slate-800 text-lg mb-1">Cleaner than Oil</h4>
+                    <p className="text-base text-slate-500">LPG produces less carbon and fewer particulates than oil heating, making it a "greener" off-grid choice.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                  <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center shrink-0 mt-1">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" /></svg>
+                  </div>
+                  <div className="text-left">
+                    <h4 className="font-bold text-slate-800 text-lg mb-1">Versatile</h4>
+                    <p className="text-base text-slate-500">Beyond heating, you can use the same LPG supply for your gas hob or fireplace.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 w-full flex justify-center lg:justify-start">
+                <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-3.5 bg-[#059669] text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_10px_20px_rgba(5,150,105,0.2)] hover:shadow-[0_15px_30px_rgba(5,150,105,0.3)] hover:bg-[#047857] hover:-translate-y-0.5">
+                  Switch to LPG Today
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-1/2 relative z-10 mt-10 lg:mt-0">
+              <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-slate-900/5 group">
+                <Image
+                  src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200"
+                  alt="LPG Heating Benefits"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pros and Cons Section */}
+      <section className="bg-white py-20 sm:py-28 relative overflow-hidden border-b border-gray-100">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-full bg-gradient-to-b from-blue-50/30 to-transparent -z-10"></div>
+        <div className="container mx-auto px-4 max-w-[1200px] relative z-10">
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-bold text-[0.7rem] sm:text-xs tracking-[0.15em] uppercase mb-6 shadow-sm">
+                 Objective Comparison
+              </span>
+            <h2 className="text-[2.25rem] sm:text-[3.25rem] font-black text-slate-800 tracking-tight leading-[1.05] mb-6">
+              LPG Boilers: Pros & Cons
+            </h2>
+            <div className="w-20 h-1.5 bg-[#ff9e0b] rounded-full mx-auto mb-6"></div>
+            <p className="text-slate-500 font-medium text-lg max-w-2xl mx-auto">
+              Weighing up off-grid heating options? Here is a transparent breakdown of the advantages and considerations when choosing LPG.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            
+            {/* Pros Column */}
+            <div className="backdrop-blur-sm bg-white/80 rounded-[2.5rem] p-8 sm:p-10 border-2 border-emerald-500/20 shadow-[0_20px_40px_-15px_rgba(16,185,129,0.15)] relative overflow-hidden group hover:border-emerald-500/40 transition-colors duration-500 flex flex-col h-full">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-400 to-teal-500"></div>
+              <div className="absolute -top-24 -right-24 w-48 h-48 bg-emerald-100 rounded-full blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none"></div>
+              
+              <div className="flex items-center gap-4 mb-10">
+                <div className="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center shadow-inner border border-emerald-200/50">
+                  <svg className="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">The Pros</h3>
+              </div>
+
+              <div className="space-y-6 flex-1">
+                {[
+                  { title: "High Efficiency", text: "Most modern LPG boilers are condensing units with 90% efficiency or higher, reducing fuel waste." },
+                  { title: "Lower Upfront Cost", text: "LPG boilers are typically cheaper to purchase and install than oil-fired boilers or heat pumps." },
+                  { title: "Cleaner Fuel", text: "LPG produces fewer carbon emissions and particulates than oil or coal, making it a \"greener\" off-grid option." },
+                  { title: "Versatility", text: "The same fuel supply can power your central heating, hot water, gas hob, and even a real-flame gas fire." },
+                  { title: "Compact Size", text: "They are usually smaller and quieter than oil boilers, often fitting inside a standard kitchen cupboard." },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-5 rounded-2xl bg-emerald-50/50 border border-emerald-100/50 hover:bg-emerald-50 transition-colors h-auto lg:min-h-[140px]">
+                    <svg className="w-6 h-6 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div>
+                      <h4 className="font-bold text-slate-800 text-lg mb-1">{item.title}</h4>
+                      <p className="text-slate-600 font-medium leading-relaxed text-sm md:text-base">{item.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Cons Column */}
+            <div className="backdrop-blur-sm bg-white/80 rounded-[2.5rem] p-8 sm:p-10 border-2 border-rose-500/20 shadow-[0_20px_40px_-15px_rgba(244,63,94,0.15)] relative overflow-hidden group hover:border-rose-500/40 transition-colors duration-500 flex flex-col h-full">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-rose-400 to-orange-500"></div>
+              <div className="absolute -top-24 -right-24 w-48 h-48 bg-rose-100 rounded-full blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none"></div>
+              
+              <div className="flex items-center gap-4 mb-10">
+                <div className="w-14 h-14 rounded-full bg-rose-100 flex items-center justify-center shadow-inner border border-rose-200/50">
+                  <svg className="w-7 h-7 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12"></path></svg>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">The Cons</h3>
+              </div>
+
+              <div className="space-y-6 flex-1">
+                {[
+                  { title: "Fuel Costs", text: "LPG is generally more expensive per unit of energy (kWh) compared to mains natural gas." },
+                  { title: "Fuel Storage", text: "You need space on your property for a large storage tank or a secure area for gas cylinders." },
+                  { title: "Delivery Logistics", text: "You must monitor your fuel levels and arrange for deliveries, or sign up for an automated refilling service." },
+                  { title: "Conversion Required", text: "Standard boilers must be specifically converted or purchased as LPG-ready to function safely." },
+                  { title: "Regulation Heavy", text: "Storage tanks must meet strict safety distance regulations from \"boundaries\" and \"fixed sources of ignition.\"" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-5 rounded-2xl bg-rose-50/50 border border-rose-100/50 hover:bg-rose-50 transition-colors h-auto lg:min-h-[140px]">
+                    <svg className="w-6 h-6 text-rose-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div>
+                      <h4 className="font-bold text-slate-800 text-lg mb-1">{item.title}</h4>
+                      <p className="text-slate-600 font-medium leading-relaxed text-sm md:text-base">{item.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+          
+          <div className="mt-16 text-center z-10 relative">
+            <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-5 bg-slate-900 text-white font-black text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_15px_30px_rgba(15,23,42,0.2)] hover:shadow-[0_20px_40px_rgba(15,23,42,0.3)] hover:bg-slate-800 hover:-translate-y-1">
+              Request Your Free LPG Consultation
+              <svg className="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
 
       {/* Why Choose Us Section */}
       <WhyChooseUs />

@@ -102,22 +102,7 @@ export default function OurBoilerBrandsPage() {
                   </div>
                 </Link>
 
-                {/* Alpha Premium Card */}
-                <Link href="/alpha" className="group relative flex items-center justify-between w-full bg-white border border-slate-200 p-5 sm:p-6 rounded-[1.25rem] shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(239,68,68,0.15)] hover:border-red-200 transition-all duration-500 hover:-translate-y-1.5 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="flex items-center gap-5 sm:gap-6 relative z-10">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl flex items-center justify-center text-red-500 shadow-sm border border-red-100 group-hover:scale-110 transition-transform duration-500">
-                      <svg className="w-7 h-7 sm:w-8 sm:h-8 drop-shadow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" /></svg>
-                    </div>
-                    <div className="flex flex-col text-left">
-                      <span className="text-[0.65rem] sm:text-xs font-bold text-red-500 uppercase tracking-[0.15em] mb-1.5">View Value Tier</span>
-                      <span className="text-slate-800 font-black text-lg sm:text-xl tracking-tight">Alpha Boilers</span>
-                    </div>
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center group-hover:bg-red-500 group-hover:border-red-500 transition-colors duration-500 relative z-10 hidden sm:flex">
-                    <svg className="w-5 h-5 text-slate-400 group-hover:text-white transform group-hover:translate-x-0.5 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
-                  </div>
-                </Link>
+
 
               </div>
             </div>
@@ -139,18 +124,8 @@ export default function OurBoilerBrandsPage() {
                   </div>
                 </div>
 
-                {/* Secondary Large Badge: Alpha */}
-                <div className="col-span-2 md:col-span-1 lg:col-span-1 relative group cursor-pointer">
-                  <div className="absolute inset-0 bg-red-500 rounded-3xl blur-[20px] opacity-0 group-hover:opacity-20 transition-opacity duration-700"></div>
-                  <div className="relative w-full h-32 sm:h-40 bg-white border border-slate-100 shadow-[0_4px_25px_rgba(0,0,0,0.04)] rounded-[1.75rem] flex items-center justify-center p-6 transition-transform duration-500 group-hover:-translate-y-2">
-                    <div className="relative w-full h-full opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110">
-                      <Image src="https://i.postimg.cc/dVBy0GMb/Alpha_Logo.png" alt="Alpha Heating Innovation" fill className="object-contain" unoptimized />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Tertiary Logo Array Row Block */}
-                <div className="col-span-2 md:col-span-2 lg:col-span-1 grid grid-rows-3 gap-4 sm:gap-6">
+                {/* Secondary Logo Array Row Block */}
+                <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-2">
                   
                   <div className="w-full h-24 bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] rounded-2xl flex items-center justify-center p-4 transition-transform duration-500 hover:-translate-y-1 hover:border-slate-300 group cursor-pointer">
                     <div className="relative w-full h-full opacity-60 group-hover:opacity-100 transition-all duration-500">

@@ -135,55 +135,58 @@ export default function NewBoilersPage() {
         </div>
       </section>
 
-      {/* Interactive Quoting Engine Tier */}
+      {/* Pricing & Testimonial Section */}
       <section className="bg-slate-50 py-16 sm:py-24 border-b border-gray-100">
         <div className="container mx-auto px-4 max-w-[1200px]">
 
-          <div className="flex flex-col lg:flex-row items-start justify-start">
+          {/* New Full-Width Typography Block */}
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-[2rem] sm:text-[2.75rem] font-bold text-[#334155] tracking-tight leading-[1.1] mb-6">
+              HOW MUCH DOES A NEW BOILER COST?
+            </h2>
 
-            {/* Left Content Area: Typography & Interactive Quote Engine (50% Width) */}
-            <div className="w-full lg:w-1/2 flex flex-col items-start pr-0 lg:pr-8">
+            <p className="text-gray-500 text-[1.1rem] sm:text-[1.15rem] font-medium leading-[1.8] mb-8 max-w-3xl">
+              At Tom Sutton Heating we are completely upfront with our pricing. This is why we offer FIXED PRICE BOILER PACKAGES. Contact us today to discuss our fixed price boiler installation packages or build a quote online to find out exactly how much your new boiler will cost you.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/online-boiler-quote" className="inline-flex items-center justify-center px-10 py-4 bg-[#ff5e14] text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-all hover:bg-orange-700 shadow-[0_10px_20px_rgba(255,94,20,0.2)] hover:-translate-y-1">
+                Build Online Quote
+              </Link>
+              <Link href="#contact" className="inline-flex items-center justify-center px-10 py-4 bg-white border-2 border-slate-200 text-slate-700 font-bold text-sm tracking-widest uppercase rounded-xl transition-all hover:border-slate-300 hover:bg-slate-50 hover:-translate-y-1">
+                Contact Us
+              </Link>
+            </div>
+          </div>
 
-              {/* Screenshot Typography Block */}
-              <div className="w-full text-center lg:text-left mb-10">
-                <h2 className="text-[2rem] sm:text-[2.75rem] font-bold text-[#334155] tracking-tight leading-[1.1] mb-6">
-                  HOW MUCH DOES A NEW BOILER COST?
-                </h2>
-
-                <p className="text-gray-500 text-[1.1rem] sm:text-[1.15rem] font-light leading-[1.8]">
-                  At Tom Sutton Heating we are completely upfront with our pricing. This is why we offer FIXED PRICE BOILER PACKAGES. <Link href="#contact" className="text-[#2563eb] hover:text-[#1d4ed8] underline underline-offset-2 decoration-1 transition-colors">Contact us</Link> today to discuss our fixed price boiler installation packages or use the quote tool below to find out how much your new boiler could cost you.
-                </p>
-              </div>
-
-
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mt-16">
+            
+            {/* Left Content Area: Testimonial Slider */}
+            <div className="w-full">
+              <TestimonialSlider />
             </div>
 
-            {/* Right Content Area: Testimonial Slider & Lead Form (50% Width) */}
-            <div className="w-full lg:w-1/2 mt-12 lg:mt-0 lg:pl-8 xl:pl-16 flex flex-col space-y-12">
-              <TestimonialSlider />
-              
-
-              {/* Finance Info Section */}
-              <div className="w-full bg-[#f8f9fa] rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 flex flex-col space-y-6">
+            {/* Right Content Area: Finance Info Section */}
+            <div className="w-full">
+              <div className="w-full bg-white rounded-[2rem] p-8 sm:p-10 shadow-lg border border-slate-100 flex flex-col space-y-6 lg:mt-6">
                 <div className="space-y-4">
-                  <h3 className="text-[#64748b] font-bold text-lg sm:text-lg uppercase tracking-tight leading-snug">
-                    NEED A NEW BOILER FAST, BUT YOU JUST CAN'T AFFORD IT RIGHT NOW?
+                  <h3 className="text-[#0d1033] font-black text-xl sm:text-2xl uppercase tracking-tight leading-snug">
+                    NEED A NEW BOILER FAST, BUT CAN'T AFFORD IT RIGHT NOW?
                   </h3>
+                  <div className="w-12 h-1 bg-blue-500 rounded-full mb-6"></div>
+                  
                   <p className="text-slate-600 font-medium">
-                    Don't panic! Tom Sutton Heating has you covered!
+                    Don't panic! Tom Sutton Heating has you covered.
                   </p>
                   <p className="text-slate-600 leading-relaxed text-[0.95rem]">
-                    Tom Sutton Heating offer brand new boiler installations with low-cost finance packages (including <strong className="text-slate-800">0% finance packages!</strong>)
+                    We offer brand new boiler installations with low-cost finance packages (including <strong className="text-[#0d1033] font-bold">0% interest finance packages!</strong>)
                   </p>
                   <p className="text-slate-600 leading-relaxed text-[0.95rem]">
                     If you are looking to spread the cost over a longer period, speak with a member of our team who can put you in touch with our finance partner to discuss your options.
                   </p>
-                  <p className="text-slate-700 text-[0.7rem] sm:text-xs italic leading-relaxed text-justify mt-2 font-semibold">
-                    (Tom Sutton Heating) is an Introducer Appointed Representative of (and provides a pure client Introduction through) hiber Energy Ltd., a company registered in England and Wales (Co. Reg. No. 11228917). Registered Office: Linen Court, 10 East Road, London, N1 6AD. hiber Energy Ltd. is authorised and regulated by the Financial Conduct Authority (FRN 810654) as a Broker, not a Lender, and offers credit facilities from a panel of lenders. The credit is subject to application and status
-                  </p>
                 </div>
 
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+                <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-4">
                   <Image
                     src="https://i.postimg.cc/769bY98K/payment-pic.webp"
                     alt="Card Payment Terminal"
@@ -192,11 +195,15 @@ export default function NewBoilersPage() {
                     unoptimized
                   />
                 </div>
+                
+                <p className="text-slate-400 text-[0.65rem] italic leading-relaxed text-justify mt-6 font-medium">
+                  Tom Sutton Heating is an Introducer Appointed Representative of (and provides a pure client Introduction through) hiber Energy Ltd., a company registered in England and Wales (Co. Reg. No. 11228917). hiber Energy Ltd. is authorised and regulated by the Financial Conduct Authority (FRN 810654) as a Broker, not a Lender, and offers credit facilities from a panel of lenders. The credit is subject to application and status.
+                </p>
               </div>
-
-
             </div>
+
           </div>
+
         </div>
       </section>
 

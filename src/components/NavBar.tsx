@@ -276,7 +276,16 @@ const NavBar = () => {
                                             <Link href="/new-boiler-installation-2" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-800 border-b border-gray-200/50 hover:text-[#ff5e14]">Boiler Installation</Link>
                                             <Link href="/new-boilers" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">New Boilers</Link>
                                             <Link href="/our-boiler-brands" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Our Boiler Brands</Link>
-                                            <Link href="/worcester-bosch" onClick={() => setIsMobileOpen(false)} className="block py-2 text-[13px] font-medium text-slate-500 pl-4 border-l border-gray-200 hover:text-[#ff5e14]">- Worcester Bosch</Link>
+                                            <div className="border-l border-gray-200">
+                                                <Link href="/worcester-bosch" onClick={() => setIsMobileOpen(false)} className="block py-2 text-[13px] font-bold text-slate-600 pl-4 hover:text-[#ff5e14]">- Worcester Bosch</Link>
+                                                <div className="pl-6 ml-2 space-y-1 mb-2">
+                                                    <Link href="/worcester-bosch-8000-installation" onClick={() => setIsMobileOpen(false)} className="block py-1.5 text-[12px] font-medium text-slate-500 hover:text-[#ff5e14] border-l border-gray-200 pl-3">Worcester Bosch 8000</Link>
+                                                    <Link href="/worcester-bosch-4000-combi" onClick={() => setIsMobileOpen(false)} className="block py-1.5 text-[12px] font-medium text-slate-500 hover:text-[#ff5e14] border-l border-gray-200 pl-3">Worcester Bosch 4000 Combi</Link>
+                                                    <Link href="/worcester-bosch-cdi-compact" onClick={() => setIsMobileOpen(false)} className="block py-1.5 text-[12px] font-medium text-slate-500 hover:text-[#ff5e14] border-l border-gray-200 pl-3">Worcester CDi Compact</Link>
+                                                    <Link href="/worcester-bosch-4000-system" onClick={() => setIsMobileOpen(false)} className="block py-1.5 text-[12px] font-medium text-slate-500 hover:text-[#ff5e14] border-l border-gray-200 pl-3">Worcester 4000 System</Link>
+                                                    <Link href="/worcester-bosch-greenstar-ri-installation" onClick={() => setIsMobileOpen(false)} className="block py-1.5 text-[12px] font-medium text-slate-500 hover:text-[#ff5e14] border-l border-gray-200 pl-3">Worcester Greenstar Ri</Link>
+                                                </div>
+                                            </div>
                                             <Link href="/online-boiler-quote" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-[#ff5e14] hover:text-orange-700 mt-2">Online Boiler Quote &rarr;</Link>
                                         </div>
                                     </div>

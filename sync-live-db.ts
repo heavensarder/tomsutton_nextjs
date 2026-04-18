@@ -1,3 +1,7 @@
+import { loadEnvConfig } from '@next/env';
+const projectDir = process.cwd();
+loadEnvConfig(projectDir);
+
 import pool from './src/lib/db';
 import { SITE_PAGES } from './src/lib/seo-pages';
 

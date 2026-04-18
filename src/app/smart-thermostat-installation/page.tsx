@@ -7,7 +7,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import ContactSection from '@/components/ContactSection';
 
-export default function NestThermostatInstallationPage() {
+export default function SmartThermostatInstallationPage() {
   return (
     <main className="min-h-screen bg-slate-50">
       
@@ -37,15 +37,15 @@ export default function NestThermostatInstallationPage() {
               </div>
 
               <h1 className="text-[2.25rem] sm:text-4xl lg:text-[3.5rem] font-black tracking-tight leading-[1.05] mb-8 drop-shadow-md">
-                Accredited Nest <br className="hidden lg:block"/> Pro Installer
+                Accredited Smart <br className="hidden lg:block"/> Pro Installer
               </h1>
               
               <div className="space-y-5 text-[1.05rem] sm:text-[1.15rem] font-medium leading-[1.7] text-blue-50 mb-10 max-w-[650px]">
                 <p>
-                  Tom Sutton Heating are now proud installers of Nest products which include heating controls, smoke and carbon dioxide alarms, transforming your home into a smart home.
+                  Tom Sutton Heating are now proud installers of Smart Thermostat products which include heating controls, smoke and carbon dioxide alarms, transforming your home into a smart home.
                 </p>
                 <p>
-                  Easily implemented, Nest products sit on your local Wi-Fi network so that you can monitor and control multiple aspects of your home like heating, hot water and safety using a single user interface: The Nest App on your smart phone.
+                  Easily implemented, Smart products sit on your local Wi-Fi network so that you can monitor and control multiple aspects of your home like heating, hot water and safety using a single user interface: The Smart App on your smartphone.
                 </p>
               </div>
 
@@ -60,7 +60,7 @@ export default function NestThermostatInstallationPage() {
               <div className="relative w-full max-w-[450px] aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3]">
                 <Image 
                   src="https://i.postimg.cc/4yFRKn1b/Nest-White.webp" 
-                  alt="Works with Nest - Smart Home Technology Logo" 
+                  alt="Smart Home Technology Logo" 
                   fill 
                   className="object-contain transform transition-transform duration-700 ease-out group-hover:scale-105 drop-shadow-[0_10px_20px_rgba(0,0,0,0.1)]" 
                   unoptimized 
@@ -95,17 +95,17 @@ export default function NestThermostatInstallationPage() {
                  Smart Technology
                </span>
                <h2 className="text-[2.5rem] lg:text-[3.25rem] font-black text-[#1e293b] tracking-tight leading-[1.05] mb-6">
-                 MEET THE NEST THERMOSTAT
+                 MEET THE SMART THERMOSTAT
                </h2>
                <p className="text-slate-500 font-medium leading-[1.8] mb-12 text-[1.1rem]">
-                 The 3rd-gen Nest Thermostat learns what temperatures you like, turns itself down when you're away, and connects to your mobile. It seamlessly keeps you comfortable while dramatically reducing your energy consumption.
+                 The latest-gen Smart Thermostat learns what temperatures you like, turns itself down when you're away, and connects to your mobile. It seamlessly keeps you comfortable while dramatically reducing your energy consumption.
                </p>
 
                <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(37,99,235,0.15)] ring-1 ring-slate-200/60 bg-white group p-4 border border-white">
                   <div className="absolute inset-0 bg-blue-50/20 bg-gradient-to-tr from-transparent to-blue-100/10 pointer-events-none"></div>
                   <Image 
                     src="https://i.postimg.cc/bJCBgW2n/Nest.webp" 
-                    alt="Nest Thermostat Device Mounted" 
+                    alt="Smart Thermostat Device Mounted" 
                     fill 
                     className="object-cover rounded-[2rem] transform group-hover:scale-105 transition-transform duration-1000 ease-in-out mix-blend-multiply" 
                     unoptimized 
@@ -125,7 +125,7 @@ export default function NestThermostatInstallationPage() {
                  {[
                    { 
                      title: "No more programming", 
-                     desc: "Just turn it up and down. With Auto-Schedule, Nest learns from you and programs itself perfectly.", 
+                     desc: "Just turn it up and down. With Auto-Schedule, the smart thermostat learns from you and programs itself perfectly.", 
                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                    },
                    { 
@@ -150,17 +150,17 @@ export default function NestThermostatInstallationPage() {
                    },
                    { 
                      title: "Manage your hot water", 
-                     desc: "Nest can control your hot water tank. You can even adjust the hot water schedule straight from your mobile.", 
+                     desc: "Your smart thermostat can control your hot water tank. You can even adjust the hot water schedule straight from your mobile.", 
                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                    },
                    { 
-                     title: "Hello, Leaf", 
-                     desc: "Know you're actively saving energy. Look for the green Nest Leaf when you change the temperature efficiently.", 
+                     title: "Eco-Efficiency", 
+                     desc: "Know you're actively saving energy. Look for the green eco-efficiency icon when you change the temperature efficiently.", 
                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                    },
                    { 
                      title: "Get it installed", 
-                     desc: "The Nest Thermostat should be installed by a professional. We are your official local accredited Pro.", 
+                     desc: "The Smart Thermostat should be installed by a professional. We are your official local accredited Pro.", 
                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                    }
                  ].map((feat, i) => (
@@ -231,24 +231,24 @@ export default function NestThermostatInstallationPage() {
           {/* Accordion */}
           <FaqAccordion items={[
             {
-              question: "What is a Nest thermostat and how does it work?",
-              answer: "The Google Nest Learning Thermostat is a smart thermostat that learns your schedule and preferred temperatures over time, then automatically adjusts your heating to keep you comfortable while reducing energy waste. You can control it from your phone, tablet, or laptop from anywhere."
+              question: "What is a Smart thermostat and how does it work?",
+              answer: "A Smart Learning Thermostat is an intelligent device that learns your schedule and preferred temperatures over time, then automatically adjusts your heating to keep you comfortable while reducing energy waste. You can control it from your phone, tablet, or laptop from anywhere."
             },
             {
-              question: "Will a Nest thermostat work with my existing boiler?",
-              answer: "The Nest thermostat is compatible with most conventional and combi boilers. During our free survey, we will check your existing system to confirm compatibility and advise on the best model for your setup. It works with gas, oil, and heat pump systems."
+              question: "Will a Smart thermostat work with my existing boiler?",
+              answer: "A Smart thermostat is compatible with most conventional and combi boilers. During our free survey, we will check your existing system to confirm compatibility and advise on the best model for your setup. It works with gas, oil, and heat pump systems."
             },
             {
-              question: "How much can I save with a Nest thermostat?",
-              answer: "Independent studies show the Nest thermostat can save up to 26% on heating bills. By learning your routine and using features like Home/Away Assist, it ensures your heating only runs when needed, reducing energy waste significantly."
+              question: "How much can I save with a Smart thermostat?",
+              answer: "Independent studies show a smart thermostat can save up to 26% on heating bills. By learning your routine and using features like Home/Away Assist, it ensures your heating only runs when needed, reducing energy waste significantly."
             },
             {
-              question: "How long does a Nest thermostat installation take?",
-              answer: "A standard Nest thermostat installation typically takes around 1-2 hours. This includes removing your old thermostat, wiring in the new Nest unit, setting up your Wi-Fi connection, and configuring the Nest app on your phone."
+              question: "How long does a Smart thermostat installation take?",
+              answer: "A standard smart thermostat installation typically takes around 1-2 hours. This includes removing your old thermostat, wiring in the new smart unit, setting up your Wi-Fi connection, and configuring the smart thermostat app on your phone."
             },
             {
-              question: "Can I control my Nest thermostat remotely?",
-              answer: "Yes! With the Nest app on your smartphone, you can adjust your heating from anywhere with an internet connection. You can also set schedules, view energy usage history, and receive maintenance reminders. It also works with Google Home and Amazon Alexa for voice control."
+              question: "Can I control my Smart thermostat remotely?",
+              answer: "Yes! With the smart app on your smartphone, you can adjust your heating from anywhere with an internet connection. You can also set schedules, view energy usage history, and receive maintenance reminders. It also works seamlessly with voice control."
             }
           ]} />
         </div>

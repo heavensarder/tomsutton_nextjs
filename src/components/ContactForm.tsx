@@ -132,10 +132,11 @@ export default function ContactForm() {
             defaultValue="New Boiler"
           >
             <option value="New Boiler">New Boiler</option>
+            <option value="Boiler Breakdown">Boiler Breakdown</option>
             <option value="Care Plans">Care Plans</option>
             <option value="Gas & LPG">Gas & LPG</option>
             <option value="Heating">Heating</option>
-            <option value="Nest Installation">Nest Installation</option>
+            <option value="Smart Thermostat">Smart Thermostat</option>
             <option value="Plumbing & Bathrooms">Plumbing & Bathrooms</option>
             <option value="Other">Other</option>
           </select>

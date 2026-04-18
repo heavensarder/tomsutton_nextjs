@@ -300,9 +300,6 @@ export default function NewBoilerInstallationPage() {
               <Link href="/online-boiler-quote" className="inline-flex items-center justify-center whitespace-nowrap px-10 py-3 sm:py-4 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-sm sm:text-[15px] uppercase tracking-wider rounded shadow-[0_8px_16px_rgba(249,115,22,0.25)] hover:shadow-[0_12px_24px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1">
                 More Info
               </Link>
-                <Link href="#contact" className="inline-flex items-center justify-center whitespace-nowrap px-10 py-3 sm:py-4 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-sm sm:text-[15px] uppercase tracking-wider rounded shadow-[0_8px_16px_rgba(249,115,22,0.25)] hover:shadow-[0_12px_24px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1">
-                More Info
-              </Link>
             </div>
           </div>
 

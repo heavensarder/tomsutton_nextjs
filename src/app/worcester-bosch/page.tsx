@@ -1,4 +1,4 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
 import FaqAccordion from '@/components/FaqAccordion';
@@ -111,7 +111,6 @@ export default function WorcesterBoschPage() {
              {[
                { name: "GREENSTAR 4000 COMBI", link: "/worcester-bosch-4000-combi", image: "https://i.postimg.cc/7ZNCXs7w/EVOKE_6_300x300.webp" },
                { name: "GREENSTAR 4000 SYSTEM", link: "/worcester-bosch-4000-system", image: "https://i.postimg.cc/s2DMLY9d/EVOKE_7_300x300.webp" },
-               { name: "GREENSTAR i SYSTEM", link: "/worcester-bosch-i-system", image: "https://i.postimg.cc/JzQyK6JR/RI_Range_2_300x300.webp" },
                { name: "GREENSTAR Ri", link: "/worcester-bosch-greenstar-ri-installation", image: "https://i.postimg.cc/xdTXZvyS/RI_Range_3_300x300.webp" },
                { name: "GREENSTAR 8000 STYLE", link: "/worcester-bosch-8000-installation", image: "https://i.postimg.cc/QdqBS45s/Si_Compact_Range_1_300x300.webp" },
                { name: "GREENSTAR CDi COMPACT", link: "/worcester-bosch-cdi-compact", image: "https://i.postimg.cc/bwRGLCbY/Untitled_design_14_300x300.webp" },

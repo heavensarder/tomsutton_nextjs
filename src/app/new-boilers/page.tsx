@@ -1,4 +1,4 @@
-﻿
+
 import Image from 'next/image';
 import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
@@ -155,13 +155,6 @@ export default function NewBoilersPage() {
                 </p>
               </div>
 
-              {/* Quote Component Wrapper */}
-              <div className="w-full bg-white rounded-[2rem] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] border border-slate-100 p-6 sm:p-10 relative overflow-hidden transition-all duration-500">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50/50 rounded-bl-full -z-10 transition-transform duration-700"></div>
-                <div className="relative z-10 w-full min-h-[400px]">
-                  <QuoteComponent />
-                </div>
-              </div>
 
             </div>
 
@@ -201,35 +194,6 @@ export default function NewBoilersPage() {
                 </div>
               </div>
 
-              {/* Why Choose Us Section */}
-              <div className="w-full bg-[#f8f9fa] rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 flex flex-col items-center">
-                <h3 className="text-[1.35rem] sm:text-2xl text-center text-[#475569] mb-8 font-light">
-                  Why Choose us?
-                </h3>
-                <ul className="space-y-4 w-full max-w-[420px]">
-                  {[
-                    "Highly trained Gas Safe, OFTEC registered\nengineers",
-                    "Friendly Attitude & A Commitment To Customer\nService",
-                    "Rate 5* On Google & 9.9/10 On Checkatrade",
-                    "No Obligation Free Quotes",
-                    "Honest & Upfront Pricing",
-                    "Local Business & Team",
-                    "Reliable Boilers & Products",
-                    "Extended Boiler Guarantee's",
-                    "Fast, Reliable Service"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <div className="mt-1 flex-shrink-0">
-                        {/* Exact matching green checkbox box */}
-                        <div className="w-[1.1rem] h-[1.1rem] border-[1.5px] border-[#7cb342] rounded-[2px] flex items-center justify-center bg-transparent">
-                          <svg className="w-3.5 h-3.5 text-[#8bc34a] transform translate-y-[-1px] translate-x-[0.5px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={3.5} d="M5 12l4 4L19 6" /></svg>
-                        </div>
-                      </div>
-                      <span className="font-bold text-[#334155] text-[0.95rem] leading-[1.3] whitespace-pre-line">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
 
             </div>
           </div>

@@ -51,9 +51,6 @@ export default function BoilerBreakdownsPage() {
                 <Link href="/online-boiler-quote" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-4 sm:px-12 sm:py-4 bg-white text-blue-700 font-bold text-[0.85rem] tracking-widest uppercase rounded-xl transition-all shadow-[0_15px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1">
                   <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">GET ONLINE QUOTE</span>
                 </Link>
-                <Link href="#contact" className="group relative inline-flex items-center justify-center whitespace-nowrap px-10 py-4 sm:px-12 sm:py-4 bg-white/10 border border-white/20 text-white font-bold text-[0.85rem] tracking-widest uppercase rounded-xl transition-all hover:bg-white/20 backdrop-blur-sm">
-                  <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">GET IN TOUCH</span>
-                </Link>
               </div>
             </div>
 

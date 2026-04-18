@@ -69,7 +69,7 @@ export default function GasInlineSlider({ data }: { data?: any }) {
     <div className="w-full relative overflow-hidden bg-slate-50 py-10 mt-6 border-y border-slate-100 shadow-[inset_0_4px_15px_rgba(0,0,0,0.02)] select-none" style={{ maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)' }}>
       <div 
         ref={scrollContainerRef}
-        className="grid grid-cols-1 gap-4 px-4 sm:flex sm:overflow-x-auto sm:gap-6 sm:py-2 sm:px-8 w-full sm:cursor-grab active:cursor-grabbing no-scrollbar scroll-smooth"
+        className="grid grid-cols-1 gap-4 px-4 sm:flex sm:overflow-x-auto sm:gap-6 sm:py-2 sm:px-8 w-full sm:cursor-grab active:cursor-grabbing no-scrollbar"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={handleMouseLeave}

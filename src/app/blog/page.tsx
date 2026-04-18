@@ -21,14 +21,14 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
     SELECT p.title, p.slug, p.excerpt, p.featured_image, p.published_at, c.name as category_name
     FROM blog_posts p
     LEFT JOIN blog_categories c ON p.category_id = c.id
-    WHERE p.status = 'published'
+    WHERE p.status = 'published' AND (p.is_energy_event = 0 OR p.is_energy_event IS NULL)
   `;
   
   let countQuery = `
     SELECT COUNT(*) as total
     FROM blog_posts p
     LEFT JOIN blog_categories c ON p.category_id = c.id
-    WHERE p.status = 'published'
+    WHERE p.status = 'published' AND (p.is_energy_event = 0 OR p.is_energy_event IS NULL)
   `;
   let params: any[] = [];
 

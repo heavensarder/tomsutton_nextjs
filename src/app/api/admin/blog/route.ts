@@ -40,7 +40,7 @@ export async function POST(request: Request) {
 
     const { 
       title, slug, content, excerpt, featured_image, 
-      category_id, meta_title, meta_description, meta_keywords, status 
+      category_id, meta_title, meta_description, meta_keywords, status, is_energy_event
     } = await request.json();
 
     if (!title || !slug || !content) {
@@ -52,8 +52,8 @@ export async function POST(request: Request) {
 
     const [result] = await pool.execute(
       `INSERT INTO blog_posts 
-      (title, slug, content, excerpt, featured_image, category_id, meta_title, meta_description, meta_keywords, status, published_at) 
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ${status === 'published' ? 'NOW()' : 'NULL'})`,
+      (title, slug, content, excerpt, featured_image, category_id, meta_title, meta_description, meta_keywords, status, is_energy_event, published_at) 
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ${status === 'published' ? 'NOW()' : 'NULL'})`,
       [
         title, slug, content, 
         excerpt || '', 
@@ -62,7 +62,8 @@ export async function POST(request: Request) {
         meta_title || '', 
         meta_description || '', 
         meta_keywords || '',
-        status || 'draft'
+        status || 'draft',
+        is_energy_event ? 1 : 0
       ]
     );
 

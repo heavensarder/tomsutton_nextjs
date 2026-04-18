@@ -106,37 +106,123 @@ export default function WorcesterBoschPage() {
             </p>
           </div>
 
-          {/* Standard Professional Product Matrix (6 Items) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mt-16 max-w-6xl mx-auto">
+          {/* Comprehensive Alternating Product Showcase */}
+          <div className="mt-16 sm:mt-24 max-w-6xl mx-auto space-y-20 sm:space-y-32">
              {[
-               { name: "GREENSTAR 4000 COMBI", link: "/worcester-bosch-4000-combi", image: "https://i.postimg.cc/7ZNCXs7w/EVOKE_6_300x300.webp" },
-               { name: "GREENSTAR 4000 SYSTEM", link: "/worcester-bosch-4000-system", image: "https://i.postimg.cc/s2DMLY9d/EVOKE_7_300x300.webp" },
-               { name: "GREENSTAR Ri", link: "/worcester-bosch-greenstar-ri-installation", image: "https://i.postimg.cc/xdTXZvyS/RI_Range_3_300x300.webp" },
-               { name: "GREENSTAR 8000 STYLE", link: "/worcester-bosch-8000-installation", image: "https://i.postimg.cc/QdqBS45s/Si_Compact_Range_1_300x300.webp" },
-               { name: "GREENSTAR CDi COMPACT", link: "/worcester-bosch-cdi-compact", image: "https://i.postimg.cc/bwRGLCbY/Untitled_design_14_300x300.webp" },
-             ].map((boiler, index) => (
-                <div key={index} className="flex flex-col items-center bg-white p-6 sm:p-8 group hover:-translate-y-2 transition-transform duration-300 relative border border-transparent hover:border-slate-100 rounded-2xl hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+               {
+                 name: "WORCESTER BOSCH 4000 COMBI",
+                 description: "The Worcester Bosch 4000 is perfect for small to medium-sized homes with one bathroom. It features a modern new design, an easy-to-use full-colour text display, and it's quiet too. The 4000 has a wide power range to meet all of your heating and hot water needs, whilst doing so efficiently.",
+                 image: "https://i.postimg.cc/T1bkskZs/EVOKE-5-300x300.webp",
+                 features: [
+                   "A wide power range helps to reduce gas consumption and lower energy bills",
+                   "Innovative 'Quick Tap' water-saving function helps you reduce water waste",
+                   "The modern new design comes with an easy to use colour display",
+                   "Operates extremely well in low water pressure areas",
+                   "One of the quietest combi boilers available",
+                   "Features wireless connectivity with the Bosch EasyControl",
+                   "Instantaneous hot water, always available"
+                 ]
+               },
+               {
+                 name: "WORCESTER BOSCH 4000 SYSTEM",
+                 description: "The Worcester Bosch 4000 System is perfect for small to medium-sized homes. It features a modern new design and is extremely quiet. With a wide power range, it efficiently meets your property's heating requirements when used alongside a hot water storage cylinder.",
+                 image: "https://i.postimg.cc/s2DMLY9d/EVOKE-7-300x300.webp",
+                 features: [
+                   "A wide power range to reduce gas consumption and lower bills",
+                   "Modern new design with an easy to use colour display",
+                   "Worcester's quietest system boiler",
+                   "Wireless connectivity with the Bosch EasyControl",
+                   "Ideal for homes where the system includes a hot water cylinder",
+                   "Can be used with solar panels for energy saving"
+                 ]
+               },
+               {
+                 name: "WORCESTER BOSCH Ri",
+                 description: "The Worcester Bosch Ri is a compact, wall-mounted boiler that perfectly fits small and medium-sized homes. Small enough to be installed inside a standard kitchen cupboard, it performs flawlessly alongside our high-efficiency hot water cylinders.",
+                 image: "https://i.postimg.cc/3R6TQcWP/Ri-1-300x300.webp",
+                 features: [
+                   "Ultra-compact; fits smoothly in a standard kitchen cupboard",
+                   "Simple and intuitive boiler control knob",
+                   "Suitable for setups requiring a hot water storage cylinder",
+                   "Built-in frost protection, perfect for garage or loft installations",
+                   "Fully compatible with solar panels"
+                 ]
+               },
+               {
+                 name: "WORCESTER BOSCH 8000 RANGE",
+                 description: "Building upon the highly awarded CDi Classic, the 8000 Life and Style ranges are Worcester's most powerful wall hung combi boilers. Capable of up to 50kW outputs, these sleek units feature completely upgraded controls, wireless connectivity, and intelligent filling options.",
+                 image: "https://i.postimg.cc/VvmZ09SG/STYLE-300x300.webp",
+                 features: [
+                   "Available with Worcester Bosch's longest standard guarantee",
+                   "Stunning modern design with improved touch-display screen",
+                   "Optional unique Intelligent Filling System",
+                   "Perfect for larger homes equipped with multiple bathrooms",
+                   "Available in a high-gloss black or white finish",
+                   "Wireless connectivity with the Bosch EasyControl smart thermostat"
+                 ]
+               },
+               {
+                 name: "WORCESTER BOSCH CDi COMPACT",
+                 description: "The Worcester Bosch CDi Compact belongs to the latest generation of smaller and highly efficient boilers. Engineered for a seamless fit inside standard kitchen cupboards, it brings exceptional power to small, medium, and large homes despite its minimal footprint.",
+                 image: "https://i.postimg.cc/bwRGLCbY/Untitled_design_14_300x300.webp",
+                 features: [
+                   "Space-saving design that fits in standard kitchen cupboards",
+                   "Simple control knobs equipped with a clear temperature display",
+                   "Highly user-friendly interface for everyday ease of use",
+                   "Low energy pump drastically reduces electrical usage",
+                   "Easily paired with solar panels for cost savings"
+                 ]
+               }
+             ].map((boiler, index) => {
+               const isEven = index % 2 === 0;
+               return (
+                 <div key={index} className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${!isEven ? 'lg:flex-row-reverse' : ''}`}>
                    
-                   {/* Product Image Container */}
-                   <div className="relative w-[110%] sm:w-[125%] -ml-[5%] sm:-ml-[12.5%] aspect-[1/1.1] mb-6 bg-transparent overflow-visible pointer-events-none z-0">
-                      <Image 
+                   {/* Product Image Side */}
+                   <div className="w-full lg:w-5/12 flex justify-center perspective">
+                     <div className="relative w-full max-w-[350px] aspect-[4/5] bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_20px_40px_rgba(0,0,0,0.04)] group overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)]">
+                       <Image 
                          src={boiler.image} 
                          alt={boiler.name} 
                          fill 
-                         className="object-contain group-hover:scale-[1.15] transition-transform duration-500 ease-out mix-blend-multiply origin-top" 
+                         className="object-contain p-6 transform transition-transform duration-700 ease-out group-hover:scale-[1.08] mix-blend-multiply" 
                          unoptimized 
-                      />
+                       />
+                       {/* Subtle glow behind image */}
+                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#00a651]/5 rounded-full blur-[40px] pointer-events-none group-hover:bg-[#00a651]/10 transition-colors duration-500"></div>
+                     </div>
                    </div>
-                   
-                   {/* Action Button */}
-                   <div className="mt-auto w-full relative z-20" suppressHydrationWarning>
-                     <Link href={boiler.link} className="inline-flex items-center justify-center w-full px-6 py-3.5 bg-[#00a651] hover:bg-[#008f45] text-white font-bold text-sm tracking-wider uppercase rounded transition-colors shadow-sm" suppressHydrationWarning>
-                       MORE INFO
-                     </Link>
+
+                   {/* Content & Features Side */}
+                   <div className="w-full lg:w-7/12 flex flex-col text-left">
+                     <h3 className="text-2xl sm:text-3xl font-black text-slate-800 tracking-tight uppercase mb-4 inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-[#00a651] after:rounded-full">
+                       {boiler.name}
+                     </h3>
+                     <p className="text-slate-600 font-medium text-[1.05rem] leading-[1.7] mb-8 mt-6 text-balance">
+                       {boiler.description}
+                     </p>
+                     
+                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10">
+                       {boiler.features.map((feature, fIdx) => (
+                         <li key={fIdx} className="flex items-start gap-3">
+                           <div className="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-[#00a651]/10 flex items-center justify-center">
+                             <svg className="w-3.5 h-3.5 text-[#00a651]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7"/></svg>
+                           </div>
+                           <span className="text-slate-700 font-semibold text-[0.95rem] leading-[1.4]">{feature}</span>
+                         </li>
+                       ))}
+                     </ul>
+
+                     <div>
+                       <Link href="/online-boiler-quote" className="inline-flex items-center justify-center px-8 py-3.5 bg-[#00a651] text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_10px_20px_rgba(0,166,81,0.2)] hover:shadow-[0_15px_30px_rgba(0,166,81,0.3)] hover:-translate-y-1 hover:bg-[#008f45]">
+                         Get An Installation Quote
+                         <svg className="w-4 h-4 ml-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                       </Link>
+                     </div>
                    </div>
-                   
-                </div>
-             ))}
+                 </div>
+               );
+             })}
           </div>
 
         </div>

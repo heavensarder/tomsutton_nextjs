@@ -138,9 +138,10 @@ export default async function GasPage() {
                   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" /></svg>
                 </div>
                 <h3 className="text-[1.75rem] font-black text-slate-800 tracking-tight uppercase mb-4">Gas Hob Installation</h3>
-                <p className="text-slate-600 leading-relaxed font-medium mb-8">
+                <p className="text-slate-600 leading-relaxed font-medium mb-6">
                   A modern gas hob requires absolute precision. Integrated directly into your worktops, the connection must be flawlessly secure while allowing for the strict specific clearances and "hot zone" parameters required by manufacturer guidelines.
                 </p>
+
                 <div className="relative h-48 sm:h-64 rounded-2xl overflow-hidden shadow-lg">
                   <Image src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Gas Hob Installation" fill className="object-cover transform group-hover:scale-105 transition-transform duration-700" unoptimized />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -169,6 +170,12 @@ export default async function GasPage() {
                       }
                     ]} />
                   </div>
+                  <div className="pt-6 mt-6 border-t border-slate-100 flex justify-end">
+                    <Link href="#contact" className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_8px_16px_rgba(37,99,235,0.2)] hover:shadow-[0_12px_24px_rgba(37,99,235,0.3)] hover:-translate-y-1 w-full sm:w-auto">
+                      Get A Quote
+                      <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -181,9 +188,10 @@ export default async function GasPage() {
                   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                 </div>
                 <h3 className="text-[1.75rem] font-black text-slate-800 tracking-tight uppercase mb-4">Gas Cooker Installation</h3>
-                <p className="text-slate-600 leading-relaxed font-medium mb-8">
+                <p className="text-slate-600 leading-relaxed font-medium mb-6">
                   Free-standing gas cookers or range cookers demand robust structural stability and high-flow flexible hose connections. We ensure your cooker is perfectly leveled, rigidly secured with stability chains, and safely connected to the mains.
                 </p>
+
                 <div className="relative h-48 sm:h-64 rounded-2xl overflow-hidden shadow-lg">
                   <Image src="https://images.unsplash.com/photo-1590756254933-2873d72a83b6?auto=format&fit=crop&w=800&q=80" alt="Gas Range Cooker" fill className="object-cover transform group-hover:scale-105 transition-transform duration-700" unoptimized />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -211,6 +219,12 @@ export default async function GasPage() {
                         answer: "We can safely and cleanly disconnect your old appliance and isolate the pipework before setting up the new one. Many of our Hampshire clients also request active disposal services, which can be swiftly arranged upon your request."
                       }
                     ]} />
+                  </div>
+                  <div className="pt-6 mt-6 border-t border-orange-100/50 flex justify-end">
+                    <Link href="#contact" className="inline-flex items-center justify-center px-6 py-3 bg-[#ff5e14] hover:bg-[#e65512] text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-all shadow-[0_8px_16px_rgba(255,94,20,0.2)] hover:shadow-[0_12px_24px_rgba(255,94,20,0.3)] hover:-translate-y-1 w-full sm:w-auto">
+                      Get A Quote
+                      <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </Link>
                   </div>
                 </div>
               </div>

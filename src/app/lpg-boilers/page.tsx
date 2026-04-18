@@ -1,4 +1,4 @@
-﻿
+
 import Image from 'next/image';
 import Link from 'next/link';
 import LocationContact from '@/components/LocationContact';
@@ -102,13 +102,7 @@ export default function NewBoilersPage() {
                 At Tom Sutton Heating we work with a select tier of premium thermal manufacturers. As <strong className="text-slate-800 font-bold">Worcester Accredited Installers</strong>, their pioneering systems represent our absolute number one boiler recommendation and top sellers globally.
               </p>
 
-              <Link
-                href="/our-boiler-brands/"
-                className="group relative inline-flex items-center justify-center whitespace-nowrap px-8 py-4 sm:px-10 sm:py-4 bg-slate-900 hover:bg-black text-white font-bold tracking-widest text-sm uppercase rounded-xl transition-all hover:-translate-y-1 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.3)]"
-              >
-                <span>View All Brands</span>
-                <svg className="w-5 h-5 ml-2.5 opacity-80 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-              </Link>
+
             </div>
 
             {/* Right Column: Visual Showcase Display Component */}

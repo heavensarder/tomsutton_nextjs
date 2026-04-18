@@ -50,7 +50,7 @@ export async function PUT(
     const body = await request.json();
     const { 
       title, slug, content, excerpt, featured_image, 
-      category_id, meta_title, meta_description, meta_keywords, status 
+      category_id, meta_title, meta_description, meta_keywords, status, is_energy_event 
     } = body;
 
     if (!title || !slug || !content) {
@@ -75,7 +75,7 @@ export async function PUT(
       `UPDATE blog_posts SET 
         title = ?, slug = ?, content = ?, excerpt = ?, 
         featured_image = ?, category_id = ?, 
-        meta_title = ?, meta_description = ?, meta_keywords = ?, status = ?
+        meta_title = ?, meta_description = ?, meta_keywords = ?, status = ?, is_energy_event = ?
         ${publishedAtUpdate}
        WHERE id = ?`,
       [
@@ -87,6 +87,7 @@ export async function PUT(
         meta_description || '', 
         meta_keywords || '',
         status || 'draft',
+        is_energy_event ? 1 : 0,
         id
       ]
     );

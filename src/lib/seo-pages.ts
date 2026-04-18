@@ -23,21 +23,14 @@ export const SITE_PAGES: SitePage[] = [
   { path: '/gas', name: 'Gas Services', category: 'Services' },
   { path: '/heating', name: 'Heating Services', category: 'Services' },
   { path: '/oil', name: 'LPG & Oil', category: 'Services' },
-  { path: '/nest-thermostat-installation', name: 'Nest Thermostat Installation', category: 'Services' },
+  { path: '/smart-thermostat-installation', name: 'Smart Thermostats', category: 'Services' },
+  { path: '/renewable-technology', name: 'Renewable Technology', category: 'Services' },
   { path: '/unvented-hot-water', name: 'Unvented Hot Water', category: 'Services' },
   { path: '/online-boiler-quote', name: 'Online Boiler Quote', category: 'Services' },
 
   // Boiler Brands
-  { path: '/our-boiler-brands', name: 'Our Boiler Brands', category: 'Boiler Brands' },
   { path: '/lpg-boilers', name: 'LPG Boilers', category: 'Boiler Brands' },
   { path: '/oil-boilers', name: 'Oil Boilers', category: 'Boiler Brands' },
-
-  // Alpha Range
-  { path: '/alpha', name: 'Alpha Boilers', category: 'Alpha Range' },
-  { path: '/alpha-e-tec-plus', name: 'Alpha E-Tec Plus', category: 'Alpha Range' },
-  { path: '/alpha-e-tec-regular', name: 'Alpha E-Tec Regular', category: 'Alpha Range' },
-  { path: '/alpha-e-tec-system', name: 'Alpha E-Tec System', category: 'Alpha Range' },
-  { path: '/alpha-evoke', name: 'Alpha Evoke', category: 'Alpha Range' },
 
   // Worcester Bosch Range
   { path: '/worcester-bosch', name: 'Worcester Bosch', category: 'Worcester Bosch' },
@@ -46,7 +39,6 @@ export const SITE_PAGES: SitePage[] = [
   { path: '/worcester-bosch-8000-installation', name: 'Worcester Bosch 8000', category: 'Worcester Bosch' },
   { path: '/worcester-bosch-cdi-compact', name: 'Worcester Bosch CDi Compact', category: 'Worcester Bosch' },
   { path: '/worcester-bosch-greenstar-ri-installation', name: 'Worcester Bosch Greenstar Ri', category: 'Worcester Bosch' },
-  { path: '/worcester-bosch-i-system', name: 'Worcester Bosch i-System', category: 'Worcester Bosch' },
 
   // Service Areas
   { path: '/hampshire', name: 'Hampshire', category: 'Service Areas' },

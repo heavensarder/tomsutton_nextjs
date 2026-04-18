@@ -18,6 +18,7 @@ export default function PostEditor({ initialData = null }: { initialData?: any }
   const [excerpt, setExcerpt] = useState(initialData?.excerpt || '');
   const [featuredImage, setFeaturedImage] = useState(initialData?.featured_image || '');
   const [categoryId, setCategoryId] = useState(initialData?.category_id || '');
+  const [isEnergyEvent, setIsEnergyEvent] = useState(initialData?.is_energy_event ? true : false);
   const [metaTitle, setMetaTitle] = useState(initialData?.meta_title || '');
   const [metaDescription, setMetaDescription] = useState(initialData?.meta_description || '');
   const [metaKeywords, setMetaKeywords] = useState(initialData?.meta_keywords || '');
@@ -87,6 +88,7 @@ export default function PostEditor({ initialData = null }: { initialData?: any }
     const payload = {
       title, slug, content, excerpt, featured_image: featuredImage,
       category_id: categoryId ? parseInt(categoryId) : null,
+      is_energy_event: isEnergyEvent,
       meta_title: metaTitle, meta_description: excerpt, meta_keywords: metaKeywords,
       status: postStatus
     };
@@ -296,13 +298,31 @@ export default function PostEditor({ initialData = null }: { initialData?: any }
             <select
               value={categoryId}
               onChange={(e) => setCategoryId(e.target.value)}
-              className="w-full text-sm font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all appearance-none cursor-pointer"
+              className="w-full text-sm font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all appearance-none cursor-pointer mb-6"
             >
               <option value="">Uncategorized</option>
               {categories.map((c: any) => (
                 <option key={c.id} value={c.id}>{c.name}</option>
               ))}
             </select>
+
+            <div className="pt-5 border-t border-slate-100 flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="isEnergyEvent"
+                checked={isEnergyEvent}
+                onChange={(e) => setIsEnergyEvent(e.target.checked)}
+                className="mt-1 w-4 h-4 text-[#1d4ed8] bg-slate-100 border-slate-300 rounded focus:ring-[#1d4ed8] cursor-pointer"
+              />
+              <div className="flex-1">
+                <label htmlFor="isEnergyEvent" className="text-sm font-black text-slate-800 cursor-pointer block">
+                  Feature on Energy Events
+                </label>
+                <p className="text-[0.65rem] font-medium text-slate-400 mt-1 leading-relaxed">
+                  Checking this makes the post simultaneously appear on the special /energy-events page.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* SEO Metadata */}

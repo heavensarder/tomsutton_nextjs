@@ -115,10 +115,10 @@ const NavBar = () => {
 
                                     {/* 2nd Level Dropdown (Slide Right) */}
                                     <div className="relative group/sub">
-                                        <Link href="/our-boiler-brands" className="flex items-center justify-between px-6 py-3.5 text-sm font-semibold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors">
+                                        <div className="flex items-center justify-between px-6 py-3.5 text-sm font-semibold text-gray-700 cursor-default">
                                             Our Boiler Brands
                                             <svg className="w-4 h-4 ml-2 text-gray-400 group-hover/sub:text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                                        </Link>
+                                        </div>
                                         {/* 3rd Level Dropdown Box */}
                                         <div className="absolute left-[95%] top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible group-hover/sub:translate-x-2 transition-all duration-300 w-64 bg-white border-t-4 border-blue-900 shadow-2xl z-50 py-2 rounded-b-lg rounded-tr-lg">
                                             {/* Worcester Bosch sub-sub menu */}
@@ -275,7 +275,7 @@ const NavBar = () => {
                                         <div className="border-l-2 border-orange-200 ml-2 pl-4 space-y-1">
                                             <Link href="/new-boiler-installation-2" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-800 border-b border-gray-200/50 hover:text-[#ff5e14]">Boiler Installation</Link>
                                             <Link href="/new-boilers" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">New Boilers</Link>
-                                            <Link href="/our-boiler-brands" onClick={() => setIsMobileOpen(false)} className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50 hover:text-[#ff5e14]">Our Boiler Brands</Link>
+                                            <div className="block py-2.5 text-[14px] font-semibold text-slate-600 border-b border-gray-200/50">Our Boiler Brands</div>
                                             <div className="border-l border-gray-200">
                                                 <Link href="/worcester-bosch" onClick={() => setIsMobileOpen(false)} className="block py-2 text-[13px] font-bold text-slate-600 pl-4 hover:text-[#ff5e14]">- Worcester Bosch</Link>
                                                 <div className="pl-6 ml-2 space-y-1 mb-2">

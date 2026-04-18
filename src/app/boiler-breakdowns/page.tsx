@@ -5,6 +5,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import FaqAccordion from '@/components/FaqAccordion';
 import LocationContact from '@/components/LocationContact';
 import ContactSection from '@/components/ContactSection';
+import ContactForm from '@/components/ContactForm';
 
 export default function BoilerBreakdownsPage() {
   return (
@@ -114,51 +115,19 @@ export default function BoilerBreakdownsPage() {
               </div>
             </div>
 
-            {/* Right Column: Static Contact Form */}
+            {/* Right Column: Dynamic Contact Form */}
             <div className="w-full md:w-[50%] flex flex-col items-center md:items-start pt-2 lg:pl-10">
               <h2 className="text-[1.5rem] sm:text-[1.75rem] font-bold text-[#475569] tracking-tight mb-6 text-center md:text-left uppercase w-full">
                 LEAVE YOUR DETAILS
               </h2>
 
               <p className="text-gray-500 font-medium text-[0.95rem] leading-[1.8] mb-8 text-center md:text-left w-full">
-                Leave your details below and we'll get in touch to discuss your new boiler.
+                Leave your details below and we'll get in touch to discuss your boiler breakdown.
               </p>
 
-              <form className="w-full space-y-4" action="/contact">
-                <div className="w-full">
-                  <input type="text" placeholder="Name *" className="w-full px-5 py-3.5 border border-slate-200 rounded-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-colors bg-white font-medium text-slate-700 placeholder-slate-400 text-[0.95rem]" required />
-                </div>
-                <div className="w-full">
-                  <input type="email" placeholder="E-mail *" className="w-full px-5 py-3.5 border border-slate-200 rounded-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-colors bg-white font-medium text-slate-700 placeholder-slate-400 text-[0.95rem]" required />
-                </div>
-                <div className="w-full">
-                  <input type="tel" placeholder="Telephone *" className="w-full px-5 py-3.5 border border-slate-200 rounded-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-colors bg-white font-medium text-slate-700 placeholder-slate-400 text-[0.95rem]" required />
-                </div>
-                <div className="w-full">
-                  <input type="text" placeholder="Country" className="w-full px-5 py-3.5 border border-slate-200 rounded-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-colors bg-white font-medium text-slate-700 placeholder-slate-400 text-[0.95rem]" />
-                </div>
-                <div className="w-full">
-                  <input type="text" placeholder="City" className="w-full px-5 py-3.5 border border-slate-200 rounded-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-colors bg-white font-medium text-slate-700 placeholder-slate-400 text-[0.95rem]" />
-                </div>
-                <div className="w-full">
-                  <textarea rows={5} placeholder="Message *" className="w-full px-5 py-3.5 border border-slate-200 rounded-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-colors bg-white font-medium text-slate-700 placeholder-slate-400 text-[0.95rem] resize-y" required></textarea>
-                </div>
-
-                <div className="w-full flex items-start gap-4 py-3">
-                  <div className="flex items-center h-5 mt-0.5">
-                    <input id="consent" type="checkbox" className="w-4 h-4 border-slate-300 rounded-sm text-[#2563eb] focus:ring-[#2563eb] bg-white cursor-pointer" required />
-                  </div>
-                  <label htmlFor="consent" className="text-[0.8rem] text-slate-500 font-medium leading-snug cursor-pointer">
-                    By using this form you agree with the storage and handling of your data by this website.
-                  </label>
-                </div>
-
-                <div className="pt-2 w-full flex justify-start">
-                  <button type="submit" className="px-8 py-3 bg-[#0066cc] hover:bg-[#0052a3] text-white font-bold text-[0.95rem] rounded-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                    Send message
-                  </button>
-                </div>
-              </form>
+              <div className="w-full bg-slate-50 rounded-[2.5rem] shadow-sm border border-slate-200 p-6 sm:p-10">
+                <ContactForm />
+              </div>
             </div>
 
           </div>
@@ -229,7 +198,7 @@ export default function BoilerBreakdownsPage() {
         </div>
       </section>
 
-      <ContactSection />
+
     </main>
   );
 }

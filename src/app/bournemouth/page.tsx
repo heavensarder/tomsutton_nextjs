@@ -366,7 +366,7 @@ export default function BournemouthAreaPage() {
                   </div>
                   <div>
                     <p className="text-gray-400 text-xs font-semibold tracking-wider uppercase mb-0.5">Our Service Area</p>
-                    <p className="text-[#0d1033] font-bold text-base leading-snug">New Milton, Bournemouth<br/>BH25, United Kingdom</p>
+                    <p className="text-[#0d1033] font-bold text-[12px] sm:text-[13px] xl:text-[14px] leading-tight">Unit 1J, Hamilton Business Park,<br/>New Milton BH25 6TL, United Kingdom</p>
                   </div>
                 </div>
 
@@ -383,10 +383,6 @@ export default function BournemouthAreaPage() {
                 </div>
 
                 <Link href="/contact" className="group mt-2 w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] rounded-xl font-bold text-white text-base hover:from-[#ff6a00] hover:to-[#ff9c52] transition-all shadow-lg hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-5px_rgba(255,94,20,0.4)]">
-                  Contact Us Today
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </Link>
-                <Link href="#contact" className="group mt-2 w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-[#ff5e14] to-[#ff8c42] rounded-xl font-bold text-white text-base hover:from-[#ff6a00] hover:to-[#ff9c52] transition-all shadow-lg hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-5px_rgba(255,94,20,0.4)]">
                   Contact Us Today
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>

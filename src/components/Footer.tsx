@@ -120,8 +120,11 @@ const Footer = () => {
 
                 {/* Bottom Copyright */}
                 <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 gap-4">
-                    <p>&copy; {new Date().getFullYear()} {s?.footer_copyright || 'Tom Sutton Heating. All Rights Reserved.'}</p>
-                    <p>
+                    <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+                        <p>&copy; {new Date().getFullYear()} {s?.footer_copyright || 'Tom Sutton Heating. All Rights Reserved.'}</p>
+                        <Link href="/privacy-policy" className="hover:text-white transition-colors underline md:no-underline">Privacy Policy</Link>
+                    </div>
+                    <p className="text-center md:text-left">
                         Developed by <a href="https://heavensarder.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 font-bold hover:text-white transition-colors">Web With Heaven</a>
                     </p>
                 </div>

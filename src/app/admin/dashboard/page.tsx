@@ -152,7 +152,9 @@ export default function AdminDashboardPage() {
             </div>
             <div className="flex justify-between items-center py-2 border-b border-slate-50">
               <span className="text-slate-500 text-sm">Environment</span>
-              <span className="text-sm font-semibold text-green-600 bg-green-50 px-2.5 py-0.5 rounded-full">Development</span>
+              <span className={`text-sm font-semibold px-2.5 py-0.5 rounded-full ${process.env.NODE_ENV === 'production' ? 'text-blue-600 bg-blue-50' : 'text-green-600 bg-green-50'}`}>
+                {process.env.NODE_ENV === 'production' ? 'Production' : 'Development'}
+              </span>
             </div>
             <div className="flex justify-between items-center py-2">
               <span className="text-slate-500 text-sm">Last SEO Update</span>

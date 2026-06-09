@@ -56,16 +56,27 @@ export default function MediaPicker({ open, onClose, onSelect }: MediaPickerProp
 
   const handleUpload = async (files: FileList | File[]) => {
     setUploading(true);
-    const fd = new FormData();
-    Array.from(files).forEach(f => fd.append('files', f));
-    try {
-      const res = await fetch('/api/admin/media', { method: 'POST', body: fd });
-      const data = await res.json();
-      if (data.success) {
-        await fetchMedia();
-        if (data.uploaded?.[0]?.id) setSelectedId(data.uploaded[0].id);
-      }
-    } catch { /* silent */ }
+    let lastId: number | null = null;
+    let anySuccess = false;
+
+    // Upload sequentially to avoid triggering Nginx/server large payload limits
+    for (const f of Array.from(files)) {
+      const fd = new FormData();
+      fd.append('files', f);
+      try {
+        const res = await fetch('/api/admin/media', { method: 'POST', body: fd });
+        const data = await res.json();
+        if (data.success && data.uploaded?.[0]?.id) {
+          lastId = data.uploaded[0].id;
+          anySuccess = true;
+        }
+      } catch { /* silent for individual file failures */ }
+    }
+
+    if (anySuccess) {
+      await fetchMedia();
+      if (lastId) setSelectedId(lastId);
+    }
     setUploading(false);
   };
 

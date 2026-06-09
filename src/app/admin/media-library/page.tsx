@@ -44,19 +44,31 @@ export default function MediaLibraryPage() {
 
   const handleUpload = async (files: FileList | File[]) => {
     setUploading(true);
-    const fd = new FormData();
-    Array.from(files).forEach(f => fd.append('files', f));
-    try {
-      const res = await fetch('/api/admin/media', { method: 'POST', body: fd });
-      const data = await res.json();
-      if (data.success) {
-        setToast({ message: data.message, type: 'success' });
-        fetchMedia();
-      } else {
-        setToast({ message: data.error || 'Upload failed', type: 'error' });
+    let successCount = 0;
+    let failCount = 0;
+
+    // Upload files sequentially to prevent Nginx/Server large payload errors
+    for (const f of Array.from(files)) {
+      const fd = new FormData();
+      fd.append('files', f);
+      try {
+        const res = await fetch('/api/admin/media', { method: 'POST', body: fd });
+        const data = await res.json();
+        if (data.success) {
+          successCount++;
+        } else {
+          failCount++;
+        }
+      } catch {
+        failCount++;
       }
-    } catch {
-      setToast({ message: 'Upload error', type: 'error' });
+    }
+
+    if (successCount > 0) {
+      setToast({ message: `Successfully uploaded ${successCount} file(s). ${failCount > 0 ? `${failCount} failed.` : ''}`, type: 'success' });
+      fetchMedia();
+    } else if (failCount > 0) {
+      setToast({ message: `Failed to upload ${failCount} file(s).`, type: 'error' });
     }
     setUploading(false);
   };

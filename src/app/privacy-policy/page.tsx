@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Information We Collect</h2>
           <p className="mb-4">We may collect personal data from you in a variety of ways, including when you visit our site, request a quote, book a service, or fill out a form.</p>
-          
+
           <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Personal Data You Provide</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2">
             <li><strong>Contact Information:</strong> Name, email address, phone number, and physical billing/job addresses.</li>
@@ -94,7 +94,7 @@ export default function PrivacyPolicyPage() {
             <li className="mb-2"><strong>Company Name:</strong> SL Energy Ltd / Tom Sutton Heating</li>
             <li className="mb-2"><strong>Email:</strong> <a href="mailto:info@tomsuttonheating.co.uk" className="text-[#0055A4] hover:underline font-medium">info@tomsuttonheating.co.uk</a></li>
             <li className="mb-2"><strong>Phone:</strong> <a href="tel:01590631671" className="text-[#0055A4] hover:underline font-medium">01590 631671</a></li>
-            <li><strong>Address:</strong> New Milton, Hampshire, UK</li>
+            <li><strong>Address:</strong> Unit 1J, Hamilton Business Park, New Milton BH25 6TL, United Kingdom</li>
           </ul>
         </div>
       </div>

@@ -113,10 +113,10 @@ export default function OilBoilersPage() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-blue-100/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0 pointer-events-none"></div>
 
                 {/* Physical Logo Bounding Box ensuring absolute structural integrity */}
-                <div className="relative w-full h-[70px] sm:h-[100px] z-10 transition-transform duration-500 group-hover:scale-105">
+                <div className="relative w-full h-[120px] sm:h-[160px] z-10 transition-transform duration-500 group-hover:scale-105">
                   <Image
-                    src="https://i.postimg.cc/PqXwb81V/WAI-Bosch-Logo-WHITE-BOXES-SGRight-2-300x73.webp"
-                    alt="Worcester Bosch Accredited Installer Partnership Logo"
+                    src="https://i.postimg.cc/t4MXrkZs/grant-logo.png"
+                    alt="Grant Accredited Installer Partnership Logo"
                     fill
                     className="object-contain object-center mix-blend-multiply"
                     unoptimized
@@ -138,7 +138,7 @@ export default function OilBoilersPage() {
             <div className="w-full lg:w-[40%] flex justify-center lg:sticky lg:top-32 relative z-10 pt-4">
               <div className="relative w-full max-w-[450px] aspect-[4/5] sm:aspect-[3/4] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 group flex items-center justify-center">
                 <Image
-                  src="https://i.postimg.cc/bYQzjs84/grant-vortex-internal-combi.jpg"
+                  src="https://i.postimg.cc/RCdxsd2v/grant-images.png"
                   alt="Grant Vortex Pro Internal Combi Boiler"
                   fill
                   className="object-contain p-6 transform group-hover:scale-105 transition-transform duration-700"

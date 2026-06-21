@@ -59,7 +59,7 @@ export default function SmartThermostatInstallationPage() {
             <div className="w-full lg:w-[45%] relative mt-8 lg:mt-0 flex justify-center lg:justify-end z-20 group">
               <div className="relative w-full max-w-[450px] aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3]">
                 <Image 
-                  src="https://i.postimg.cc/4yFRKn1b/Nest-White.webp" 
+                  src="https://i.postimg.cc/3JzpPXD0/Smart-Thermostat-tranaprent.webp" 
                   alt="Smart Home Technology Logo" 
                   fill 
                   className="object-contain transform transition-transform duration-700 ease-out group-hover:scale-105 drop-shadow-[0_10px_20px_rgba(0,0,0,0.1)]" 
@@ -104,7 +104,7 @@ export default function SmartThermostatInstallationPage() {
                <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(37,99,235,0.15)] ring-1 ring-slate-200/60 bg-white group p-4 border border-white">
                   <div className="absolute inset-0 bg-blue-50/20 bg-gradient-to-tr from-transparent to-blue-100/10 pointer-events-none"></div>
                   <Image 
-                    src="https://i.postimg.cc/bJCBgW2n/Nest.webp" 
+                    src="https://i.postimg.cc/SNStnpZZ/Smart-thermostat.webp" 
                     alt="Smart Thermostat Device Mounted" 
                     fill 
                     className="object-cover rounded-[2rem] transform group-hover:scale-105 transition-transform duration-1000 ease-in-out mix-blend-multiply" 

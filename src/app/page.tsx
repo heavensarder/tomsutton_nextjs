@@ -460,7 +460,7 @@ export default async function Home() {
       </section>
 
       {/* Ultra-Premium Smart Home Section */}
-      <section className="relative py-24 sm:py-32 bg-[#050B14] overflow-hidden">
+      <section className="relative py-24 sm:py-32 bg-[#050B14] overflow-hidden hidden">
         {/* Ambient Glowing Background Orbs */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#00d0bb]/10 rounded-full blur-[120px] pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none transform -translate-x-1/3 translate-y-1/3"></div>
@@ -657,10 +657,10 @@ export default async function Home() {
                 <React.Fragment key={half}>
                   {[0, 1, 2].map((group) => (
                     <React.Fragment key={`${half}-${group}`}>
-                      <Image src="https://i.postimg.cc/d3k7Dghd/logo_1.webp" alt="Brand Partner 1" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
-                      <Image src="https://i.postimg.cc/Fzdf1wY3/logo_2.webp" alt="Brand Partner 2" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
-                      <Image src="https://i.postimg.cc/NF9yLZKr/logo_3.webp" alt="Brand Partner 3" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
-                      <Image src="https://i.postimg.cc/tJZ178sF/logo_4.webp" alt="Brand Partner 4" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="https://i.postimg.cc/43tLh4pQ/alpha-logo.png" alt="Alpha Boilers" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="https://i.postimg.cc/sXP3KrC2/Glow-Worm-logo.png" alt="Glow Worm" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="https://i.postimg.cc/505fpVW2/Vaillant.png" alt="Vaillant" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="https://i.postimg.cc/6QRjG6CV/worcester-bosch-logo.png" alt="Worcester Bosch" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
                     </React.Fragment>
                   ))}
                 </React.Fragment>

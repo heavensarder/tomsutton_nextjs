@@ -138,7 +138,7 @@ export default function OilBoilersPage() {
             <div className="w-full lg:w-[40%] flex justify-center lg:sticky lg:top-32 relative z-10 pt-4">
               <div className="relative w-full max-w-[450px] aspect-[4/5] sm:aspect-[3/4] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 group flex items-center justify-center">
                 <Image
-                  src="https://i.postimg.cc/RCdxsd2v/grant-images.png"
+                  src="https://i.postimg.cc/wBg5Y7jk/grant-vortex-pro.png"
                   alt="Grant Vortex Pro Internal Combi Boiler"
                   fill
                   className="object-contain p-6 transform group-hover:scale-105 transition-transform duration-700"

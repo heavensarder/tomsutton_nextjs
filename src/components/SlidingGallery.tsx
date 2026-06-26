@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 
 interface SlidingGalleryProps {
@@ -8,25 +8,28 @@ interface SlidingGalleryProps {
 }
 
 export default function SlidingGallery({ images }: SlidingGalleryProps) {
+  const uniqueImages = useMemo(() => Array.from(new Set(images)), [images]);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const openLightbox = useCallback((globalIndex: number) => {
-    setActiveIndex(globalIndex);
+    const clickedUrl = images[globalIndex];
+    const uniqueIndex = uniqueImages.indexOf(clickedUrl);
+    setActiveIndex(uniqueIndex !== -1 ? uniqueIndex : 0);
     setLightboxOpen(true);
-  }, []);
+  }, [images, uniqueImages]);
 
   const closeLightbox = useCallback(() => {
     setLightboxOpen(false);
   }, []);
 
   const goNext = useCallback(() => {
-    setActiveIndex(prev => (prev + 1) % images.length);
-  }, [images.length]);
+    setActiveIndex(prev => (prev + 1) % uniqueImages.length);
+  }, [uniqueImages.length]);
 
   const goPrev = useCallback(() => {
-    setActiveIndex(prev => (prev - 1 + images.length) % images.length);
-  }, [images.length]);
+    setActiveIndex(prev => (prev - 1 + uniqueImages.length) % uniqueImages.length);
+  }, [uniqueImages.length]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -97,7 +100,7 @@ export default function SlidingGallery({ images }: SlidingGalleryProps) {
 
           {/* Image Counter */}
           <div className="absolute top-6 left-6 text-white/70 font-bold text-sm tracking-widest z-50">
-            {activeIndex + 1} / {images.length}
+            {activeIndex + 1} / {uniqueImages.length}
           </div>
 
           {/* Previous Button */}
@@ -122,7 +125,7 @@ export default function SlidingGallery({ images }: SlidingGalleryProps) {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={images[activeIndex]}
+              src={uniqueImages[activeIndex]}
               alt={`Gallery Image ${activeIndex + 1}`}
               fill
               className="object-contain rounded-2xl"
@@ -134,7 +137,7 @@ export default function SlidingGallery({ images }: SlidingGalleryProps) {
 
           {/* Thumbnail Strip */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-50 max-w-[90vw] overflow-x-auto pb-2 px-4">
-            {images.map((src, i) => (
+            {uniqueImages.map((src, i) => (
               <button
                 key={i}
                 onClick={(e) => { e.stopPropagation(); setActiveIndex(i); }}

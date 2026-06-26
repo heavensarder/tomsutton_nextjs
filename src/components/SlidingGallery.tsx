@@ -128,6 +128,7 @@ export default function SlidingGallery({ images }: SlidingGalleryProps) {
               className="object-contain rounded-2xl"
               sizes="80vw"
               priority
+              unoptimized
             />
           </div>
 
@@ -139,7 +140,7 @@ export default function SlidingGallery({ images }: SlidingGalleryProps) {
                 onClick={(e) => { e.stopPropagation(); setActiveIndex(i); }}
                 className={`relative w-16 h-10 rounded-lg overflow-hidden shrink-0 transition-all duration-300 ${i === activeIndex ? 'ring-2 ring-[#ff5e14] scale-110 brightness-100' : 'opacity-50 hover:opacity-80'}`}
               >
-                <Image src={src} alt={`Thumb ${i + 1}`} fill className="object-cover" />
+                <Image src={src} alt={`Thumb ${i + 1}`} fill sizes="64px" className="object-cover" unoptimized />
               </button>
             ))}
           </div>

@@ -34,6 +34,9 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href={settings.site_favicon || 'https://i.postimg.cc/X7skSxGn/favicon.png'} />
         <link rel="apple-touch-icon" href={settings.site_favicon || 'https://i.postimg.cc/X7skSxGn/favicon.png'} />
+        {settings.custom_header_code && (
+          <script dangerouslySetInnerHTML={{ __html: `</script>${settings.custom_header_code}<script>` }} />
+        )}
       </head>
       <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
         <SiteSettingsProvider settings={settings}>

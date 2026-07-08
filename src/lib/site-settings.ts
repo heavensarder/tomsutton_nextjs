@@ -32,6 +32,8 @@ export interface SiteSettings {
   footer_vat_number: string;
   // Google Maps
   footer_google_maps_url: string;
+  // Advanced Custom Code
+  custom_header_code: string;
 }
 
 // Default values matching the current hardcoded data
@@ -61,6 +63,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   footer_oftec_tech_reg: '38391',
   footer_vat_number: '263 5356 96',
   footer_google_maps_url: 'https://www.google.com/maps?cid=8226595044909973442',
+  custom_header_code: '',
 };
 
 export const SETTINGS_LABELS: Record<string, { label: string; helpText?: string; group: string }> = {

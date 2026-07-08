@@ -51,6 +51,7 @@ export default function SeoManagerPage() {
   // Sitemap & Robots state
   const [sitemapContent, setSitemapContent] = useState('');
   const [robotsContent, setRobotsContent] = useState('');
+  const [customHeaderCode, setCustomHeaderCode] = useState('');
   const [savingFile, setSavingFile] = useState<string | null>(null);
   const [filesExpanded, setFilesExpanded] = useState(false);
 
@@ -63,7 +64,18 @@ export default function SeoManagerPage() {
     setLoading(false);
   }, []);
 
-  useEffect(() => { fetchData(); fetchFiles(); }, [fetchData]);
+  useEffect(() => { fetchData(); fetchFiles(); fetchSettings(); }, [fetchData]);
+
+  const fetchSettings = async () => {
+    try {
+      const res = await fetch('/api/admin/site-settings');
+      const json = await res.json();
+      if (json.success && json.data) {
+        const headerRow = json.data.find((r: any) => r.setting_key === 'custom_header_code');
+        if (headerRow) setCustomHeaderCode(headerRow.setting_value);
+      }
+    } catch { /* silent */ }
+  };
 
   useEffect(() => {
     if (toast) {
@@ -94,6 +106,26 @@ export default function SeoManagerPage() {
       const data = await res.json();
       if (data.success) {
         setToast({ message: `${filename} saved successfully!`, type: 'success' });
+      } else {
+        setToast({ message: data.error || 'Save failed', type: 'error' });
+      }
+    } catch {
+      setToast({ message: 'Network error', type: 'error' });
+    }
+    setSavingFile(null);
+  };
+
+  const handleSaveHeaderCode = async () => {
+    setSavingFile('header_code');
+    try {
+      const res = await fetch('/api/admin/site-settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ settings: { custom_header_code: customHeaderCode } }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setToast({ message: 'Header code saved successfully!', type: 'success' });
       } else {
         setToast({ message: data.error || 'Save failed', type: 'error' });
       }
@@ -262,8 +294,8 @@ export default function SeoManagerPage() {
             <svg className="w-5 h-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
           </div>
           <div className="flex-1 min-w-0">
-            <p className="font-bold text-slate-800 text-[0.95rem]">Sitemap & Robots.txt</p>
-            <p className="text-slate-400 text-xs">Manage your sitemap.xml and robots.txt files</p>
+            <p className="font-bold text-slate-800 text-[0.95rem]">Sitemap, Robots.txt & Global Scripts</p>
+            <p className="text-slate-400 text-xs">Manage your sitemap.xml, robots.txt and head scripts</p>
           </div>
           <div className="flex items-center gap-2">
             {sitemapContent && <span className="text-xs font-semibold px-2.5 py-1 rounded-full border bg-green-50 text-green-600 border-green-200 hidden sm:block">sitemap.xml ✓</span>}
@@ -332,6 +364,32 @@ export default function SeoManagerPage() {
                 rows={6}
                 className="w-full bg-[#0f172a] text-emerald-300 border border-slate-700 rounded-xl px-4 py-3 text-xs font-mono leading-relaxed focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-y"
                 placeholder={'User-agent: *\nAllow: /\n\nSitemap: https://tomsuttonheating.co.uk/sitemap.xml'}
+                spellCheck={false}
+              />
+            </div>
+
+            {/* Custom Header Code */}
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Global Header Scripts</label>
+                </div>
+                <button
+                  onClick={handleSaveHeaderCode}
+                  disabled={savingFile === 'header_code'}
+                  className="text-xs font-bold text-white bg-[#0f172a] hover:bg-[#1e293b] px-3 py-1.5 rounded-lg transition-all disabled:opacity-60 flex items-center gap-1.5"
+                >
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  {savingFile === 'header_code' ? 'Saving...' : 'Save Scripts'}
+                </button>
+              </div>
+              <p className="text-xs text-slate-400 mb-2">Inject Google Analytics, Tag Manager, Facebook Pixel or other tracking codes into the website's <code>&lt;head&gt;</code>.</p>
+              <textarea
+                value={customHeaderCode}
+                onChange={(e) => setCustomHeaderCode(e.target.value)}
+                rows={8}
+                className="w-full bg-[#0f172a] text-purple-300 border border-slate-700 rounded-xl px-4 py-3 text-xs font-mono leading-relaxed focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-y"
+                placeholder={'<!-- Google Analytics -->\n<script async src="..."></script>'}
                 spellCheck={false}
               />
             </div>

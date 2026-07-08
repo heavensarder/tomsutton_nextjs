@@ -349,8 +349,8 @@ const NavBar = () => {
                                 Renewables
                             </Link>
 
-                            <Link href="/contact" onClick={() => setIsMobileOpen(false)} className={`px-6 py-4 text-[15px] font-semibold border-b border-gray-100 transition-colors  ${isContact ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}>
-                                Contact
+                            <Link href="/food-menu" onClick={() => setIsMobileOpen(false)} className={`px-6 py-4 text-[15px] font-semibold border-b border-gray-100 transition-colors  ${pathname === '/food-menu' ? 'text-[#ff5e14] bg-orange-50' : 'text-slate-800 hover:text-[#ff5e14] hover:bg-orange-50'}`}>
+                                Food Menu
                             </Link>
 
                             {/* MORE Dropdown */}

@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+import { generatePageMetadata, getSchemaMarkup } from '@/lib/seo-metadata';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,7 +18,13 @@ import pool from '@/lib/db';
 
 export const revalidate = 60;
 
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata('/');
+}
+
 export default async function Home() {
+  const schema = await getSchemaMarkup('/');
+
   // Fetch Latest Blog Posts
   const [rows] = await pool.execute(`
     SELECT p.title, p.slug, p.excerpt, p.featured_image, p.published_at, c.name as category_name
@@ -28,9 +36,16 @@ export default async function Home() {
   `);
   const latestPosts = rows as any[];
   return (
-    <main className="flex-1 w-full bg-slate-50 relative overflow-x-hidden">
-      {/* Hero Section - Matching New Design Pattern */}
-      <section className="relative w-full min-h-[calc(100vh-140px)] flex items-center overflow-hidden bg-gradient-to-r from-[#0d1033] via-[#2d3266] to-[#8f96b8] pt-20 lg:pt-10 pb-24 lg:pb-20">
+    <>
+      {schema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: schema }}
+        />
+      )}
+      <main className="flex-1 w-full bg-slate-50 relative overflow-x-hidden">
+        {/* Hero Section - Matching New Design Pattern */}
+        <section className="relative w-full min-h-[calc(100vh-140px)] flex items-center overflow-hidden bg-gradient-to-r from-[#0d1033] via-[#2d3266] to-[#8f96b8] pt-20 lg:pt-10 pb-24 lg:pb-20">
 
         {/* Background SVG Curve Effect across entire screen width */}
         <div className="absolute inset-0 pointer-events-none z-0 hidden lg:block">
@@ -842,5 +857,6 @@ export default async function Home() {
       </section>
 
     </main>
+    </>
   );
 }

@@ -38,17 +38,13 @@ export default async function RootLayout({
           if (!settings.custom_header_code) return null;
           
           let trimmed = settings.custom_header_code.trim();
-          let isJson = false;
           
-          // Check if it's raw JSON (like schema markup)
-          if (trimmed.startsWith('{') && trimmed.endsWith('}')) {
-            try {
-              JSON.parse(trimmed);
-              isJson = true;
-            } catch (e) {}
-          }
+          // Check if it looks like raw JSON (starts with { and ends with })
+          // We don't strictly enforce JSON.parse because sometimes users paste slightly invalid JSON 
+          // (like trailing commas), and we still want to wrap it in a script tag so it hides from the screen.
+          let isJsonLike = trimmed.startsWith('{') && trimmed.endsWith('}');
 
-          if (isJson) {
+          if (isJsonLike) {
             return (
               <script
                 type="application/ld+json"

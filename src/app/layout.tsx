@@ -34,9 +34,32 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href={settings.site_favicon || 'https://i.postimg.cc/X7skSxGn/favicon.png'} />
         <link rel="apple-touch-icon" href={settings.site_favicon || 'https://i.postimg.cc/X7skSxGn/favicon.png'} />
-        {settings.custom_header_code && (
-          <script dangerouslySetInnerHTML={{ __html: `</script>${settings.custom_header_code}<script>` }} />
-        )}
+        {(() => {
+          if (!settings.custom_header_code) return null;
+          
+          let trimmed = settings.custom_header_code.trim();
+          let isJson = false;
+          
+          // Check if it's raw JSON (like schema markup)
+          if (trimmed.startsWith('{') && trimmed.endsWith('}')) {
+            try {
+              JSON.parse(trimmed);
+              isJson = true;
+            } catch (e) {}
+          }
+
+          if (isJson) {
+            return (
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: trimmed }}
+              />
+            );
+          }
+          
+          // If it contains script tags or other HTML, use the injection hack
+          return <script dangerouslySetInnerHTML={{ __html: `</script>${settings.custom_header_code}<script>` }} />;
+        })()}
       </head>
       <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
         <SiteSettingsProvider settings={settings}>

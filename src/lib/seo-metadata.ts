@@ -91,7 +91,14 @@ export async function getSchemaMarkup(pagePath: string): Promise<string | null> 
       [pagePath]
     );
     const data = (rows as { schema_markup: string }[])[0];
-    return data?.schema_markup || null;
+    let schema = data?.schema_markup;
+    
+    if (schema) {
+      // Remove <script type="application/ld+json"> and </script> if the user accidentally pasted them
+      schema = schema.replace(/<script[^>]*>/gi, '').replace(/<\/script>/gi, '').trim();
+    }
+    
+    return schema || null;
   } catch {
     return null;
   }

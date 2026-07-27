@@ -127,6 +127,48 @@ export default function ReviewsPage() {
               </a>
             </div>
 
+            {/* Facebook Rating Summary Card */}
+            <div className="bg-white rounded-[2.5rem] p-8 shadow-[0_20px_60px_rgba(24,119,242,0.06)] border border-[#1877F2]/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(24,119,242,0.12)] transition-all duration-500 relative overflow-hidden group flex flex-col items-center justify-center min-h-[160px]">
+              {/* Top-right arrow */}
+              <a href="https://www.facebook.com/tomsuttonheating/reviews" target="_blank" rel="noopener noreferrer" className="absolute top-6 right-6 text-[#1877F2] opacity-50 hover:opacity-100 transition-opacity z-20">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+
+              <div className="absolute top-0 left-0 w-32 h-32 bg-[#1877F2]/10 rounded-full blur-[40px] group-hover:bg-[#1877F2]/20 transition-colors duration-500 pointer-events-none"></div>
+
+              {/* Facebook Logo */}
+              <div className="flex items-center justify-center gap-2 mb-5 relative z-10">
+                <svg className="w-10 h-10 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <span className="text-3xl font-bold text-[#1877F2] tracking-tight ml-1">facebook</span>
+              </div>
+
+              <div className="w-full h-px bg-gray-100 my-4 relative z-10"></div>
+
+              <div className="flex text-[#1877F2] gap-1 mb-2 relative z-10">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-[22px] h-[22px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                ))}
+              </div>
+
+              <div className="text-center mb-6 relative z-10">
+                <span className="text-[#0d1b42] font-black text-lg">5.0/5</span>
+                <span className="text-gray-400 font-medium ml-1.5">(Excellent)</span>
+              </div>
+
+              <a
+                href="https://www.facebook.com/tomsuttonheating/reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-gradient-to-r from-[#1877F2] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3.5 px-4 rounded-2xl text-center transition-all duration-300 shadow-[0_10px_20px_rgba(24,119,242,0.15)] hover:shadow-[0_10px_25px_rgba(24,119,242,0.3)] group/btn relative overflow-hidden flex items-center justify-center text-sm sm:text-base z-10"
+              >
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out"></div>
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Leave a Review
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </span>
+              </a>
+            </div>
+
             {/* Worcester Bosch Card */}
             <div className="bg-white rounded-[2.5rem] p-8 shadow-[0_20px_60px_rgba(13,27,66,0.06)] border border-gray-100 flex items-center justify-center hover:-translate-y-1 transition-transform min-h-[140px]">
               <div className="relative w-full h-[80px]">
@@ -172,11 +214,23 @@ export default function ReviewsPage() {
               </div>
               
               <div className="w-full flex-1 flex flex-col h-[700px] overflow-hidden relative group">
+                <style>{`
+                  @keyframes manual-slide-vertical {
+                    0% { transform: translateY(0); }
+                    100% { transform: translateY(calc(-50% - 16px)); }
+                  }
+                  .manual-marquee-slider {
+                    animation: manual-slide-vertical 35s linear infinite;
+                  }
+                  .manual-marquee-slider:hover {
+                    animation-play-state: paused;
+                  }
+                `}</style>
                 {/* Gradient Masks for smooth scrolling effect */}
                 <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
 
-                <div className="w-full flex flex-col gap-8 animate-slide-vertical hover:[animation-play-state:paused] pt-4">
+                <div className="w-full flex flex-col gap-8 pt-4 manual-marquee-slider">
                   {[...staticReviews, ...staticReviews].map((review, idx) => (
                     <div key={idx} className="flex flex-col border-b border-gray-100 pb-8">
                       <div className="flex items-center justify-between mb-3">
@@ -216,7 +270,7 @@ export default function ReviewsPage() {
           <div className="lg:col-span-12 xl:col-span-3 flex justify-center xl:justify-end items-stretch mt-8 lg:mt-0 lg:pt-0">
             <div className="flex flex-col gap-6 w-full sm:w-[50%] lg:w-[60%] xl:w-full max-w-sm">
               <a 
-                href="https://www.checkatrade.com/trades/slenergytomsuttonheating"
+                href="http://checkatrade.com/give-feedback/trades/slenergytomsuttonheating"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full hover:-translate-y-3 transition-transform duration-500 cursor-pointer"

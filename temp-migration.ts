@@ -2,15 +2,17 @@ import pool from './src/lib/db';
 
 async function run() {
   try {
-    console.log('Running migration: Adding is_energy_event column...');
-    await pool.execute('ALTER TABLE blog_posts ADD COLUMN is_energy_event BOOLEAN DEFAULT false;');
-    console.log('Migration successful.');
+    console.log('Running migration: Updating SEO path...');
+    const [result] = await pool.execute(
+      `UPDATE seo_settings 
+       SET page_path = '/leave-us-a-review',
+           page_name = 'Leave a Review',
+           custom_slug = 'leave-us-a-review'
+       WHERE page_path = '/our-reviews'`
+    );
+    console.log('Migration successful.', result);
   } catch (error: any) {
-    if (error.code === 'ER_DUP_FIELDNAME') {
-      console.log('Column already exists, skipping.');
-    } else {
-      console.error('Migration failed:', error);
-    }
+    console.error('Migration failed:', error);
   } finally {
     process.exit(0);
   }

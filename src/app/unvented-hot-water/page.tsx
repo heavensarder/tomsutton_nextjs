@@ -39,7 +39,7 @@ export default function UnventedHotWaterPage() {
                 <p>Is your current hot water system not giving you what you need?</p>
                 <p>If this is the case, an unvented hot water cylinder may be the solution you have been looking for.</p>
                 <p>Tom Sutton Heating and its team of local unvented qualified heating engineers are here to help!</p>
-                <p>We offer fast, friendly and reliable service, and are always on hand to help provide plumbing solutions to you and your family. Check out our <Link href="/our-reviews" className="underline underline-offset-4 decoration-blue-300 hover:text-white transition-colors">review page</Link> or our <a href="https://www.google.com/maps?cid=8226595044909973442" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-blue-300 hover:text-white transition-colors">Google listing</a> if you are unsure!</p>
+                <p>We offer fast, friendly and reliable service, and are always on hand to help provide plumbing solutions to you and your family. Check out our <Link href="/leave-us-a-review" className="underline underline-offset-4 decoration-blue-300 hover:text-white transition-colors">review page</Link> or our <a href="https://www.google.com/maps?cid=8226595044909973442" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-blue-300 hover:text-white transition-colors">Google listing</a> if you are unsure!</p>
               </div>
 
               {/* Trust Highlight Array */}

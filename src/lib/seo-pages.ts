@@ -10,7 +10,7 @@ export const SITE_PAGES: SitePage[] = [
   { path: '/about', name: 'About Us', category: 'Main Pages' },
   { path: '/contact', name: 'Contact', category: 'Main Pages' },
   { path: '/blog', name: 'Blog', category: 'Main Pages' },
-  { path: '/our-reviews', name: 'Our Reviews', category: 'Main Pages' },
+  { path: '/leave-us-a-review', name: 'Leave a Review', category: 'Main Pages' },
   { path: '/energy-events', name: 'Energy Events', category: 'Main Pages' },
   { path: '/survey-test', name: 'Survey Test', category: 'Main Pages' },
 

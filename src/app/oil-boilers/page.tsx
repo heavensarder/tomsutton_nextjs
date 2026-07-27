@@ -41,7 +41,7 @@ export default function OilBoilersPage() {
                 <p>Has your old oil boiler let you down again?</p>
                 <p>Tom Sutton Heating and its team of local OFTEC registered engineers are here to help!</p>
                 <p className="mt-2 text-white/90">
-                  We offer fast, friendly and reliable service, and are always on hand to keep you and your family warm throughout the winter! Check out our <Link href="/our-reviews" className="underline underline-offset-4 decoration-blue-300 hover:text-white transition-colors">review page</Link> or our <a href="https://www.google.com/maps?cid=8226595044909973442" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-blue-300 hover:text-white transition-colors">Google listing</a> if you are unsure!
+                  We offer fast, friendly and reliable service, and are always on hand to keep you and your family warm throughout the winter! Check out our <Link href="/leave-us-a-review" className="underline underline-offset-4 decoration-blue-300 hover:text-white transition-colors">review page</Link> or our <a href="https://www.google.com/maps?cid=8226595044909973442" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-blue-300 hover:text-white transition-colors">Google listing</a> if you are unsure!
                 </p>
               </div>
 

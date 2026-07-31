@@ -181,17 +181,7 @@ export default function ReviewsPage() {
               </div>
             </div>
 
-            {/* Expert Trades Card */}
-            <div className="bg-white rounded-[2.5rem] p-8 shadow-[0_20px_60px_rgba(13,27,66,0.06)] border border-gray-100 flex items-center justify-center hover:-translate-y-1 transition-transform bg-gradient-to-br from-white to-sky-50/50 min-h-[140px]">
-              <div className="relative w-[85%] h-[80px]">
-                <Image 
-                  src="https://i.postimg.cc/05ttYMcm/Verified-Expert-Trades.png" 
-                  alt="Verified by Expert Trades" 
-                  fill 
-                  className="object-contain" 
-                />
-              </div>
-            </div>
+
 
           </div>
 

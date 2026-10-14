@@ -13,7 +13,16 @@ export async function getSiteSettings(): Promise<SiteSettings> {
         return acc;
       }, {});
 
-    return { ...DEFAULT_SETTINGS, ...dbSettings } as SiteSettings;
+    // Normalize legacy '#' values in dbSettings for social media keys
+    const normalizedDbSettings: Record<string, string> = { ...dbSettings };
+    const socialKeys = ['social_facebook', 'social_linkedin', 'social_twitter', 'social_instagram', 'social_youtube'];
+    for (const key of socialKeys) {
+      if (normalizedDbSettings[key] === '#') {
+        normalizedDbSettings[key] = DEFAULT_SETTINGS[key as keyof SiteSettings] || '';
+      }
+    }
+
+    return { ...DEFAULT_SETTINGS, ...normalizedDbSettings } as SiteSettings;
   } catch {
     // If table doesn't exist yet, return defaults
     return { ...DEFAULT_SETTINGS };

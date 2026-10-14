@@ -185,7 +185,10 @@ export default function SiteSettingsPage() {
                 <div className="border-t border-slate-100 px-5 pb-6 pt-4 space-y-5">
                   {groupSettings.map(([key, meta]) => {
                     const isImage = key.includes('logo') || key.includes('image') || key.includes('accreditations') || key.includes('favicon');
-                    const fieldValue = settings[key] ?? DEFAULT_SETTINGS[key as keyof typeof DEFAULT_SETTINGS] ?? '';
+                    const rawValue = settings[key] ?? DEFAULT_SETTINGS[key as keyof typeof DEFAULT_SETTINGS] ?? '';
+                    const fieldValue = (key.startsWith('social_') && rawValue === '#')
+                      ? (DEFAULT_SETTINGS[key as keyof typeof DEFAULT_SETTINGS] || '')
+                      : rawValue;
                     return (
                     <div key={key} className="space-y-1.5">
                       <div className="flex items-center justify-between">
@@ -205,6 +208,7 @@ export default function SiteSettingsPage() {
                         <input
                           type="text"
                           value={fieldValue}
+                          placeholder={key.startsWith('social_') ? 'https://... (leave empty to hide)' : ''}
                           onChange={(e) => handleChange(key, e.target.value)}
                           className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 focus:bg-white transition-all"
                         />

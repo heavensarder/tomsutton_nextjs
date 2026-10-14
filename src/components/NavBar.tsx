@@ -5,9 +5,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useSiteSettings } from '@/components/SiteSettingsProvider';
+import { getActiveSocialLinks } from '@/lib/site-settings';
+import { SocialLink } from '@/components/SocialIcon';
 
 const NavBar = () => {
     const s = useSiteSettings();
+    const socialLinks = getActiveSocialLinks(s);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
     const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
@@ -55,21 +58,14 @@ const NavBar = () => {
                             {s?.header_email || 'info@tomsuttonheating.co.uk'}
                         </div>
                     </div>
-                    <div className="hidden lg:flex items-center space-x-3">
-                        <span className="mr-3 border-r border-gray-300 pr-5 tracking-wider font-semibold text-gray-400">Visit Our Social Pages:</span>
-                        <Link href={s?.social_twitter || '#'} className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-twitter-blue hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
-                            <svg className="w-3.5 h-3.5 fill-current group-hover:text-blue-400" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
-                        </Link>
-                        <Link href={s?.social_facebook || '#'} className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-facebook-blue hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
-                            <svg className="w-3.5 h-3.5 fill-current group-hover:text-blue-600" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" /></svg>
-                        </Link>
-                        <Link href={s?.social_youtube || '#'} className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-youtube-red hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
-                            <svg className="w-3.5 h-3.5 fill-current group-hover:text-red-500" viewBox="0 0 24 24"><path d="M21.582 6.186c-.23-.86-.908-1.538-1.768-1.768C18.254 4 12 4 12 4s-6.254 0-7.814.418c-.86.23-1.538.908-1.768 1.768C2 7.746 2 12 2 12s0 4.254.418 5.814c.23.86.908 1.538 1.768 1.768C5.746 20 12 20 12 20s6.254 0 7.814-.418c.86-.23 1.538-.908 1.768-1.768C22 16.254 22 12 22 12s0-4.254-.418-5.814zM9.999 15.5v-7l6.5 3.5-6.5 3.5z" /></svg>
-                        </Link>
-                        <Link href={s?.social_linkedin || '#'} className="w-8 h-8 bg-white border border-gray-200 text-blue-900 rounded-full flex items-center justify-center hover:bg-linkedin-blue hover:text-white hover:border-transparent hover:scale-110 hover:shadow-lg transition-all duration-300 group">
-                            <svg className="w-3.5 h-3.5 fill-current group-hover:text-blue-500" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" /></svg>
-                        </Link>
-                    </div>
+                    {socialLinks.length > 0 && (
+                        <div className="hidden lg:flex items-center space-x-3">
+                            <span className="mr-3 border-r border-gray-300 pr-5 tracking-wider font-semibold text-gray-400">Visit Our Social Pages:</span>
+                            {socialLinks.map((item) => (
+                                <SocialLink key={item.id} id={item.id} url={item.url} label={item.label} variant="topbar" />
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
 
@@ -385,20 +381,13 @@ const NavBar = () => {
                                 </Link>
 
                                 {/* Mobile Social Icons */}
-                                <div className="flex space-x-4 items-center justify-center w-full">
-                                    <Link href="#" className="w-10 h-10 bg-white border border-gray-200 shadow-sm text-[#1e3a8a] rounded-full flex items-center justify-center hover:bg-[#1DA1F2] hover:text-white hover:border-transparent transition-all duration-300">
-                                        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
-                                    </Link>
-                                    <Link href="#" className="w-10 h-10 bg-white border border-gray-200 shadow-sm text-[#1e3a8a] rounded-full flex items-center justify-center hover:bg-[#1877F2] hover:text-white hover:border-transparent transition-all duration-300">
-                                        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" /></svg>
-                                    </Link>
-                                    <Link href="#" className="w-10 h-10 bg-white border border-gray-200 shadow-sm text-[#1e3a8a] rounded-full flex items-center justify-center hover:bg-[#FF0000] hover:text-white hover:border-transparent transition-all duration-300">
-                                        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M21.582 6.186c-.23-.86-.908-1.538-1.768-1.768C18.254 4 12 4 12 4s-6.254 0-7.814.418c-.86.23-1.538.908-1.768 1.768C2 7.746 2 12 2 12s0 4.254.418 5.814c.23.86.908 1.538 1.768 1.768C5.746 20 12 20 12 20s6.254 0 7.814-.418c.86-.23 1.538-.908 1.768-1.768C22 16.254 22 12 22 12s0-4.254-.418-5.814zM9.999 15.5v-7l6.5 3.5-6.5 3.5z" /></svg>
-                                    </Link>
-                                    <Link href="#" className="w-10 h-10 bg-white border border-gray-200 shadow-sm text-[#1e3a8a] rounded-full flex items-center justify-center hover:bg-[#0A66C2] hover:text-white hover:border-transparent transition-all duration-300">
-                                        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" /></svg>
-                                    </Link>
-                                </div>
+                                {socialLinks.length > 0 && (
+                                    <div className="flex space-x-4 items-center justify-center w-full">
+                                        {socialLinks.map((item) => (
+                                            <SocialLink key={item.id} id={item.id} url={item.url} label={item.label} variant="mobile" />
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

@@ -46,11 +46,11 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   header_cta_text: 'GET A QUOTE',
   header_cta_link: '/online-boiler-quote',
   site_favicon: 'https://i.postimg.cc/X7skSxGn/favicon.png',
-  social_twitter: '#',
-  social_facebook: '#',
-  social_instagram: '#',
-  social_youtube: '#',
-  social_linkedin: '#',
+  social_twitter: '',
+  social_facebook: 'https://www.facebook.com/tomsuttonheating/',
+  social_instagram: '',
+  social_youtube: '',
+  social_linkedin: 'https://www.linkedin.com/company/sl-energy-ltd-renewable-heating',
   footer_logo_url: 'https://i.postimg.cc/MKPVK7HV/SLEnergy-logo.webp',
   footer_logo_link: 'https://www.sl-energy.co.uk/',
   footer_phone_1: '01590 631671',
@@ -66,6 +66,43 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   custom_header_code: '',
 };
 
+export type SocialPlatformId = 'facebook' | 'linkedin' | 'twitter' | 'instagram' | 'youtube';
+export type SocialPlatformKey = 'social_facebook' | 'social_linkedin' | 'social_twitter' | 'social_instagram' | 'social_youtube';
+
+export interface SocialPlatformInfo {
+  key: SocialPlatformKey;
+  id: SocialPlatformId;
+  label: string;
+}
+
+export const SOCIAL_PLATFORMS: SocialPlatformInfo[] = [
+  { key: 'social_facebook', id: 'facebook', label: 'Facebook' },
+  { key: 'social_linkedin', id: 'linkedin', label: 'LinkedIn' },
+  { key: 'social_twitter', id: 'twitter', label: 'Twitter / X' },
+  { key: 'social_instagram', id: 'instagram', label: 'Instagram' },
+  { key: 'social_youtube', id: 'youtube', label: 'YouTube' },
+];
+
+export interface ActiveSocialLink extends SocialPlatformInfo {
+  url: string;
+}
+
+export function getActiveSocialLinks(settings: Partial<SiteSettings> | null | undefined): ActiveSocialLink[] {
+  return SOCIAL_PLATFORMS.map(platform => {
+    // If settings is provided and key is present, use it. Otherwise use DEFAULT_SETTINGS.
+    const rawVal = settings && platform.key in settings
+      ? settings[platform.key]
+      : DEFAULT_SETTINGS[platform.key];
+    const val = typeof rawVal === 'string' ? rawVal.trim() : '';
+    // Normalize legacy '#' placeholder to the new default (or empty string)
+    const finalUrl = val === '#' ? (DEFAULT_SETTINGS[platform.key] || '') : val;
+    return {
+      ...platform,
+      url: finalUrl,
+    };
+  }).filter(link => Boolean(link.url && link.url !== '#'));
+}
+
 export const SETTINGS_LABELS: Record<string, { label: string; helpText?: string; group: string }> = {
   header_logo_url: { label: 'Header Logo URL', helpText: 'Recommended: 320×80px, transparent PNG or WebP. Also used on admin login & sidebar.', group: 'Header' },
   header_phone: { label: 'Phone Number (Display)', helpText: 'Shown in the top bar and after scroll.', group: 'Header' },
@@ -75,11 +112,11 @@ export const SETTINGS_LABELS: Record<string, { label: string; helpText?: string;
   header_cta_text: { label: 'CTA Button Text', helpText: 'The main call-to-action button (e.g. GET A QUOTE)', group: 'Header' },
   header_cta_link: { label: 'CTA Button Link', helpText: 'Page URL for the button', group: 'Header' },
   site_favicon: { label: 'Favicon', helpText: 'Recommended: 32×32px or 180×180px PNG. Browser tab icon.', group: 'Header' },
-  social_twitter: { label: 'Twitter / X URL', group: 'Social Media' },
-  social_facebook: { label: 'Facebook URL', group: 'Social Media' },
-  social_instagram: { label: 'Instagram URL', group: 'Social Media' },
-  social_youtube: { label: 'YouTube URL', group: 'Social Media' },
-  social_linkedin: { label: 'LinkedIn URL', group: 'Social Media' },
+  social_facebook: { label: 'Facebook URL', helpText: 'Leave empty to hide. When filled, shows in topbar and footer and opens in a new tab.', group: 'Social Media' },
+  social_linkedin: { label: 'LinkedIn URL', helpText: 'Leave empty to hide. When filled, shows in topbar and footer and opens in a new tab.', group: 'Social Media' },
+  social_twitter: { label: 'Twitter / X URL', helpText: 'Leave empty to hide. When filled, shows in topbar and footer and opens in a new tab.', group: 'Social Media' },
+  social_instagram: { label: 'Instagram URL', helpText: 'Leave empty to hide. When filled, shows in topbar and footer and opens in a new tab.', group: 'Social Media' },
+  social_youtube: { label: 'YouTube URL', helpText: 'Leave empty to hide. When filled, shows in topbar and footer and opens in a new tab.', group: 'Social Media' },
   footer_logo_url: { label: 'Footer Logo URL', helpText: 'Recommended: 240×80px. The partner/brand logo shown at the top of the footer.', group: 'Footer' },
   footer_logo_link: { label: 'Footer Logo Link', helpText: 'Where the footer logo links to', group: 'Footer' },
   footer_phone_1: { label: 'Footer Phone 1', group: 'Footer' },

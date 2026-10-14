@@ -32,8 +32,8 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link rel="icon" href={settings.site_favicon || 'https://i.postimg.cc/X7skSxGn/favicon.png'} />
-        <link rel="apple-touch-icon" href={settings.site_favicon || 'https://i.postimg.cc/X7skSxGn/favicon.png'} />
+        <link rel="icon" href={settings.site_favicon || '/images/favicon.png'} />
+        <link rel="apple-touch-icon" href={settings.site_favicon || '/images/favicon.png'} />
         {(() => {
           if (!settings.custom_header_code) return null;
           

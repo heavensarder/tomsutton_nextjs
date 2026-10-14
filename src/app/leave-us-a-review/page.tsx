@@ -99,7 +99,7 @@ export default function ReviewsPage() {
               
               <a href="https://www.google.com/maps?cid=8226595044909973442" target="_blank" rel="noopener noreferrer" className="relative w-[85%] h-[80px] mb-2 transition-transform duration-500 group-hover:scale-105 block cursor-pointer">
                 <Image 
-                  src="https://i.postimg.cc/0NcSTm6n/Google-Review-Emblem.png" 
+                  src="/images/Google-Review-Emblem.png" 
                   alt="Google Review Emblem" 
                   fill 
                   className="object-contain" 
@@ -173,7 +173,7 @@ export default function ReviewsPage() {
             <div className="bg-white rounded-[2.5rem] p-8 shadow-[0_20px_60px_rgba(13,27,66,0.06)] border border-gray-100 flex items-center justify-center hover:-translate-y-1 transition-transform min-h-[140px]">
               <div className="relative w-full h-[80px]">
                 <Image 
-                  src="https://i.postimg.cc/43bPmmYw/Worcester-768x219.webp" 
+                  src="/images/Worcester-768x219.webp" 
                   alt="Worcester Bosch Accredited Installer" 
                   fill 
                   className="object-contain" 
@@ -266,7 +266,7 @@ export default function ReviewsPage() {
                 className="block w-full hover:-translate-y-3 transition-transform duration-500 cursor-pointer"
               >
                 <Image 
-                  src="https://i.postimg.cc/XJLsDp3X/Tom-Sutton-Heating.png" 
+                  src="/images/Tom-Sutton-Heating.png" 
                   alt="Proud Members of Checkatrade" 
                   width={600}
                   height={1400}

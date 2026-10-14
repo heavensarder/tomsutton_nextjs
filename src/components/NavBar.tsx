@@ -78,7 +78,7 @@ const NavBar = () => {
                         <div className="flex-shrink-0 flex items-center xl:mr-10 lg:mr-4 z-20">
                             <Link href="/" className="hover:opacity-90 transition-opacity">
                                 <Image
-                                    src={s?.header_logo_url || 'https://i.postimg.cc/V65kTYN4/tom-sutton-logo.webp'}
+                                    src={s?.header_logo_url || '/images/tom-sutton-logo.webp'}
                                     alt="Tom Sutton Heating"
                                     width={320}
                                     height={80}

@@ -99,7 +99,7 @@ export default function HampshireAreaPage() {
                 {/* Fallback elegant dark layer */}
                 <div className="absolute inset-0 bg-slate-800"></div>
                 <Image 
-                  src="https://i.postimg.cc/mgLTByf6/hampshire.jpg" 
+                  src="/images/hampshire.jpg" 
                   alt="Professional Boiler Installation Hampshire" 
                   fill 
                   className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"

@@ -61,7 +61,7 @@ export default function CombiBoilerInstallationPage() {
             <div className="w-full lg:w-[45%] relative mt-10 lg:mt-0 group z-20">
               <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-white/20 transform transition-transform duration-700 group-hover:-translate-y-2">
                 <Image
-                  src="https://i.postimg.cc/0jbRcM1K/Worcester-Greenstar-CDi-Classic-Combi-Insitu-2-534x310.webp"
+                  src="/images/Worcester-Greenstar-CDi-Classic-Combi-Insitu-2-534x310.webp"
                   alt="Worcester Greenstar CDi Classic Combi Insitu"
                   fill
                   className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700 ease-out"
@@ -110,7 +110,7 @@ export default function CombiBoilerInstallationPage() {
                 <div className="absolute inset-0 bg-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
                 <Image
-                  src="https://i.postimg.cc/5yxqVL2v/Gas-Combi-Diagram-3-300x300.webp"
+                  src="/images/Gas-Combi-Diagram-3-300x300.webp"
                   alt="Internal Gas Combi Boiler Functionality Diagram"
                   fill
                   className="object-contain p-8 transform group-hover:scale-110 transition-transform duration-700"
@@ -161,7 +161,7 @@ export default function CombiBoilerInstallationPage() {
             <div className="w-full lg:w-1/2 relative z-10 flex flex-col">
               <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] ring-1 ring-white/10 mb-6 group">
                 <Image
-                  src="https://i.postimg.cc/769bY98K/payment-pic.webp"
+                  src="/images/payment-pic.webp"
                   alt="Card Payment Terminal for Boiler Finance"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"

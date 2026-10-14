@@ -99,7 +99,7 @@ export default function RingwoodAreaPage() {
                 {/* Fallback elegant dark layer */}
                 <div className="absolute inset-0 bg-slate-800"></div>
                 <Image 
-                  src="https://i.postimg.cc/mgLTByf6/ringwood.jpg" 
+                  src="/images/ringwood.jpg" 
                   alt="Professional Boiler Installation Ringwood" 
                   fill 
                   className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"

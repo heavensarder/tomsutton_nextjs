@@ -120,7 +120,7 @@ export async function POST() {
           page.name.toLowerCase().split(' ')[0],
           metaTitle,
           metaDescription,
-          'https://i.postimg.cc/V65kTYN4/tom-sutton-logo.webp',
+          '/images/tom-sutton-logo.webp',
           'website',
           'summary_large_image',
           metaTitle,
@@ -169,10 +169,10 @@ export async function POST() {
 
     // Seed existing site images into media library
     const existingImages = [
-      { filename: 'tom-sutton-logo.webp', url: 'https://i.postimg.cc/V65kTYN4/tom-sutton-logo.webp', original_name: 'Tom Sutton Logo (Header)', mime_type: 'image/webp' },
-      { filename: 'SLEnergy-logo.webp', url: 'https://i.postimg.cc/MKPVK7HV/SLEnergy-logo.webp', original_name: 'SL Energy Logo (Footer)', mime_type: 'image/webp' },
-      { filename: 'Footer-Logos-Updated-1.webp', url: 'https://i.postimg.cc/nr1K1NHx/Footer-Logos-Updated-1.webp', original_name: 'Accreditations (Gas Safe, OFTEC, Checkatrade)', mime_type: 'image/webp' },
-      { filename: 'favicon.png', url: 'https://i.postimg.cc/X7skSxGn/favicon.png', original_name: 'Site Favicon', mime_type: 'image/png' },
+      { filename: 'tom-sutton-logo.webp', url: '/images/tom-sutton-logo.webp', original_name: 'Tom Sutton Logo (Header)', mime_type: 'image/webp' },
+      { filename: 'SLEnergy-logo.webp', url: '/images/SLEnergy-logo.webp', original_name: 'SL Energy Logo (Footer)', mime_type: 'image/webp' },
+      { filename: 'Footer-Logos-Updated-1.webp', url: '/images/Footer-Logos-Updated-1.webp', original_name: 'Accreditations (Gas Safe, OFTEC, Checkatrade)', mime_type: 'image/webp' },
+      { filename: 'favicon.png', url: '/images/favicon.png', original_name: 'Site Favicon', mime_type: 'image/png' },
     ];
     for (const img of existingImages) {
       await conn.execute(

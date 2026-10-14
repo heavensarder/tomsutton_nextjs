@@ -55,7 +55,7 @@ export default function AboutPage() {
             <div className="w-full lg:w-[50%] relative mt-10 lg:mt-0 group z-20">
               <div className="relative w-full aspect-[21/10] sm:aspect-[2/1] lg:aspect-[21/10] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-white/10 transform transition-transform duration-700 group-hover:-translate-y-2 group-hover:ring-white/30">
                 <Image 
-                  src="https://i.postimg.cc/g0Dzzz1h/About-Pic-1024x490.webp" 
+                  src="/images/About-Pic-1024x490.webp" 
                   alt="Tom Sutton and Ronan Sutton Family Business History Collage" 
                   fill 
                   className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700 ease-out" 

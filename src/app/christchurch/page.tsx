@@ -99,7 +99,7 @@ export default function ChristchurchAreaPage() {
                 {/* Fallback elegant dark layer */}
                 <div className="absolute inset-0 bg-slate-800"></div>
                 <Image 
-                  src="https://i.postimg.cc/mgLTByf6/christchurch.jpg" 
+                  src="/images/christchurch.jpg" 
                   alt="Professional Boiler Installation Christchurch" 
                   fill 
                   className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"

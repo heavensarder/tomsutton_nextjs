@@ -27,7 +27,7 @@ export default function WorcesterBoschCdiCompactPage() {
               {/* Manufacturer Logo Pill */}
               <div className="mb-6 lg:mb-8 bg-white/95 px-5 py-3 sm:px-6 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.2)] border border-white/20 backdrop-blur-sm transform transition-transform hover:scale-105 duration-300 w-max flex items-center justify-center">
                 <div className="relative w-[130px] h-[30px] sm:w-[160px] sm:h-[40px]">
-                  <Image src="https://i.postimg.cc/43bPmmYw/Worcester_768x219.webp" alt="Worcester Bosch" fill className="object-contain drop-shadow-sm" priority unoptimized />
+                  <Image src="/images/Worcester_768x219.webp" alt="Worcester Bosch" fill className="object-contain drop-shadow-sm" priority unoptimized />
                 </div>
               </div>
 
@@ -59,7 +59,7 @@ export default function WorcesterBoschCdiCompactPage() {
             <div className="w-full lg:w-[40%] relative mt-8 lg:mt-0 group z-20 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[300px] sm:max-w-[350px] aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-white/10 transform transition-transform duration-700 group-hover:-translate-y-2 bg-gradient-to-br from-slate-800/60 to-slate-900/90 backdrop-blur-md p-8">
                 <Image 
-                  src="https://i.postimg.cc/gkmzKfFF/imageonline-co-whitebackgroundremoved-19-187x300.webp" 
+                  src="/images/imageonline-co-whitebackgroundremoved-19-187x300.webp" 
                   alt="Worcester Bosch CDi Compact Boiler" 
                   fill 
                   className="object-contain scale-[1.02] group-hover:scale-105 transition-transform duration-700 ease-out filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] p-6 z-10" 
@@ -91,7 +91,7 @@ export default function WorcesterBoschCdiCompactPage() {
             <div className="lg:col-span-4 flex flex-col items-center lg:sticky lg:top-32">
               <div className="relative w-[70%] sm:w-[50%] lg:w-[90%] max-w-[320px] aspect-[4/5] mb-8 group">
                 <Image 
-                  src="https://i.postimg.cc/dVDKHFWv/I-SYSTEM-300x300.webp" 
+                  src="/images/I-SYSTEM-300x300.webp" 
                   alt="Worcester Bosch Greenstar i System Hardware Overview" 
                   fill 
                   className="object-contain transform transition-transform duration-700 ease-out group-hover:scale-[1.08] mix-blend-multiply" 

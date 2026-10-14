@@ -22,7 +22,7 @@ const Footer = () => {
 
                         <a href="https://www.sl-energy.co.uk/" target="_blank" rel="noopener noreferrer" className="block w-[240px] hover:opacity-80 transition-opacity" suppressHydrationWarning>
                             <Image
-                                src="https://i.postimg.cc/MKPVK7HV/SLEnergy-logo.webp"
+                                src="/images/SLEnergy-logo.webp"
                                 alt="SL Energy Heating, Plumbing & Renewables"
                                 width={240}
                                 height={80}
@@ -104,7 +104,7 @@ const Footer = () => {
 
                         <div className="w-full relative py-2">
                             <Image
-                                src={s?.footer_accreditations_image || 'https://i.postimg.cc/nr1K1NHx/Footer-Logos-Updated-1.webp'}
+                                src={s?.footer_accreditations_image || '/images/Footer-Logos-Updated-1.webp'}
                                 alt="Recommended & Vetted Accreditations: Alpha, Baxi, Gas Safe, Checkatrade"
                                 width={300}
                                 height={180}

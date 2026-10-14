@@ -10,7 +10,7 @@ export default function RenewablesSection() {
       {/* Image Side (Left) - Full Edge Bleed */}
       <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-[600px] xl:min-h-[700px] overflow-hidden group">
         <Image
-          src="https://i.postimg.cc/wTQkkY7r/renwable-energy.jpg"
+          src="/images/renwable-energy.jpg"
           alt="Modern solar panels on a premium residential roof"
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"

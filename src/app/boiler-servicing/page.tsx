@@ -12,7 +12,7 @@ export default function BoilerServicingPage() {
         {/* Full-width and Regulated-height Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://i.postimg.cc/bNrQ8QhJ/hero-background.webp" 
+            src="/images/hero-background.webp" 
             alt="Boiler Servicing and Annual Maintenance" 
             fill
             className="object-cover object-center" 
@@ -321,25 +321,25 @@ export default function BoilerServicingPage() {
             <div className="flex w-max animate-slider hover:[animation-play-state:paused] items-center">
               {/* Combine the 4 exact requested logos replicated 4 times to fill the ultra-wide scroll width securely */}
               {[
-                { src: "https://i.postimg.cc/d3k7Dghd/logo_1.webp", alt: "Glow-worm" },
-                { src: "https://i.postimg.cc/Fzdf1wY3/logo_2.webp", alt: "Alpha" },
-                { src: "https://i.postimg.cc/NF9yLZKr/logo_3.webp", alt: "Vaillant" },
-                { src: "https://i.postimg.cc/tJZ178sF/logo_4.webp", alt: "Worcester" },
+                { src: "/images/logo_1.webp", alt: "Glow-worm" },
+                { src: "/images/logo_2.webp", alt: "Alpha" },
+                { src: "/images/logo_3.webp", alt: "Vaillant" },
+                { src: "/images/logo_4.webp", alt: "Worcester" },
 
-                { src: "https://i.postimg.cc/d3k7Dghd/logo_1.webp", alt: "Glow-worm" },
-                { src: "https://i.postimg.cc/Fzdf1wY3/logo_2.webp", alt: "Alpha" },
-                { src: "https://i.postimg.cc/NF9yLZKr/logo_3.webp", alt: "Vaillant" },
-                { src: "https://i.postimg.cc/tJZ178sF/logo_4.webp", alt: "Worcester" },
+                { src: "/images/logo_1.webp", alt: "Glow-worm" },
+                { src: "/images/logo_2.webp", alt: "Alpha" },
+                { src: "/images/logo_3.webp", alt: "Vaillant" },
+                { src: "/images/logo_4.webp", alt: "Worcester" },
 
-                { src: "https://i.postimg.cc/d3k7Dghd/logo_1.webp", alt: "Glow-worm" },
-                { src: "https://i.postimg.cc/Fzdf1wY3/logo_2.webp", alt: "Alpha" },
-                { src: "https://i.postimg.cc/NF9yLZKr/logo_3.webp", alt: "Vaillant" },
-                { src: "https://i.postimg.cc/tJZ178sF/logo_4.webp", alt: "Worcester" },
+                { src: "/images/logo_1.webp", alt: "Glow-worm" },
+                { src: "/images/logo_2.webp", alt: "Alpha" },
+                { src: "/images/logo_3.webp", alt: "Vaillant" },
+                { src: "/images/logo_4.webp", alt: "Worcester" },
 
-                { src: "https://i.postimg.cc/d3k7Dghd/logo_1.webp", alt: "Glow-worm" },
-                { src: "https://i.postimg.cc/Fzdf1wY3/logo_2.webp", alt: "Alpha" },
-                { src: "https://i.postimg.cc/NF9yLZKr/logo_3.webp", alt: "Vaillant" },
-                { src: "https://i.postimg.cc/tJZ178sF/logo_4.webp", alt: "Worcester" }
+                { src: "/images/logo_1.webp", alt: "Glow-worm" },
+                { src: "/images/logo_2.webp", alt: "Alpha" },
+                { src: "/images/logo_3.webp", alt: "Vaillant" },
+                { src: "/images/logo_4.webp", alt: "Worcester" }
               ].map((logo, idx) => (
                 <div key={idx} className="flex-shrink-0 w-40 sm:w-48 md:w-56 h-20 sm:h-24 md:h-28 relative mx-8 sm:mx-12 transition-transform duration-300 transform hover:scale-110">
                   <Image src={logo.src} alt={logo.alt} fill className="object-contain" unoptimized />
@@ -555,7 +555,7 @@ export default function BoilerServicingPage() {
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-3xl transform -rotate-3 scale-[1.03] opacity-60"></div>
               <div className="relative aspect-[4/3] sm:aspect-[4/4] lg:aspect-[4/5] w-full rounded-3xl overflow-hidden border-[6px] border-white shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                 <Image 
-                  src="https://i.postimg.cc/Bn2mddH1/Tom-Sutton-Heating-Boiler-Care-Plans-What-Happens-Next-2-768x683.webp" 
+                  src="/images/Tom-Sutton-Heating-Boiler-Care-Plans-What-Happens-Next-2-768x683.webp" 
                   alt="Client consultation with gas engineer" 
                   fill 
                   className="object-cover"

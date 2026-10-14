@@ -137,7 +137,7 @@ export default async function Home() {
             {/* Main Image Mask/Shape - sharp edges & rounded corners combination */}
             <div className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[480px] h-full z-10 rounded-[2rem] sm:rounded-[4rem] rounded-tl-xl rounded-br-xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border-4 border-white/10 group">
               <Image
-                src="https://i.postimg.cc/W3dP0VTH/hero-image.webp"
+                src="/images/hero-image.webp"
                 alt="Tom Sutton Heating Team"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -296,24 +296,24 @@ export default async function Home() {
       <section className="relative w-full overflow-hidden" style={{ minHeight: '380px' }}>
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <Image src="https://i.postimg.cc/HWMDSrhV/background_image.jpg" alt="Background" fill className="object-cover object-center" />
+          <Image src="/images/background_image.jpg" alt="Background" fill className="object-cover object-center" />
           <div className="absolute inset-0 bg-[#0a1e4e]/30"></div>
         </div>
 
         {/* Air Conditioner - Top Center */}
         <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-[240px] sm:w-[320px] lg:w-[360px] h-[100px] sm:h-[130px] lg:h-[150px] z-20 pointer-events-none">
-          <Image src="https://i.postimg.cc/B6c56cvg/air-conditionar.png" alt="Air Conditioner Unit" fill className="object-contain drop-shadow-2xl" />
+          <Image src="/images/air-conditionar.png" alt="Air Conditioner Unit" fill className="object-contain drop-shadow-2xl" />
         </div>
 
         {/* Left Character */}
         <div className="hidden lg:block absolute -left-4 bottom-0 w-[320px] xl:w-[370px] h-full z-20 pointer-events-none">
-          <Image src="https://i.postimg.cc/dQCPWhx7/lest_side_man_image.png" alt="Engineer" fill className="object-contain object-left-bottom" />
+          <Image src="/images/lest_side_man_image.png" alt="Engineer" fill className="object-contain object-left-bottom" />
         </div>
 
         {/* Right Character */}
         <style dangerouslySetInnerHTML={{ __html: `@keyframes floatUpDown { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }` }} />
         <div className="hidden lg:block absolute right-0 xl:right-8 bottom-0 w-[260px] xl:w-[300px] z-20 pointer-events-none" style={{ height: '110%', animation: 'floatUpDown 3s ease-in-out infinite' }}>
-          <Image src="https://i.postimg.cc/FFS5PYB1/right_side_cartoon.png" alt="Technician" fill className="object-contain object-bottom" />
+          <Image src="/images/right_side_cartoon.png" alt="Technician" fill className="object-contain object-bottom" />
         </div>
 
         {/* Full-Width Center Content */}
@@ -375,7 +375,7 @@ export default async function Home() {
             {/* Right Column (Vertical Image) */}
             <div className="w-full lg:w-[45%] lg:absolute lg:inset-y-6 lg:right-6 relative min-h-[350px] sm:min-h-[450px] lg:min-h-0 rounded-[1.5rem] overflow-hidden mt-10 lg:mt-0 shadow-2xl z-10 hidden sm:block border-4 border-[#121a36]">
               <Image
-                src="https://i.postimg.cc/XNcGYZVS/boiler-installation.webp"
+                src="/images/boiler-installation.webp"
                 alt="Boiler system installation"
                 fill
                 className="object-cover object-center transition-transform duration-1000 group-hover:scale-105"
@@ -393,7 +393,7 @@ export default async function Home() {
         {/* Image Side (Left) - Full Edge Bleed */}
         <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-[600px] xl:min-h-[700px] overflow-hidden group">
           <Image
-            src="https://i.postimg.cc/wTQkkY7r/renwable-energy.jpg"
+            src="/images/renwable-energy.jpg"
             alt="Modern solar panels on a premium residential roof"
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
@@ -522,7 +522,7 @@ export default async function Home() {
               {/* Main Image Frame */}
               <div className="relative w-full max-w-[600px] aspect-[4/3] rounded-[2.5rem] overflow-hidden transform transition-transform duration-1000 lg:rotate-[-2deg] hover:rotate-0 shadow-[0_20px_50px_rgba(0,208,187,0.15)] ring-1 ring-white/10 z-10">
                 <Image
-                  src="https://i.postimg.cc/k48j3jym/Tom-Sutton-Heating-NEST.webp"
+                  src="/images/Tom-Sutton-Heating-NEST.webp"
                   alt="Premium Nest Thermostat Installation"
                   fill
                   className="object-cover scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out"
@@ -596,7 +596,7 @@ export default async function Home() {
               {/* Logo at top */}
               <div className="relative w-full max-w-[360px] aspect-[16/9] mb-8 mx-auto lg:mx-0 drop-shadow-[0_15px_25px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform duration-500">
                 <Image
-                  src="https://i.postimg.cc/90kLPKtD/sl-energy-logo.webp"
+                  src="/images/sl-energy-logo.webp"
                   alt="SL Energy Renewables Partner Logo"
                   fill
                   className="object-contain"
@@ -672,10 +672,10 @@ export default async function Home() {
                 <React.Fragment key={half}>
                   {[0, 1, 2].map((group) => (
                     <React.Fragment key={`${half}-${group}`}>
-                      <Image src="https://i.postimg.cc/43tLh4pQ/alpha-logo.png" alt="Alpha Boilers" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
-                      <Image src="https://i.postimg.cc/sXP3KrC2/Glow-Worm-logo.png" alt="Glow Worm" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
-                      <Image src="https://i.postimg.cc/505fpVW2/Vaillant.png" alt="Vaillant" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
-                      <Image src="https://i.postimg.cc/6QRjG6CV/worcester-bosch-logo.png" alt="Worcester Bosch" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="/images/alpha-logo.png" alt="Alpha Boilers" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="/images/Glow-Worm-logo.png" alt="Glow Worm" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="/images/Vaillant.png" alt="Vaillant" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
+                      <Image src="/images/worcester-bosch-logo.png" alt="Worcester Bosch" width={220} height={100} className="object-contain max-h-10 sm:max-h-16 md:max-h-20 w-auto transition-transform hover:scale-105" />
                     </React.Fragment>
                   ))}
                 </React.Fragment>
@@ -719,7 +719,7 @@ export default async function Home() {
                   <svg className="w-6 h-6 text-[#0bdacb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </div>
                 <div className="flex-1 flex items-center justify-center w-full mb-8 pt-6 relative group-hover:scale-105 transition-transform duration-500">
-                  <Image src="https://i.postimg.cc/3rfJdKQY/checktrade.webp" alt="Checkatrade" width={240} height={100} className="object-contain max-h-12 sm:max-h-16 w-auto" />
+                  <Image src="/images/checktrade.webp" alt="Checkatrade" width={240} height={100} className="object-contain max-h-12 sm:max-h-16 w-auto" />
                 </div>
                 <div className="w-full text-center border-t border-gray-100 pt-6">
                   <div className="flex items-center justify-center gap-1.5 text-[#0bdacb] mb-3">

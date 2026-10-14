@@ -26,7 +26,7 @@ export default function WorcesterBoschPage() {
           
           {/* Giant Faint Watermark Overlay */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[150%] h-[150%] lg:w-[1000px] lg:h-[1000px] opacity-[0.03] select-none pointer-events-none z-0 mix-blend-screen">
-             <Image src="https://i.postimg.cc/28MLVLD2/worcester-bosch-accredited-installer-png.webp" alt="Worcester Bosch Watermark" fill className="object-contain" unoptimized />
+             <Image src="/images/worcester-bosch-accredited-installer-png.webp" alt="Worcester Bosch Watermark" fill className="object-contain" unoptimized />
           </div>
         </div>
 
@@ -37,7 +37,7 @@ export default function WorcesterBoschPage() {
             <div className="col-span-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20">
               
               <div className="mb-8 relative w-[260px] h-[90px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)] opacity-95 mx-auto lg:mx-0 group-hover:scale-105 transition-transform">
-                 <Image src="https://i.postimg.cc/28MLVLD2/worcester-bosch-accredited-installer-png.webp" alt="Worcester Bosch Accredited Installer" fill className="object-contain object-center lg:object-left" unoptimized />
+                 <Image src="/images/worcester-bosch-accredited-installer-png.webp" alt="Worcester Bosch Accredited Installer" fill className="object-contain object-center lg:object-left" unoptimized />
               </div>
 
               <h1 className="text-[2.25rem] sm:text-4xl lg:text-[3.25rem] font-black tracking-tight leading-[1.05] mb-10 text-white drop-shadow-lg max-w-3xl">
@@ -66,7 +66,7 @@ export default function WorcesterBoschPage() {
                 {/* Floating Boiler Hardware Element */}
                 <div className="absolute inset-0 transform transition-transform duration-1000 ease-out group-hover:-translate-y-6 group-hover:scale-[1.03]">
                   <Image 
-                    src="https://i.postimg.cc/pVnJkvL3/Worcester-Bosch-Greenstar-Boiler.webp" 
+                    src="/images/Worcester-Bosch-Greenstar-Boiler.webp" 
                     alt="Worcester Bosch Boiler Hardware Unit" 
                     fill 
                     className="object-contain filter drop-shadow-[0_40px_50px_rgba(0,0,0,0.6)] z-10 p-6" 
@@ -112,7 +112,7 @@ export default function WorcesterBoschPage() {
                {
                  name: "WORCESTER BOSCH 4000 COMBI",
                  description: "The Worcester Bosch 4000 is perfect for small to medium-sized homes with one bathroom. It features a modern new design, an easy-to-use full-colour text display, and it's quiet too. The 4000 has a wide power range to meet all of your heating and hot water needs, whilst doing so efficiently.",
-                 image: "https://i.postimg.cc/T1bkskZs/EVOKE-5-300x300.webp",
+                 image: "/images/EVOKE-5-300x300.webp",
                  features: [
                    "A wide power range helps to reduce gas consumption and lower energy bills",
                    "Innovative 'Quick Tap' water-saving function helps you reduce water waste",
@@ -126,7 +126,7 @@ export default function WorcesterBoschPage() {
                {
                  name: "WORCESTER BOSCH 4000 SYSTEM",
                  description: "The Worcester Bosch 4000 System is perfect for small to medium-sized homes. It features a modern new design and is extremely quiet. With a wide power range, it efficiently meets your property's heating requirements when used alongside a hot water storage cylinder.",
-                 image: "https://i.postimg.cc/s2DMLY9d/EVOKE-7-300x300.webp",
+                 image: "/images/EVOKE-7-300x300.webp",
                  features: [
                    "A wide power range to reduce gas consumption and lower bills",
                    "Modern new design with an easy to use colour display",
@@ -139,7 +139,7 @@ export default function WorcesterBoschPage() {
                {
                  name: "WORCESTER BOSCH Ri",
                  description: "The Worcester Bosch Ri is a compact, wall-mounted boiler that perfectly fits small and medium-sized homes. Small enough to be installed inside a standard kitchen cupboard, it performs flawlessly alongside our high-efficiency hot water cylinders.",
-                 image: "https://i.postimg.cc/3R6TQcWP/Ri-1-300x300.webp",
+                 image: "/images/Ri-1-300x300.webp",
                  features: [
                    "Ultra-compact; fits smoothly in a standard kitchen cupboard",
                    "Simple and intuitive boiler control knob",
@@ -151,7 +151,7 @@ export default function WorcesterBoschPage() {
                {
                  name: "WORCESTER BOSCH 8000 RANGE",
                  description: "Building upon the highly awarded CDi Classic, the 8000 Life and Style ranges are Worcester's most powerful wall hung combi boilers. Capable of up to 50kW outputs, these sleek units feature completely upgraded controls, wireless connectivity, and intelligent filling options.",
-                 image: "https://i.postimg.cc/VvmZ09SG/STYLE-300x300.webp",
+                 image: "/images/STYLE-300x300.webp",
                  features: [
                    "Available with Worcester Bosch's longest standard guarantee",
                    "Stunning modern design with improved touch-display screen",
@@ -164,7 +164,7 @@ export default function WorcesterBoschPage() {
                {
                  name: "WORCESTER BOSCH CDi COMPACT",
                  description: "The Worcester Bosch CDi Compact belongs to the latest generation of smaller and highly efficient boilers. Engineered for a seamless fit inside standard kitchen cupboards, it brings exceptional power to small, medium, and large homes despite its minimal footprint.",
-                 image: "https://i.postimg.cc/bwRGLCbY/Untitled_design_14_300x300.webp",
+                 image: "/images/Untitled_design_14_300x300.webp",
                  features: [
                    "Space-saving design that fits in standard kitchen cupboards",
                    "Simple control knobs equipped with a clear temperature display",

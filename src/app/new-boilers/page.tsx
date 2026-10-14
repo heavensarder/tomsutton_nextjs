@@ -61,7 +61,7 @@ export default function NewBoilersPage() {
             <div className="w-full lg:w-[45%] relative mt-10 lg:mt-0 group z-20">
               <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-white/20 transform transition-transform duration-700 group-hover:-translate-y-2">
                 <Image
-                  src="https://i.postimg.cc/P5xHmXPS/boiler-installation.webp"
+                  src="/images/boiler-installation-lpg.webp"
                   alt="Specialist fitting new boiler"
                   fill
                   className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700 ease-out"
@@ -115,7 +115,7 @@ export default function NewBoilersPage() {
                 {/* Physical Logo Bounding Box ensuring absolute structural integrity */}
                 <div className="relative w-full h-[70px] sm:h-[100px] z-10 transition-transform duration-500 group-hover:scale-105">
                   <Image
-                    src="https://i.postimg.cc/PqXwb81V/WAI-Bosch-Logo-WHITE-BOXES-SGRight-2-300x73.webp"
+                    src="/images/WAI-Bosch-Logo-WHITE-BOXES-SGRight-2-300x73.webp"
                     alt="Worcester Bosch Accredited Installer Partnership Logo"
                     fill
                     className="object-contain object-center mix-blend-multiply"
@@ -182,7 +182,7 @@ export default function NewBoilersPage() {
 
                 <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-4">
                   <Image
-                    src="https://i.postimg.cc/769bY98K/payment-pic.webp"
+                    src="/images/payment-pic.webp"
                     alt="Card Payment Terminal"
                     fill
                     className="object-cover"

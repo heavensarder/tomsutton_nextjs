@@ -33,7 +33,7 @@ export default function RenewableTechnologyPage() {
           {/* Tom Sutton Logo */}
           <div className="relative w-56 h-24 sm:w-64 sm:h-28 filter grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100">
             <Image 
-              src="https://i.postimg.cc/V65kTYN4/tom_sutton_logo.webp" 
+              src="/images/tom_sutton_logo.webp" 
               alt="Tom Sutton Heating Logo" 
               fill 
               className="object-contain" 
@@ -49,7 +49,7 @@ export default function RenewableTechnologyPage() {
           {/* SL Energy Logo */}
           <div className="relative w-56 h-24 sm:w-64 sm:h-28 transition-transform duration-500 transform hover:scale-110">
             <Image 
-              src="https://i.postimg.cc/90kLPKtD/sl_energy_logo.webp" 
+              src="/images/sl_energy_logo.webp" 
               alt="SL Energy Logo" 
               fill 
               className="object-contain drop-shadow-md" 

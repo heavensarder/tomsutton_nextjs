@@ -6,7 +6,7 @@ export const popularPackagesDefault = {
     {
       type: "Standard",
       subtitle: "Worcester Bosch 1000 Range",
-      image: "https://i.postimg.cc/jjGCP7w6/Worcester-Bosch-1000-Range.png",
+      image: "/images/Worcester-Bosch-1000-Range.png",
       price: "2,028",
       features: [
         "5-year warranty for peace of mind",
@@ -22,7 +22,7 @@ export const popularPackagesDefault = {
     {
       type: "Premium",
       subtitle: "Worcester Bosch 4000 Range",
-      image: "https://i.postimg.cc/NfJsRHSn/Worcester-Bosch-4000-Range.webp",
+      image: "/images/Worcester-Bosch-4000-Range.webp",
       price: "2,750",
       features: [
         "10-year warranty (Long-term peace of mind)",
@@ -40,7 +40,7 @@ export const popularPackagesDefault = {
     {
       type: "Premium Plus",
       subtitle: "Worcester Bosch 8000+ Range",
-      image: "https://i.postimg.cc/fbbgm3nz/Worcester-Bosch-8000-Style.webp",
+      image: "/images/Worcester-Bosch-8000-Style.webp",
       price: "3,205",
       features: [
         "Unrivalled 12-year warranty: Complete peace of mind for over a decade",
@@ -62,7 +62,7 @@ export const popularPackagesDefault = {
 };
 
 export const whyChooseUsDefault = {
-  image: "https://i.postimg.cc/TYFRhPbV/My-Post.webp",
+  image: "/images/My-Post.webp",
   statPercentage: "98%",
   statTextLine1: "Clients Satisfied and",
   statTextLine2: "Repeating",

@@ -50,7 +50,7 @@ export default function AdminLoginPage() {
         {/* Logo */}
         <div className="text-center mb-10">
           <Image
-            src="https://i.postimg.cc/V65kTYN4/tom-sutton-logo.webp"
+            src="/images/tom-sutton-logo.webp"
             alt="Tom Sutton Heating"
             width={260}
             height={65}

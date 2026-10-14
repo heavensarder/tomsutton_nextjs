@@ -83,7 +83,7 @@ export default function NewBoilerInstallationPage() {
                 <div className="absolute inset-0 bg-blue-500/15 blur-[80px] lg:blur-[120px] rounded-full mix-blend-screen scale-75"></div>
 
                 <Image
-                  src="https://i.postimg.cc/prb8FcCJ/Slide-Image.webp"
+                  src="/images/Slide-Image.webp"
                   alt="Worcester Bosch Accredited Boiler Installation System Details"
                   fill
                   className="object-contain lg:object-right drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] lg:drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] z-10"
@@ -177,7 +177,7 @@ export default function NewBoilerInstallationPage() {
                 {/* Static Header Image specifically requested by user */}
                 <div className="w-full max-w-[300px] h-[100px] sm:h-[120px] relative mb-4">
                   <Image
-                    src="https://i.postimg.cc/5yrxGmSh/google.webp"
+                    src="/images/google.webp"
                     alt="5 Star Google Review Reputation for Tom Sutton Heating"
                     fill
                     className="object-contain object-center mix-blend-multiply"
@@ -251,7 +251,7 @@ export default function NewBoilerInstallationPage() {
               <a href="https://www.google.com/maps?cid=8226595044909973442" target="_blank" rel="noopener noreferrer" className="transform hover:scale-105 hover:-translate-y-1 hover:drop-shadow-xl transition-all duration-300 block mt-2">
                 <div className="w-[200px] sm:w-[220px] h-[60px] sm:h-[65px] relative mix-blend-multiply flex-shrink-0 mx-auto">
                   <Image
-                    src="https://i.postimg.cc/5yrxGmSh/google.webp"
+                    src="/images/google.webp"
                     alt="Google Customer Reviews 5 Stars - Tom Sutton Heating"
                     fill
                     className="object-contain"
@@ -267,7 +267,7 @@ export default function NewBoilerInstallationPage() {
               <a href="https://www.checkatrade.com/trades/slenergytomsuttonheating" target="_blank" rel="noopener noreferrer" className="transform hover:scale-105 hover:-translate-y-1 hover:drop-shadow-xl transition-all duration-300 block mt-2">
                 <div className="w-[200px] sm:w-[220px] h-[60px] sm:h-[65px] relative mix-blend-multiply flex-shrink-0 mx-auto">
                   <Image
-                    src="https://i.postimg.cc/3rfJdKQY/checktrade.webp"
+                    src="/images/checktrade.webp"
                     alt="Checkatrade Reputation Matters Emblem"
                     fill
                     className="object-contain"
@@ -357,7 +357,7 @@ export default function NewBoilerInstallationPage() {
               {/* Front Face (Image + Clean Footer Title) */}
               <div className="absolute inset-0 flex flex-col transition-all duration-500 opacity-100 group-hover:opacity-0 bg-white z-10">
                 <div className="relative flex-1 w-full bg-slate-50/50 p-8">
-                  <Image src="https://i.postimg.cc/KjKyTQ98/Magnetic_filter.jpg" alt="Magnetic Filter" fill className="object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-700" unoptimized />
+                  <Image src="/images/Magnetic_filter.jpg" alt="Magnetic Filter" fill className="object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-700" unoptimized />
                 </div>
                 <div className="h-[90px] flex items-center justify-center border-t border-slate-100 bg-white px-4">
                   <h3 className="text-[20px] sm:text-[22px] font-bold text-slate-800 text-center uppercase tracking-wider">
@@ -385,7 +385,7 @@ export default function NewBoilerInstallationPage() {
               {/* Front Face */}
               <div className="absolute inset-0 flex flex-col transition-all duration-500 opacity-100 group-hover:opacity-0 bg-white z-10">
                 <div className="relative flex-1 w-full bg-slate-50/50 p-8">
-                  <Image src="https://i.postimg.cc/J0yWXKTt/System_controls.webp" alt="System Controls" fill className="object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-700" unoptimized />
+                  <Image src="/images/System_controls.webp" alt="System Controls" fill className="object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-700" unoptimized />
                 </div>
                 <div className="h-[90px] flex items-center justify-center border-t border-slate-100 bg-white px-4">
                   <h3 className="text-[20px] sm:text-[22px] font-bold text-slate-800 text-center uppercase tracking-wider">
@@ -410,7 +410,7 @@ export default function NewBoilerInstallationPage() {
               {/* Front Face */}
               <div className="absolute inset-0 flex flex-col transition-all duration-500 opacity-100 group-hover:opacity-0 bg-white z-10">
                 <div className="relative flex-1 w-full bg-slate-50/50 p-8">
-                  <Image src="https://i.postimg.cc/LXJHkH59/water-treatment.png" alt="Water Treatment" fill className="object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-700" unoptimized />
+                  <Image src="/images/water-treatment.png" alt="Water Treatment" fill className="object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-700" unoptimized />
                 </div>
                 <div className="h-[90px] flex items-center justify-center border-t border-slate-100 bg-white px-4">
                   <h3 className="text-[20px] sm:text-[22px] font-bold text-slate-800 text-center uppercase tracking-wider">
@@ -457,7 +457,7 @@ export default function NewBoilerInstallationPage() {
                 Over the years, our team of professionals has developed a reputation for offering exceptional customer service by paying attention to and attending to our clients' needs. We make a special effort to offer straightforward, hassle-free solutions that increase comfort while reducing energy usage because we understand how important your boiler is to your home.
               </p>
               <div className="w-full relative rounded-2xl overflow-hidden h-[400px] sm:h-[450px] lg:flex-1 lg:min-h-[400px] shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-white/10 group-hover:border-blue-500/30 transition-colors duration-500">
-                <Image src="https://i.postimg.cc/3wJpTDSF/expert_team.webp" alt="Tom Sutton Heating Expert Team" fill className="object-cover transform group-hover:scale-110 transition-transform duration-1000" unoptimized />
+                <Image src="/images/expert_team.webp" alt="Tom Sutton Heating Expert Team" fill className="object-cover transform group-hover:scale-110 transition-transform duration-1000" unoptimized />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050B14] via-transparent to-transparent opacity-60"></div>
               </div>
             </div>
@@ -476,7 +476,7 @@ export default function NewBoilerInstallationPage() {
                 Tom Sutton Heating is proud to keep families warm in the Bournemouth area, Southbourne, Christchurch, Highcliffe, New Milton, Lymington, and throughout the New Forest with our boiler installations.
               </p>
               <div className="w-full relative rounded-2xl overflow-hidden h-[250px] sm:h-[280px] mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-white/10 group-hover:border-orange-500/30 transition-colors duration-500">
-                <Image src="https://i.postimg.cc/jjdNbJgh/room_warm.webp" alt="Family staying warm in winter" fill className="object-cover transform group-hover:scale-110 transition-transform duration-1000" unoptimized />
+                <Image src="/images/room_warm.webp" alt="Family staying warm in winter" fill className="object-cover transform group-hover:scale-110 transition-transform duration-1000" unoptimized />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050B14] via-transparent to-transparent opacity-60"></div>
               </div>
               <p className="text-slate-400 leading-[1.9] text-[15px] sm:text-base font-medium mt-auto">
@@ -496,12 +496,12 @@ export default function NewBoilerInstallationPage() {
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 lg:gap-16 opacity-80 hover:opacity-100 transition-opacity duration-300">
             {[
-              { src: "https://i.postimg.cc/cH3f9G5C/checkatrade.webp", alt: "Checkatrade", width: 140 },
-              { src: "https://i.postimg.cc/85vLKgnj/alpha.webp", alt: "Alpha Heating Innovation", width: 90 },
-              { src: "https://i.postimg.cc/1tFDC1Yt/baxi.webp", alt: "Baxi Approved Installer", width: 90 },
-              { src: "https://i.postimg.cc/3RG2SQb4/safe.webp", alt: "Gas Safe Register", width: 80 },
-              { src: "https://i.postimg.cc/gJh3SbBx/Worcester2_150x43.webp", alt: "Worcester Bosch", width: 130 },
-              { src: "https://i.postimg.cc/mD97XW6c/grant_logo.webp", alt: "Grant", width: 100 }
+              { src: "/images/checkatrade.webp", alt: "Checkatrade", width: 140 },
+              { src: "/images/alpha.webp", alt: "Alpha Heating Innovation", width: 90 },
+              { src: "/images/baxi.webp", alt: "Baxi Approved Installer", width: 90 },
+              { src: "/images/safe.webp", alt: "Gas Safe Register", width: 80 },
+              { src: "/images/Worcester2_150x43.webp", alt: "Worcester Bosch", width: 130 },
+              { src: "/images/grant_logo.webp", alt: "Grant", width: 100 }
             ].map((logo, idx) => (
               <div key={idx} className="relative flex items-center justify-center transition-transform hover:scale-105 duration-300" style={{ width: logo.width, height: 40 }}>
                 <Image src={logo.src} alt={logo.alt} fill className="object-contain" unoptimized />
@@ -525,7 +525,7 @@ export default function NewBoilerInstallationPage() {
               <div className="w-full lg:w-[45%] flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-[320px] aspect-square rounded-full bg-white shadow-[0_20px_40px_rgba(0,0,0,0.08)] flex items-center justify-center p-8 group-hover:-translate-y-4 transition-transform duration-700 border border-gray-50">
                   <div className="relative w-full h-full">
-                    <Image src="https://i.postimg.cc/3W5SSZZ1/Nest.webp" alt="Works with Nest" fill className="object-contain drop-shadow-xl" unoptimized />
+                    <Image src="/images/Nest.webp" alt="Works with Nest" fill className="object-contain drop-shadow-xl" unoptimized />
                   </div>
                   <div className="absolute inset-0 rounded-full border border-gray-100 scale-110 opacity-50 group-hover:scale-125 transition-transform duration-1000"></div>
                   <div className="absolute inset-0 rounded-full border border-blue-50/50 scale-125 opacity-30 group-hover:scale-150 transition-transform duration-1000 delay-100"></div>
@@ -643,42 +643,42 @@ const servicesData = [
   {
     title: "Gas",
     description: "Your gas appliances could potentially expose you to fires, gas explosions, and carbon monoxide poisoning. Get your gas appliances serviced today.",
-    image: "https://i.postimg.cc/Hs8qW2s5/gas_service.webp",
+    image: "/images/gas_service.webp",
     link: "/gas",
     icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" /></svg>
   },
   {
     title: "Brand New Boilers",
     description: "Getting a new boiler doesn't have to be expensive! We can offer flexible boiler finance plans to get you on your way. Call us today for a bespoke quote.",
-    image: "https://i.postimg.cc/MKfCZDKB/boiler_service.webp",
+    image: "/images/boiler_service.webp",
     link: "/new-boiler-installation-2",
     icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
   },
   {
     title: "Heating",
     description: "Whether it's a valve replacement or a heating repair, you can trust us to look at your problem. We aim to get to any heating system breakdown within 24 hrs!",
-    image: "https://i.postimg.cc/02KT5f2M/heating_service.webp",
+    image: "/images/heating_service.webp",
     link: "/heating",
     icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg> // Snowflake substitute
   },
   {
     title: "Plumbing & Bathrooms",
     description: "Our qualified plumbers are experienced enough to deal with shower repairs, leaks, taps, bathroom installations and much more.",
-    image: "https://i.postimg.cc/nc9yVkcX/plumbing_service.webp",
+    image: "/images/plumbing_service.webp",
     link: "/contact",
     icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
   },
   {
     title: "Nest Thermostat Installation",
     description: "Nest Thermostats make it easier than ever to manage your heating and hot water. Use the app to control your home while you're away.",
-    image: "https://i.postimg.cc/wTRCxVTt/Thermostat_service.webp",
+    image: "/images/Thermostat_service.webp",
     link: "/nest-thermostat-installation",
     icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
   },
   {
     title: "LPG & Oil",
     description: "LPG & Oil appliances must be checked for safety and efficiency on an annual basis. Call the team today to arrange LPG / Oil servicing, installation or repair.",
-    image: "https://i.postimg.cc/bNS7YTN2/lpg_oil_service.webp",
+    image: "/images/lpg_oil_service.webp",
     link: "/oil",
     icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
   }

@@ -56,7 +56,7 @@ export default async function GasPage() {
             <div className="w-full lg:w-[45%] relative mt-8 lg:mt-0 group z-20">
               <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-white/10 transform transition-transform duration-700 group-hover:-translate-y-2">
                 <Image 
-                  src="https://i.postimg.cc/pLGjSr7D/Gas_Pic.webp" 
+                  src="/images/Gas_Pic.webp" 
                   alt="Gas Boiler Technician Servicing" 
                   fill 
                   className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700 ease-out" 

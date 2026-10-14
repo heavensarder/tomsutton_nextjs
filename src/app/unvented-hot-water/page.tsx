@@ -63,7 +63,7 @@ export default function UnventedHotWaterPage() {
             <div className="w-full lg:w-[45%] relative mt-10 lg:mt-0 group z-20 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[500px] sm:max-w-[600px] aspect-[16/9] lg:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl ring-[6px] ring-white/10 transform transition-transform duration-700 group-hover:-translate-y-2 bg-slate-800">
                 <Image 
-                  src="https://i.postimg.cc/rwxx0D43/IMG-8782-scaled-534x310.webp" 
+                  src="/images/IMG-8782-scaled-534x310.webp" 
                   alt="Unvented Hot Water Cylinder Installation" 
                   fill 
                   className="object-cover scale-[1.02] group-hover:scale-[1.04] transition-transform duration-1000 ease-out" 
@@ -141,13 +141,13 @@ export default function UnventedHotWaterPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
             <a href="https://www.google.com/maps/place/Tom+Sutton+Heating/@50.7572451,-1.6704168,688m/data=!3m2!1e3!4b1!4m6!3m5!1s0x487383d967293ef5:0x722abc9b62d8ffc2!8m2!3d50.7572451!4d-1.6704168!16s%2Fg%2F11b5pjq4ng?entry=ttu&g_ep=EgoyMDI2MDMxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="relative w-[240px] h-[85px] bg-white rounded-2xl flex items-center justify-center p-4 hover:scale-[1.05] transition-transform duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
               <div className="relative w-[180px] h-[55px]">
-                <Image src="https://i.postimg.cc/5yrxGmSh/google.webp" alt="Google Customer Reviews" fill className="object-contain" unoptimized />
+                <Image src="/images/google.webp" alt="Google Customer Reviews" fill className="object-contain" unoptimized />
               </div>
             </a>
             
             <a href="https://www.checkatrade.com/trades/slenergytomsuttonheating" target="_blank" rel="noopener noreferrer" className="relative w-[280px] h-[85px] bg-white rounded-2xl flex items-center justify-center p-4 hover:scale-[1.05] transition-transform duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
               <div className="relative w-[210px] h-[65px]">
-                <Image src="https://i.postimg.cc/3rfJdKQY/checktrade.webp" alt="Checkatrade Approved" fill className="object-contain pointer-events-none" unoptimized />
+                <Image src="/images/checktrade.webp" alt="Checkatrade Approved" fill className="object-contain pointer-events-none" unoptimized />
               </div>
             </a>
           </div>

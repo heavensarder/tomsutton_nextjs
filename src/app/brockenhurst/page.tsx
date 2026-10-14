@@ -99,7 +99,7 @@ export default function BrockenhurstAreaPage() {
                 {/* Fallback elegant dark layer */}
                 <div className="absolute inset-0 bg-slate-800"></div>
                 <Image 
-                  src="https://i.postimg.cc/mgLTByf6/brockenhurst.jpg" 
+                  src="/images/brockenhurst.jpg" 
                   alt="Professional Boiler Installation Brockenhurst" 
                   fill 
                   className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"

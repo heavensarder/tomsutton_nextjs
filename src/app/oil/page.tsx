@@ -58,7 +58,7 @@ export default function OilPage() {
             <div className="w-full lg:w-[45%] relative mt-8 lg:mt-0 group z-20">
               <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-10px_rgba(0,0,0,0.5)] ring-1 ring-white/20 transform transition-transform duration-700 group-hover:-translate-y-2">
                 <Image 
-                  src="https://i.postimg.cc/5NnSCLL4/Oil-2-534x310.webp" 
+                  src="/images/Oil-2-534x310.webp" 
                   alt="LPG & Oil Heating Installation" 
                   fill 
                   className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700 ease-out" 
@@ -85,7 +85,7 @@ export default function OilPage() {
             <div className="w-full lg:w-[45%] relative group max-w-lg mx-auto lg:mx-0">
               <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)] ring-1 ring-slate-200">
                 <Image
-                  src="https://i.postimg.cc/cHhrbMsv/LPG_1.webp"
+                  src="/images/LPG_1.webp"
                   alt="Industrial LPG Gas Cylinders"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"

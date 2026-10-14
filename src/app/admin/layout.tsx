@@ -88,7 +88,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div className="px-6 py-6 border-b border-white/10">
           <Link href="/" target="_blank" className="block">
             <Image
-              src={s?.header_logo_url || 'https://i.postimg.cc/V65kTYN4/tom-sutton-logo.webp'}
+              src={s?.header_logo_url || '/images/tom-sutton-logo.webp'}
               alt="Tom Sutton Heating"
               width={200}
               height={50}
@@ -158,7 +158,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <svg className="w-5 h-5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
           </button>
           <Image
-            src={s?.header_logo_url || 'https://i.postimg.cc/V65kTYN4/tom-sutton-logo.webp'}
+            src={s?.header_logo_url || '/images/tom-sutton-logo.webp'}
             alt="Tom Sutton Heating"
             width={160}
             height={40}

@@ -64,7 +64,7 @@ export default async function HeatingPage() {
             <div className="w-full lg:w-[45%] relative mt-8 lg:mt-0 group z-20">
               <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-10px_rgba(0,0,0,0.5)] ring-1 ring-white/20 transform transition-transform duration-700 group-hover:-translate-y-2">
                 <Image 
-                  src="https://i.postimg.cc/zfPCcrpc/Heating.webp" 
+                  src="/images/Heating.webp" 
                   alt="Cozy socks warming on a radiator" 
                   fill 
                   className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700 ease-out" 
@@ -119,7 +119,7 @@ export default async function HeatingPage() {
             <div className="w-full lg:w-1/2 relative group">
               <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)] ring-1 ring-slate-200">
                 <Image
-                  src="https://i.postimg.cc/SKt6vhVT/Radiator.webp"
+                  src="/images/Radiator.webp"
                   alt="Hands warming up on a newly installed radiator"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"
@@ -190,10 +190,10 @@ export default async function HeatingPage() {
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-slate-50 p-6 rounded-2xl flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100 border border-slate-100">
-                  <Image src="https://i.postimg.cc/85zX6X6F/Viessmann-logo-svg.png" alt="Viessmann" width={150} height={50} className="object-contain" unoptimized />
+                  <Image src="/images/Viessmann-logo-svg.png" alt="Viessmann" width={150} height={50} className="object-contain" unoptimized />
                 </div>
                 <div className="bg-slate-50 p-6 rounded-2xl flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100 border border-slate-100">
-                  <Image src="https://i.postimg.cc/PqjZ6d0B/Worcester-Bosch-logo.webp" alt="Worcester Bosch" width={150} height={50} className="object-contain" unoptimized />
+                  <Image src="/images/Worcester-Bosch-logo.webp" alt="Worcester Bosch" width={150} height={50} className="object-contain" unoptimized />
                 </div>
               </div>
             </div>
